@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Allura|Arima+Madurai|Arizonia|Bubbler+One|Calligraffitti|Italianno|Life+Savers|Martel+Sans:200|Marvel|Poiret+One|Quicksand|Text+Me+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: lightblue;
+    height: 50px;
+    font-family: 'Calligraffitti', cursive;
+    /*font-weight: bold;*/
+    text-decoration: none;
+    /*text-transform: uppercase; Would look good with another type of font*/
+}
+
+nav a:hover {
+    background: blue;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    /*NECESSARY*/
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    /*Necessary so it doesn't turn too wide and stays under ul*/
+    width: 100%;
+    text-align: center;
+}
+
+nav li:hover .drop1>li {
+    top: 0;
+    display: block;
+}
+
+/*makes it drop*/
+
+.drop1 li {
+    display: none;
+    position: relative;
+}
+
+/*VERY NECESSARY. hides it*/
+
+.drop1 {
+    position: absolute;
+    /*NECESSARY, or it will push all stuff underneath it upon hover*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/*SO satisfiying after you nav FINALLY works perfectly!*/
+
+/*and then you remember you were going to make it fixed...*/

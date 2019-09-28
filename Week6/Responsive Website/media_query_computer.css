@@ -1,3 +1,4 @@
+@media only screen and (min-width:780px ) {
 .topdividers {
     height: 50px;
     width: 100%;
@@ -258,4 +259,4 @@ footer h1:hover{
     text-transform: uppercase;
     margin-bottom: 5vw;
 }
-
+}
