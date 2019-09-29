@@ -19,16 +19,20 @@ header {
 font-family: 'Calligraffitti', cursive;*/
 }
 
-.welcomesection {
+/*.welcomesection {
     width: 100%;
-    display: grid;
+    /*display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 100px 5vw 300px;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60vw;
+}*/
 
 #TopHeading {
     margin-left: 5vw;
-    grid-column: span 2;
     font-size: 100px;
     text-align: center;
     color: Blue;
@@ -43,11 +47,8 @@ font-family: 'Calligraffitti', cursive;*/
     color: blue;
     font-size: 35px;
     width: 25vw;
-    text-align: right;
+    text-align: left;
     height: auto;
-    grid-column: span;
-    margin: 10vw;
-    margin-bottom: 20vw;
     
 }
 .welcomequote:hover{
@@ -55,11 +56,10 @@ font-family: 'Calligraffitti', cursive;*/
 }
 
 .welcomesection figure {
-    margin-left: 10vw;
+    margin-top: 8vw;
 }
 
 .welcomesection figure img {
-    grid-column: span 2;
     width: 250px;
     height: auto;
 }
@@ -154,7 +154,7 @@ aside {
     display: flex;
     flex-direction: column;
     padding: 5% 0;
-    padding-top: 10%;
+    /*padding-top: 10%;*/
     background: rgb(6, 226, 171);
     font-family: 'Arima Madurai', cursive;
     text-align: center;
@@ -179,6 +179,7 @@ aside h1 {
     border-collapse: collapse;
     transition: all 0.5s;
     position: absolute;
+    margin-left: auto;
 }
 .table:hover{
     transform: scale(1.3);
