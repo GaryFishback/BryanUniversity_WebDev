@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Pointerdown cadet--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Navbar--><link rel="stylesheet" href="https://github.com/GiselleMartinez006/BryanUniversity_WebDev/blob/master/Week6/Responsive%20Website/navbar.css">
-        <!--Navbar--><link rel="stylesheet" href="C:\Users\Family\dev\BryanUniversity_WebDev\Week6\Responsive Website\navbar.css">
+    <!--Navbar--><link rel="stylesheet" href="C:\Users\Family\dev\BryanUniversity_WebDev\Week6\Responsive Website\navbar.css">
 
     <!--scrollupcss--> <link rel="stylesheet" href="C:\Users\Family\dev\BryanUniversity_WebDev\Week7\css\scroll-upbutton.css">
+    <!--scrollupcss--> <link rel="stylesheet" href="https://github.com/GiselleMartinez006/BryanUniversity_WebDev/blob/master/Week7/css/scroll-upbutton.css">
 
     <!--JQuery Library--><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
    
     <link rel="stylesheet" href="C:\Users\Family\dev\BryanUniversity_WebDev\Week7\css\pricingtable.css">
+    <link rel="stylesheet" href="https://github.com/GiselleMartinez006/BryanUniversity_WebDev/blob/master/Week7/css/pricingtable.css">
     <title>PricingTable</title>
 </head>
 <body>
@@ -27,7 +29,7 @@
                         </ul>
                     </li>
                     <li><a href="#massageheading"> Massages </a>
-                    <li><a href="#Table">Pricing Table</a></li>
+                    <li><a href="pricingtable.html#Table">Pricing Table</a></li>
                     <li><a href="#contactus">Contact Us</a></li>
                 </ul>
             </nav>
@@ -60,7 +62,7 @@
                             </details>
                         </li>
                         <li><a href="#massageheading"> Massages </a>
-                        <li><a href="#Table">Pricing Table</a></li>
+                        <li><a href="pricingtable.html#Table">Pricing Table</a></li>
                         <li><a href="#contactus">Contact Us</a></li>
                     </ul>
                 </nav>
@@ -71,7 +73,7 @@
         <div class="topdividers" id="treatmentheadinglink"></div>
     <main>
             <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
-<section class="treatments">
+<header class="treatments">
         <div class="topdividers" id="treatmentheadinglink"></div>
         <div>
             <h1 id="treatmentheading">Treatments</h1>
@@ -87,15 +89,15 @@
                 sha;
                 herbal medicine; diet and lifestyle changes; meditation; and exercise (often in the form of qigong
                 or
-                tai chi).
+                <a id="Table" name="Table">tai chi).</a>
             </p>
         </div>
-        </section>
+    </header>
 
     <!-----------------TABLE------------------------------------------>
     <table class="table" id="Table">
         <tr class="headerrow">
-            <th>Treatment</th>
+            <th>Treatment                                                                                      </th>
             <th>Brief Description</th>
             <th>Respective Price</th>
         </tr>
@@ -116,15 +118,21 @@
             <td>$60/60minutes</td>
         </tr>
         <tr>
-            <td>Cupping</td>
-            <td>Cupping therapy is a specific type of alternative medicine that involves placing cups on the skin.
-                The cups that are used range in different types and function. By placing the cups upside down on the
-                skin, it creates a suction that encourages healthier and more active circulation of blood. The
-                increased blood supply is healthy for the general functioning of the body and can also encourage
-                faster healing of various body parts.
-            </td>
-            <td>$60/60minutes </td>
-        </tr>
+                <td>Cupping</td>
+                <td>Cupping therapy is a specific type of alternative medicine that involves placing cups on the skin.
+                    The cups that are used range in different types and function. By placing the cups upside down on the
+                    skin, it creates a suction that encourages healthier and more active circulation of blood. The
+                    increased blood supply is healthy for the general functioning of the body and can also encourage
+                    faster healing of various body parts.
+                </td>
+                <td>$60/60minutes </td>
+            </tr>
+            <tr>
+                    <td>Gua Sha</td>
+                    <td>Gua Sha is a technique commonly used in Traditional Chinese Medicine to alleviate pain and treat chronic and acute conditions. It is very effective in alleviating chronic pain from muscle tension, recent injuries, or older injuries as it promotes circulation in the affected area.
+                    </td>
+                    <td>$60/60minutes </td>
+                </tr>
         <tr>
             <td>Shiatsu</td>
             <td>Using the Japanese techniques of
@@ -155,6 +163,11 @@
     </table></main>
 </article>
 <footer>
+    <h1 id="contactus">Contact US: </h1>
+    <p><span>Phone:</span> (786)-546-9033</p>
+    <p><span>Email:</span> <a href="gisellesanchezj@yahoo.es">gisellesanchezj@yahoo.es</a></p>
+    <p><span>Address:</span> 9026 SW 97th Ave Apt 7, Miami Fl 33176</p>
+    <p><span>Website:</span> <a href="https://stillneedsadomain.com">https://stillneedsadomain.com</a></p>
 <figure>
         <img
             src="https://raw.githubusercontent.com/GiselleMartinez006/PublishingAcu_Mockup/master/Week6/img/bluegreenlightbadge.png">
