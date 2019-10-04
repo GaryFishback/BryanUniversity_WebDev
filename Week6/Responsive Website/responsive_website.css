@@ -1,7 +1,243 @@
 @import url('https://fonts.googleapis.com/css?family=Allura|Arima+Madurai|Arizonia|Bubbler+One|Calligraffitti|Italianno|Life+Savers|Martel+Sans:200|Marvel|Poiret+One|Quicksand|Text+Me+One&display=swap');
 
-/*navbar has its own stylesheets*/
+/*navbar */
 
+@media only screen and (max-width:480px ) {
+    button{
+        position: fixed;
+        left:10vw;
+        width: 8;
+        height: 8vw;
+        border-radius: 50%;
+        list-style: none;
+        transition: 0.2s;
+    }
+    svg{
+        width: 6vw;
+        height:auto;
+    }
+    nav ul{
+        margin-left: -25px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'Calligraffitti', cursive;
+        color: #fff;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2em;
+    }
+    nav ul li{
+        border-bottom: 1px solid blue;
+        
+    }
+    nav ul li ul li{
+        border-bottom: none;
+    }
+    button:hover{
+        height: 40%;
+        width: 40%;
+        border-radius: 50px;
+        background: lightblue;
+        background: contain;
+    }
+    button:hover >nav {
+        display: block;
+        
+    }
+    button:hover >svg {
+        display: none;
+    }
+    nav{
+        display: none;
+        position: relative;
+        
+    }
+    
+    nav li:hover .drop1>li {
+        top: 0;
+        display: block;
+    }
+    
+    /*makes it drop*/
+    
+    .drop1 li {
+        display: none;
+        position: relative;
+    }
+    .drop1 li:hover{
+        background: lightblue;
+    }
+    details a:hover{
+        background: lightblue;
+    }
+    nav details summary{
+        border-bottom: blue;
+    }
+    /*VERY NECESSARY. hides it*/
+    
+    .drop1 {
+        /*position: absolute;
+        NECESSARY, or it will push all stuff underneath it upon hover*/
+       display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    nav ul li:hover{
+        background: blue;
+    }
+    
+    .topdividerstop{
+        display:none;
+    }
+    }
+    @media only screen and (min-width:480px ) {
+        #button{
+            display: none;
+        }
+    
+        @import url('https://fonts.googleapis.com/css?family=Allura|Arima+Madurai|Arizonia|Bubbler+One|Calligraffitti|Italianno|Life+Savers|Martel+Sans:200|Marvel|Poiret+One|Quicksand|Text+Me+One&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    nav {
+        position: fixed;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    
+    nav a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background: lightblue;
+        height: 50px;
+        font-family: 'Calligraffitti', cursive;
+        /*font-weight: bold;*/
+        text-decoration: none;
+        /*text-transform: uppercase; Would look good with another type of font*/
+    }
+    
+    nav a:hover {
+        background: blue;
+        color: #fff;
+    }
+    
+    nav ul {
+        list-style: none;
+        /*NECESSARY*/
+        display: flex;
+    }
+    
+    nav ul li {
+        position: relative;
+        /*Necessary so it doesn't turn too wide and stays under ul*/
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav li:hover .drop1>li {
+        top: 0;
+        display: block;
+    }
+    
+    /*makes it drop*/
+    
+    .drop1 li {
+        display: none;
+        position: relative;
+    }
+    
+    /*VERY NECESSARY. hides it*/
+    
+    .drop1 {
+        position: absolute;
+        /*NECESSARY, or it will push all stuff underneath it upon hover*/
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    /*SO satisfiying after you nav FINALLY works perfectly!*/
+    
+    /*and then you remember you were going to make it fixed...*/
+    /*and the queries.*/
+    
+    .topdividerstop{
+        height: 60px;
+        width: 100%;
+    }
+}
+
+
+
+
+/*end of navbar*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*responsive.css starts here*/
 header { margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -267,3 +503,493 @@ footer h1:hover{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width:480px ) {
+
+    /*HEADER*/
+    
+    header {
+        padding: 5% 0;
+        padding-top:15%;
+    }
+    
+    .welcomesection {
+        display: grid;
+        grid-template-columns: auto auto;
+        
+    }
+    
+    #TopHeading {
+        margin-left: 5vw;
+        grid-column: span 2;
+        font-size: 100px;
+        text-align: center;
+        color: Blue;
+        text-shadow: 5px -1px 2px rgba(0, 170, 0, 0.73);
+    }
+    
+    .welcomesection .none {
+        width: 10%;
+    }
+    
+    .welcomequote {
+        color: blue;
+        font-size: 23px;
+        width: 26vw;
+        text-align: center;
+        height: auto;
+        margin-top: 2.5vw;
+    }
+    .welcomequote:hover{
+        text-shadow: 1px 1px 17px rgba(10, 255, 0, 1);
+    }
+    
+    .welcomesection figure {
+        margin-left: 10vw;
+        margin-top: 5vw;
+    }
+    
+    .welcomesection figure img {
+        grid-column: span 2;
+        width: 180px;
+        height: auto;
+    }
+    
+    /*welcome header over*/
+    
+    article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    
+    /*aside*/
+    .table{
+        margin-left: 25vw;
+    }
+    
+    /*footer*/
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .contact-items {
+        display: relative;
+    }
+}
+
+/*tablet ends here*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*computer*/
+@media only screen and (min-width:780px ) {
+    .topdividers {
+        height: 50px;
+        width: 100%;
+    }
+    
+    /*HEADER*/
+    
+    header {
+        /*background: url(https://raw.githubusercontent.com/GiselleMartinez006/FSW-100-assignments/master/assignments/Inprogress/week6/Complete%20Project%203%20Create%20a%20Responsive%20Website/img/agujasblanco_canva_stretched.jpg);*/
+        background: url(https://github.com/GiselleMartinez006/FSW-100-assignments/blob/master/assignments/Inprogress/week6/Complete%20Project%203%20Create%20a%20Responsive%20Website/img/s3_L0057000_L0057963.jpg?raw=true);
+        width: 100%;
+        height: auto;
+        background-size: cover;
+        padding: 5% 0;
+        /*font-family: 'Italianno', cursive;*/
+        font-family: 'Allura', cursive;
+        /*font-family: 'Arizonia', cursive;
+    font-family: 'Calligraffitti', cursive;*/
+    }
+    
+    /*.welcomesection {
+        width: 100%;
+        /*display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 100px 5vw 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 60vw;
+    }*/
+    
+    #TopHeading {
+        margin-left: 5vw;
+        font-size: 100px;
+        text-align: center;
+        color: Blue;
+        text-shadow: 5px -1px 2px rgba(0, 170, 0, 0.73);
+    }
+    
+    .welcomesection .none {
+        width: 10%;
+    }
+    
+    .welcomequote {
+        color: blue;
+        font-size: 35px;
+        width: 25vw;
+        text-align: left;
+        height: auto;
+        
+    }
+    .welcomequote:hover{
+        text-shadow: 1px 1px 17px rgba(10, 255, 0, 1);
+    }
+    
+    .welcomesection figure {
+        margin-top: 8vw;
+    }
+    
+    .welcomesection figure img {
+        width: 250px;
+        height: auto;
+    }
+    
+    /*welcome header over*/
+    
+    /*ARTICLE*/
+    
+    article {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 254, 254, 1) 22%, rgba(167, 252, 252, 1) 42%, rgba(33, 215, 215, 1) 76%, rgba(111, 228, 233, 1) 100%);
+        display: grid;
+        grid-template-columns: 75% 20%;
+        grid-gap: 1vw;
+        justify-items: left;
+        z-index: 0;
+    }
+    
+    .treatments {
+        margin: auto;
+        width: 80%;
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+    
+    #wrapper {
+        vertical-align: top;
+        float: left;
+        margin: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        grid-row: span 1;
+        grid-column: span 1;
+        flex-wrap: wrap;
+    }
+    
+    /*#acupunctureheading {
+        flex-grow: 20px;
+    }
+    
+    #moxibustionheading {
+        flex-shrink: 10px;
+    }
+    
+    #cuppingheading {
+        flex-shrink: 20px;
+    }*/
+    
+    #treatmentheading, summary {
+        font-family: 'Martel Sans', sans-serif;
+        font-size: 2.5vw;
+    }
+    
+    summary {
+        font-size: 1.5vw;
+        padding-top: 4vw;
+        padding-bottom: 3vw;
+    }
+    
+    .semi-headingdescriptions, .treatments p {
+        font-size: 2em;
+        font-family: 'Life Savers', cursive;
+    }
+    
+    .treatments p {
+        font-size: 1.5em;
+    }
+    
+    #wrapper2 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    
+    #shiatsuheading, #tuinaheading, #swedishheading {
+        font-size: 1em;
+        font-family: 'Martel Sans', sans-serif;
+    }
+    summary:hover{
+        text-decoration: underline;
+        color: darkblue;
+        transform: scale(1.1)
+    }
+    #massageheading{
+        margin-top: 8vw;
+    }
+    /*ASIDE HERE*/
+    
+    aside {
+        display: flex;
+        flex-direction: column;
+        padding: 5% 0;
+        /*padding-top: 10%;*/
+        background: rgb(6, 226, 171);
+        font-family: 'Arima Madurai', cursive;
+        text-align: center;
+        position: sticky;
+    }
+    
+    aside h1 {
+        font-size: 1.5em;
+        text-decoration: underline;
+    }
+    
+    #sideimg {
+        max-width: 20vw;
+        box-sizing: contain;
+    }
+    
+    .table {
+        padding-left: 15%;
+        border: solid 1px;
+        border-color: black;
+        border-radius: 95%;
+        border-collapse: collapse;
+        transition: all 0.5s;
+        position: absolute;
+        margin-left: auto;
+    }
+    .table:hover{
+        transform: scale(1.3);
+    }
+    th {
+        background: teal;
+        border-collapse: collapse;
+    }
+    
+    /*FOOTER HERE*/
+    
+    footer {
+        margin: auto;
+        clear: both;
+        padding-left: 10%;
+        font-family: 'Arima Madurai', cursive;
+        background: linear-gradient(180deg, rgba(111, 228, 233, 1) 0%, rgba(33, 215, 215, 1) 11%, rgba(30, 227, 117, 1) 59%, rgba(92, 249, 67, 1) 100%);
+    }
+    
+    footer h1 {
+        font-family: 'Arizonia', cursive;
+        font-size: 40px;
+        margin-bottom: 18px;
+    }
+    footer h1:hover{
+        text-decoration: underline;
+        color: darkgreen;
+    }
+    .contact-items {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .contact {
+        background: url(https://github.com/GiselleMartinez006/PublishingAcu_Mockup/blob/master/Week6/img/Backgroundblue.jpg?raw=true);
+        padding: 80px 0;
+        background-size: cover;
+        position: relative;
+        z-index: 0;
+    }
+    
+    /*darkcover
+    
+    .contact:before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.25);
+        z-index: -1;
+    }*/
+    
+    .contact-items input[type="text"] {
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+        width: 50%;
+    }
+    
+    .contact-items textarea {
+        border-radius: 10px;
+        height: 150px;
+        padding: 15px;
+        width: 50%;
+    }
+    
+    .contact-items a {
+        background: blue;
+        color: white;
+        display: block;
+        font-size: 20px;
+        margin-top: 15px;
+        padding: 15px 80px;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-bottom: 5vw;
+    }}
