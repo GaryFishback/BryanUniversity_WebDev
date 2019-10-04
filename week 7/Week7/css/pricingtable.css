@@ -38,7 +38,7 @@
 article {
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 254, 254, 1) 22%, rgba(167, 252, 252, 1) 42%, rgba(33, 215, 215, 1) 76%, rgba(111, 228, 233, 1) 100%);
     display: grid;
-    margin:auto;
+    padding: auto;
     /*grid-template-columns: 75% 20%;
     grid-gap: 1vw;
     justify-items: left;*/
@@ -49,13 +49,11 @@ article {
             text-align: center;
             float: center;
             color: rgb(27, 7, 207);
-    margin: auto;
     width: 80%;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.5vw;
     /*padding-bottom: 10vw;*/
-    padding-top: 25px;
-    line-height: 3vw;
+    line-height: 2vw;
 }
 
 
