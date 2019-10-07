@@ -1,0 +1,170 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto ;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3vw;
+    grid-gap: 2vw;
+    padding: 5%;
+}
+main img{
+    width: 70%;
+    height: auto;
+}
+.treatments{
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.treatments p{
+    line-height: 2.2vw;
+}
+.wrapper {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+#wrapper{
+    /*display: flex;
+    flex-direction: row;
+    vertical-align: top;
+    flex-wrap: nowrap; justify-content: space-between;*/
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    grid-template-rows:auto auto auto;
+    text-align: center;
+    float: right;
+    width: 100%;
+    height: 100%;
+   
+}
+#wrapper details summary{
+    background:  rgb(209, 234, 243);
+    background: rgb(251, 253, 140);
+    /*padding-right: 0.2 vw;*/
+    border-right: solid lightgreen 0.2vw;
+    border-bottom: dashed lightgreen 0.1vw;
+    height: 100%;
+}
+.wrapperM {
+    grid-row: span 1;
+    grid-column: span 2;
+    text-align: center;
+}
+.wrapperM details summary{
+    font-family: 'Arima Madurai', cursive;
+    font-size: 2vw;
+}
+
+h1{
+    font-family: 'Arima Madurai', cursive;
+    font-size: 2vw;
+}
+h2{
+    font-family: 'Arima Madurai', cursive;
+    font-size: 1.8vw;
+}
+
+aside {
+    grid-row: span 3;
+    text-align: center;
+    background: rgb(167, 240, 235);
+}
+aside p{
+    text-align: left;
+}
+ul {
+    list-style: none;
+}
+figcaption{
+    font-size: 0.8vw;
+}
+#wrapper details{
+    width: 18vw;
+    height:auto;
+}
+#electrostimuliheading img{
+height: 7.9vw;
+}
+#electrostimuliheading[open] img{
+    height: auto;
+    }
+#guashaheading img{
+    height: 8vw;
+}
+#guashaheading[open] img{
+    height: auto;
+    }
+#magnetismheading img{
+    height: 8vw;
+}
+#magnetismheading[open] img{
+    height: auto;
+    }
+
+#wrapper details[open] {
+    width: 100%;
+    grid-column: span 3; 
+}
+#wrapper details summary{
+    background: rgb(183, 241, 183);
+}
+
+/* Hide the marker completely. */
+#wrapper details summary::-webkit-details-marker {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*i need to remember to change color back to normal after testing...*/
+@media only screen and (max-width:900px ) {
+main{
+    display: table;
+}
+aside{
+    display: table-footer-group;
+    background: transparent;
+}
+.treatments{
+ display: table-header-group;
+}
+#wrapper details img {
+    display: inline-block;
+    width: 60%;
+}
+}
+  /*i need to remember to change color back to normal after testing...*/
+  @media only screen and (max-width:500px ) {
+    .wrapperM details summary {
+    background-color: lightblue;
+    margin-left: 10vw;
+}
+.wrapperM details {
+    margin-left: -10vw;
+}
+  
+
+#wrapper #magnetismheading figcaption{
+    display:none;
+}
+
+  }

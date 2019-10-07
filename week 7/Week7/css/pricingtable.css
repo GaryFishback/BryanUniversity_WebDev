@@ -1,40 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Allura|Arima+Madurai|Arizonia|Bubbler+One|Calligraffitti|Italianno|Life+Savers|Martel+Sans:200|Marvel|Poiret+One|Quicksand|Text+Me+One&display=swap');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*prcing table.css*/
+header{
+    display: grid;
+    grid-column: repeat(12 fr)
+}
 article {
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 254, 254, 1) 22%, rgba(167, 252, 252, 1) 42%, rgba(33, 215, 215, 1) 76%, rgba(111, 228, 233, 1) 100%);
     display: grid;
@@ -61,6 +31,7 @@ article {
     font-family: 'Arima Madurai', cursive;
     font-size: 2.5vw;
     padding-bottom: 2vw;
+    margin-top: 0.3vw;
 }
 
 
@@ -117,7 +88,7 @@ tr:hover >th {
 }
 
 
-#divtoptable{
+.divtoptable{
     height: 5vw;
 }
 
@@ -125,7 +96,7 @@ figure {
     display: flex;
     justify-content: center;
 }
-img{
+footer img{
     width: 10%;
     height: auto;
 }
@@ -167,44 +138,3 @@ footer {
 
 
 
-
-
-
-/*scrollup.css*/
-#scroll {
-    position:fixed;
-    right:10px;
-    bottom:10px;
-    cursor:pointer;
-    width:50px;
-    height:50px;
-    border-color: blue;
-    background-color:rgb(220, 241, 245);
-    text-indent:-9999px; /*so top written is not visible*/
-    display:none;
-    /*border: blue solid 2px;*/
-    border-radius:50%;
-}
-#scroll span {
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin-left:-8px;
-    margin-top:-12px;
-    height:0;
-    width:0;
-    border:8px solid transparent;
-    border-bottom-color:rgb(27, 7, 207);
-}
-#scroll:hover {
-    background-color:rgb(27, 7, 207);
-    transform: scale(1.1)
-    }
-
-    #scroll:hover >span{
-        border-bottom-color: rgb(220, 241, 245);
-        transform: scale(1.1)
-    }
-
-
- 

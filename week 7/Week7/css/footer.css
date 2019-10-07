@@ -1,0 +1,25 @@
+footer {
+    clear: both;
+    padding-left: 10%;
+    font-family: 'Arima Madurai', cursive;
+    font-size: 2vw;
+    background: linear-gradient(180deg, rgba(111, 228, 233, 1) 0%, rgba(33, 215, 215, 1) 11%, rgba(30, 227, 117, 1) 59%, rgba(92, 249, 67, 1) 100%);
+display: flex;
+    align-items: center;
+    flex-direction: column;}
+
+footer h1 { 
+    font-size: 3vw;
+    margin-bottom: 0.5vw;
+}
+footer h1:hover{
+    text-decoration: underline;
+    color: darkgreen;
+}
+
+footer img{
+    width: 10%;
+    height: auto;
+    margin: auto;
+    margin-left: 45%;
+}

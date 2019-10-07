@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--Pointerdown cadet-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--JQuery Library-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/scroll-upbutton.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/pricingtable.css">
-    <title>Table</title>
+    <link rel="stylesheet" href="../css/pathologies.css">
+    <title>Pathologies</title>
 </head>
-
 <body>
         <section>
                 <nav>
@@ -75,46 +69,27 @@
                     </nav>
                 </button>
             </section>
-    <header>
-        <h1>Acupuncture Clinic</h1>
-        <div class="headerstructurer"><q>We will always treat you the way we would treat ourselves.</q>
-        <figure>
-                <img
-                    src="../../../../PublishingAcu_Mockup/Week6/img/bluegreenlightbadge.png">
-          </figure></div>
-    </header>
-    <main>
-        <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
-        <section></section>
-        <section></section>
-    </main>
-    <footer>
-        <h1 class="contactus">Contact US: </h1>
-        <p><span>Phone:</span> (786)-546-9033</p>
-        <p><span>Email:</span> <a href="gisellesanchezj@yahoo.es">gisellesanchezj@yahoo.es</a></p>
-        <p><span>Address:</span> 9026 SW 97th Ave Apt 7, Miami Fl 33176</p>
-        <p><span>Website:</span> <a href="https://stillneedsadomain.com">https://stillneedsadomain.com</a></p>
-        <figure>
-            <img
-                src="../../../../PublishingAcu_Mockup/Week6/img/bluegreenlightbadge.png">
-      </figure>
-    </footer>
-
+            <header>
+                    <h1>Acupuncture Clinic</h1>
+                    <div class="headerstructurer"><q>We will always treat you the way we would treat ourselves.</q>
+                        <figure>
+                            <img src="../../../../PublishingAcu_Mockup/Week6/img/bluegreenlightbadge.png">
+                        </figure>
+                    </div>
+                </header>
+                <main>
+                    <h1><mark>We're still working on its content- Please be patient.</mark></h1>
+                </main>
+                <footer>
+                        <h1 class="contactus">Contact US: </h1>
+                        <p><span>Phone:</span> (786)-546-9033</p>
+                        <p><span>Email:</span> <a href="gisellesanchezj@yahoo.es">gisellesanchezj@yahoo.es</a></p>
+                        <p><span>Address:</span> 9026 SW 97th Ave Apt 7, Miami Fl 33176</p>
+                        <p><span>Website:</span> <a href="https://stillneedsadomain.com">https://stillneedsadomain.com</a></p>
+                        <figure>
+                            <img src="../../../../PublishingAcu_Mockup/Week6/img/bluegreenlightbadge.png">
+                        </figure>
+                    </footer>
+                
 </body>
-<script>
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 100) {
-                $('#scroll').fadeIn();
-            } else {
-                $('#scroll').fadeOut();
-            }
-        });    //so the button Appears or Fades when it detects SCROLL//
-    
-        //buttom GOES up now on .click//
-        $('#scroll').click(function () {
-            $("html, body").animate({ scrollTop: 0 }, 600);
-            return false;
-        });
-    
-    </script>
 </html>

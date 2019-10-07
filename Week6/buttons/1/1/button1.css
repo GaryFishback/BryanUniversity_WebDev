@@ -6,6 +6,7 @@
     padding: 8px;
     border-radius: 85%;
     transition: 0.3s ease-out;
+    margin-left: 5vw;
 }
 
 .button1 svg {
@@ -16,7 +17,6 @@
 
 .button1 :hover {
     border: #C0C0C0 1px solid;
-    background-color: blue;
     width: 250px;
     padding: 8px;
     height: 250px;

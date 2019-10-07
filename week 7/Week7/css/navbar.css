@@ -2,7 +2,7 @@
 
 
 @media only screen and (max-width:480px ) {
-    button{
+    #button{
         position: fixed;
         left:10vw;
         width: 8;
@@ -21,7 +21,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        font-family: 'Calligraffitti', cursive;
+        font-family:'Arima Madurai', cursive;
         color: #fff;
     }
     nav ul li a{
@@ -30,24 +30,24 @@
         font-size: 1.2em;
     }
     nav ul li{
-        border-bottom: 1px solid blue;
+        border-bottom: 1px solid teal;
         
     }
     nav ul li ul li{
         border-bottom: none;
     }
-    button:hover{
+    #button:hover{
         height: 40%;
         width: 40%;
         border-radius: 50px;
         background: lightblue;
         background: contain;
     }
-    button:hover >nav {
+    #button:hover >nav {
         display: block;
         
     }
-    button:hover >svg {
+    #button:hover >svg {
         display: none;
     }
     nav{
@@ -74,7 +74,7 @@
         background: lightblue;
     }
     nav details summary{
-        border-bottom: blue;
+        border-bottom: teal;
     }
     /*VERY NECESSARY. hides it*/
     
@@ -87,7 +87,7 @@
     }
     
     nav ul li:hover{
-        background: blue;
+        background: teal;
     }
     
     .topdividerstop{
@@ -107,7 +107,7 @@
     }
     
     nav {
-        position: fixed;
+        /*position: fixed;*/
         width: 100%;
         padding-bottom: 20px;
     }
@@ -116,17 +116,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: blue;
+        color: teal;
         background: white;
         height: 50px;
-        font-family: 'Calligraffitti', cursive;
+        font-family:'Arima Madurai', cursive;
         /*font-weight: bold;*/
         text-decoration: none;
         /*text-transform: uppercase; Would look good with another type of font*/
     }
     
     nav a:hover {
-        background: blue;
+        background: teal;
         color: #fff;
     }
     
