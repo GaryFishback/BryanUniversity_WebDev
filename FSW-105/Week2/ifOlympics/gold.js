@@ -142,7 +142,7 @@ var stringForGreaterOrNot = "s";
 function sGreater12(){
     return ( stringForGreaterOrNot > 12 ? "yes":"no");
 }
-console.log(ifDefined())
+console.log(sGreater12())
 
 var num = 30;
 function oddOrEven(){
