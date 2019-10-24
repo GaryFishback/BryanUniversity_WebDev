@@ -1,26 +1,25 @@
-let fiveBeGreater = 5 > 3;
-function getReturn(fiveBeGreater) {
-  return ( fiveBeGreater ? "is greater than" : "is not greater than");
+function getGreater(num1, num2) {
+  return( num1 > num2 ? "is greater than" : "is not greater than");
 }
-console.log(getReturn(true));
-console.log(getReturn(false));
+console.log (getGreater(5, 3))
 
 let cat = "cat".length;
 let plusOneOrNot = 0; //change to 0 for a true result, change to anything else for a false result
 let dog = "dog".length + plusOneOrNot;
 
-function getCatLength() {
-    return ( cat === 3 ? "is the length" : "is not")
-}
-console.log(getCatLength());
+function getCatLength( x) {
+    return ( x === 3 ? "is the length" : "is not")
+} 
+console.log(getCatLength( cat));
 
-function getCatVsDog() {
-    return ( cat === dog ? "cat is equal to dog" : "not the same")
+function getCatVsDog(x, y) {
+    return ( x === y ? "cat is equal to dog" : "not equal")
 }
-console.log(getCatVsDog());
+console.log(getCatVsDog(cat , dog));
+// - changed only the ternary, should i also apply the changes to the ifs in comment sections?
+/////////////////////////////////////////////// -
 
-///////////////////////////////////////////////
-/*if (5 > 3){
+/* if (num1 > num2){
     console.log("is greater than")
 }
 var cat= "cat".length;
@@ -39,19 +38,19 @@ var person = {
     name: "Bobby",
     age: 12
 }
-function getBobbyAge() {
+function getPersonAge() {
     return ( person.age >= 18 ? person.name + " is allowed to go" : person.name + " is not allowed to go")
 }
-console.log(getBobbyAge());
-function getBobbyFirstLetter() {
+console.log(getPersonAge());
+function getPersonFirstLetter() {
     return (person.name.charAt(0) === "B" ? person.name + " is allowed to go" : person.name + " is not allowed to go")
 }
-console.log(getBobbyFirstLetter())
+console.log(getPersonFirstLetter())
 
-function getBobbyAgeAndLetter() {
+function getPersonAgeAndLetter() {
     return (person.name.charAt(0) === "B" , person.age >= 18 ? person.name + " is allowed to go" : person.name + " is not allowed to go")
 }
-console.log(getBobbyAgeAndLetter())
+console.log(getPersonAgeAndLetter())
 ///////////////////////////////////////////////////////////
 /*
 var person ={
@@ -78,18 +77,18 @@ if (person.name.charAt(0) === "B", person.age >= 18){
 
 ////////////////////////////////////////////////////////////////////////*/
 var oneNoString = 1; //change to 1, "1" or anyOtherThanOne respectively
-function strictOrNot() {
+function strictOrNot(valueX) {
     return ( 
-        "1"  === oneNoString ? "strict" 
-        : oneNoString == "1" ? "abstract"
+        "1"  === valueX ? "strict" 
+        : valueX == "1" ? "abstract"
         : "not equal at all")
 }
-console.log(strictOrNot());
+console.log(strictOrNot(oneNoString));
 
-function twoInFour () {
-    return (oneNoString <= 2, 2 == 4 ? "yes" : "no")
+function twoInFour (x, y) {
+    return (x <= y, y == 4 ? "smaller/equal to 2 AND equal to 4" : "not either smaller/equal to 2 OR equal to 4")
 }
-console.log(twoInFour())
+console.log(twoInFour(1, 2)) 
 
 /////////////////////////////////////////////////////////////////////////
 /*//Write an if/else if/else statement that prints "strict" if 1 strictly equals "1", prints "loose" or "abstract" if 1 equals "1" without type checking, and prints "not equal at all" if it doesn't print the other stuff.
@@ -120,34 +119,37 @@ Write an if statement that checks to see if a variable has been defined or not
 Write an if statement asking if "s" greater than 12?
 Try it with a few more letters and a few numbers.
 Write a ternary statement that console.logs whether a number is odd or even. For example: var myNum= 10;*/
-
-function dogF(){
-    return (typeof("dog") == "string" ? "yes": "no")
+var dogString = "dog";
+function dogF(x){
+    return (typeof(x) == "string" ? "yes string": "no string")
 }
-console.log(dogF())
-
-function ifTrue(){
-    return (typeof("true") == "boolean" ? "yes"
-    : typeof("true") == "string" ? "string"
-    :"no");
+console.log(dogF(dogString))
+var trueString = "true";
+function ifTrue(x){
+    return (typeof(x) == "boolean" ? "yes boolean"
+    : typeof(x) == "string" ? "just string"
+    :"neither string nor boolean");
 }
-console.log(ifTrue())
+console.log(ifTrue(trueString))
 
-function ifDefined(){
-    return ( typeof(yourvar) == "undefined"? "yes":"no");
+//if (typeof variable !== 'undefined') {
+    // the variable is defined
+function ifDefined(variable){
+    return ( typeof(variable) === "undefined" ? "undefined":"defined");
 }
 console.log(ifDefined())
 
 var stringForGreaterOrNot = "s";
-function sGreater12(){
-    return ( stringForGreaterOrNot > 12 ? "yes":"no");
+var numberForGreaterOrNot = 12
+function sGreater12( string, number){
+    return ( string > number ? "string is greater than number"
+    :"string is NOT greater than number");
 }
-console.log(sGreater12())
+console.log(sGreater12(stringForGreaterOrNot, numberForGreaterOrNot))
 
-var num = 30;
-function oddOrEven(){
-    return ( num%2 ==0 ? "even":"odd");
+var number = 30;
+function oddOrEven(num){
+    return ( num % 2 ==0 ? "even" :"odd");
 }
-console.log(oddOrEven())
-console.log(oddOrEven(num = 55))
-console.log(oddOrEven(num = 66))
+console.log(oddOrEven(number))
+console.log(oddOrEven(55))
