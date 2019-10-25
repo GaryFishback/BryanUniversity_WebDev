@@ -13,8 +13,11 @@ p.textContent = "All of this was created with Javascript";
 
 document.body.append(h1, p);
 
+var ol = document.createElement("ol");
+ol.textContent ="List Items:"; 
+document.body.append(ol);
 
-var li = document.createElement("li");
+/*var li = document.createElement("li");
 li.textContent = "Some text";
 
 var li1 = document.createElement("li");
@@ -25,18 +28,27 @@ li2.textContent = "Some text";
 
 var li3 = document.createElement("li");
 li3.textContent = "Some text";
+ol.append(li, li1, li2, li3);*/
 
-var ol = document.createElement("ol");
-ol.textContent ="List Items:"; 
-document.body.append(ol);
-ol.append(li, li1, li2, li3);
+////////////////////////////////////////////////////////////////////
 
-
-
-
-
-
+/*var olArray = [ 
+  document.createElement("li"), 
+  document.createElement("li"),
+  document.createElement("li"), 
+  document.createElement("li")]
 
 
-/*var myList = document.getElementById("my-list")
-myList.append(newLi)*/
+olArray.forEach(function(element) {
+  (element).textContent = "Some text";
+  ol.append(element)
+});*/
+
+var olArray = [ "1","2","3","4", "and some more text"]
+
+
+olArray.forEach(function(element) {
+  var li = document.createElement("li");
+  li.textContent = (element);
+  ol.append(li)
+});
