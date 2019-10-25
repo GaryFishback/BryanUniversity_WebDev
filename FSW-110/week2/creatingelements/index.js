@@ -47,8 +47,13 @@ olArray.forEach(function(element) {
 var olArray = [ "1","2","3","4", "and some more text"]
 
 
-olArray.forEach(function(element) {
+/*olArray.forEach(function(element) {
   var li = document.createElement("li");
   li.textContent = (element);
   ol.append(li)
-});
+});*/
+for(var i = 0; i < olArray.length ; i++){
+  var li = document.createElement("li");
+  li.textContent = (olArray[i]);
+  ol.append(li) //so this works too
+}
