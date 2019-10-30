@@ -1,4 +1,10 @@
-/*Loop through the following array and count how many "computers" there are. Log the final count:*/
+console.log("MESSAGE: EVERYTHING UP FROM HERE IS THE EVEN/ODD For Loop. I left it because its output is too long")
+
+for (var i = 0; i < 100; i++) {
+    if (i % 2 === 0 ? console.log("Even") : console.log("Odd"));
+} //that's a lot of output..
+
+//Loop through the following array and count how many "computers" there are. Log the final count:
 
 var officeItems = ["stapler", "monitor", "computer", "desk", "lamp", "computer", "lamp", "stapler", "computer", "computer"]
 var computerAmount = 0;
@@ -60,8 +66,4 @@ for (var i = 0; i < array.length; i++) {
 //console.log(arrayNumber) i was just testing the number i got for this var.
 if (arrayNumber % 2 == 0 ? console.log("light off") : console.log("light on"));
 
-console.log("MESSAGE: EVERYTHING DOWN FROM HERE IS THE EVEN/ODD For Loop. I left it for the end because its output is too long")
 
-for (var i = 0; i < 100; i++) {
-    if (i % 2 === 0 ? console.log("Even") : console.log("Odd"));
-} //that's a lot of output..
