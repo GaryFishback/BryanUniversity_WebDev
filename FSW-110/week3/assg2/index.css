@@ -1,0 +1,10 @@
+/*Go to your CSS file and create a class called .border that has:
+2px solid black border, 
+5px padding 
+5px margin*/
+
+.border {
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+}
