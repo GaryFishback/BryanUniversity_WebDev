@@ -9,9 +9,9 @@ You should now see 8 “Hello World” h1s show up when the page loads.
 Instead of using “Hello World” as the text, swap it for the current name in the array so that all of the names now list out on the website.
 Add styles to the h1’s.*/
 
-/*var h1 = document.createElement("h1");
-h1.textContent = "Hello World";
-document.body.append(h1);*/
+var newh1 = document.createElement("h1");
+newh1.textContent = "Hello World";
+document.body.append(newh1);
 
 /*for (var i = 0; i < 10; i++) {
     var newh1 = document.createElement("h1");
