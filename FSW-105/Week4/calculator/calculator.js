@@ -2,8 +2,29 @@ var readlineSync = require('readline-sync');
 const welcomeMessage = "Let's make some calculations!";
 console.log(welcomeMessage)
 
+function addingTwo(num1, num2) {
+    var num1 = Number(readlineSync.question('What is the first number to be added? '));
+    var num2 = Number(readlineSync.question('What is the second number to add to the first? '));
+    return console.log(num1 + num2)
+}
 
+function multiplyingTwo(num1, num2) {
+    var num1 = Number(readlineSync.question('What is the first number to be multiplied? '));
+    var num2 = Number(readlineSync.question('What is the second number to multiply to the first? '));
+    return console.log(num1 * num2)
+}
 
+function dividingTwo(num1, num2) {
+    var num1 = Number(readlineSync.question('What is the first number to be divided? '));
+    var num2 = Number(readlineSync.question('What is the second number to divide the first by? '));
+    return console.log(num1 / num2)
+}
+
+function substractingTwo(num1, num2) {
+    var num1 = Number(readlineSync.question('What is the first number to be substracted from? '));
+    var num2 = Number(readlineSync.question('What is the second number to substract from the first? '));
+    return console.log(num1 - num2)
+}
 
 function calculator() {
     function operationChoice() {
@@ -12,54 +33,24 @@ function calculator() {
             operation == "multiply" || operation == "multiplication" ? multiplyingTwo() :
             operation == "divide" || operation == "division" ? dividingTwo() :
             operation == "substract" || operation == "substraction" ? substractingTwo() :
-            "Please try again with: 'add' 'multiply' 'divide' or 'substract' :) ")
+            console.log("Please try again with: 'add' 'multiply' 'divide' or 'substract' :) "))
     }
+    operationChoice()
+    var goodByeMessage = "Have a Great Number Day!";
 
     function doneOrNot() {
         var doneOrNotV = readlineSync.question("Would you like to make more calculations? HINT: 'yes' or 'no': ")
-        console.log(doneOrNotV);
         return (doneOrNotV == "yes" ? calculator() :
-            doneOrNotV == "no" ? goodByeMessage :
+            doneOrNotV == "no" ? console.log(goodByeMessage) :
             "Please try again: yes or no.")
     }
-
-    function addingTwo(num1, num2) {
-        var num1 = Number(readlineSync.question('What is the first number to be added? '));
-        var num2 = Number(readlineSync.question('What is the second number to add to the first? '));
-        return num1 + num2
-    }
-
-
-    function multiplyingTwo(num1, num2) {
-        var num1 = Number(readlineSync.question('What is the first number to be multiplied? '));
-        var num2 = Number(readlineSync.question('What is the second number to multiply to the first? '));
-        return num1 * num2
-    }
-
-
-    function dividingTwo(num1, num2) {
-        var num1 = Number(readlineSync.question('What is the first number to be divided? '));
-        var num2 = Number(readlineSync.question('What is the second number to divide the first by? '));
-        return num1 / num2
-    }
-
-    function substractingTwo(num1, num2) {
-        var num1 = Number(readlineSync.question('What is the first number to be substracted from? '));
-        var num2 = Number(readlineSync.question('What is the second number to substract from the first? '));
-        return num1 - num2
-
-    }
-    console.log(operationChoice())
-    var goodByeMessage = "Have a Great Number Day!";
-    console.log(doneOrNot())
-
-
+    doneOrNot()
 }
+calculator()
 
-console.log(calculator())
-    // Wait for user's response.
-    //var userName = readlineSync.question('May I have your name? ');
-    //console.log('Hi ' + userName + '!');
+// Wait for user's response.
+//var userName = readlineSync.question('May I have your name? ');
+//console.log('Hi ' + userName + '!');
 
 // Handle the secret text (e.g. password).
 //var favFood = readlineSync.question('What is your favorite food? ', {
