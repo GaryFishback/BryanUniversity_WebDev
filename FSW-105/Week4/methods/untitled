@@ -1,0 +1,43 @@
+/*Make a function that will return any given string into all caps followed by the same string all lowercase.
+Make a function that returns a number half the length, and rounded down. You'll need to use Math.floor().
+Make a function that uses slice() and the other functions you've written to return the first half of the string.
+Make a function that takes a string and returns that string where the first half is capitalized, and the second half is lower cased. (If the string length is odd, capitalize the shorter of the first half.)
+Optional Code Challenge (This one is a step up in difficulty):
+Make a function that takes any string and capitalizes any character that follows a space.*/
+
+/*findMiddleIndex("Hello") // => 2
+findMiddleIndex("Hello World") // => 5
+
+returnFirstHalf("Hello") // => "He"
+returnFirstHalf("Hello World") // => "Hello"
+
+capitalizeAndLowercase("Hello") // => "HEllo"
+capitalizeAndLowercase("Hello World") // => "HELLO world"
+
+capitalize("hey friends! practice practice practice!") // => "Hey Friends! Practice Practice Practice!"*/
+
+
+
+/*Create a new JavaScript file and put these two arrays at the beginning. 
+You will write a single function that performs many operations on them.
+After every command, use console.log() to inspect your arrays. A good way to do that is to do something like:
+Remove the last item from the vegetable array.
+Remove the first item from the fruit array.
+Find the index of "orange."
+Add that number to the end of the fruit array.
+Use the length property to find the length of the vegetable array.
+Add that number to the end of the vegetable array.
+Put the two arrays together into one array. Fruit first. Call the new Array "food".
+Remove 2 elements from your new array starting at index 4 with one method.
+Reverse your array.
+Turn the array into a string and return it.
+If you've done everything correctly, the last step should print the following string to the console:*/
+
+
+/*var fruit = ["banana", "apple", "orange", "watermelon"];
+var vegetables = ["carrot", "tomato", "pepper", "lettuce"];
+
+console.log("fruit: ", fruit);
+console.log("vegetables: ", vegetables);*/
+
+//3, pepper, 1, watermelon, orange, apple
