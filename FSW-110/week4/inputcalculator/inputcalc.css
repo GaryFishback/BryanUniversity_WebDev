@@ -1,0 +1,141 @@
+/* i hope i'm the only one who thinks the colors came out tooo bright */
+
+.add {
+    padding-top: 5em;
+    justify-content: center;
+    display: grid;
+    grid-auto-columns: 25% 25% 25% 25%;
+    color: yellow;
+    background: linear-gradient(180deg, rgba(255, 0, 0, 1) 0%, rgba(255, 64, 0, 1) 51%, rgba(255, 102, 0, 1) 79%, rgba(255, 102, 0, 1) 97%);
+}
+
+.add:first-child {
+    margin: auto;
+}
+
+.add>input {
+    border-radius: 15%;
+    grid-column: span 1;
+    margin-bottom: 2.5em;
+    padding: 1em;
+    align-content: center;
+    background: rgba(255, 0, 0, 0.377);
+    color: yellow;
+    border-style: double;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+::placeholder {
+    font-weight: 5;
+    color: yellow;
+}
+
+.add>button {
+    border-radius: 10px;
+    padding: 0.5em;
+    margin-top: 2.5em;
+    margin: auto;
+    grid-column: span 2;
+    width: 60%;
+    color: red;
+    background: Yellow;
+    border-style: double;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.substract {
+    padding-top: 5em;
+    justify-content: center;
+    display: grid;
+    grid-auto-columns: 25% 25% 25% 25%;
+    color: rgb(211, 62, 3);
+    background: linear-gradient(180deg, rgba(255, 102, 0, 1) 0%, rgba(255, 139, 0, 1) 47%, rgba(255, 151, 0, 1) 62%, rgba(255, 192, 0, 1) 98%);
+}
+
+.substract:first-child {
+    margin: auto;
+}
+
+.substract>input {
+    border-radius: 15%;
+    grid-column: span 1;
+    margin-bottom: 2.5em;
+    padding: 1em;
+    align-content: center;
+    background: rgba(255, 0, 0, 0.377);
+    color: yellow;
+    border-style: double;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+::placeholder {
+    font-weight: 5;
+    color: yellow;
+}
+
+.substract>button {
+    border-radius: 10px;
+    padding: 0.5em;
+    margin-top: 2.5em;
+    margin: auto;
+    grid-column: span 2;
+    width: 60%;
+    color: orangered;
+    background: orange;
+    border-style: double;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.multiply {
+    padding-top: 5em;
+    justify-content: center;
+    margin-bottom: 5em;
+    display: grid;
+    grid-auto-columns: 25% 25% 25% 25%;
+    color: red;
+    background: linear-gradient(180deg, rgba(255, 192, 0, 1) 0%, rgba(249, 218, 0, 1) 26%, rgba(255, 249, 1, 1) 77%, rgba(242, 246, 171, 1) 100%);
+}
+
+.multiply:first-child {
+    margin: auto;
+}
+
+.multiply>input {
+    border-radius: 15%;
+    grid-column: span 1;
+    margin-bottom: 2.5em;
+    padding: 1em;
+    align-content: center;
+    background: rgba(255, 0, 0, 0.377);
+    color: yellow;
+    border-style: double;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+::placeholder {
+    font-weight: 5;
+    color: yellow;
+}
+
+.multiply>button {
+    color: yellow;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin-top: 2.5em;
+    margin: auto;
+    grid-column: span 2;
+    width: 60%;
+    background: Red;
+    border-style: double;
+    /*margin-bottom: 5em;*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button {
+    border: none;
+}
+
+h1 {
+    margin-left: 290px;
+    text-align: center;
+}
