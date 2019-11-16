@@ -1,0 +1,121 @@
+﻿Array Filter Exercises
+Purpose: The purpose of this exercise is to practice using some of the most common array methods: filter, sort, map, and reduce.
+Getting started:
+Use the built-in array method .filter() to solve all of these problems:
+1) Given an array of numbers, return a new array that has only the numbers that are 5 or greater.
+function fiveAndGreaterOnly (arr) {
+
+}
+console.log(fiveAndGreaterOnly([3,6,8,2])) // 6,8
+2) Given an array of numbers, return a new array that only includes the even numbers.
+  function evensOnly (arr){
+
+  }
+console.log(evensOnly([3,6,8,2])) //6, 8, 2
+3) Given an array of strings, return a new array that only includes those that are 5 characters or fewer in length
+  function fiveCharactersOrFewerOnly(arr){
+
+  }
+console.log(fiveCharactersOrFewerOnly(["dog", "wolf", "by", "family", "eaten", "camping"])) //by dog wolf eaten
+4) Given an array of people objects, return a new array that has filtered out all those who don't belong to the club.
+  
+5) Make a filtered list of all the people who are old enough to see The Matrix (younger than 18)
+  
+
+
+
+Use the built-in .map() method on arrays to solve all of these problems:
+1) Make an array of numbers that are doubles of the first array
+  
+
+2) Take an array of numbers and make them strings
+  
+
+3) Capitalize each of an array of names
+  
+
+  
+
+4) Make an array of strings of the names
+  
+
+5) Make an array of strings of the names saying whether or not they can go to The Matrix
+  
+
+6) Make an array of the names in h1s, and the ages in h2s
+  
+
+
+
+Use the built-in .reduce() method on arrays to solve all of these problems:
+1) Turn an array of numbers into a total of all the numbers
+  
+
+2) Turn an array of numbers into a long string of all those numbers.
+  
+
+3) Turn an array of voter objects into a count of how many people voted
+  
+
+Note: You don't necessarily have to use reduce for this, so try to think of multiple ways you could solve this.
+
+
+4) Given an array of all your wishlist items, figure out how much it would cost to just buy everything at once
+
+
+  
+
+5) Given an array of arrays, flatten them into a single array
+  
+
+Note: Take a look at Array.concat() to help with this one
+
+
+6) Given an array of potential voters, return an object representing the results of the vote
+Include how many of the potential voters were in the ages 18-25, how many from 26-35, how many from 36-55, and how many of each of those age ranges actually voted. The resulting object containing this data should have 6 properties. See the example output at the bottom.
+  
+
+
+
+Use the built-in .sort() method on arrays to solve all of these problems:
+1) Sort an array from smallest number to largest
+  
+
+2) Sort an array from largest number to smallest
+  
+
+3) Sort an array from shortest string to longest
+  
+
+  
+
+4) Sort an array alphabetically
+  
+
+  
+
+5) Sort the objects in the array by age
+  
+
+
+
+Extra credit:
+Using AJAX, do a GET request to your own Github repositories endpoint. The URL will be https://api.github.com/users/<YOUR GITHUB USERNAME HERE>/repos.
+Once you get the data, use .reduce() to figure out how many watchers you have across all of your repositories. Don't be too disappointed if the number is 0. You're still new at this :)
+Note: If you've learned how to use the axios library, you can do this in node. Otherwise, you'll want to run this code in the browser's JavaScript context and either use XMLHttpRequest or jQuery's AJAX methods, meaning you'll need an HTML page and an associated script tag for your JavaScript.
+Submission:
+You will submit a screenshot of your functions console output so I can see it, or if that does not fit, do a screencast video; and, you will submit the GitHub URL to your assignment files, so I can review your code.
+
+
+How to Submit Your GitHub URL:
+1. When you’re done, stage, commit, and then push your changes to your Github repository. (Note: Make sure this file is located inside a “array_exercises” directory within your “week5” directory.
+2. Then, copy the URL. Your URL should look similar to this: https://github.com/username/class/week/project
+3. Go back to this assignment in Canvas, click the Submit Assignment button. At the bottom of the page, paste the URL into the Website URL field, and click Submit Assignment.
+How to Take a Screenshot:
+1. Take a screenshot of the required material, ensuring everything can be seen (Go to https://www.take-a-screenshot.org to learn how to take a screenshot). You can save your screenshot as an image or paste it to a Word document. 
+2. Go back to the assignment in Canvas, click the Submit Assignment button. At the bottom of the page, upload your file.
+How to Create a Video Screencast:
+1. Go back to this assignment in Canvas, click the Submit Assignment button, if you haven't already. At the bottom of the page, select the Studio tab.
+2. Take a screencast of the required material, ensuring you clearly display what has been required from the assignment.
+3. Select the Embed button, to ensure your screencast link saves to this assignment.
+Once both your URL and Screenshot/Screencast have been uploaded, click the Submit Assignment button.

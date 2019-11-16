@@ -2,33 +2,37 @@ var readlineSync = require('readline-sync');
 const welcomeMessage = "Let's make some calculations!";
 console.log(welcomeMessage)
 
-function addingTwo(num1, num2) {
-    var num1 = Number(readlineSync.question('What is the first number to be added? '));
-    var num2 = Number(readlineSync.question('What is the second number to add to the first? '));
-    return console.log(num1 + num2)
-}
 
-function multiplyingTwo(num1, num2) {
-    var num1 = Number(readlineSync.question('What is the first number to be multiplied? '));
-    var num2 = Number(readlineSync.question('What is the second number to multiply to the first? '));
-    return console.log(num1 * num2)
-}
-
-function dividingTwo(num1, num2) {
-    var num1 = Number(readlineSync.question('What is the first number to be divided? '));
-    var num2 = Number(readlineSync.question('What is the second number to divide the first by? '));
-    return console.log(num1 / num2)
-}
-
-function substractingTwo(num1, num2) {
-    var num1 = Number(readlineSync.question('What is the first number to be substracted from? '));
-    var num2 = Number(readlineSync.question('What is the second number to substract from the first? '));
-    return console.log(num1 - num2)
-}
 
 function calculator() {
+    function addingTwo(num1, num2) {
+        var num1 = Number(readlineSync.question('What is the first number to be added? '));
+        var num2 = Number(readlineSync.question('What is the second number to add to the first? '));
+        return console.log(num1 + num2)
+    }
+
+    function multiplyingTwo(num1, num2) {
+        var num1 = Number(readlineSync.question('What is the first number to be multiplied? '));
+        var num2 = Number(readlineSync.question('What is the second number to multiply to the first? '));
+        return console.log(num1 * num2)
+    }
+
+    function dividingTwo(num1, num2) {
+        var num1 = Number(readlineSync.question('What is the first number to be divided? '));
+        var num2 = Number(readlineSync.question('What is the second number to divide the first by? '));
+        return console.log(num1 / num2)
+    }
+
+    function substractingTwo(num1, num2) {
+        var num1 = Number(readlineSync.question('What is the first number to be substracted from? '));
+        var num2 = Number(readlineSync.question('What is the second number to substract from the first? '));
+        return console.log(num1 - num2)
+    }
+
     function operationChoice() {
         var operation = readlineSync.question("What operations would you like to carry on with? \n Note: all are lowercased: ")
+
+
         return (operation == "add" || operation == "addition" ? addingTwo() :
             operation == "multiply" || operation == "multiplication" ? multiplyingTwo() :
             operation == "divide" || operation == "division" ? dividingTwo() :
@@ -47,6 +51,12 @@ function calculator() {
     doneOrNot()
 }
 calculator()
+module.exports = calculator;
+//this is my calculator project. 
+//with a full function called calculator
+//the calculator function is exported in line 54 ^^^
+
+
 
 // Wait for user's response.
 //var userName = readlineSync.question('May I have your name? ');
