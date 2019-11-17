@@ -311,3 +311,67 @@ flatten(arrays)
 
 // // youth: 18-25. mids: 26-36. olds: 36-55
 // // youngvoted     midvoted     oldvoted
+
+
+var arrayVotesCompleted = require('./arrayVotes.js');
+
+
+console.log("Reduce ends here. Sort starts here")
+    //////////////////////////REDUCE ENDS HERE.
+    //////////////////////////SORT Starts Here.
+
+function sortFunction(array, functionToRun) {
+    return array.sort(functionToRun);
+}
+
+messyNumArray = [1, 3, 5, 2, 90, 20]
+
+
+function leastToGreatest(arr) {
+    function operationFunction(num1, num2) {
+        return num1 - num2
+    }
+    const leastToGreatest = new sortFunction(arr, operationFunction)
+    console.log(leastToGreatest)
+}
+leastToGreatest(messyNumArray)
+
+function greatestToLeast(arr) {
+    function operationFunction(num1, num2) {
+        return num2 - num1
+    }
+    const leastToGreatest = new sortFunction(arr, operationFunction)
+    console.log(leastToGreatest)
+}
+greatestToLeast(messyNumArray)
+
+const arrayofStrings = [
+    "by", "dog", "wolf", "eaten", "family"
+];
+
+function shortestToLongest(arr) {
+    function operationFunction(string1, string2) {
+        return string1.length - string2.length
+    }
+    const stringLength = new sortFunction(arr, operationFunction)
+    console.log(stringLength)
+}
+shortestToLongest(arrayofStrings)
+
+console.log(arrayofStrings.sort())
+
+let objectArrayByAge = [
+    { name: "Quiet Samurai", age: 22 },
+    { name: "Arrogant Ambassador", age: 100 },
+    { name: "Misunderstood Observer", age: 2 },
+    { name: "Unluky Swami", age: 77 }
+]
+
+function byAge(arr) {
+    function operationFunction(age1, age2) {
+        return age1.age - age2.age
+    }
+    const sortByAge = new sortFunction(arr, operationFunction)
+    console.log(sortByAge)
+}
+byAge(objectArrayByAge)

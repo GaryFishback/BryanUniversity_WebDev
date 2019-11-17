@@ -13,37 +13,81 @@ var voters = [
     { name: "Zach", age: 19, voted: false }
 ]
 
-function reduceFunction(array, functionToRun, placeholder) {
-    this.reduceArray = array.reduce(functionToRun, placeholder);
-}
+
 
 function totalVotes(arr) {
+    function reduceFunction(array, functionToRun, placeholder) {
+        this.reduceArray = array.reduce(functionToRun, placeholder);
+        return reduceFunction.reduceArray
+    }
+
     function youngVoters(final, object) {
         if (object.age > 18 && object.age <= 25) { final++ }
         return final
     }
-    var reduceVoters1 = new reduceFunction(arr, youngVoters, 0)
-    console.log(reduceVoters1.reduceArray)
+
 
     function youngVotedOrNot(final, object) {
         if (object.age > 18 && object.age <= 25 && object.voted) { final++ }
         return final
     }
-    var reduceVoters2 = new reduceFunction(arr, youngVotedOrNot, 0)
-    console.log(reduceVoters2.reduceArray)
+
 
     function midVoters(final, object) {
         if (object.age >= 26 && object.age <= 35) { final++ }
         return final
     }
-    var reduceVoters3 = new reduceFunction(arr, midVoters, 0)
-    console.log(reduceVoters3.reduceArray)
 
     function midVotedOrNot(final, object) {
         if (object.age >= 26 && object.age <= 35 && object.voted) { final++ }
         return final
     }
+
+
+    function oldVoters(final, object) {
+        if (object.age >= 36 && object.age <= 55) { final++ }
+        return final
+    }
+
+
+    function oldVotedOrNot(final, object) {
+        if (object.age >= 36 && object.age <= 55 && object.voted) { final++ }
+        return final
+    }
+    // let votesObject = {
+    //     reduceVoters1: new reduceFunction(arr, youngVoters, 0),
+    //     reduceVoters2: new reduceFunction(arr, youngVotedOrNot, 0),
+    //     reduceVoters3: new reduceFunction(arr, midVoters, 0),
+    //     reduceVoters4: new reduceFunction(arr, midVotedOrNot, 0),
+    //     reduceVoters5: new reduceFunction(arr, oldVoters, 0),
+    //     reduceVoters6: new reduceFunction(arr, oldVotedOrNot, 0)
+    // }
+
+    var reduceVoters1 = new reduceFunction(arr, youngVoters, 0)
+    var reduceVoters2 = new reduceFunction(arr, youngVotedOrNot, 0)
+    var reduceVoters3 = new reduceFunction(arr, midVoters, 0)
     var reduceVoters4 = new reduceFunction(arr, midVotedOrNot, 0)
-    console.log(reduceVoters4.reduceArray)
+    var reduceVoters5 = new reduceFunction(arr, oldVoters, 0)
+    var reduceVoters6 = new reduceFunction(arr, oldVotedOrNot, 0)
+        // console.log(reduceVoters1.reduceArray)
+        // console.log(reduceVoters2.reduceArray)
+        // console.log(reduceVoters3.reduceArray)
+        // console.log(reduceVoters4.reduceArray)
+        // console.log(reduceVoters5.reduceArray)
+        // console.log(reduceVoters6.reduceArray)
+
+    let votesObject = {
+        youth: reduceVoters1.reduceArray,
+        youngVotes: reduceVoters2.reduceArray,
+        mids: reduceVoters3.reduceArray,
+        midVotes: reduceVoters4.reduceArray,
+        olds: reduceVoters5.reduceArray,
+        oldVotes: reduceVoters6.reduceArray
+    }
+    console.log(votesObject)
+
+
 }
 totalVotes(voters)
+
+module.exports = totalVotes;
