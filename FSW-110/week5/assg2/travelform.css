@@ -1,0 +1,68 @@
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+    color: #eb0f8f;
+    border-radius: 50px;
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+    border-style: double;
+    border-width: 12px;
+    border-color: #eb0f8f;
+    padding: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    color: #eb0f8f;
+    display: block;
+    font-size: 1.2em;
+}
+
+input {
+    border-radius: 5px;
+    width: 6em;
+}
+
+input::placeholder {
+    color: #eb0f8f;
+}
+
+input[type="radio"] {
+    width: auto;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+select {
+    margin-left: 8em;
+    margin-bottom: 2em;
+    width: 25%;
+}
+
+option {
+    text-align: center;
+}
+
+section {
+    border-radius: 10px;
+    margin-bottom: 2em;
+    background-color: white;
+    color: #eb0f8f;
+    padding: 25px;
+}
+
+button {
+    margin: auto;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    background-color: #ffb8e2;
+    color: #eb0f8f;
+}

@@ -27,7 +27,7 @@ document.body.append(form);
 //             }) :
 //             console.log("no")))
 
-const makingSections = ["Name", "gender", "location", "diet"];
+const makingSections = ["Name", "gender", "diet"];
 
 makingSections.forEach(element => {
     let sections = document.createElement("section");
