@@ -18,15 +18,23 @@ for (let i = 0; i < makingSections.length; i++) {
     sections.classList = makingSections[i];
     form.append(sections)
 
-    function createHeadings() {
-        const headingsText = ["Gender: ", "Diet: ", "Location to Travel: "]
-        let headings = document.createElement("h1");
-        (sections.className == "gender" ? headings.textContent = headingsText[0] :
-            sections.className == "location" ? headings.textContent = headingsText[2] :
-            sections.className == "diet" ? headings.textContent = headingsText[1] : console.log("no"));
-        sections.append(headings);
-    }
-    (sections.className !== "Name" ? createHeadings() : console.log("no"));
+    // function createHeadings() {
+    //     const headingsText = ["Gender: ", "Diet: ", "Location to Travel: "]
+    //     let headings = document.createElement("h1");
+    //     (sections.className == "gender" ? headings.textContent = headingsText[0] :
+    //         sections.className == "location" ? headings.textContent = headingsText[2] :
+    //         sections.className == "diet" ? headings.textContent = headingsText[1] : console.log("no"));
+    //     sections.append(headings);
+    // }
+    createHeadings = () => {
+            const headingsText = ["Gender: ", "Diet: ", "Location to Travel: "]
+            let headings = document.createElement("h1");
+            (sections.className == "gender" ? headings.textContent = headingsText[0] :
+                sections.className == "location" ? headings.textContent = headingsText[2] :
+                sections.className == "diet" ? headings.textContent = headingsText[1] : console.log("no"));
+            sections.append(headings);
+        }
+        (sections.className !== "Name" ? createHeadings() : console.log("no"));
     if (sections.className !== "location") {
 
         for (let i = 0; i < makingInputs.length; i++) {
