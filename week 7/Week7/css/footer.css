@@ -1,25 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Allura|Arima+Madurai|Arizonia|Bubbler+One|Calligraffitti|Italianno|Life+Savers|Martel+Sans:200|Marvel|Poiret+One|Quicksand|Text+Me+One&display=swap');
 footer {
     clear: both;
-    padding-left: 10%;
+    /* padding-left: 10%; */
     font-family: 'Arima Madurai', cursive;
-    font-size: 2vw;
+    font-size: 2em;
     background: linear-gradient(180deg, rgba(111, 228, 233, 1) 0%, rgba(33, 215, 215, 1) 11%, rgba(30, 227, 117, 1) 59%, rgba(92, 249, 67, 1) 100%);
-display: flex;
+    display: flex;
     align-items: center;
-    flex-direction: column;}
+    flex-direction: column;
+}
 
-footer h1 { 
-    font-size: 3vw;
+footer h1 {
+    font-family: 'Arima Madurai', cursive;
+    font-size: 2.5em;
+    padding-bottom: 2vw;
     margin-bottom: 0.5vw;
 }
-footer h1:hover{
+
+h1:hover {
     text-decoration: underline;
     color: darkgreen;
 }
 
-footer img{
+footer img {
     width: 10%;
     height: auto;
     margin: auto;
-    margin-left: 45%;
+    /* margin-left: 45%; */
 }

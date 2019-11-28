@@ -22,12 +22,13 @@ age.type = "Number"
 // checkbox
 const form = document.getElementById("submit-me")
 const makingInputs = ["date", "color", "range", "radio", "checkbox"]
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < makingInputs.length; i++) {
     let inputs = document.createElement("input");
     inputs.type = makingInputs[i];
     inputs.style.display = "block";
     form.append(inputs)
 }
+
 const gettingAllButtons = document.getElementsByTagName("button")
 const button = gettingAllButtons[0]
 

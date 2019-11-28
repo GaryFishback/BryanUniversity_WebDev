@@ -1,0 +1,13 @@
+main>ul {
+    margin-left: 15vw;
+    list-style: circle;
+}
+
+main>ul>h1 {
+    padding-bottom: 0;
+}
+
+main>ul>li {
+    font-family: 'Arima Madurai', cursive;
+    font-size: 1.5em;
+}

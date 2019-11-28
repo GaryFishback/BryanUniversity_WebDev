@@ -2,39 +2,45 @@
 article {
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 254, 254, 1) 22%, rgba(167, 252, 252, 1) 42%, rgba(33, 215, 215, 1) 76%, rgba(111, 228, 233, 1) 100%);
     display: grid;
-    margin:auto;
+    margin: auto;
 }
-main{
-    font-family: 'Quicksand', sans-serif;;
-    font-size: 1.5vw;
+
+main {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 254, 254, 1) 22%, rgba(167, 252, 252, 1) 42%, rgba(33, 215, 215, 1) 76%, rgba(111, 228, 233, 1) 100%);
-    }
+}
+
 main section {
     float: right;
     padding-left: 5vw;
     padding-top: 5vw;
     padding-bottom: 5vw;
 }
+
 main h1 {
     font-family: 'Arima Madurai', cursive;
-    font-size: 2.5vw;
+    font-size: 2.5em;
     padding-bottom: 2vw;
 }
-main h1:hover{
+
+
+/*h1:hover {
     text-decoration: underline;
     color: darkgreen;
-}
-.contact-text{
-    clear: both;
-}
+}*/
+
 .contact-items {
+    clear: both;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.contactus{
+
+.contactus {
     padding-left: 10%;
 }
+
 .contact {
     background: url(https://github.com/GiselleMartinez006/PublishingAcu_Mockup/blob/master/Week6/img/Backgroundblue.jpg?raw=true);
     padding: 80px 0;
@@ -42,6 +48,7 @@ main h1:hover{
     position: relative;
     z-index: 0;
 }
+
 
 /*darkcover
 
@@ -56,7 +63,10 @@ main h1:hover{
     z-index: -1;
 }*/
 
-.contact-items input/*[type="text"]*/ {
+.contact-items input
+/*[type="text"]*/
+
+{
     border-radius: 10px;
     margin-bottom: 15px;
     padding: 1vw;
@@ -74,7 +84,7 @@ main h1:hover{
     background: blue;
     color: white;
     display: block;
-    font-size: 20px;
+    font-size: 1em;
     margin-top: 15px;
     padding: 1%;
     text-decoration: none;
@@ -83,17 +93,17 @@ main h1:hover{
     border-color: none;
     border-radius: 99.9%;
 }
+
 .contact-items button:hover {
-background: rgb(143, 213, 235);
-color: blue;}
-figure {
-    display: flex;
-    justify-content: center;
+    background: rgb(143, 213, 235);
+    color: blue;
 }
-img{
+
+footer figure {
+    margin: auto;
+}
+
+footer figure img {
     width: 10%;
     height: auto;
 }
-
-
-

@@ -2,4 +2,4 @@
 
 const redBox = document.getElementsByClassName("red-box")
 
-redBox[0].addEventListener("mousedown", (() => document.body.removeChild(redBox[0])))
+redBox[0].addEventListener("mousedown", (() => redBox[0].remove()))

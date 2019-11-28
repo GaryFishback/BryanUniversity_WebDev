@@ -22,11 +22,6 @@ ifAlive = (name) => {
     const firstRoundToOptions = readline.question("Well, 'Due to regulations of the state' we were required to leave you a Hope of escape, and inform you about it. \nYou have 3 options; choose wisely for if thee fail to choose rightfully thee shall no longer be named (in other words, you will die) :) \n Are you Ready to Choose? ");
     choosing = (name, key = false) => {
 
-        // -Hole in the wall should lead to death and end of game
-
-        // -Ability to find a key and store that key as an item for later use
-
-
         ifSearchKey = (name, key) => {
                 searchingKey = (name, key) => {
                     keyFound = (name, key) => {
@@ -40,7 +35,9 @@ ifAlive = (name) => {
                     return ((Math.random() * 10) > 5 ? keyFound(askingName) : keyNotFound(askingName))
                 }
                 const askBeforeSearchingKey = readline.question(`Smart Choice ${name}. \n Now you have the chance to look around and try to find a key, and if you find it, you might be able to open the door successfully. Are you Ready? `);
-                (askBeforeSearchingKey == "yes" || askBeforeSearchingKey == "Yes" ? searchingKey(askingName, key) : ifSearchKey(askingName, key))
+                (askBeforeSearchingKey == "yes" || askBeforeSearchingKey == "Yes" ?
+                    searchingKey(askingName, key) :
+                    ifSearchKey(askingName, key))
                 //console.log(`Lets search for something to open the door!`)
 
 
@@ -63,7 +60,9 @@ ifAlive = (name) => {
             options[index] == 'Search' ? ifSearchKey(askingName, key) :
             console.log(`Oh, seems like you ran out of air too soom.\n RIP ${askingName}`))
     }
-    return (firstRoundToOptions == "yes" || firstRoundToOptions == "Yes" ? choosing(askingName, key = false) : ifAlive(askingName))
+    return (firstRoundToOptions == "yes" || firstRoundToOptions == "Yes" ?
+        choosing(askingName, key = false) :
+        ifAlive(askingName))
 
 
 }

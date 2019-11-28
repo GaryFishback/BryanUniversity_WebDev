@@ -17,9 +17,7 @@ class Employee {
         this.status = status
         employees.push(this)
     }
-    printEmployeeForm() {
-        console.log(` Name: ${this.name}, Job Title: ${this.jobTitle}, Salary: $${this.salary}/year, Status: ${this.status}. `)
-    }
+    printEmployeeForm() { console.log(` Name: ${this.name}, Job Title: ${this.jobTitle}, Salary: $${this.salary}/year, Status: ${this.status}. `) }
 
 }
 
