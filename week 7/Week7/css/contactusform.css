@@ -2,7 +2,6 @@
 article {
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 254, 254, 1) 22%, rgba(167, 252, 252, 1) 42%, rgba(33, 215, 215, 1) 76%, rgba(111, 228, 233, 1) 100%);
     display: grid;
-    margin: auto;
 }
 
 main {
@@ -15,7 +14,7 @@ main section {
     float: right;
     padding-left: 5vw;
     padding-top: 5vw;
-    padding-bottom: 5vw;
+    /* padding-bottom: 5vw; */
 }
 
 main h1 {

@@ -1,64 +1,68 @@
 @import url('https://fonts.googleapis.com/css?family=Allura|Arima+Madurai|Arizonia|Bubbler+One|Calligraffitti|Italianno|Life+Savers|Martel+Sans:200|Marvel|Poiret+One|Quicksand|Text+Me+One&display=swap');
-
-
 header {
-    background: url(https://elisejohnson.co.uk/wp-content/uploads/2018/12/Elise-Johnson-Colchester-Acupuncture-3.jpg) ;
+    background: url(https://elisejohnson.co.uk/wp-content/uploads/2018/12/Elise-Johnson-Colchester-Acupuncture-3.jpg);
     background: contain;
     background-repeat: no-repeat;
     width: 100%;
     height: 50vw;
     padding: 5vw;
 }
+
 header h1 {
-    font-size: 5em;
+    font-size: 5vw;
     text-align: right;
+    margin-right: 5vw;
     color: Blue;
     text-shadow: 5px -1px 2px rgb(251, 253, 140);
 }
-header q{
+
+header q {
     color: blue;
     font-size: 3.5vw;
     width: 35vw;
     text-align: left;
     height: auto;
     margin-left: 5vw;
-
     text-shadow: -3px 3px 30px rgb(206, 252, 1);
 }
+
+
 /* I know in practice the header image does not entirely fill up the header space as the screen size changes, and i did not like it. But my mom said she liked that "it gives it a exciting feel to the page" and this page was already meant to be for her business in a given future after she graduates from her own master. */
-.headerstructurer{
+
+.headerstructurer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-header img{
+
+header img {
     width: 19vw;
     height: auto;
     margin-bottom: 5vw;
     display: none;
 }
-header figure{
+
+header figure {
     margin: auto;
     margin-right: 5vw;
     margin-bottom: 5vw;
 }
 
-
-@media only screen and (max-width:520px ) {
-    header h1{
+@media only screen and (max-width:520px) {
+    header h1 {
         font-size: 5vw;
     }
     header q {
         width: 50vw;
     }
-    header img{
+    header img {
         width: 10vw;
         height: auto;
     }
 }
 
-@media only screen and (min-width: 900px){
-    header img{
+@media only screen and (min-width: 900px) {
+    header img {
         width: 25vw;
         height: auto;
     }
@@ -67,52 +71,48 @@ header figure{
     }
 }
 
-main{
-   background: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(174,255,224,1) 76%, rgba(80,255,188,0.85) 91%);
+main {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 10%, rgba(174, 255, 224, 1) 76%, rgba(80, 255, 188, 0.85) 91%);
+}
 
+footer {
+    padding: 3vw;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(80, 255, 188, 0.85) 9%, rgba(80, 255, 244, 0.85) 29%, rgba(28, 198, 252, 0.85) 65%);
+}
+
+footer h1,
+footer>p span {
+    color: blue;
+    padding-top: 5vw;
+    font-size: 1.7em;
+    font-family: 'Arima Madurai', cursive;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-footer {
+/* footer {
     clear: both;
     padding-left: 10%;
     font-family: 'Arima Madurai', cursive;
-    font-size: 2vw;
-    background: linear-gradient(180deg, rgba(80,255,188,0.85) 9%, rgba(80,255,244,0.85) 29%, rgba(28,198,252,0.85) 65%);
-
-
-display: flex;
+    font-size: 2em;
+    background: linear-gradient(180deg, rgba(80, 255, 188, 0.85) 9%, rgba(80, 255, 244, 0.85) 29%, rgba(28, 198, 252, 0.85) 65%);
+    display: flex;
     align-items: center;
-    flex-direction: column;}
+    flex-direction: column;
+}
 
-footer h1 { 
-    font-size: 3vw;
+footer h1 {
+    font-size: 2em;
     margin-bottom: 0.5vw;
 }
-footer h1:hover{
+
+footer h1:hover {
     text-decoration: underline;
     color: darkgreen;
-}
+}*/
 
-footer img{
-    width: 10%;
+footer img {
+    width: 10em;
     height: auto;
     margin: auto;
-    margin-left: 45%;
 }

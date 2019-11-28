@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Allura|Arima+Madurai|Arizonia|Bubbler+One|Calligraffitti|Italianno|Life+Savers|Martel+Sans:200|Marvel|Poiret+One|Quicksand|Text+Me+One&display=swap');
 
 /*prcing table.css*/
-header{
+
+header {
     display: grid;
     grid-column: repeat(12 fr)
 }
+
 article {
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 254, 254, 1) 22%, rgba(167, 252, 252, 1) 42%, rgba(33, 215, 215, 1) 76%, rgba(111, 228, 233, 1) 100%);
     display: grid;
@@ -15,49 +17,40 @@ article {
 }
 
 .treatments {
-            font-family: 'Arima Madurai', cursive;
-            text-align: center;
-            float: center;
-            color: rgb(27, 7, 207);
+    font-family: 'Arima Madurai', cursive;
+    text-align: center;
+    float: center;
+    color: rgb(27, 7, 207);
     width: 80%;
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.5em;
     /*padding-bottom: 10vw;*/
     line-height: 2vw;
 }
 
-
-.treatments h1{
+.treatments h1 {
     font-family: 'Arima Madurai', cursive;
-    font-size: 2.5vw;
+    font-size: 2.5em;
     padding-bottom: 2vw;
     margin-top: 0.3vw;
 }
 
-
-
-
-
-
-
-
-
-
 table {
     color: rgb(13, 6, 53);
-    font-size: 1.2vw;
+    font-size: 1em;
     text-align: center;
-    width: 60%;
+    width: 60vw;
     height: auto;
     border-collapse: collapse;
     /*margin-top: 100;*/
-    margin-left: 10vw;
+    /* margin-left: 10vw; */
     border-radius: 75%;
     font-family: 'Quicksand', sans-serif;
     margin: auto;
 }
 
-th, td {
+th,
+td {
     border-bottom: 1px solid rgb(0, 18, 176);
     padding: 1vw;
 }
@@ -71,24 +64,25 @@ th {
 
 tr {
     background-color: rgb(220, 241, 245);
-    font-size: 1.2vw;
+    font-size: 1.2em;
 }
 
 tr:hover {
     background-color: rgb(137, 197, 247);
-    color: darkblue;}
-tr:hover >th {
-    color:rgb(220, 241, 245);
+    color: darkblue;
+}
+
+tr:hover>th {
+    color: rgb(220, 241, 245);
     background: rgb(27, 7, 207);
 }
 
 .headerrow {
     padding: 1.2vw;
-    font-size: 2vw;
+    font-size: 2em;
 }
 
-
-.divtoptable{
+.divtoptable {
     height: 5vw;
 }
 
@@ -96,7 +90,8 @@ figure {
     display: flex;
     justify-content: center;
 }
-footer img{
+
+footer img {
     width: 10%;
     height: auto;
 }
@@ -105,36 +100,6 @@ footer {
     clear: both;
     background: linear-gradient(180deg, rgba(111, 228, 233, 1) 0%, rgba(33, 215, 215, 1) 11%, rgba(30, 227, 117, 1) 59%, rgba(92, 249, 67, 1) 100%);
 }
+
+
 /*end of pricing table.css*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

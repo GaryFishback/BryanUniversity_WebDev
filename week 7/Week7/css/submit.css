@@ -1,6 +1,7 @@
 main>ul {
     margin-left: 15vw;
     list-style: circle;
+    margin-bottom: 0;
 }
 
 main>ul>h1 {
@@ -10,4 +11,20 @@ main>ul>h1 {
 main>ul>li {
     font-family: 'Arima Madurai', cursive;
     font-size: 1.5em;
+}
+
+footer {
+    line-height: 1.5em;
+}
+
+@media only screen and (max-width:750px) {
+    main>ul>h1 {
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+    main>ul {
+        text-align: center;
+        list-style: square;
+        font-size: 0.5em;
+    }
 }

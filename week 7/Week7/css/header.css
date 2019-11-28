@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Allura|Arima+Madurai|Arizonia|Bubbler+One|Calligraffitti|Italianno|Life+Savers|Martel+Sans:200|Marvel|Poiret+One|Quicksand|Text+Me+One&display=swap');
-
-
 header {
-    background: url(https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/week%207/Week7/imgs/download.jpg) ;
+    background: url(https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/week%207/Week7/imgs/download.jpg);
     background: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -10,13 +8,15 @@ header {
     box-sizing: content-box;
     font-family: 'Arima Madurai', cursive;
 }
+
 header h1 {
     font-size: 5em;
     text-align: center;
     color: Blue;
     text-shadow: 5px -1px 2px rgba(0, 170, 0, 0.73);
 }
-header q{
+
+header q {
     color: blue;
     font-size: 3vw;
     width: 25vw;
@@ -24,43 +24,47 @@ header q{
     height: auto;
     margin-left: 5vw;
 }
-header q:hover{
+
+header q:hover {
     text-shadow: 1px 1px 17px rgba(10, 255, 0, 1);
 }
+
+
 /* I know in practice the header image does not entirely fill up the header space as the screen size changes, and i did not like it. But my mom said she liked that "it gives it a exciting feel to the page" and this page was already meant to be for her business in a given future after she graduates from her own master. */
-.headerstructurer{
+
+.headerstructurer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-header img{
+
+header img {
     width: 19vw;
     height: auto;
     margin-bottom: 5vw;
-    
 }
-header figure{
+
+header figure {
     margin: auto;
     margin-right: 5vw;
     margin-bottom: 5vw;
 }
 
-
-@media only screen and (max-width:520px ) {
-    header h1{
+@media only screen and (max-width:520px) {
+    header h1 {
         font-size: 5vw;
     }
     header q {
         width: 50vw;
     }
-    header img{
+    header img {
         width: 10vw;
         height: auto;
     }
 }
 
-@media only screen and (min-width: 900px){
-    header img{
+@media only screen and (min-width: 900px) {
+    header img {
         width: 25vw;
         height: auto;
     }
@@ -69,5 +73,6 @@ header figure{
     }
 }
 
-main{
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 254, 254, 1) 22%, rgba(167, 252, 252, 1) 42%, rgba(33, 215, 215, 1) 76%, rgba(111, 228, 233, 1) 100%);}
+main {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 254, 254, 1) 22%, rgba(167, 252, 252, 1) 42%, rgba(33, 215, 215, 1) 76%, rgba(111, 228, 233, 1) 100%);
+}

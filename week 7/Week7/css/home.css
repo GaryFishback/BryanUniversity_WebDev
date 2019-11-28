@@ -7,100 +7,59 @@ header {
     width: 100%;
     height: 50vw;
     text-align: center;
-    padding: 5% ;
-   margin-bottom: 2vw;
+    padding: 5%;
+    margin-bottom: 2vw;
 }
 
-header h1{
+header h1 {
     font-family: 'Arima Madurai', cursive;
     font-size: 5vw;
-    background: -webkit-linear-gradient(180deg, rgba(4,186,255,1) 0%, rgba(18,224,131,1) 25%, rgba(30,255,30,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(4, 186, 255, 1) 0%, rgba(18, 224, 131, 1) 25%, rgba(30, 255, 30, 1) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: ease-in-out 0.1s;
 }
-header h1:hover{
-    background: -webkit-linear-gradient(180deg, rgba(30,255,30,1) 0%, rgba(18,224,131,1) 25%, rgba(4,186,255,1) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;}
-header q {
-    font-family: 'Arima Madurai', cursive;
-    font-size: 4vw;
-    height: auto;
-    background: -webkit-linear-gradient(180deg, rgba(30,255,30,1) 0%, rgba(18,224,131,1) 25%, rgba(4,186,255,1) 100%);
+
+header h1:hover {
+    background: -webkit-linear-gradient(180deg, rgba(30, 255, 30, 1) 0%, rgba(18, 224, 131, 1) 25%, rgba(4, 186, 255, 1) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-header q:hover{
-    background: -webkit-linear-gradient(180deg, rgba(4,186,255,1) 0%, rgba(18,224,131,1) 25%, rgba(30,255,30,1) 100%);
+header q {
+    font-family: 'Arima Madurai', cursive;
+    font-size: 4vw;
+    height: auto;
+    background: -webkit-linear-gradient(180deg, rgba(30, 255, 30, 1) 0%, rgba(18, 224, 131, 1) 25%, rgba(4, 186, 255, 1) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.aboutus{
+
+header q:hover {
+    background: -webkit-linear-gradient(180deg, rgba(4, 186, 255, 1) 0%, rgba(18, 224, 131, 1) 25%, rgba(30, 255, 30, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.aboutus {
     margin-left: 5vw;
     margin-right: 5vw;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* gallery*/
 
-  
-  ul {
+ul {
     list-style: none;
+}
 
-  }
-  
-
-  
-  .grid {
-      margin-top: 3vw;
-      margin-bottom: 5vw;
+.grid {
+    margin-top: 3vw;
+    margin-bottom: 5vw;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 100%;
@@ -108,96 +67,113 @@ header q:hover{
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     background: white;
-  }
-  .grid__figure img {
-    width: 60%;
-    height: auto;}
+}
 
-  @media all and (min-width: 600px) {
+.grid__figure img {
+    width: 60%;
+    height: auto;
+}
+
+@media all and (min-width: 600px) {
     .grid {
-      grid-auto-flow: initial;
-      grid-template-columns: repeat(auto-fit, minmax(auto, 20em));
-      justify-content: center;
+        grid-auto-flow: initial;
+        grid-template-columns: repeat(auto-fit, minmax(auto, 20em));
+        justify-content: center;
     }
-  }
-  .grid__figure {
+}
+
+.grid__figure {
     display: grid;
     grid-template-rows: 15em 1fr;
     grid-gap: 1em;
-  }
-  .grid__figure img {
+}
+
+.grid__figure img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .grid__figure img:hover{
-      transform: scale(2);
-  }
- @media all and (min-width: 900px){
-     .grid{
+    object-fit: cover;
+}
+
+.grid__figure img:hover {
+    transform: scale(2);
+}
+
+p {
+    font-size: 0.5em;
+    color: darkgreen;
+    font-family: 'Arima Madurai', cursive;
+    line-height: 1.5em;
+    margin: 1vw;
+}
+
+@media all and (min-width: 900px) {
+    .grid {
         margin-right: -5vw;
         margin-left: -5vw;
         grid-template-columns: 15em 15em;
         grid-template-rows: auto, auto;
- }
- }
+    }
+}
 
+figure img {
+    width: 10em;
+    height: auto;
+}
 
-
-
-
-figure img{
-    width: 10vw;
-    height: auto;}
-
-section h1{
-    font-size: 2vw;
-      color: teal;
-      font-family: 'Arima Madurai', cursive;
+section h1 {
+    font-size: 2em;
+    color: teal;
+    font-family: 'Arima Madurai', cursive;
     padding-top: -2vw;
 }
- section section h1, footer span{
-      padding-top: 5vw;
-      font-size: 2vw;
-      color: teal;
-      font-family: 'Arima Madurai', cursive;
-  }
-  
-p{
-    font-size: 1.5vw;
-      color: darkgreen;
-      font-family: 'Arima Madurai', cursive;
-      line-height: 2.2vw;
-      margin: 1vw;
+
+section section h1,
+footer span {
+    padding-top: 5vw;
+    font-size: 2em;
+    color: teal;
+    font-family: 'Arima Madurai', cursive;
 }
-main section section{
+
+p {
+    font-size: 1.5em;
+    color: darkgreen;
+    font-family: 'Arima Madurai', cursive;
+    line-height: 2em;
+    margin: 1vw;
+}
+
+main section section {
     margin: 5vw;
 }
-main section figure{
+
+main section figure {
     float: left;
-    
     margin-right: 2vw;
     margin-bottom: 2vw;
 }
-.background{
-    background: linear-gradient(180deg, rgba(255,255,255,1) 52%, rgba(166,243,222,1) 80%, rgba(18,224,168,1) 100%);
-width: 100%;
-height: 100%;
+
+.background {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 52%, rgba(166, 243, 222, 1) 80%, rgba(18, 224, 168, 1) 100%);
+    width: 100%;
+    height: 100%;
 }
-#mapsection{
+
+#mapsection {
     clear: both;
 }
-footer{
+
+footer {
     padding: 3vw;
     text-align: center;
-    background:linear-gradient(180deg, rgba(18,224,168,1) 0%, rgba(5,202,236,1) 100%);
-
-
+    background: linear-gradient(180deg, rgba(18, 224, 168, 1) 0%, rgba(5, 202, 236, 1) 100%);
 }
-footer h1, footer span{
+
+footer h1,
+footer>p span {
     color: blue;
     padding-top: 5vw;
-      font-size: 2vw;
-      font-family: 'Arima Madurai', cursive;
+    font-size: 1.7em;
+    font-family: 'Arima Madurai', cursive;
 }
