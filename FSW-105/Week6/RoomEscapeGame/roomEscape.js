@@ -67,10 +67,6 @@ ifAlive = (name) => {
 
 }
 
-
-
-
-
 ifNotAlive = (name) => {
         console.log(`Oh, seems like you ran out of air too soom.\n RIP ${name}`)
     }

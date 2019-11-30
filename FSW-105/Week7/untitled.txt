@@ -1,0 +1,18 @@
+hello player, give me your name. (saves name here)
+press w to walk or e to exit(
+    if exit: say ByeMessage and close everything.
+    if walking: run random algorithm. 
+        if random algorith is not 1/4 of probaility: keep walking until e or random algorith= 1/4
+        
+        if random algorith is 1/4 of probability: an enemy creature appears AND run another random algorith to determine which creature
+            after determined creature, ask player what to do: "run" or "attack" 
+                if run: 50% of running chance
+                if attack: random algorithm between min and max to determine strength of attack  
+                in either case, after player chooses creature will have chance of attack, random algorith determines strength of attack again
+            if creature kills player. {Everything resets and payer is weaker. } <===== bs
+            if player kills creature he becomes stronger. 
+            either way player can choose to keep walking or not. 
+if player writes "print" at any moment they have to see their scores
+)
+
+
