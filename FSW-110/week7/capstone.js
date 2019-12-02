@@ -1,90 +1,33 @@
-var input1 = document.createElement("input");
-var input2 = document.createElement("input");
-input1.placeholder = "First Number Goes Here";
-input2.placeholder = "Second Number Goes Here";
-document.body.append(input1, input2)
-var buttonOperation = document.createElement("button");
-buttonOperation.textContent = "Submit";
-document.body.append(buttonOperation);
+const form = document.createElement("form")
 
-function operationF() {
-    function add() {
-        function addHeading() {
-            var addResultH = document.createElement("h1");
-            addResultH.textContent = num1.valueAsNumber + num2.valueAsNumber;
-            sections.append(addResultH);
+const input1 = document.createElement("input")
 
-            function addClearButton() {
-                var clearButton = document.createElement("button");
-                clearButton.textContent = "Clear";
-                sections.append(clearButton);
+const input2 = document.createElement("input")
 
-                function removeHeading() {
-                    sections.removeChild(addResultH)
-                    sections.removeChild(clearButton)
-                }
-                clearButton.addEventListener("click", removeHeading)
-            }
-            addClearButton()
-        }
-        console.log(num1.valueAsNumber + num2.valueAsNumber)
-        return addHeading()
-    }
+document.body.append(form)
 
-    function substract() {
-        function subHeading() {
-            var subResultH = document.createElement("h1");
-            subResultH.textContent = num1.valueAsNumber - num2.valueAsNumber;
-            sections.append(subResultH);
+const button = document.createElement("button")
 
-            function subClearButton() {
-                var clearButton = document.createElement("button");
-                clearButton.textContent = "Clear";
-                sections.append(clearButton);
+form.append(input1, input2, button)
 
-                function removeHeading() {
-                    sections.removeChild(subResultH)
-                    sections.removeChild(clearButton)
-                }
-                clearButton.addEventListener("click", removeHeading)
-            }
-            subClearButton()
-        }
-        console.log(num1.valueAsNumber - num2.valueAsNumber)
-        return subHeading()
-    }
+button.textContent = "SUBMIT";
 
-    function multiply() {
-        function mulHeading() {
-            var mulResultH = document.createElement("h1");
-            mulResultH.textContent = num1.valueAsNumber * num2.valueAsNumber;
-            sections.append(mulResultH);
+input1.placeholder = "First Name";
 
-            function mulClearButton() {
-                var clearButton = document.createElement("button");
-                clearButton.textContent = "Clear";
-                sections.append(clearButton);
+input2.placeholder = "Last Name"
 
-                function removeHeading() {
-                    sections.removeChild(mulResultH)
-                    sections.removeChild(clearButton)
-                }
-                clearButton.addEventListener("click", removeHeading)
-            }
-            mulClearButton()
-        }
-        console.log(num1.valueAsNumber * num2.valueAsNumber)
-        return mulHeading()
-    }
+button.addEventListener("click", function(e) {
+    e.preventDefault()
+    const list = document.createElement("ul")
+    document.body.append(list)
+    const inputValues = [input1.value, input2.value]
+    for (let i = 0; i < inputValues.length /*just a number here BUT, if i add anotehr item to this array. The loop runs one more time with it.*/ ; i++) {
+        const li = document.createElement("li")
+        list.append(li)
+        li.textContent = inputValues[i] //this is what is written
+
+    } //loop closes after this brace
+    form.reset() //let's see if it works
 
 
-    return (buttonOperation.textContent === "add" ? add() :
-        buttonOperation.textContent === "substract" ? substract() :
-        buttonOperation.textContent === "multiply" ? multiply() :
-        function errorHeading() {
-            var errorHeadingV = document.createElement("h2");
-            errorHeadingV.textContent = "Error Heading";
-            sections.append(errorHeadingV);
-        })
-}
-buttonOperation.addEventListener("click", operationF)
+})

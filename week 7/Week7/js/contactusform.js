@@ -104,7 +104,7 @@ formButton.addEventListener("click", (e) => {
     }
 
 
-    console.log("black")
+    // console.log("black")
     main.removeChild(removingContactSection)
     main.removeChild(removingContactForm)
     const submitH1 = document.createElement("h1")
