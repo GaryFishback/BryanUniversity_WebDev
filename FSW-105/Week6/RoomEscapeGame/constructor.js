@@ -1,98 +1,135 @@
-const rl = require('readline-sync');
+// const rl = require('readline-sync');
 
-const playerName = rl.question('The year is 1985. Disguised as a human, a cyborg assassin known as a Terminator travels from 2030 to kill Sarah Connor. Your mission is to protect Sarah. \n State your name to accept this mission. ');
+// const playerName = rl.question('The year is 1985. Disguised as a human, a cyborg assassin known as a Terminator travels from 2030 to kill Sarah Connor. Your mission is to protect Sarah. \nState your name to accept this mission. ');
 
-const greetings = `${playerName}, `;
-console.log(greetings)
-    // Ask user to enter "w" to walk
-let action = rl.keyIn(`${playerName}, enter "w" to walk \n`, { limit: '$<w>' });
-// menuId = readline.keyIn(`"w" to walk, or "e" to exit the forest instantly: `, { limit: '$<w , e>' });
-//all of these variable will go inside the function...
-// Now check if they entered w
-if (action === "w") {
-    console.log("And we are walking...");
-    // Chance of enemy appearing
-    function walkingOrEnemy() {
-        let enemies = [
-            "T-1000 Liquid Cyborg ",
-            "T-X Female Cyborg ",
-            "T-3000 Terminator Genisys"
-        ];
-        let enemyhps = 100;
-        let tryAgain = true;
-        let found = false;
-        let hp = 100;
-        let min = 10;
-        let max = 50;
-        if (Math.random() * 100 > 50) { //now it will create a new random every time
-            // Enemy appears
-            // Show enemy's name
-            // generate a random number between 0 and 2
-            let randomEnemy = (Math.floor(Math.random() * 3) + 1) - 1; // number between 0 - 2
-            console.log("Oh no, " + enemies[randomEnemy] + " appeared");
-            // Generate random number to determine if enemy will attack
-            random = Math.random() * 100;
-            // 1/4 th chance that they will get attacked
-            if (random < 25) {
-                console.log("Enemy is attacking!");
-                // They are getting attacked
-                random = Math.random() * 100;
-                // Apply random amount of damage to player
-                hp = hp - random;
-                // Check if hp is less than 0
-                // Is the player dead?
-                if (hp <= 0) {
-                    // Player is dead
-                    console.log("Astalavista baby!");
-                    // Exit here
-                }
-                console.log("You got lucky! " + hp);
-                walkingOrEnemy(playerName)
-            } else {
-                // They did not get attacked
-                action = rl.keyIn(`${playerName}, Do you want to attack? enter (a) or run? enter (r)? \n`, { limit: '$<a, r>' });
-                // Check if they entered a or r
-                if (action === "a") {
-                    // Player decided to attack
-                    // Generate random attack number between min and max
-                    //let randomEnemy = (Math.floor(Math.random() * 3) + 1)  - 1; 
-                    console.log("User decided to attack!");
-                    //we can start it here and see where it goes. 
-                    let enemyAttack = Math.random() * 100;
+// const greetings = `${playerName}, `;
+// console.log(greetings)
 
-                    hp = hp - enemyAttack
-                    console.log(hp) //here i told it to rest the hp - random. and then it console.log(hp)
-                        // so random number is 33, smaller thna 50. 
-                        //and hp is 66. because 100-33. yep. this is what we're going to do with creature hp too. 
-                        //yepx2. this just means yep and yep again.
-                        //want a break? kkx3
-                        //you can make the createhp as hw. or we can meet in a few hours. 
-                        //yes which? lolx3 
-                        //i'll push this to my github and send you the file url. 
-                    if (enemyAttack > 50) { //if the random number is greater than 50
-                        console.log(enemyAttack) //we see what that number is
-                    } else if (enemyAttack < 50) { //if the number is smaller than 50
-                        console.log(`Not greater than 50 ${enemyAttack}`) //we see this, with the number
-                    } else {
-                        console.log(`${enemyAttack} IS 50`) //if is neither, has to be equal 50
-                    } //it should work now
-                }
-                if (action === "r") {
-                    // Player decided to run
-                    console.log("User decided to run!");
-                    walkingOrEnemy(playerName)
-                }
-            }
-        } else {
-            let action = rl.keyIn(`${playerName}, enter "w" to walk \n`, { limit: '$<w>' });
-            if (action === "w") {
-                console.log("And we are walking AGAIN...");
-                walkingOrEnemy(playerName)
-            }
-        }
-    }
-    walkingOrEnemy(playerName)
-}
+// // Ask user to enter "w" to walk
+// let action = rl.keyIn(`${playerName}, enter "w" to walk  OR "e" to exit\n`, { limit: '$<w, e>' });
+
+// // Now check if they entered w
+// if (action === "w") {
+//     console.log("And we are walking...");
+
+//     function playerWalks() {
+//         function gameOver() {
+//             console.log("Game Over!")
+//         }
+//         let enemies = [
+//             "T-1000 Liquid Cyborg ",
+//             "T-X Female Cyborg ",
+//             "T-3000 Terminator Genisys"
+//         ];
+
+//         //let enemyhps = 100;
+//         let hp = 100;
+//         //let min = 10;
+//         //let max = 50;
+
+//         if (Math.random() * 100 > 50) {
+//             // Enemy appears
+//             function attack(playerName) {
+//                 // Player decided to attack
+//                 // Generate random attack number between min and max
+//                 //let randomEnemy = (Math.floor(Math.random() * 3) + 1)  - 1; 
+//                 console.log("User attack!");
+
+//                 let enemyAttack = Math.random() * 100;
+
+//                 hp = hp - enemyAttack
+//                 console.log(hp)
+//                 if (enemyAttack > 50) { //if the random number is greater than 50
+//                     // console.log(`Game Over! ENEMY WINS! ${enemyAttack}`) //we see what that number is
+//                     // gameOver(playerName)
+//                     if (hp <= 10) {
+//                         // Player is dead
+//                         // console.log("Game Over!");
+//                         gameOver(playerName)
+
+//                         // Exit here
+//                     } else if (hp > 10) {
+//                         console.log("You got lucky! " + hp);
+//                         playerWalks(playerName)
+//                     }
+//                 } else if (enemyAttack < 50) { //if the number is smaller than 50
+//                     console.log(`HASTA LA VISTA BABY! You Have Terminated The Enemy! ${enemyAttack}`) //we see this, with the number
+//                     playerWalks(playerName)
+//                 } else {
+//                     console.log(`IT'S A DRAW! GIVE THE ENEMY A HUG AND START OVER! ${enemyAttack}`) //if is neither, has to be equal 50
+//                 }
+//             }
+//             // Show enemy's name
+//             // generate a random number between 0 and 2
+//             let randomEnemy = (Math.floor(Math.random() * 3) + 1) - 1; // number between 0 - 2
+
+//             // Generate random number to determine if enemy will attack
+//             let random = Math.random() * 100;
+//             // 1/4th chance that they will get attacked
+//             // if (random > 50) {
+
+//             console.log("Oh no, " + enemies[randomEnemy] + " appeared");
+//             console.log("Enemy is attacking!");
+
+//             // They are getting attacked
+//             // let random = Math.random() * 100;
+
+//             // Apply random amount of damage to player
+//             hp = hp - (Math.random() * 10);
+//             console.log("You HP is too low :" + hp)
+//             action = rl.keyIn(`${playerName}, Do you want to attack? enter (a) or run? enter (r)? \n`, { limit: '$<a, r>' });
+//             // Check if they entered a or r
+//             if (action === "a") {
+
+//                 attack(playerName)
+//             }
+//             if (action === "r") {
+//                 // Player decided to run
+//                 if ((Math.random * 100) > 50) {
+//                     console.log("User decided to run!");
+//                     playerWalks(playerName)
+//                 } else {
+//                     console.log("You couldn't run away. You must fight")
+//                     attack(playerName)
+//                 }
+//             }
+//             // Is the player dead?
+//             // Check if hp is less than 0
+
+//             // } else {
+//             //     // They did not get attacked
+//             //     // playerWalks(playerName)
+//             //     console.log("red")
+//             // }
+//         } else {
+//             let action = rl.keyIn(`${playerName}, enter "w" to walk OR "e" to exit \n`, { limit: '$<w, e>' });
+//             if (action === "w") {
+//                 console.log("And we are walking AGAIN...");
+//                 playerWalks(playerName)
+//             } else if (action === "e") {
+//                 console.log("bye")
+//             }
+//         }
+//     }
+//     playerWalks(playerName)
+// } else if (action === "e") {
+//     console.log("bye")
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // while(tryAgain) {
@@ -208,3 +245,16 @@ if (action === "w") {
 // while (userHP > 0) {
 //     loop()
 // }
+
+function forwardMarch() {
+    if (Math.floor(Math.random()) * 3 === 0) {
+        console.log("You lucky ducky... you win!!!")
+    } else if (Math.floor(Math.random()) * 3 === 1) {
+        console.log("You've been attacked by a pus monster! What should we do? Press the letter a for attack, or r for run")
+    } else if (Math.floor(Math.random()) * 3 === 2) {
+        console.log("Oh no, you've been attacked by a pack of evil baby gorillas! What should we do? Press the letter a for attack, or r for run")
+    } else if (Math.floor(Math.random()) * 3 === 3) {
+        console.log("Aaah! It's a chupacabra!  What should we do?  Press the letter a for attack, or r for run")
+    }
+}
+forwardMarch(action)
