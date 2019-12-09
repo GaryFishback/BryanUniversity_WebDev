@@ -1,0 +1,78 @@
+{
+    "appetizers": [{
+            "name": "Fried Ravioli",
+            "ingredients": ["uncooked small cheese", "vegetable oil", "salt", "grated parmesan", "marinara sauce"],
+            "description": "Fry uncooked small cheese or meat ravioli in 365 degrees F vegetable oil until golden, about 2 minutes. Drain on paper towels and sprinkle with salt and grated Parmesan. Serve with warm marinara sauce.",
+            "source": "https://www.foodnetwork.com/recipes/articles/50-easy-appetizer-recipes"
+        },
+        {
+            "name": "Cranberry-Pate Bites",
+            "ingredients": ["mayonnaise", "cranberry sauce", "salt", "pepper", "toasted baguette", "sliced country pate", "sliced cornichons"],
+            "description": "Mix 1/4 cup mayonnaise, 2 tablespoons cranberry sauce, and salt and pepper to taste. Spread on toasted baguette slices and top with sliced country pate and sliced cornichons.",
+            "source": "https://www.foodnetwork.com/recipes/articles/50-easy-appetizer-recipes"
+        },
+        {
+            "name": "Deviled Crab Dip",
+            "ingredients": ["crabmeat", "mayonnaise", "dijon mustard", "lemon juice", "chopped parsley", "Worcestershire sauce", "hot sauce", "salt", "crackers"],
+            "description": "Mix 1/2 pound crabmeat, 3 tablespoons mayonnaise, 1 tablespoon each dijon mustard, lemon juice and chopped parsley, 1/4 teaspoon Worcestershire sauce, and salt and hot sauce to taste. Serve with crackers.",
+            "source": "https://www.foodnetwork.com/recipes/articles/50-easy-appetizer-recipes"
+        }
+    ],
+    "cold sandwiches": [{
+            "name": "Caprese Sandwich with Tomato, Mozzarella, and Fresh Basil",
+            "ingredients": ["fresh mozarella", "sweet Italian tomatoes", "rich extra virgin olive oil", "tangy balsamic glaze", "fragrant green basil"],
+            "description": "It takes less than 5 minutes to assemble this classic, Italian submarine sandwich that's packed full of mouth-watering flavors. Made with thick slices of fresh mozzarella, sweet Italian tomatoes, rich extra virgin olive oil, tangy balsamic glaze, and fragrant green basil, the Caprese sandwich is a tasty and satisfying vegetarian lunch that's also super easy to make.",
+            "source": "https://www.thespruceeats.com/best-cold-sandwich-recipes-483354"
+        },
+        {
+            "name": "Shrimp Salad Sandwich",
+            "ingredients": ["1 teaspoon kosher salt", "12 ounces small or medium shrimp (peeled and deveined)", "1 1/2 teaspoons Old Bay seasoning", "2 teaspoons lemon juice", "1/3 cup mayonnaise", "1/4 teaspoon Worcestershire sauce", "1 to 2 ribs celery, chopped (about 1/2 cup)", "1 to 2 scallions, chopped (about 1/3 cup)", "2 sandwich rolls, hoagie rolls, or large hamburger buns (split and toasted)", "3 / 4 cup shredded iceberg or romaine lettuce"],
+            "description": "Cooked shrimp are combined with creamy mayonnaise and savory seasonings in this upscale lunchbox sandwich recipe that's equally delicious on a crusty baguette, or packed into a pita pocket stuffed with crisp lettuce leaves. If you have leftover filling, serve it stuffed into a hollowed-out tomato or artichoke for an elegant appetizer or first course.",
+            "source": "https://www.thespruceeats.com/recipe-shrimp-salad-sandwiches-for-two-9133086"
+        },
+        {
+            "name": "Smoked Salmon Croissant Sandwiches",
+            "ingredients": ["1 (8 ounce) package thinly sliced cold smoked salmon", "2 tablespoons butter", "1 (8 ounce) package cream cheese, softened", "1/2 cup mayonnaise", "1/2 teaspoon dried basil leaves", "1/2 cup fresh whole basil leaves", "16 small croissants, split and toasted "],
+            "description": "Smoked salmon adds a bit of luxury to this sandwich as part of the creamy spread that's accented with fresh basil. Stuffed into a flaky, buttery croissant pastry, it's like having the best brunch dish in the palm of your hand. This recipe calls for first sauteing the cold smoked salmon in a bit of butter, but if you prefer your salmon straight from the package feel free to skip this step.",
+            "source": "https://www.thespruceeats.com/smoked-salmon-croissant-sandwiches-479716"
+        }
+    ],
+    "hot sandwiches": [{
+            "name": "Baked Grilled Cheese Pesto Sandwiches",
+            "ingredients": ["8 slices whole wheat bread", "3 tablespoons butter, softened", "8 thin slices Swiss, Muenster, Colby or Cheddar cheese", "1/4 cup basil pesto"],
+            "description": "Got a crowd to feed? This easy oven method is the best way to make a big bunch of baked grilled cheese pesto sandwiches quickly and easily. This recipe calls for whole wheat, but you can use your favorite bread. ",
+            "source": "https://www.thespruceeats.com/baked-grilled-cheese-pesto-480992"
+        },
+        {
+            "name": "Chicken and Apple Grilled Sandwiches",
+            "ingredients": ["1 (12-ounce) can ​canned chicken (drained)", "1/2 cup mayonnaise", "1 tablespoon lemon juice", "1 1/2 cups grated Swiss cheese", "2 stalks celery (chopped)", "1 apple (finely chopped)", "12 slices whole wheat bread​", "1/4 cup softened butter"],
+            "description": "This classic chicken and apple grilled sandwiches is a nice alternative to plain old grilled cheese. The apple adds crunch and the chicken makes it filling enough for dinnertime. This recipe calls for canned chicken, but feel free to use shredded rotisserie chicken​ or leftover grilled chicken. This sandwich is perfect with a cup of soup on a cold fall evening.",
+            "source": "https://www.thespruceeats.com/grilled-chicken-and-apple-sandwiches-479057"
+        },
+        {
+            "name": "Kentucky Hot Brown Turkey Sandwich",
+            "ingredients": ["turkey", "a cheese sauce", "bacon", "tomato"],
+            "description": "Created in 1926 at the Brown Hotel (hence the name) in Louisville, this open-faced Kentucky hot brown turkey sandwich is layered with turkey, a cheese sauce, bacon, and tomato and then placed under the broiler to brown. Although the cheese sauce is made from scratch, it doesn't take too long—and the results are worth the effort. This is a great way to use up leftover turkey after the holidays! ",
+            "source": "https://www.thespruceeats.com/top-hot-sandwiches-483385"
+        }
+    ],
+    "drinks": [{
+            "name": "Lemonade!",
+            "ingredients": ["water", "squished lemon juice", "sugar to taste"],
+            "description": "Nothing like cold lemonde in the summer. Since we are in winter maybe we could try to microwave it...",
+            "source": "N/A"
+        },
+        {
+            "name": "The Greyhound",
+            "ingredients": ["rocks glass with ice", "two ounces of vodka", "five ounces of grapefruit juice"],
+            "description": "A Don Draper favorite, this refreshing Mad Men–era cocktail is made with vodka and grapefruit juice. Just fill a rocks glass with ice, pour in two ounces of vodka and five ounces of grapefruit juice, and stir well. Garnish with a grapefruit peel if you so desire. Want to get fancy? Add 1/2 ounce of rosemary syrup and a rosemary sprig to give this mixed drink with vodka an herbal touch.",
+            "source": "https://www.mydomaine.com/two-ingredient-cocktails"
+        },
+        {
+            "name": "Orange Juice",
+            "ingredients": ["oranges", "sugar to taste, if applicable"],
+            "description": "Just natural orange juice, cause there's nothing better like it -Unless you get sour oranges.",
+            "source": "N/A"
+        }
+    ]
+}
