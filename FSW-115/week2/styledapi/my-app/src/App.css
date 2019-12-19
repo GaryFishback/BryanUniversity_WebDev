@@ -8,17 +8,18 @@
 
 .swapi{
   color: red;
+  list-style: none;
 }
 .people{
   color:blue;
 }
 .films{
-overflow: auto;
+/* overflow: auto; */
   color: pink;
 }
 .planets{
   color: purple;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .vehicles{
   color: green;
@@ -30,8 +31,9 @@ overflow: auto;
   color: teal;
 }
 .pWrapper{
-  width: 60%;
-  margin: auto;
-  text-align: center;
-  /* overflow: auto; */
+  font-size: 3em;
+  width: 70%;
+  /* margin: auto; */
+  /* text-align: center; */
+  overflow: auto;
 }
