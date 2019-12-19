@@ -1,0 +1,37 @@
+/* classSwapi= "swapi"
+                classPeople= "people"
+                classFilms= "films"
+                classPlanets= "planets"
+                classVehicles= "vehicles"
+                classStarships= "starships"
+                classSpecies= "species" */
+
+.swapi{
+  color: red;
+}
+.people{
+  color:blue;
+}
+.films{
+overflow: auto;
+  color: pink;
+}
+.planets{
+  color: purple;
+  overflow: hidden;
+}
+.vehicles{
+  color: green;
+}
+.starships{
+  color: brown;
+}
+.species{
+  color: teal;
+}
+.pWrapper{
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  /* overflow: auto; */
+}
