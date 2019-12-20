@@ -1,0 +1,24 @@
+div{
+    /* color: red; */
+    width: 75%;
+    font-size: 1.2em;
+    text-align: center;
+    margin: auto;
+}
+
+.li1{
+    font-style: bold;
+    text-decoration: underline;
+}
+
+.li2{
+    font-style: italic;
+}
+
+.li3{
+   font-size: 0.8em;
+}
+
+ul{
+    list-style: none;
+}
