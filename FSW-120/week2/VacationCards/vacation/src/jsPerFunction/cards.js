@@ -33,7 +33,7 @@ function Card() {
               <CardIMG
                 src={
                   card.timeToGo === "Spring"
-                    ? img[0].src
+                    ? img[4].src
                     : card.timeToGo === "Summer"
                     ? img[2].src
                     : card.timeToGo === "Fall"

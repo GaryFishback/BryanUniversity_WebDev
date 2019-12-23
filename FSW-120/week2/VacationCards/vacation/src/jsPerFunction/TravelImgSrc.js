@@ -18,6 +18,11 @@ const imgs = [
     src:
       "https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/week2/VacationCards/vacation/src/imgs/download.jpg",
     alt: "blue"
+  },
+  {
+    src:
+      "https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/week2/VacationCards/vacation/src/imgs/download%20(3).jpg",
+    alt: "blue"
   }
 ];
 
