@@ -36,7 +36,7 @@
 }
 #wrapper {
   /* padding-left: 250px; */
-  grid: auto auto / auto auto auto auto;
+  grid: auto auto / auto auto auto;
   display: grid;
 }
 img {

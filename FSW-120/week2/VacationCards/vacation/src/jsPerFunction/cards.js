@@ -93,7 +93,7 @@ function Card() {
                 }
                 marginTop={
                   card.timeToGo === "Spring"
-                    ? "-110px"
+                    ? "-60px"
                     : card.timeToGo === "Summer"
                     ? "-80px"
                     : card.timeToGo === "Fall"
