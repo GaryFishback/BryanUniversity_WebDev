@@ -30,7 +30,26 @@ function Card() {
         return (
           <div className="container" key={keys}>
             <div className="card">
-              <CardIMG src={img[1].src} alt={img[1].alt} />
+              <CardIMG
+                src={
+                  card.timeToGo === "Spring"
+                    ? img[0].src
+                    : card.timeToGo === "Summer"
+                    ? img[2].src
+                    : card.timeToGo === "Fall"
+                    ? img[3].src
+                    : img[1].src
+                }
+                alt={
+                  card.timeToGo === "Spring"
+                    ? img[0].alt
+                    : card.timeToGo === "Summer"
+                    ? img[2].alt
+                    : card.timeToGo === "Fall"
+                    ? img[3].alt
+                    : img[1].alt
+                }
+              />
               <CardSVG
                 BackgroundColor={
                   card.timeToGo === "Spring"
@@ -48,12 +67,12 @@ function Card() {
                 li1={card.place}
                 li2={
                   card.price < 500
-                    ? card.price + "$"
-                    : card.price <= 1000
-                    ? card.price + "$$"
-                    : card.price + "$$$"
+                    ? "Price: " + card.price + "$"
+                    : "Price: " + card.price <= 1000
+                    ? "Price: " + card.price + "$$"
+                    : "Price: " + card.price + "$$$"
                 }
-                li3={card.timeToGo}
+                li3={"Season: " + card.timeToGo}
                 BackgroundColor={
                   card.timeToGo === "Spring"
                     ? backgroundObject.li11
@@ -62,6 +81,24 @@ function Card() {
                     : card.timeToGo === "Fall"
                     ? backgroundObject.li2
                     : backgroundObject.li1
+                }
+                Color={
+                  card.timeToGo === "Spring"
+                    ? "lightpink"
+                    : card.timeToGo === "Summer"
+                    ? "lightyellow"
+                    : card.timeToGo === "Fall"
+                    ? "red"
+                    : "blue"
+                }
+                marginTop={
+                  card.timeToGo === "Spring"
+                    ? "-110px"
+                    : card.timeToGo === "Summer"
+                    ? "-80px"
+                    : card.timeToGo === "Fall"
+                    ? "-85px"
+                    : "-40px"
                 }
               />
             </div>

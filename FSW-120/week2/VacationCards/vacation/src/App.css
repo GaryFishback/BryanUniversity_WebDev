@@ -1,37 +1,29 @@
-#ul1 {
+@import url("https://fonts.googleapis.com/css?family=Baskervville|Gelasio&display=swap");
+
+/* #ul1 {
   color: lightpink;
   /* margin: auto; */
+/* font-family: "Gelasio", serif; 
   border-radius: 10px;
 }
 #ul2 {
   color: blue;
-  /* margin: auto; */
+  /* margin: auto; 
 }
 
 #ul3 {
   color: red;
-  /* margin: auto; */
+  /* margin: auto; 
 }
 #ul4 {
   color: lightyellow;
-  /* margin: auto; */
+  /* margin: auto; 
 }
 #ul5 {
   color: lightpink;
-  /* margin: auto; */
-}
+  /* margin: auto; 
+}  did this with react later*/
 
-ul {
-  margin-top: -40px;
-  position: relative;
-  /* padding: auto; */
-  list-style: none;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 2.5em;
-}
 /* #wrapper {
   display: grid;
   grid: 500px 500px 500px / auto auto;
@@ -44,7 +36,7 @@ ul {
 }
 #wrapper {
   /* padding-left: 250px; */
-  grid: auto auto / auto auto auto;
+  grid: auto auto / auto auto auto auto;
   display: grid;
 }
 img {
@@ -80,18 +72,39 @@ img {
   opacity: 0;
   animation: ImageFadeIn 0.8s 1.4s forwards;
 }
+.li2 {
+  font-family: "Gelasio", serif;
+  /* font-style: italic; */
+}
+.li3 {
+  font-family: "Gelasio", serif;
+  font-style: italic;
+}
 .li1 {
+  font-family: "Baskervville", serif;
   /* color: white; */
   margin-top: 0;
-  font-weight: 800;
+  text-decoration: underline;
+  font-weight: 600;
   /* font-size: 1.5em; */
   letter-spacing: 0.01em;
+}
+ul {
+  /* margin-top: -65px; */
+  position: relative;
+  /* padding: auto; */
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 2.5em;
 }
 .card__content {
   text-align: center;
   list-style: none;
   /* margin-top: -1rem; */
-  opacity: 0;
+  /* opacity: 0; */
   animation: ContentFadeIn 0.8s 1.6s forwards;
 }
 .card__svg {

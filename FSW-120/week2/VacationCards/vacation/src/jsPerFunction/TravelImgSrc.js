@@ -11,27 +11,14 @@ const imgs = [
   },
   {
     src:
-      "https://images.unsplash.com/photo-1519999482648-25049ddd37b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2126&q=80",
+      "https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/week2/VacationCards/vacation/src/imgs/download%20(1).jpg",
     alt: "blue"
   },
   {
     src:
-      "https://images.unsplash.com/photo-1519999482648-25049ddd37b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2126&q=80",
+      "https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/week2/VacationCards/vacation/src/imgs/download.jpg",
     alt: "blue"
   }
 ];
-const backgroundObject = {
-  li1: "skyblue",
-  li2: "coral",
-  li3: "green",
-  li4: "lightseagreen",
-  li5: "goldenrod",
-  li6: "salmon",
-  li7: "lightskyblue",
-  li8: "rgb(211, 117, 211)",
-  li9: "cyan",
-  li10: "rgb(109, 92, 92)",
-  li11: "magenta"
-};
 
 export default imgs;

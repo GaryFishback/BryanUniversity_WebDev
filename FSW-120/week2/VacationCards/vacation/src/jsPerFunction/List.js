@@ -5,7 +5,11 @@ function UList(props) {
     <ul
       className={props.className}
       id={props.id}
-      style={{ backgroundColor: props.BackgroundColor }}
+      style={{
+        backgroundColor: props.BackgroundColor,
+        marginTop: props.marginTop,
+        color: props.Color
+      }}
     >
       <li className="li1">{props.li1}</li>
       <li className="li2">{props.li2}</li>
