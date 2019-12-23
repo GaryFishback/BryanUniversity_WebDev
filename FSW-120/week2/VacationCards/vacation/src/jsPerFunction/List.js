@@ -1,17 +1,16 @@
-import React from 'react'
+import React from "react";
+// import backgroundObject from './makingObjects/backgroundStyle'
 function UList(props) {
-    console.log(props)
-    return (
-        <ul className={props.className}>
-            <li className={props.classSwapi}>{props.li1}</li>
-            <li className={props.classPeople}>{props.li2}</li>
-            <li className={props.classFilms}>{props.li3}</li>
-            <li className={props.classPlanets}>{props.li4}</li>
-            <li className={props.classVehicles}>{props.li5}</li>
-            <li className={props.classStarships}>{props.li6}</li>
-            <li className={props.classSpecies}>{props.li7}</li>
-            
-        </ul>
-    )
+  return (
+    <ul
+      className={props.className}
+      id={props.id}
+      style={{ backgroundColor: props.BackgroundColor }}
+    >
+      <li className="li1">{props.li1}</li>
+      <li className="li2">{props.li2}</li>
+      <li className="li3">{props.li3}</li>
+    </ul>
+  );
 }
-export default UList
+export default UList;
