@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap");
+@import url("https://db.onlinewebfonts.com/c/a1d8907023856091f1fa137b18616015?family=GlosaW01-RomanItalic");
+/*Copyright (c) 2007 by Dino dos Santos _DSType. All rights reserved.*/
+body {
+  margin: 0;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+.BlogList,
+.Footer {
+  /* color: red; */
+  width: 85%;
+  font-size: 1.2em;
+  text-align: center;
+  margin: auto;
+  font-size: 0.5em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+.twitterWrap {
+  background-image: url("https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/week2/Project1-blogPost/blog-post/src/imgs/twiter.jpg");
+  background-image: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+.twitterWrap:hover {
+  background-image: url("https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/week2/Project1-blogPost/blog-post/src/imgs/twiter_hover.jpg");
+}
+.fbWrap {
+  background-image: url("https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/week2/Project1-blogPost/blog-post/src/imgs/facebook.jpg");
+  background-image: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+.fbWrap:hover {
+  background-image: url("https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/week2/Project1-blogPost/blog-post/src/imgs/facebook_hover.jpg");
+}
+.githubWrap {
+  background-image: url("https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/week2/Project1-blogPost/blog-post/src/imgs/github.jpg");
+  background-image: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+.githubWrap:hover {
+  background-image: url("https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/week2/Project1-blogPost/blog-post/src/imgs/github_hover.jpg");
+}
+.row {
+  display: flex;
+  justify-content: center;
+}
+/*----------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+
+h2 {
+  box-sizing: border-box;
+  color: rgb(33, 37, 41);
+  cursor: pointer;
+  display: block;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  /* height: 86px; */
+  line-height: 43.2px;
+  /* margin-block-end: 10px;
+  margin-block-start: 30px; */
+  margin-bottom: 10px;
+  /* margin-inline-end: 0px;
+  margin-inline-start: 0px; */
+  margin-top: 30px;
+  text-align: left;
+  max-width: 730px;
+  /* text-size-adjust: 100%; */
+  /* width: 609.984px; */
+}
+h3 {
+  box-sizing: border-box;
+  color: rgb(33, 37, 41);
+  cursor: pointer;
+  display: block;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  /* height: 33px;*/
+  line-height: 33.6px;
+  /* margin-block-end: 10px;
+  margin-block-start: 0px; */
+  margin-bottom: 10px;
+  /* margin-inline-end: 0px;
+  margin-inline-start: 0px; */
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  text-align: left;
+  max-width: 730px;
+  /* text-size-adjust: 100%; */
+  /* width: 609.984px; */
+}
+.note {
+  font-family: "GlosaW01-RomanItalic", "Times New Roman", serif;
+  box-sizing: border-box;
+  color: rgb(134, 142, 150);
+  display: block;
+  /* font-family: "Times New Roman", serif; */
+  font-size: 18px;
+  /* font-style: italic; */
+  font-weight: 400;
+  /* height: 27px;*/
+  line-height: 27px;
+  /* margin-block-end: 30px;
+  margin-block-start: 0px; */
+  margin-bottom: 30px;
+  /* margin-inline-end: 0px;
+  margin-inline-start: 0px; */
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  text-align: left;
+  max-width: 730px;
+  /* text-size-adjust: 100%; */
+  /* width: 609.984px; */
+}
+.blogPost {
+  box-sizing: border-box;
+  color: rgb(33, 37, 41);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: Lora, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 400;
+  /* height: auto; */
+  /* line-height: 30px; */
+  text-align: left;
+  text-size-adjust: 100%;
+  max-width: 750px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+hr {
+  width: 730px;
+  color: rgb(134, 142, 150);
+  margin-left: 0px;
+  margin-right: 0px;
+  /* overflow: hidden; */
+  text-align: center;
+  opacity: 0.3;
+}
+.BlogList {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  /* margin-right: -15%; */
+}
+.btnwrap {
+  background-color: rgb(0, 133, 161);
+  border-radius: 0px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(0, 133, 161);
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  display: block;
+  float: right;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  height: 53px;
+  letter-spacing: 1px;
+  line-height: 21px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 177.453px;
+}
+.btn {
+  padding-right: 50px;
+  padding: 10px;
+  width: 750px;
+}
+.btnwrap > a {
+  color: white;
+  text-decoration-line: none;
+}
+#lasthr {
+  width: 100%;
+  /* text-align: left;
+  margin-left: -50%; */
+  overflow: hidden;
+}
+.copyright {
+  font-family: "GlosaW01-RomanItalic", "Times New Roman", serif;
+  color: rgb(108, 117, 125);
+  font-size: 17px;
+  font-weight: 400;
+  height: 21px;
+  line-height: 21px;
+  text-align: center;
+}
+.row > a > div {
+  background-position-x: 50%;
+  background-position-y: 45%;
+  width: 66.66px;
+  height: 58.33px;
+}
+.Footer {
+  padding-top: 50px;
+  padding-bottom: 65px;
+}

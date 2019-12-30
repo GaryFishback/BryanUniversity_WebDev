@@ -2,7 +2,9 @@ import React from "react";
 // import Paragraph from './Paragraph'
 // import UList from "./List";
 // import api from './apiToJs'
-import "./../App.css";
+import "./../css/header.css";
+import "./../css/App.css";
+import "./../css/navbar.css";
 // import numbers from "./makingObjects/keynumbers";
 import Header from "./Header";
 
@@ -15,7 +17,7 @@ function Home() {
       <Header className="Header" />
 
       <BlogList className="BlogList" />
-
+      <hr id="lasthr" />
       <Footer className="Footer" />
     </div>
   );

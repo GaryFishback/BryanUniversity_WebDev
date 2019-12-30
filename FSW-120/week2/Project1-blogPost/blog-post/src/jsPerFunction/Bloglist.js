@@ -22,12 +22,11 @@ function BlogList(props) {
           />
         );
       })}
-      <button className="btnwrap">
-        <a className="btn" href="top">
-          Older Posts →
-        </a>
-      </button>
-      <hr />
+      <div className="btn">
+        <button className="btnwrap">
+          <a href="top">Older Posts →</a>
+        </button>
+      </div>
     </div>
   );
 }

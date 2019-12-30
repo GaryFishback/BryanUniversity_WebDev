@@ -5,25 +5,17 @@ function Footer(props) {
     <footer className={props.className}>
       <div className="container">
         <div className="row">
-          <div className="twitterWrap">
-            <a href="top">
-              <span></span>
-            </a>
-          </div>
           <a href="top">
-            <span className="facebook">
-              <i className="fas fa-circle fa-stack-2x"></i>
-              <i className="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-            </span>
+            <div className="twitterWrap"> </div>
           </a>
           <a href="top">
-            <span className="github">
-              <i className="fas fa-circle fa-stack-2x"></i>
-              <i className="fab fa-github fa-stack-1x fa-inverse"></i>
-            </span>
+            <div className="fbWrap"> </div>
           </a>
-          <p className="copyright text-muted">Copyright © Your Website 2019</p>
-        </div>
+          <a href="top">
+            <div className="githubWrap"> </div>
+          </a>
+        </div>{" "}
+        <p className="copyright">Copyright © Your Website 2019</p>
       </div>
     </footer>
   );

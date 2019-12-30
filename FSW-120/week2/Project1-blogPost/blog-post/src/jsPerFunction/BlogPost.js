@@ -5,11 +5,11 @@ function BlogPost(props) {
   return (
     <div className={props.className}>
       <a href={props.href}>
-        <h2>{props.title}</h2> <h3>{props.subtitle}</h3>
+        <h2>{props.title}</h2>
+        <h3>{props.subtitle}</h3>
       </a>
-      <p>
-        {" "}
-        Posted By {props.author} on {props.date}
+      <p className="note">
+        Posted by <a href={props.AuthorHref}>{props.author}</a> on {props.date}
       </p>
       <hr />
     </div>
