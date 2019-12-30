@@ -94,7 +94,7 @@ h3 {
   box-sizing: border-box;
   color: rgb(33, 37, 41);
   cursor: pointer;
-  display: block;
+  /* display: block; */
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 28px;
   font-weight: 300;
@@ -225,4 +225,8 @@ hr {
 .Footer {
   padding-top: 50px;
   padding-bottom: 65px;
+}
+
+a:hover {
+  color: rgb(0, 133, 161);
 }

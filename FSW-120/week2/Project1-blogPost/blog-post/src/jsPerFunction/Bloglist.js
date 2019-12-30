@@ -19,6 +19,7 @@ function BlogList(props) {
             subtitle={postData.subTitle}
             author={postData.author}
             date={postData.date}
+            aClassName={"hoverblue"}
           />
         );
       })}
