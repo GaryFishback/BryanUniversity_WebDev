@@ -1,59 +1,56 @@
 //Home.js
-import React from 'react'
-// import './home.css'
-// import Paragraph from './Paragraph' this was just for paragraph testing. 
-import Checkboxes from './Checkboxes' 
-function Home() {
+import React, { Component } from "react";
+import HeaderButtons from "./ButtonPerSquare";
+import ReactDOM from "react-dom";
+// import Paragraph from "./Paragraph";
+import SquaresWrapper from "./squaresWrapper";
+class Home extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   // this.ColorSending = this.ColorSending.bind(this);
+  //   this.state = { ColorSending: "" };
+  // }
+  constructor(props) {
+    super(props);
+    this.state = { value: "" };
+  }
 
-    //sp is for the span element in the Checkboxes function. 
+  handleChange = event => {
+    this.setState({ value: event.target });
+    console.log(this.state.value);
+  };
+  render() {
+    //sp is for the span element in the Checkboxes function.
     return (
-        <div> 
-        {/* <Checkboxes /> //uncomment after testing Home// no need to uncomment in the end */}
-        <Checkboxes 
-        className= 'firstCheckbox'
-        sp1 = "placeholderhere"/>
-        <Checkboxes 
-        className= 'secondCheckbox'
-        sp1 = "Placeholder for checkbox2"/>
-         <Checkboxes 
-        className= 'thirdCheckbox'
-        sp1 = "placeholder3"/>
-         <Checkboxes 
-        className= 'fourthCheckbox'
-        sp1 = "placeholder4"/>
-            {/* <Paragraph 
-                className='firstP'
-                p1='hello world'
-                p2='and some other text'
-                p3='hey look its right there' />
-            <Paragraph
-                className='secondP'
-                p1='hello world2'
-                p2='and some other text2'
-                p3='hey look its right there 2' />
-            <Paragraph
-                className='thirdP'
-                p1='hello world 3'
-                p2='and some other text 3'
-                p3='hey look its right there 3' /> */}
-            
-            {/* This was part of the class testing.. 
-             <div id='boxdiv1'>
-                <div className='box1'>this is some box of something</div>
-                <div className='box2'>another box</div>
-                <div className='box3'>another box again</div>
-            </div>
-            <div id='boxdiv2'>
-                <div>this is some box of something2</div>
-                <div>another box2</div>
-                <div>another box again2</div>
-            </div>
-            <div id='boxdiv3'>
-                <div>this is some box of something3</div>
-                <div>another box3</div>
-                <div>another box again3</div>
-            </div> */}
-        </div>
-    )
+      <div className="creatorDiv">
+        <HeaderButtons
+          value={this.state.value}
+          onChange={this.handleChange}
+          backgroundColor={this.state.value}
+          headerClass="HeaderDiv"
+          // color={this.state.ColorSending}
+          // onColorChange={this.ColorSending}
+        />
+
+        <button
+          onMouseDown={() =>
+            ReactDOM.render(
+              <SquaresWrapper
+                sectionClass="squaresWrapper"
+                styleSquare={{ background: "blue" }}
+              />,
+              document.getElementById("blue")
+            )
+          }
+        >
+          Create Color
+        </button>
+        <div
+          id="blue"
+          //   style={{ background: "blue", width: "1850px", height: "2000px" }}
+        ></div>
+      </div>
+    );
+  }
 }
-export default Home
+export default Home;
