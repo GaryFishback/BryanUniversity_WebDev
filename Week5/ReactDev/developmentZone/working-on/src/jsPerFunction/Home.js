@@ -12,21 +12,35 @@ class Home extends Component {
   // }
   constructor(props) {
     super(props);
-    this.state = { value: "" };
+    this.state = {
+      color1: "",
+      color2: "",
+      color3: "",
+      color4: ""
+    };
   }
-
   handleChange = event => {
-    this.setState({ value: event.target });
-    console.log(this.state.value);
+    this.setState = {
+      color1: event.target.value,
+      color2: event.target.value,
+      color3: event.target.value,
+      color4: event.target.value
+    };
   };
   render() {
+    console.log(this.state.color1);
+    console.log(this.state.color2);
+    console.log(this.state.color3);
+    console.log(this.state.color4);
     //sp is for the span element in the Checkboxes function.
     return (
       <div className="creatorDiv">
         <HeaderButtons
-          value={this.state.value}
-          onChange={this.handleChange}
-          backgroundColor={this.state.value}
+          color1={this.state.color1}
+          color2={this.state.color2}
+          color3={this.state.color3}
+          color4={this.state.color4}
+          handleChange={this.handleChange}
           headerClass="HeaderDiv"
           // color={this.state.ColorSending}
           // onColorChange={this.ColorSending}
@@ -37,7 +51,10 @@ class Home extends Component {
             ReactDOM.render(
               <SquaresWrapper
                 sectionClass="squaresWrapper"
-                styleSquare={{ background: "blue" }}
+                background1={this.state.color1}
+                background2={this.state.color2}
+                background3={this.state.color3}
+                background4={this.state.color4}
               />,
               document.getElementById("blue")
             )
