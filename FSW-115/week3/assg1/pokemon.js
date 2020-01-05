@@ -29,10 +29,10 @@ showData = data => {
   for (i = 0; i < data.pokemon.length; i++) {
     const section = document.createElement("section");
     document.body.append(section);
-    const h1 = document.createElement("h1");
-    const h2 = document.createElement("h2");
-    h1.textContent = i + ") Name: " + data.pokemon[i].name;
-    h2.textContent = "URI: " + data.pokemon[i].resource_uri;
-    section.append(h1, h2);
+    const p1 = document.createElement("p");
+    const p2 = document.createElement("p");
+    p1.textContent = i + ") Name: " + data.pokemon[i].name;
+    p2.textContent = "URI: " + data.pokemon[i].resource_uri;
+    section.append(p1, p2);
   }
 };
