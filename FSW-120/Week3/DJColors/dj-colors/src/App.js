@@ -1,8 +1,7 @@
-
 // // import logo from './logo.svg';
-import './App.css'; //this is left because i left the App.css file for the style. 
+import "./App.css"; //this is left because i left the App.css file for the style.
 
-//original App() function. 
+//original App() function.
 // // function App() {
 // //   return (
 // //     <div className="App">
@@ -24,20 +23,19 @@ import './App.css'; //this is left because i left the App.css file for the style
 // //   );
 // // }
 
-
 //my checkbox app() function
 // function App() {
 //     return (
 // <div>
 //             <input type="checkbox" />
 //             <p>Placeholder text here</p>
-            
+
 //             <input type="checkbox" />
 //             <p>Placeholder text here</p>
-            
+
 //             <input type="checkbox" />
 //             <p>Placeholder text here</p>
-            
+
 //             <input type="checkbox" />
 //             <p>Placeholder text here</p>
 //         </div>
@@ -45,15 +43,14 @@ import './App.css'; //this is left because i left the App.css file for the style
 // }
 // export default App;
 
-
-import React from 'react'
-import Home from './jsPerFunction/Home'
+import React from "react";
+import Home from "./jsPerFunction/SecondHome";
 //function components
 function App() {
   return (
     <div>
-       <Home />  
+      <Home />
     </div>
-  )
+  );
 }
-export default App
+export default App;

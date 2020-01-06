@@ -18,7 +18,14 @@ class HeaderButtons extends Component {
               color2={this.props.color2}
               color3={this.props.color3}
               color4={this.props.color4}
-              handleChange={this.props.handleChange}
+              // color2={this.props.color2}
+              // color3={this.props.color3}
+              // color4={this.props.color4}
+              handleChange1={event => this.props.handleChange1(event)}
+              handleChange2={event => this.props.handleChange2(event)}
+              handleChange3={event => this.props.handleChange3(event)}
+              handleChange4={event => this.props.handleChange4(event)}
+              //this.props.handleChange}
               background={this.props.background}
               // className="ColorInput"
               // color={this.props.color}
