@@ -47,6 +47,7 @@ class Home extends React.Component {
     return blue;
   };
   countingClicks() {
+    //this function sets everything to 0/default after the button has been clicked 3 times (count is counted to 3)
     this.state.count !== 3
       ? this.handleButtonClick()
       : this.setState(prevState => {
@@ -83,8 +84,9 @@ class Home extends React.Component {
   handleButtonClick() {
     this.setState(prevState => {
       return {
-        count: prevState.count + 1,
+        count: prevState.count + 1, //here is where count counts. It starts counting everytime it is done counting to 3
         number1: {
+          //to get a random number every time IF select is not true (text is red)
           number:
             this.state.number1.select === false
               ? this.randomNumber()
@@ -140,12 +142,13 @@ class Home extends React.Component {
   }
 
   handlingSelect1 = () => {
+    //select for each diceroll Is the click event of clicking on each one.
     this.setState(prevState => {
       return {
         number1: {
-          number: prevState.number1.number,
+          number: prevState.number1.number, //number remains the same as before click
           select:
-            prevState.number1.select === false
+            prevState.number1.select === false //state of select will change to the opposite of what it already had
               ? true
               : prevState.number1.select === true
               ? false
@@ -153,7 +156,7 @@ class Home extends React.Component {
           color:
             this.state.number1.select === true
               ? "black"
-              : this.state.number1.select === false
+              : this.state.number1.select === false //color changes depending on select state
               ? "red"
               : console.log(this.state.number1.color)
         }
@@ -163,6 +166,7 @@ class Home extends React.Component {
     console.log(this.state.number1.color);
   };
   handlingSelect2 = () => {
+    //repeats itself per dice roll.
     this.setState(prevState => {
       return {
         number2: {
@@ -309,8 +313,8 @@ class Home extends React.Component {
           p1={this.state.number5.number}
         />
 
-        {/* ); */}
-        {/* })} */}
+        {/* I wanted to use map for it, but last time i stumbled in an error when it comes to changing the state of each dice roll individually like that, so until i figure that out i'll have to do it this way */}
+        {/*  */}
         <button onClick={this.countingClicks}>ClickMe for New!</button>
       </div>
     );

@@ -1,0 +1,2 @@
+WE pretty much delete everything here, except for the index.html
+Reset index.html, add the root Div again. 
