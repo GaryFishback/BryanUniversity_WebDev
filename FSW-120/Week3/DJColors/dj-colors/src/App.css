@@ -1,5 +1,5 @@
 * {
-  background: black;
+  background: rgb(66, 64, 64);
   color: white;
 }
 header {
@@ -35,10 +35,11 @@ input::-webkit-color-swatch {
   border-radius: 100%;
 }
 button {
-  margin-left: 50%;
-  margin-right: 50%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 200px;
 }
 .squaresWrapper {
   margin-right: 0;
@@ -53,6 +54,7 @@ button {
   grid-template-columns: 1fr 1fr;
 }
 .Square {
+  border-color: white;
   text-align: center;
   border-radius: 25px;
   /* background: red; */

@@ -6,6 +6,7 @@ class Squares extends Component {
         id={this.props.id}
         className="Square"
         style={{
+          border: "white",
           background:
             this.props.id === "square1"
               ? this.props.background1
@@ -18,7 +19,7 @@ class Squares extends Component {
               : console.log("blue")
         }}
       >
-        Blue
+        Square
       </div>
     );
   }

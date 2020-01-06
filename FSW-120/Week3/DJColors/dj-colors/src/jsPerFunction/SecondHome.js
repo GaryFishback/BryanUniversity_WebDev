@@ -4,14 +4,18 @@ import ReactDOM from "react-dom";
 
 // import Paragraph from "./Paragraph";
 import SquaresWrapper from "./squaresWrapper";
+const rollSound = new Audio(
+  "./../audio/Button_Push-Mike_Koenig-1659525069.wav"
+);
+const backgrounds = ["#ffffff", "#ffffff", "#ffffff", "#ffffff"];
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      color1: { hex: "" },
-      color2: { hex: "" },
-      color3: { hex: "" },
-      color4: { hex: "" }
+      color1: { hex: backgrounds[0] },
+      color2: { hex: backgrounds[1] },
+      color3: { hex: backgrounds[2] },
+      color4: { hex: backgrounds[3] }
     };
   }
 
@@ -45,8 +49,13 @@ class Home extends Component {
           }
           headerClass="HeaderDiv"
         />
+
         <button
-          onMouseDown={() =>
+          onMouseDown={() => {
+            console.log(this.state.color1.hex);
+            console.log(this.state.color2.hex);
+            console.log(this.state.color3.hex);
+            console.log(this.state.color4.hex);
             ReactDOM.render(
               <SquaresWrapper
                 sectionClass="squaresWrapper"
@@ -60,10 +69,106 @@ class Home extends Component {
                 // {this.state.color4}
               />,
               document.getElementById("blue")
-            )
-          }
+            );
+          }}
         >
-          Create Color
+          I Create/Update the Square!
+        </button>
+        <button
+          onMouseDown={() => {
+            this.setState(prevState => {
+              return {
+                color1: {
+                  //to get a random number every time IF select is not true (text is red)
+                  hex:
+                    this.state.color1.hex === "#ffffff" ? "#000000" : "#ffffff"
+                },
+                color2: {
+                  hex:
+                    this.state.color2.hex === "#ffffff" ? "#000000" : "#ffffff"
+                },
+                color3: {
+                  hex:
+                    this.state.color3.hex === "#ffffff" ? "#000000" : "#ffffff"
+                },
+                color4: {
+                  hex:
+                    this.state.color4.hex === "#ffffff" ? "#000000" : "#ffffff"
+                }
+              };
+            });
+          }}
+        >
+          WhiteORBlack
+        </button>
+        <button
+          onMouseDown={() => {
+            this.setState(prevState => {
+              return {
+                color1: {
+                  //to get a random number every time IF select is not true (text is red)
+                  hex: "purple"
+                },
+                color2: {
+                  hex: "purple"
+                },
+                color3: {
+                  hex: prevState.color3.hex
+                },
+                color4: {
+                  hex: prevState.color4.hex
+                }
+              };
+            });
+          }}
+        >
+          Top2GoPURPLE
+        </button>
+        <button
+          onMouseDown={() => {
+            this.setState(prevState => {
+              return {
+                color1: {
+                  hex: prevState.color1.hex
+                },
+                color2: {
+                  hex: prevState.color2.hex
+                },
+                color3: {
+                  hex: "blue"
+                },
+                color4: {
+                  hex: prevState.color4.hex
+                }
+              };
+            });
+          }}
+        >
+          LEFTBottom
+        </button>
+        <button
+          onMouseDown={() => {
+            // rollSound.play();
+
+            this.setState(prevState => {
+              return {
+                color1: {
+                  hex: prevState.color1.hex
+                },
+                color2: {
+                  hex: prevState.color2.hex
+                },
+                color3: {
+                  hex: prevState.color3.hex
+                },
+                color4: {
+                  hex: "blue"
+                }
+              };
+            });
+          }}
+        >
+          RIGHTBottom
         </button>
         <div id="blue"></div>
       </div>

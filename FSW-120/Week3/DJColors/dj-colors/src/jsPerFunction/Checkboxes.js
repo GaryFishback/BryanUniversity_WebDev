@@ -74,9 +74,6 @@ class CheckBoxes extends React.Component {
   // };
 
   render() {
-    // const [initial, setInitial] = useState("#5e72e4");
-    // const [color, setColor] = useState({});
-    // let color;
     return (
       <div>
         <input
@@ -92,15 +89,6 @@ class CheckBoxes extends React.Component {
               : this.props.class === "input4"
               ? this.props.color4
               : console.log("blue")
-            //   this.props.class === "input1"
-            //     ? this.props.color1
-            //     : this.props.class === "input2"
-            //     ? this.props.color2
-            //     : this.props.class === "input3"
-            //     ? this.props.color3
-            //     : this.props.class === "input4"
-            //     ? this.props.color4
-            //     : console.log("blue")
           }
           onChange={
             this.props.class === "input1"
@@ -114,16 +102,7 @@ class CheckBoxes extends React.Component {
               : console.log("blue")
           }
         />
-        <div
-          style={{
-            width: 50,
-            height: 50,
-            marginBottom: 20,
-            backgroundColor: this.props.color3
-          }}
-        ></div>
-        <br />
-        {/* <InputColor initialHexColor={initial} onChange={setColor} /> */}
+        <span>{this.props.sp1}</span>
       </div>
     );
   }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Squares from "./Squares";
 // import "./../App.css";
 const numbers = ["1", "2", "3", "4"];
-// const backgrounds = ["#ffffff", "#F7E3B3", "#71EB92", "#000fff"];
+
 const classes = ["square1", "square2", "square3", "square4"];
 class SquaresWrapper extends Component {
   // constructor(props) {
