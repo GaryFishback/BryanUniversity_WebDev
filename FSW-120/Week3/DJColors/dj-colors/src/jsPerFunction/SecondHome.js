@@ -4,9 +4,9 @@ import ReactDOM from "react-dom";
 
 // import Paragraph from "./Paragraph";
 import SquaresWrapper from "./squaresWrapper";
-const rollSound = new Audio(
-  "./../audio/Button_Push-Mike_Koenig-1659525069.wav"
-);
+// const rollSound = new Audio(
+//   "./../audio/Button_Push-Mike_Koenig-1659525069.wav"
+// );
 const backgrounds = ["#ffffff", "#ffffff", "#ffffff", "#ffffff"];
 class Home extends Component {
   constructor(props) {

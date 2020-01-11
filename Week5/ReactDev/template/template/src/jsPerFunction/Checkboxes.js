@@ -1,31 +1,12 @@
-import React from 'react'
-function CheckBoxes(props) {
+import React, {Component} from 'react'
+ class CheckBoxes extends Component{
+     render(){
     return (
-        <div className={props.className}>
+        <div className={this.props.className}>
             <input type="checkbox" />
-            <span>{props.sp1}</span>
+            <span>{this.props.sp1}</span>
         </div>
     )
-}
+}}
 export default CheckBoxes
 
-
-////my checkbox app() function
-// function App() {
-//     return (
-// <div>
-//             <input type="checkbox" />
-//             <p>Placeholder text here</p>
-            
-//             <input type="checkbox" />
-//             <p>Placeholder text here</p>
-            
-//             <input type="checkbox" />
-//             <p>Placeholder text here</p>
-            
-//             <input type="checkbox" />
-//             <p>Placeholder text here</p>
-//         </div>
-//     )
-// }
-// export default App;
