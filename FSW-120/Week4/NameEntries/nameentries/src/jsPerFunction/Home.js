@@ -22,11 +22,13 @@ class Home extends Component {
     var li = document.createElement("li");
     li.textContent = this.state.Name;
     document.getElementById("NameList").append(li);
-    // ReactDOM.render(
+    // var li = React.createElement("li", null, "Blue");
+    // ReactDOM.render(li, document.getElementById("NameList"));
     //   <List li={this.state.Name} />,
     //   document.getElementById("NameList")
     // ); //I choose to use the traditional document.createElement method because the render method was not "adding the li element" but replacing everything inside the ul with it.
   };
+
   render() {
     //sp is for the span element in the Checkboxes function.
     return (

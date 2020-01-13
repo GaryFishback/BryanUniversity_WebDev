@@ -1,5 +1,3 @@
-var readline = require("readline-sync");
-
-console.log("blue");
-readline.question("May I have your name? ");
-console.log("Hi " + userName + "!");
+const readline = require("readline-sync");
+var firstNum = readline.question("Please enter first number ");
+console.log("First number is " + firstNum);
