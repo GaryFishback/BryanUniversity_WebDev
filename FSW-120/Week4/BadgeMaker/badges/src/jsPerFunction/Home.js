@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-// import ReactDOM from "react-dom";
-// import Badge from "./List";
 const typesArray = ["text", "text", "email", "text", "number", "text"];
 const placeholdersArray = [
   "FirstName",
@@ -10,6 +8,7 @@ const placeholdersArray = [
   "Phone",
   "FavoriteFood"
 ];
+var ifDisabled = false;
 
 class Home extends Component {
   constructor() {
@@ -22,23 +21,22 @@ class Home extends Component {
       PlaceofBirth: "",
       Phone: "",
       FavoriteFood: "",
-      ifDisabled:
-        this.state.textArea.length <= 3 ||
-        this.state.FirstName.length <= 3 ||
-        this.state.LastName <= 3 ||
-        this.state.Email.length <= 3 ||
-        this.state.PlaceofBirth <= 3 ||
-        this.state.Phone <= 9 ||
-        this.state.FavoriteFood <= 3
-          ? true
-          : false
+      count: 0
+      //false
     };
   }
+
   creatingBadge = () => {
+    this.setState({
+      count: this.state.count + 1
+    });
     var div = document.createElement("div");
     div.id = "Badge";
     document.getElementById("Badges").append(div);
     var badgesHeading = document.createElement("h1");
+    badgesHeading.style.background =
+      this.state.count % 2 === 0 ? "red" : "blue";
+    // console.log(this.state.count % 2);
     badgesHeading.textContent = "Badge: ";
     badgesHeading.className = "BadgeHeading";
     div.append(badgesHeading);
@@ -53,6 +51,7 @@ class Home extends Component {
     stateArray.map((state, nums) => {
       var h1 = document.createElement("h1");
       h1.textContent = placeholdersArray[nums] + ": " + state;
+
       div.append(h1);
     });
     // var pdiv = document.createElement("div");
@@ -62,8 +61,19 @@ class Home extends Component {
     div.append(p);
   };
   handleClick = e => {
+    this.state.textArea.length <= 3 ||
+    this.state.FirstName.length <= 3 ||
+    this.state.LastName.length <= 3 ||
+    this.state.Email.length <= 3 ||
+    this.state.PlaceofBirth.length <= 3 ||
+    this.state.Phone.length <= 9 ||
+    this.state.FavoriteFood.length <= 3
+      ? (ifDisabled = true)
+      : (ifDisabled = false);
+
     e.preventDefault();
-    return this.state.ifDisabled === true ? null : this.creatingBadge();
+
+    return ifDisabled === true ? null : this.creatingBadge();
   };
   handleChange = event => {
     const { name, value } = event.target;

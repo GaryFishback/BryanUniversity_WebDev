@@ -11,6 +11,9 @@
   border-radius: 10px;
   word-wrap: break-word;
 }
+h1 {
+  font-size: 22px;
+}
 button {
   margin: auto;
   /* margin-right: 0;
@@ -31,8 +34,10 @@ button:hover {
 
 textarea {
   grid-column: span 2;
+  word-wrap: break-word;
 }
 #Badge {
+  /* overflow: hidden; */
   margin: auto;
   width: 60%;
   overflow: auto;
@@ -61,6 +66,7 @@ textarea {
   grid-column: span 2;
 }
 p {
+  margin: 15px;
   width: 90%;
   height: auto;
   padding: 10px;
@@ -96,7 +102,7 @@ p {
     border-radius: 10px;
   }
 }
-@media (min-width: 1300px) {
+/* @media (min-width: 1300px) {
   form {
     grid-gap: 50px;
     display: grid;
@@ -133,4 +139,4 @@ p {
   button {
     grid-column: span 3;
   }
-}
+} */
