@@ -1,34 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Baskervville|Gelasio&display=swap");
 
-/* #ul1 {
-  color: lightpink;
-  /* margin: auto; */
-/* font-family: "Gelasio", serif; 
-  border-radius: 10px;
-}
-#ul2 {
-  color: blue;
-  /* margin: auto; 
-}
-
-#ul3 {
-  color: red;
-  /* margin: auto; 
-}
-#ul4 {
-  color: lightyellow;
-  /* margin: auto; 
-}
-#ul5 {
-  color: lightpink;
-  /* margin: auto; 
-}  did this with react later*/
-
-/* #wrapper {
-  display: grid;
-  grid: 500px 500px 500px / auto auto;
-} */
-
 * {
   box-sizing: border-box;
   line-height: 1.5;
