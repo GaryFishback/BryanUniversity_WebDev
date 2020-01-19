@@ -4,7 +4,10 @@ class Home extends Component {
   render() {
     //sp is for the span element in the Welcome!es function.
     return (
-      <div>
+      <div className="Home">
+        <figure>
+          <img src="./../imgs/SharedScreenshot.jpg"></img>
+        </figure>
         <Paragraphs className="firstWelcome!" sp1="Welcome!" />
         <Paragraphs className="secondWelcome!" sp1="Welcome! for Welcome! 2 " />
         <Paragraphs className="thirdWelcome!" sp1="Welcome! 3" />

@@ -1,3 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Quicksand&display=swap");
 footer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  /* height: 200;  */
+  padding: 15px;
+  width: 100%;
+  background: white;
+  color: black;
+}
+/* p {
+  color: #585858;
+} */
+body {
+  background: black;
+  overflow-x: hidden;
+  font-family: "Quicksand", sans-serif;
+  min-height: 100vh;
+}
+a {
+  font-family: "Lobster", cursive;
+  color: red;
+  text-decoration: none;
+  font-size: 20px;
+}
+span {
+  font-family: "Lobster", cursive;
+}
+footer > div {
   display: flex;
+}
+ul {
+  vertical-align: bottom;
+  /* width: 200%; */
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 50px;
+}
+li {
+  padding: 15px;
+  margin: -15px;
+}
+li:hover {
+  border: red solid 2px;
+  padding: 15px;
+}
+h1 {
+  color: red;
+  font-family: "Lobster", cursive;
+  padding-right: 10em;
+}
+
+h2 {
+  font-family: "Lobster", cursive;
+}
+h3 {
+  color: yellow;
+  font-family: "Lobster", cursive;
+  padding-right: 10em;
+}
+.home,
+.services,
+.about {
+  /* background: #c2bfbf; */
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  color: red;
+}
+/* .about {
+  background: #c2bfbf;
+  color: red;
+}
+.services {
+  background: #c2bfbf;
+  color: red;
+} */
+main {
+  display: grid;
+  grid-template-columns: auto 60% auto;
+  grid-template-rows: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(88, 88, 88, 1) 0%,
+    rgba(137, 136, 136, 1) 12%,
+    rgba(194, 191, 191, 1) 21%,
+    rgba(194, 191, 191, 1) 76%,
+    rgba(137, 136, 136, 1) 87%,
+    rgba(88, 88, 88, 1) 100%
+  );
+}
+
+footer ul {
+  vertical-align: top;
+  /* width: 200%; */
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 50px;
+  margin: 25px;
+}
+
+footer li:hover {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: red solid 8px;
 }
