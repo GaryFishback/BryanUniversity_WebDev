@@ -6,7 +6,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <figure>
-          <img src="./../imgs/SharedScreenshot.jpg"></img>
+          <img src="https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/Week5/mock_spa_pumbling/src/imgs/SharedScreenshot.jpg"></img>
         </figure>
         <Paragraphs className="firstWelcome!" sp1="Welcome!" />
         <Paragraphs className="secondWelcome!" sp1="Welcome! for Welcome! 2 " />
