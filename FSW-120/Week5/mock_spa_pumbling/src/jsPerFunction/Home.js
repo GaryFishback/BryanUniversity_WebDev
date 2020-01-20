@@ -35,8 +35,8 @@ class Home extends Component {
             We Got You!
           </h2>
         </section>
-        <section></section>
-        <section></section>
+        {/* <section></section>
+        <section></section> */}
       </div>
     );
   }

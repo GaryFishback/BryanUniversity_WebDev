@@ -145,7 +145,8 @@ list.addEventListener("click", () => {
             for (i = 0; i < data.length; i++) {
               if (e.target.className === data[i]._id) {
                 e.preventDefault();
-
+// console.log(data[i]._id)
+// console.log(e.target.className)
                 var updatingForm = document.createElement("updatingForm");
                 details.append(updatingForm);
 
@@ -205,7 +206,6 @@ list.addEventListener("click", () => {
                           var updateData = response.data;
                           // console.log(updateData);
                           editedTodo(updateData);
-
                           // updateData(updateData);
                         })
                         .catch(error => console.log(error));
@@ -304,7 +304,7 @@ list.addEventListener("click", () => {
                                                                                               deleteButton.addEventListener("click", deleteFunction);
 
                                                                                               details.append(editButton);
-                                                                                              editButton.addEventListener("click", editFunction);
+                                                                                              editButton.addEventListener("click", editedTodo);
                                                                                               // }
                                                                                             };
                     }

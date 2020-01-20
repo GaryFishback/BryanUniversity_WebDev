@@ -120,3 +120,28 @@ footer li:hover {
   width: 350px;
   height: auto;
 }
+.services img {
+  width: 250px;
+  height: auto;
+}
+.services section {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border: yellow 5px double;
+  height: auto;
+}
+.services section:hover {
+  border: red 5px double;
+}
+.services section:hover > h2 {
+  color: yellow;
+}
+/* .services section:hover > p {
+  color: yellow;
+} */
+@media only screen and (max-width: 600px) {
+  body {
+    color: green;
+  }
+}
