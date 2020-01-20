@@ -108,3 +108,7 @@ footer li:hover {
   border-left: none;
   border-bottom: red solid 8px;
 }
+.Home section figure img {
+  width: 450px;
+  height: auto;
+}
