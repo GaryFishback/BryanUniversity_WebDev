@@ -112,3 +112,11 @@ footer li:hover {
   width: 450px;
   height: auto;
 }
+.about section figure img {
+  width: 450px;
+  height: auto;
+}
+.about img {
+  width: 350px;
+  height: auto;
+}
