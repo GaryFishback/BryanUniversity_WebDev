@@ -1,0 +1,24 @@
+.aetheticsSection {
+  color: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.listsSection {
+  color: blue;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  text-align: center;
+}
+
+.listsSection h1 {
+  margin: 0;
+  text-decoration: underline;
+  /* color: green; */
+}
+
+.listsSection h3 {
+  text-align: left;
+  margin-left: 45%;
+  /* color: purple; */
+}
