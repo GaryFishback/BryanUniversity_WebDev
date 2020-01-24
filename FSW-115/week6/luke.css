@@ -1,13 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Quicksand&display=swap");
+
+* {
+  font-family: "Lobster", regular;
+}
+body > h1 {
+  color: lightcyan;
+  position: relative;
+  text-align: center;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.336);
+}
 .aetheticsSection {
-  color: red;
+  text-align: center;
+  color: lightcyan;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: lightblue 5px double;
 }
 .listsSection {
-  color: blue;
+  color: lightblue;
   display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
+  /* flex-direction: column; */
+  justify-content: center;
   text-align: center;
 }
 
@@ -19,6 +33,30 @@
 
 .listsSection h3 {
   text-align: left;
-  margin-left: 45%;
+  /* margin-left: 45%; */
   /* color: purple; */
+}
+body {
+  background-image: url(./night-sky-stars.jpg);
+  /* background-size: 100%; */
+  background-repeat: repeat-y;
+  background-repeat: repeat-x;
+  background-repeat: space;
+}
+button {
+  background: white;
+  color: blue;
+  /* margin-right: 50%; */
+  font-size: 1em;
+  margin-left: 45%;
+  margin-right: 50%;
+  padding: 0.5em 2em;
+  margin-top: 5%;
+  border: 2px solid blue;
+  border-radius: 3px;
+}
+button:hover {
+  background: blue;
+  color: white;
+  border: 2px solid white;
 }

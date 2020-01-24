@@ -39,3 +39,94 @@
 //   }, 0);
 // };
 // total();
+
+// code formula for functionality, input, store, process, and output!
+const listArray = [];
+// //search local for array
+// // const searchLocal = localStorage.getItem("listArray");
+if (listArray !== null) {
+  console.log(listArray);
+  //   JSON.parse(listArray);
+} else {
+  console.log("Continue to work on these bugs");
+}
+// const searchObj = {  //commented this out the rest didn't even find out. Is pretty much useless here.
+//   searchArray: ""
+// };
+//filter through the array to grab the data //same goes for this. You didn't even call this function
+// const filterArray = function(grabArray, objSearch) {
+//   grabArray.filter(function(filterThrough) {
+//     return filterThrough.todoTask
+//       .toLowerCase()
+//       .includes(objSearch.searchArray.toLowerCase());
+//   });
+// };
+// This function is to create a html element and append the it to the page for each item added to array
+
+// const render = function() {
+//     //now we're talking. Here is where the magic happens
+//     listArray.forEach(function(todoText) {
+//       let createdEl = document.createElement("p");
+//       createdEl.textContent = todoText.todoTask;
+//       document.querySelector("#added-value").appendChild(createdEl);
+//       let createButt = document.createElement("button");
+//       createButt.textContent = "Complete";
+//       //figure out why multiple buttons appear on the doc when clicking on add task
+//       document.querySelector("#added-value").appendChild(createButt); // add .appendchild(createButt)
+//     });
+//     //when the button is pressed the button renders on the screen just like the text rendering
+//     //  listArray.forEach(function (button){
+//     // })
+//   };
+//   document.querySelector("#added-value").innerHTML = "";
+//   /* when clicking the button the value entered in the input box should but pushed in the listArray and
+//   added to the list on the html doc */
+//   /*This function below is to add the value into the array and into local storage */
+//   document.querySelector("#form").addEventListener("submit", function(e) {
+//     e.preventDefault();
+//     //pushes the input entered into the array
+//     listArray.push({
+//       todoTask: e.target.elements.todoList.value,
+//       completed: false
+//     });
+//     // store the data in local storage //you don't have where to store the data here..
+//     //   localStorage.setItem("Todo Array", JSON.stringify(listArray)); //JSON here again
+//     e.target.elements.todoList.value = "";
+//     render();
+//   });
+
+//i'm working with the matter down here- to make it cleaner
+
+const render = function() {
+  document.querySelector("#added-value").innerHTML = ""; //line from 113
+  listArray.forEach(function(todoText) {
+    //Here is where the magic happens
+
+    let createdEl = document.createElement("p");
+    createdEl.textContent = todoText;
+    document.querySelector("#added-value").appendChild(createdEl);
+    let createButt = document.createElement("button");
+    createButt.textContent = "Complete";
+    //figure out why multiple buttons appear on the doc when clicking on add task - i'll answer that later, cause you have to see it.
+    document.querySelector("#added-value").appendChild(createButt);
+
+    createButt.addEventListener("click", () => {
+      document.querySelector("#added-value").innerHTML = "";
+    });
+    console.log(listArray);
+  });
+};
+// document.querySelector("#added-value").innerHTML = ""; //this line has no purpose here, you want it on line 103
+
+document.querySelector("#form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  listArray.push(
+    e.target.todoList.value //,
+    // completed: false
+  );
+  /*store the data in local storage => you don't have where to store the data here... save all of this for when working with apis and servers. 
+  As it is- we will be using AXIOS for apis. (FSW-105) Axios takes care of json.stringify and json.parse on its own. */
+  //   localStorage.setItem("Todo Array", JSON.stringify(listArray)); //JSON here again
+  e.target.todoList.value = "";
+  render();
+});
