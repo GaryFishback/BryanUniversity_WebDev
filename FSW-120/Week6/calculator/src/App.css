@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,7 +35,38 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
+
 body {
-  background-image: "./img/download.jpg";
+  background-image: url("https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/Week6/calculator/src/img/download.jpg");
+  background-repeat: stretch;
+}
+.container {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-top: 100px;
+  text-align: center;
+  height: auto;
+}
+.container button {
+  font-family: Volkorn;
+  /* max-width: 180%;
+  max-height: 100%; */
+  /* width: 220px;
+  height: 70px; */
+  text-align: center;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto auto auto auto auto auto;
+}
+/* #wrapper > :nth-child(1) {
+ color: red; 
+} */
+
+#wrapper > :nth-child(6) {
+  grid-row: 4;
 }
