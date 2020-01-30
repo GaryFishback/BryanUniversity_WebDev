@@ -7,15 +7,69 @@
   grid-template-rows: 95% 5%;
 }
 #left {
-  background-image: url();
+  background-image: url(https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/Week7/twitter_spa/src/imgs/LoginPage_leftbird.jpg); /*url(https://i.pinimg.com/564x/ef/b2/73/efb27314e7a44d188f4488816cddaf77.jpg);*/
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 #right {
-  background-image: url();
+  /* background-image: url(https://i.pinimg.com/564x/ef/b2/73/efb27314e7a44d188f4488816cddaf77.jpg); */
+  background: white;
 }
 footer {
   grid-column: span 2;
 }
-
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
+  margin: 0;
+}
 main {
+  margin: 0;
   height: 100%;
+}
+#twitter_icon {
+  /* display: block; */
+  fill: rgb(29, 161, 242);
+  height: 41.25px;
+  width: 41.25px;
+}
+svg {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  fill: rgb(255, 255, 255);
+  flex-shrink: 0;
+  font-size: 23px;
+  height: 28.75px;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  pointer-events: auto;
+  position: relative;
+  text-size-adjust: 100%;
+  user-select: none;
+  /* vertical-align: text-bottom; */
+  width: 28.75px;
+  -webkit-box-direction: normal;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h2 {
+  display: inline;
+}
+.left_center_div {
+  grid-row: 2;
+  grid-column: 2;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+#left {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
