@@ -21,7 +21,10 @@ const Container = styled.div`
 //any component that consumes lots of props
 function TweetPreview({ id, details, authorName, time, ...rest }) {
   return (
-    <Link to={`/${id}`} style={{ textDecoration: "none", color: "inherit" }}>
+    <Link
+      to={`/LoggedIn/${id}`}
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
       <Container {...rest}>
         <div>X</div>
         <div>{details}</div>

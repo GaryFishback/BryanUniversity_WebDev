@@ -9,7 +9,7 @@ import Home from "./Home";
 import LeftNav from "./LeftNav";
 // import NavBar from "./jsPerFunction/Navbar";
 // import Footer from "./jsPerFunction/Footer";
-// import About from "./jsPerFunction/About";
+import Details from "./Tweets/Details/details";
 // import Services from "./jsPerFunction/Services";
 
 //function components
@@ -33,7 +33,8 @@ class LoggedIn extends Component {
           </section>
           <section id="switcher_center">
             <Switch>
-              <Route exact path="/LoggedIn/" render={() => <Home />} />
+              <Route exact path="/LoggedIn" component={Home} />
+              <Route exact path="/LoggedIn/:id" component={Details} />
               {/* <Route exact path="/LoggedIn" render={() => <Explore />} />
             <Route exact path="/LoggedIn" render={() => <Notifications />} />
             <Route exact path="/LoggedIn" render={() => <Bookmarks />} />

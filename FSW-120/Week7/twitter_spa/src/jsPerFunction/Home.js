@@ -11,7 +11,7 @@ class Home extends Component {
     //sp is for the span element in the Paragraph function.
     return (
       <div>
-        <section>
+        <section className="home_topsection">
           <h2>Home</h2>
           <svg viewBox="0 0 24 24">
             <g>

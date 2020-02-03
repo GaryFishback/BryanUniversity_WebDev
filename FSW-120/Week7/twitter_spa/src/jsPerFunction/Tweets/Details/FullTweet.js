@@ -2,13 +2,7 @@
 import React from "react";
 // import axios from "axios";
 import data from "../../Data/Tweets";
-import styled from "styled-components";
-
-const DetailsSpan = styled.span`
-  :hover {
-    color: red;
-  }
-`;
+// import styled from "styled-components";
 
 var tweetContent;
 // console.log(
@@ -18,25 +12,29 @@ var tweetContent;
 // );
 //use this id to filter through your array of tweets somewhere and pull out those properties to define the component details here
 function Details({ id }) {
-  const storingData = tweet => {
-    tweetContent = tweet;
-    console.log(tweetContent);
-  };
   const filteringTweet = iD => {
-    data.data.statuses.filter(tweet => {
-      tweet.id == iD ? storingData(tweet) : console.log(id);
+    return data.data.statuses.filter(tweet => {
+      const storingData = tweet => {
+        tweetContent = tweet;
+        console.log(tweetContent);
+        return (
+          <div>
+            X<div>{tweetContent.text}</div>
+            <div>{tweetContent.user.screen_name}</div>
+            <div>
+              <span>{tweetContent.created_at}</span>
+            </div>
+          </div>
+        );
+      };
+      tweet.id_str === iD ? storingData(tweet) : console.log(tweet);
     });
   };
+
   return (
     <div>
-      {" "}
       {filteringTweet(id)}
-      <div>X</div>
-      <div>{tweetContent.text}</div>
-      <div>{tweetContent.user.screen_name}</div>
-      <div>
-        <DetailsSpan>{tweetContent.created_at}</DetailsSpan>
-      </div>
+      {console.log(data.data.statuses[0])}
     </div>
   );
 }

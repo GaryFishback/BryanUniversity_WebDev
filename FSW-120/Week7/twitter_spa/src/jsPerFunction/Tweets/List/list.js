@@ -10,12 +10,6 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const paragraphString = "Hello World";
-
-//an array of objects up here somewhere
-
-//const listOfTweets = array.map((tweet) => {return <div> each indivdual tweet preview <div/>})
-
 function List() {
   return (
     <Container>
@@ -31,7 +25,7 @@ function List() {
           />
         );
       })}
-
+      {/* the ones underneath here will be the ones for the post/put and delete requests */}
       <TweetPreview
         textAlign="left"
         time="yesterday"
