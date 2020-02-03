@@ -1,0 +1,84 @@
+/* details summary {
+  background: rgb(209, 234, 243);
+  border-right: solid lightblue 0.2vw;
+  border-bottom: dashed lightblue 0.1vw;
+  height: 100%;
+  font-size: 2vw;
+}
+
+details summary {
+  font-family: "Arima Madurai", cursive;
+  font-size: 1em;
+}
+
+details[open] {
+  width: 50%;
+  height: 18vh;
+  padding-right: auto;
+  padding-left: auto;
+}
+
+details summary {
+  width: 100%;
+  height: 100%;
+}
+
+details[open] summary {
+  width: 100%;
+  height: auto;
+}
+
+details {
+  width: 50%;
+  height: 100%;
+  margin: 15px;
+  background: lightskyblue;
+  color: blue;
+}
+
+details summary {
+  background: rgb(183, 241, 183);
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-height: 100px;
+}
+
+button {
+  margin: 15px;
+ 
+  border-radius: 5px;
+  grid-column: span 2;
+  
+  outline: none;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: lightblue;
+  color: blue;
+}
+button:hover {
+  background: blue;
+  color: lightblue;
+}
+
+details[open] {
+  height: auto;
+  padding: 5px;
+  padding-left: 15px;
+}
+
+input {
+  margin: 15px;
+} */
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
