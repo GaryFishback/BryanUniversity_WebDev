@@ -1,28 +1,24 @@
-import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
-// import Navbar from './navbar'
-import Home from "./home";
-import Add from "./addition";
-import Subtraction from "./subtract";
-import Mul from "./multiply";
-import Div from "./divide";
-//import './App.css';
+//App.js
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        {/* <Navbar /> */}
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/add" component={Add} />
-          <Route path="/sub" component={Subtraction} />
-          <Route path="/mul" component={Mul} />
-          <Route path="/div" component={Div} />
-        </Switch>
-      </div>
-    );
-  }
+import React from "react";
+import { withRouter, Switch, Route } from "react-router-dom";
+
+import GlobalStyle from "./Theme/GlobalStyle";
+import Landing from "./Landing/index";
+import Details from "./Tweets/Details/index";
+import Footer from "./Footer/index";
+
+function App() {
+  return (
+    <div>
+      <GlobalStyle />
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/:id" component={Details} />
+      </Switch>
+      <Footer />
+    </div>
+  );
 }
 
-export default App;
+export default withRouter(App);

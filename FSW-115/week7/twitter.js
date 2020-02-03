@@ -51,3 +51,4 @@ class LikeButton extends React.Component {
   }
 }
 ReactDOM.render(e(LikeButton), domContainer);
+//so this worked, but is too much of a huge mess just for two buttons tbh...

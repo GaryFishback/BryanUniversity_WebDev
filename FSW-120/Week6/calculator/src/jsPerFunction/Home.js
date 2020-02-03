@@ -3,14 +3,13 @@ import Paragraph from "./Paragraph";
 import style from "styled-components/macro";
 import mediaMin from "./style/device";
 import mediaMax from "./style/max-width";
-import { Link, /*Switch, Route */} from "react-router-dom";
+import { Link /*Switch, Route */ } from "react-router-dom";
 
 class Home extends Component {
- 
   render() {
-    const Button= style.button`
+    const Button = style.button`
     /* Adapt the colors based on primary prop */
-    background: ${props => (props.primary ? "none" :  "white")};
+    background: ${props => (props.primary ? "none" : "white")};
     font-size: 5em;
     // margin: 5em;
    text-align: center;
@@ -30,7 +29,7 @@ text-decoration: none;
     // margin-right: 0;
     margin-top: 10vw;
   `;
-  const Heading= style.h1`
+    const Heading = style.h1`
   text-align: center;
   background: lightgrey;
   width: 100%;
@@ -41,16 +40,16 @@ text-decoration: none;
 `;
 
     return (
-      <div class="container">        <Heading>Ready To Calculate? </Heading>
-      {/* <Button primary> */}
-        <Button >
-        <Link to="/calculator">
-          {"Calculator"}
-        </Link>
+      <div class="container">
+        {" "}
+        <Heading>Ready To Calculate? </Heading>
+        {/* <Button primary> */}
+        <Button>
+          <Link to="/calculator">{"Calculator"}</Link>
         </Button>
-      {/* </Button > */}
+        {/* </Button > */}
       </div>
     );
-  }}
+  }
+}
 export default Home;
-

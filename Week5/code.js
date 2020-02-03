@@ -97,36 +97,47 @@ if (listArray !== null) {
 
 //i'm working with the matter down here- to make it cleaner
 
-const render = function() {
-  document.querySelector("#added-value").innerHTML = ""; //line from 113
-  listArray.forEach(function(todoText) {
-    //Here is where the magic happens
+// const render = function() {
+//   document.querySelector("#added-value").innerHTML = ""; //line from 113
+//   listArray.forEach(function(todoText) {
+//     //Here is where the magic happens
 
-    let createdEl = document.createElement("p");
-    createdEl.textContent = todoText;
-    document.querySelector("#added-value").appendChild(createdEl);
-    let createButt = document.createElement("button");
-    createButt.textContent = "Complete";
-    //figure out why multiple buttons appear on the doc when clicking on add task - i'll answer that later, cause you have to see it.
-    document.querySelector("#added-value").appendChild(createButt);
+//     let createdEl = document.createElement("p");
+//     createdEl.textContent = todoText;
+//     document.querySelector("#added-value").appendChild(createdEl);
+//     let createButt = document.createElement("button");
+//     createButt.textContent = "Complete";
+//     //figure out why multiple buttons appear on the doc when clicking on add task - i'll answer that later, cause you have to see it.
+//     document.querySelector("#added-value").appendChild(createButt);
 
-    createButt.addEventListener("click", () => {
-      document.querySelector("#added-value").innerHTML = "";
-    });
-    console.log(listArray);
-  });
-};
-// document.querySelector("#added-value").innerHTML = ""; //this line has no purpose here, you want it on line 103
+//     createButt.addEventListener("click", () => {
+//       document.querySelector("#added-value").innerHTML = "";
+//     });
+//     console.log(listArray);
+//   });
+// };
+// // document.querySelector("#added-value").innerHTML = ""; //this line has no purpose here, you want it on line 103
 
-document.querySelector("#form").addEventListener("submit", function(e) {
-  e.preventDefault();
-  listArray.push(
-    e.target.todoList.value //,
-    // completed: false
-  );
-  /*store the data in local storage => you don't have where to store the data here... save all of this for when working with apis and servers. 
-  As it is- we will be using AXIOS for apis. (FSW-105) Axios takes care of json.stringify and json.parse on its own. */
-  //   localStorage.setItem("Todo Array", JSON.stringify(listArray)); //JSON here again
-  e.target.todoList.value = "";
-  render();
-});
+// document.querySelector("#form").addEventListener("submit", function(e) {
+//   e.preventDefault();
+//   listArray.push(
+//     e.target.todoList.value //,
+//     // completed: false
+//   );
+//   /*store the data in local storage => you don't have where to store the data here... save all of this for when working with apis and servers.
+//   As it is- we will be using AXIOS for apis. (FSW-105) Axios takes care of json.stringify and json.parse on its own. */
+//   //   localStorage.setItem("Todo Array", JSON.stringify(listArray)); //JSON here again
+//   e.target.todoList.value = "";
+//   render();
+// });
+
+// var object = {
+//   blue: "Maria",
+//   ver: 5345634,
+//   red: true
+// };
+// console.log(object);
+// console.log(String(object));
+// var h1 = document.createElement("h1");
+// document.body.append(h1);
+// h1.innerHTML = Object.entries(object);

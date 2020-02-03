@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
+// import { BrowserRouter as Router } from "react-router-dom";
 import { /*Link,*/ Switch, Route } from "react-router-dom";
 
 //Pages:
-import Home from "./jsPerFunction/Home";
+// import Home from "./jsPerFunction/Home";
 import Login from "./jsPerFunction/Login";
+import LoggedIn from "./jsPerFunction/LoggedIn";
 // import NavBar from "./jsPerFunction/Navbar";
 // import Footer from "./jsPerFunction/Footer";
 // import About from "./jsPerFunction/About";
@@ -28,6 +29,7 @@ class App extends Component {
           <span></span>
           <Switch>
             <Route exact path="/" render={() => <Login />} />
+            <Route exact path="/LoggedIn" render={() => <LoggedIn />} />
             {/* <Route path="/about" render={() => <About />} />
             <Route path="/services" render={() => <Services />} /> */}
           </Switch>

@@ -1,0 +1,39 @@
+.box1 {
+    background: lightcoral;
+    text-align: center;
+    padding: 10px;
+    margin: 100px;
+}
+
+.box2 {
+    background: lightblue;
+    text-align: center;
+    padding: 10px;
+    margin: 100px;
+}
+
+.exBtn {
+    display: block;
+    margin: 20px 0px 0px 120px;
+    padding: 10px;
+}
+
+.box3 {
+    background: lightgreen;
+}
+
+.firstP {
+    text-align: center;
+    background: lightcyan;
+}
+
+.secondP {
+    text-align: right;
+    background: lightcoral;
+}
+
+.thirdP {
+    text-align: left;
+    background: black;
+    color: white;
+}
