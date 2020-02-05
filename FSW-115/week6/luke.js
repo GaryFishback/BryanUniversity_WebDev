@@ -1,6 +1,7 @@
 async function getAllLukeMovies() {
   const lukeData = await axios.get("https://swapi.co/api/people/1");
   const keys = Object.keys(lukeData.data);
+  console.log(lukeData.data);
   console.log(keys);
   const lukeh1 = document.createElement("h1");
   lukeh1.textContent = `${capitalizeFirstLetter(keys[0])}: ${

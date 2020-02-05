@@ -1,7 +1,7 @@
 //   list/index.js
 import React from "react";
 import styled from "styled-components";
-import data from "../../Data/Tweets";
+import data from "../../LoggedIn/Data/Tweets";
 import TweetPreview from "./TweetPreview";
 // console.log(data.data.statuses[0]);
 const Container = styled.div`

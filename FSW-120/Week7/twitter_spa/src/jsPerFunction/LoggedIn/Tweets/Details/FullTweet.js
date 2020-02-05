@@ -1,7 +1,7 @@
 //   details/FullTweet.js
 import React from "react";
 // import axios from "axios";
-import data from "../../Data/Tweets";
+import data from "../../LoggedIn/Data/Tweets";
 // import styled from "styled-components";
 
 var tweetContent;

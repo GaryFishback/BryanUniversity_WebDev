@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import { Link, Switch, Route } from "react-router-dom";
-import Display from "./Tweets/List/list";
+import Display from "../../Tweets/List/list";
 // import data from "./json/jsonObject";
 import Form from "./home_form";
 import "./home.css";

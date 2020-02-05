@@ -8,7 +8,9 @@
 }
 #left {
   /* border-right: solid black; */
-  background-image: url(https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/Week7/twitter_spa/src/imgs/LoginPage_leftbird_fixed.jpg); /*url(https://i.pinimg.com/564x/ef/b2/73/efb27314e7a44d188f4488816cddaf77.jpg);*/
+  background-image: url(./../../imgs/LoginPage_leftbird_fixed.jpg);
+  /* background-image: url(https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/Week7/twitter_spa/src/imgs/LoginPage_leftbird_fixed.jpg);  */
+
   background-size: cover;
   background-repeat: no-repeat;
 }

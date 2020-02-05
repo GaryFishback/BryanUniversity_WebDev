@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import "./App.css";
+
 // import { BrowserRouter as Router } from "react-router-dom";
 import { /*Link,*/ Switch, Route } from "react-router-dom";
 
 //Pages:
 // import Home from "./jsPerFunction/Home";
-import Login from "./jsPerFunction/Login";
-import LoggedIn from "./jsPerFunction/LoggedIn";
+import Login from "./jsPerFunction/loginPage/Login";
+import LoggedIn from "./jsPerFunction/LoggedIn/LoggedIn";
 // import NavBar from "./jsPerFunction/Navbar";
 // import Footer from "./jsPerFunction/Footer";
 // import About from "./jsPerFunction/About";

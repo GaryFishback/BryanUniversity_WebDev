@@ -2,16 +2,15 @@ import React, { Component } from "react";
 // import "./App.css";
 // import { BrowserRouter as Router } from "react-router-dom";
 import { /*Link,*/ Switch, Route } from "react-router-dom";
-import "./../LoggedIn.css";
+import "./LoggedIn.css";
 //Pages:
-import Home from "./Home";
+import Home from "./Home/Home";
 // import Login from "./Login";
 import LeftNav from "./LeftNav";
 // import NavBar from "./jsPerFunction/Navbar";
 // import Footer from "./jsPerFunction/Footer";
-import Details from "./Tweets/Details/details";
+import Details from "../Tweets/Details/details";
 // import Services from "./jsPerFunction/Services";
-
 //function components
 
 class LoggedIn extends Component {
