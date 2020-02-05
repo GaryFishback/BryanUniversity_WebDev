@@ -230,10 +230,10 @@ input[type="date"]::placeholder {
     border-radius: 10px;
     height: 25px;
   }
-  input[type="checkbox"] {
+  /* input[type="checkbox"] {
     width: 25px;
     height: 25px;
-  }
+  } */
   button {
     border-radius: 10px;
   }

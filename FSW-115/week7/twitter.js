@@ -114,7 +114,7 @@ formButton.addEventListener("click", (e)=>{
     date.className = "date";
     date.id = res.data._id;
     li.append(date);
-        })
+       
 
         ifAlreadyCompleted = () => {
           h1.innerHTML = "<strike>" + h1.textContent + "</strike>"; //setProperty("text-decoration", "line-through")
@@ -128,7 +128,7 @@ formButton.addEventListener("click", (e)=>{
           date.innerHTML = "<strong>" + date.textContent + "</strong>";
           checkbox.checked = false;
         };
-        newtodo[i].completed ? ifAlreadyCompleted() : ifNOTYetCompleted();
+        res.data.completed ? ifAlreadyCompleted() : ifNOTYetCompleted();
     
         ifCompleted = id => {
           console.log(id);
@@ -252,12 +252,12 @@ formButton.addEventListener("click", (e)=>{
                       span.className = "span";
                       span.id = response.data._id;
                       const h1 = document.createElement("h1");
-                      h1.textContent = `${stringLength(response.data.title, 20)}`;
+                      h1.textContent = `${stringLength(response.data.title, 10)}`;
                       const p = document.createElement("p");
                       h1.id = response.data._id;
                       p.textContent = `${stringLength(
                         response.data.description,
-                        50
+                        25
                       )}`;
                       li[i].insertBefore(span, li[i].childNodes[1]);
                       span.append(h1, p);
@@ -313,6 +313,7 @@ formButton.addEventListener("click", (e)=>{
     
     
     })
+  })
 })
 
 var newtodo;
@@ -495,13 +496,10 @@ axios.get("https://api.vschool.io/gmtnezschez/todo/").then(response => {
                   span.className = "span";
                   span.id = response.data._id;
                   const h1 = document.createElement("h1");
-                  h1.textContent = `${stringLength(response.data.title, 20)}`;
+                  h1.textContent = `${response.data.title}`;
                   const p = document.createElement("p");
                   h1.id = response.data._id;
-                  p.textContent = `${stringLength(
-                    response.data.description,
-                    50
-                  )}`;
+                  p.textContent = `${response.data.description}`;
                   li[i].insertBefore(span, li[i].childNodes[1]);
                   span.append(h1, p);
                   p.id = response.data._id;
