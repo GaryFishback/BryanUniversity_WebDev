@@ -7,6 +7,7 @@ import { /*Link,*/ Switch, Route } from "react-router-dom";
 // import Home from "./jsPerFunction/Home";
 import Login from "./jsPerFunction/loginPage/Login";
 import LoggedIn from "./jsPerFunction/LoggedIn/LoggedIn";
+import LoggedOut from "./jsPerFunction/LoggedOut/LoggedOut";
 // import NavBar from "./jsPerFunction/Navbar";
 // import Footer from "./jsPerFunction/Footer";
 // import About from "./jsPerFunction/About";
@@ -30,6 +31,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={() => <Login />} />
             <Route exact path="/LoggedIn" render={() => <LoggedIn />} />
+            <Route exact path="/LoggedOut" render={() => <LoggedOut />} />
             {/* <Route path="/about" render={() => <About />} />
             <Route path="/services" render={() => <Services />} /> */}
           </Switch>

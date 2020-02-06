@@ -1,48 +1,53 @@
 //   list/index.js
 import React from "react";
 import styled from "styled-components";
-import data from "../../LoggedIn/Data/Tweets";
-import TweetPreview from "./TweetPreview";
+import data from "../../Data/Tweets";
+
 // console.log(data.data.statuses[0]);
+import axios from "axios";
+import TweetPreview from "./TweetPreview";
 const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
 `;
-
-function List() {
+// axios.get("https://api.vschool.io/gmtnezschez/todo/").then(res => {
+//   console.log(res.data);
+// });
+function List(props) {
+  const getData = axios.get("https://api.vschool.io/gmtnezschez/todo/");
+  let saveData = [];
+  saveData.push(getData.data);
+  // console.log(getData);
   return (
     <Container>
-      {data.data.statuses.map(tweet => {
-        console.log(tweet.id);
+      {/* {console.log(props.tweets)} */}
+      {props.tweets.map(tweet => {
+        // console.log(tweet.id);
         return (
           <TweetPreview
-            key={tweet.id_str}
+            key={tweet.id}
             id={tweet.id}
+            linkTo={}
             time={tweet.created_at}
             authorName={tweet.user.name}
             details={tweet.text}
           />
         );
       })}
+      {/* {console.log(saveData)}
+      {saveData.map(tweet => {
+        return (
+          <TweetPreview
+            key={tweet._id}
+            id={tweet._id}
+            time={tweet.price}
+            authorName={tweet.title}
+            details={tweet.description}
+          />
+        );
+      })} */}
       {/* the ones underneath here will be the ones for the post/put and delete requests */}
-      <TweetPreview
-        textAlign="left"
-        time="yesterday"
-        authorName="author author"
-        details="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        background="lightblue"
-        color="white"
-        id="author-author"
-      />
-      <TweetPreview
-        textAlign="center"
-        time="whenever"
-        authorName="another author"
-        details="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        background="lightgreen"
-        color="black"
-      />
     </Container>
   );
 }

@@ -3,14 +3,10 @@ import React from "react";
 
 import FullTweet from "./FullTweet";
 
-function Details({
-  match: {
-    params: { id }
-  }
-}) {
+function Details(props) {
   return (
     <div>
-      <FullTweet id={id} />
+      <FullTweet id={props.id} />
     </div>
   );
 }

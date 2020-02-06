@@ -1,40 +1,60 @@
 //   details/FullTweet.js
-import React from "react";
+import React, { useState } from "react";
 // import axios from "axios";
-import data from "../../LoggedIn/Data/Tweets";
-// import styled from "styled-components";
+import data from "../../Data/Tweets";
+import styled from "styled-components";
+import { Link, Redirect, useParams } from "react-router-dom";
+
+const DetailsSpan = styled.span`
+  :hover {
+    color: red;
+  }
+`;
 
 var tweetContent;
-// console.log(
-//   data.data.statuses.filter(tweet => {
-//     tweet.id === 1125490788736032800 ? console.log(tweet) : console.log("yey");
-//   })
-// );
-//use this id to filter through your array of tweets somewhere and pull out those properties to define the component details here
-function Details({ id }) {
+
+function Details(props) {
+  var placeholderTweet = {
+    author: "",
+    author_image: "",
+    tweet: ""
+  };
+  const { id } = useParams();
+  // const { tweet_id } = useParams();
+  const [tweets, setTweets] = useState(props.tweets);
+  const [tweet, setTweet] = useState(placeholderTweet);
+  // const [tweetDeleted, setTweetDeleted] = useState(false);
+
+  if (tweet === placeholderTweet) {
+    for (var i = 0; i < data.data.statuses.length; i++) {
+      var singleTweet = tweets[i];
+      if (parseInt(singleTweet.id) === parseInt(id)) {
+        setTweet(singleTweet);
+      }
+    }
+  }
+  console.log("fulltweet");
+  const storingData = tweet => {
+    tweetContent = tweet;
+    console.log(tweetContent);
+  };
   const filteringTweet = iD => {
-    return data.data.statuses.filter(tweet => {
-      const storingData = tweet => {
-        tweetContent = tweet;
-        console.log(tweetContent);
-        return (
-          <div>
-            X<div>{tweetContent.text}</div>
-            <div>{tweetContent.user.screen_name}</div>
-            <div>
-              <span>{tweetContent.created_at}</span>
-            </div>
-          </div>
-        );
-      };
-      tweet.id_str === iD ? storingData(tweet) : console.log(tweet);
+    data.data.statuses.filter(tweet => {
+      console.log(tweet.id);
+      tweet.id == iD ? storingData(tweet) : console.log(id);
     });
   };
-
+  console.log(tweetContent);
   return (
     <div>
-      {filteringTweet(id)}
-      {console.log(data.data.statuses[0])}
+      blue tail
+      <div> {filteringTweet(id)}</div>
+      <div>{tweetContent.text}</div>
+      <div>{tweetContent.user.name}</div>
+      <div>
+        {console.log(tweetContent)}
+        <DetailsSpan>{tweetContent.created_at}</DetailsSpan>
+      </div>
     </div>
   );
 }

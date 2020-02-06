@@ -2,7 +2,8 @@
 
 import React from "react";
 import { withRouter, Switch, Route } from "react-router-dom";
-
+import "./home.css";
+import "./LoggedIn.css";
 // import GlobalStyle from './Theme/GlobalStyle'
 // import Landing from "../../Landing/landing";
 import Details from "./Tweets/Details/details";
