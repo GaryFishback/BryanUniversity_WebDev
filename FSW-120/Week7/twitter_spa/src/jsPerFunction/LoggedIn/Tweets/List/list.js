@@ -28,7 +28,7 @@ function List(props) {
           <TweetPreview
             key={tweet.id}
             id={tweet.id}
-            linkTo={}
+            linkTo={`LoggedIn/${tweet.id}`}
             time={tweet.created_at}
             authorName={tweet.user.name}
             details={tweet.text}

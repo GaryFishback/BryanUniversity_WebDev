@@ -193,7 +193,7 @@ function Home(props) {
               {tweets.map(tweet => {
                 return (
                   <TweetPreview
-                  linkTo={`/LoggedIn/${id}`}
+                    linkTo={`LoggedIn/${tweet.id}`}
                     key={tweet.id}
                     id={tweet.id}
                     time={tweet.created_at}
@@ -204,7 +204,7 @@ function Home(props) {
               })}
             </Container>
           </Route>
-          <Route exact path="/LoggedIn/:id">
+          <Route path="/LoggedIn/:id">
             <FullTweet id={tweets} />
           </Route>
         </Switch>
