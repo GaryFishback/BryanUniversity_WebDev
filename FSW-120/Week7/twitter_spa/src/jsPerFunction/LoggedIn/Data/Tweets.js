@@ -611,7 +611,7 @@ export default {
         retweeted: false,
         lang: "pt"
       }
-    ]
+    ] //5 different tweets from here. 
     //  search_metadata : {
     //    completed_in : 0.047,
     //    max_id : 1125490788736032770,

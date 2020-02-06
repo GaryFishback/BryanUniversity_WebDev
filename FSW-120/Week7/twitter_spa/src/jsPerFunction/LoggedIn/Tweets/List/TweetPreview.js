@@ -20,9 +20,9 @@ const Container = styled.div`
 
 //any component that consumes lots of props
 function TweetPreview(props) {
-  {
-    console.log(props);
-  }
+  // {
+  //   console.log(props);
+  // } I thought the way i ordered the files was kind of bringing the problem with the id being passed around. But the problem seems to be more subtle than that. I think is cause i got lost somewhereon the ...rest.
   return (
     <section id={props.id} style={{ display: "flex" }}>
       <Link to={`/LoggedIn/Profile`}>
@@ -86,7 +86,8 @@ function TweetPreview(props) {
         </section>
       </Link>
     </section>
+    // I still haven't added them delete or put.. i wanted to do those on the full tweet part. Actually i'll go strsight to hardcode an edit and delete buttons. 
   );
 }
-
+// oh and it is a bit responsive. I made it so on my way around. Mostly on the left nav on loggedin and to get rid of the news banner on the right after smaller than 600px. 
 export default TweetPreview;

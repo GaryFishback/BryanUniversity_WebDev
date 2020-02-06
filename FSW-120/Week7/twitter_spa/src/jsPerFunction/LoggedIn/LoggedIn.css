@@ -48,9 +48,15 @@
   padding-left: 25px;
   text-align: left;
   display: flex;
+  vertical-align: left;
   flex-direction: column;
   justify-content: left;
 }
 /* a {
   background-color: rgba(180, 214, 235, 0.233);
 } */
+@media only screen and (max-width: 1000px) {
+  .left_navbar {
+    width: 75px;
+  }
+}

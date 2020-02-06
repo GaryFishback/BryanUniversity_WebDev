@@ -23,7 +23,7 @@ function List(props) {
     <Container>
       {/* {console.log(props.tweets)} */}
       {props.tweets.map(tweet => {
-        // console.log(tweet.id);
+        // console.log(tweet.id); of course the .map worked fine. 
         return (
           <TweetPreview
             key={tweet.id}
@@ -34,8 +34,8 @@ function List(props) {
             details={tweet.text}
           />
         );
-      })}
-      {/* {console.log(saveData)}
+      })}   {/* the ones underneath here will be the ones for the post/put and delete requests */}
+      {/* {console.log(saveData)} .map on the data however, did not. I tried with the normal .then syntax on the get request and that went even worse.. 
       {saveData.map(tweet => {
         return (
           <TweetPreview
@@ -47,7 +47,7 @@ function List(props) {
           />
         );
       })} */}
-      {/* the ones underneath here will be the ones for the post/put and delete requests */}
+   
     </Container>
   );
 }

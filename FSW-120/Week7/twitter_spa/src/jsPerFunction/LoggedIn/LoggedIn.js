@@ -47,9 +47,13 @@ class LoggedIn extends Component {
               {/* <Route path="/services" render={() => <Services />} /> */}
             </Switch>
           </section>
-          <section className="right_newsfeed">
-            <h1>NEWS HERE</h1>
-          </section>
+          {window.innerWidth > 800 ? (
+            <section className="right_newsfeed">
+              <h1>NEWS HERE</h1>
+            </section>
+          ) : (
+            console.log(800)
+          )}
         </main>
         {/* <Footer /> */}
       </div>

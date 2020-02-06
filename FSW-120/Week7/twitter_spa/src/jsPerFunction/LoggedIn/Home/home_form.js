@@ -15,7 +15,6 @@ function Form(props) {
       <img
         style={{ width: "47px", height: "47px", borderRadius: "9999px" }}
         alt="Giselle Martinez-Sanchez"
-        draggable="true"
         src="https://abs.twimg.com/sticky/default_profile_images/default_profile_bigger.png"
       ></img>
       <input
@@ -55,7 +54,7 @@ function Form(props) {
           document.getElementById("form_div").append(imgUrlInput);
 
           imgUrlInput.addEventListener("keydown", e => {
-            // console.log(e.key);
+            // console.log(e.key); I forgot that the post form actually needs a enter key press so the input values go to the state.
             if (e.key === "Enter") {
               setImgURL = url => {
                 imgUrl = url;
@@ -139,9 +138,9 @@ function Form(props) {
       <span
         className="submitNewTweet"
         onClick={() => {
-          // console.log(imgUrl);
-          // console.log(author);
-          // console.log(tweet);
+          console.log(imgUrl);
+          console.log(author);
+          console.log(tweet);
           // const display = document.getElementById("display");
           const newTweet = {
             title: author,
@@ -155,6 +154,8 @@ function Form(props) {
             .post("https://api.vschool.io/gmtnezschez/todo/", newTweet)
             .then(response => {
               console.log(response);
+              //to make an actual tweet come out of this end i would have to use vanilla javascript. Because the other methods would erase all the other tweets that are already there.. and that would take forever again. 
+              //So i wanted to make a get request that would get all the tweets to populate with the tweet array tweets. 
             });
         }}
       >
