@@ -67,6 +67,11 @@ class Home extends Component {
       }
     });
   }
+
+  deleteClickHandler = e => {
+    console.log(e.target.id);
+  };
+  editClickHandler = e => {};
   render() {
     //sp is for the span element in the Paragraph function.
     return (
@@ -81,7 +86,7 @@ class Home extends Component {
         </section>
         <section>
           {/* This is the post form. I left it on makes a post request to the bob's API. Haven't been able to get to making it show on the page. That's why i'm making the new Another.js data file, to see if that works to axios.get */}
-          <Form />{" "}
+          <Form />
         </section>
         <div style={{ height: "10px", background: "lightgrey" }}></div>
         <section id="display">
@@ -111,6 +116,8 @@ class Home extends Component {
                       authorName={tweet.title}
                       details={tweet.description}
                       imgUrl={tweet.imgUrl}
+                      deleteClickHandler={this.deleteClickHandler}
+                      editClickHandler={this.editClickHandler}
                     />
                   );
                 })}
