@@ -67,11 +67,16 @@ class Home extends Component {
       }
     });
   }
-
-  deleteClickHandler = e => {
-    console.log(e.target.id);
-  };
-  editClickHandler = e => {};
+  // handleChange1={event =>
+  //   this.setState({
+  //     color1: { hex: event.target.value }
+  //   })
+  // }
+  // deleteClickHandler =
+  // editClickHandler = e => {
+  //   // console.log(e);
+  //   console.log("red");
+  // };
   render() {
     //sp is for the span element in the Paragraph function.
     return (
@@ -115,9 +120,11 @@ class Home extends Component {
                       time={tweet.price}
                       authorName={tweet.title}
                       details={tweet.description}
-                      imgUrl={tweet.imgUrl}
-                      deleteClickHandler={this.deleteClickHandler}
-                      editClickHandler={this.editClickHandler}
+                      imgUrl={tweet.imgUrl}                      // onDeleteClick=
+                      // onEditClick={event => {
+                      //   // console.log(event);
+                      //   console.log("red");
+                      // }}
                     />
                   );
                 })}
