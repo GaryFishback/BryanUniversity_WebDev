@@ -1,0 +1,32 @@
+Boolean 
+
+var boolean= true;
+var boolean2= false;
+
+
+Number
+
+var number = 5; 
+
+
+String 
+
+var string = "string" ; //numbers can be strings. 
+
+var num = "5";  //no number, string
+
+console.log("5" + "5")
+// "55"
+
+no 
+all
+var false = "no"; 
+
+if (false === "no"? console.log(false)
+
+
+
+BigInt
+Symbol
+Null 
+Undefined

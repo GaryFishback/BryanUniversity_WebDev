@@ -1,3 +1,83 @@
+// var shopper = {
+//   Shopper ="casey",
+//    Age = 24,
+//    FoodColor: all,
+//   LikesToShop: false,
+// };
+  // var fruit = ["apple", "strawberry", "peach"] ;
+  // concat("apple","strawberry", "peach")
+
+// let 
+// const 
+//= 
+// ==
+// === 
+// > < <= >= 
+
+// var string = 5 + "5";
+// console.log(string)
+
+// var shopper = {
+//   "Shopper Object" :"casey",
+//    Age : 24,
+//    FoodColor: [0, "strawberry", "peach"],
+//   LikesToShop: false,
+//   varShopper: function () {
+
+//   }
+// };
+
+// function varShopper (){
+
+// }
+//   var fruit = ["apple", "strawberry", "peach"]
+//   // concat("apple","strawberry", "peach")
+
+//ctrl + D 
+//command + D
+
+
+var shopper = {
+  Shopper :"casey",
+  Age : 24,
+  FoodColor: ['apple', 'strawberry', "peach"],
+  LikesToShop: false,
+  varshopper: function (){
+
+  }
+};
+  var fruit = ["apple", "strawberry", "peach"]
+  var apple = "apple"
+  var pinnaple = "pinnacle"
+  // concat("apple","strawberry", "peach")
+
+ console.log(shopper)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // function capitalizeAndLowercase(string) {
 //   return string.toUpperCase() + string.toLowerCase();
 // }
@@ -41,15 +121,15 @@
 // total();
 
 // code formula for functionality, input, store, process, and output!
-const listArray = [];
-// //search local for array
-// // const searchLocal = localStorage.getItem("listArray");
-if (listArray !== null) {
-  console.log(listArray);
-  //   JSON.parse(listArray);
-} else {
-  console.log("Continue to work on these bugs");
-}
+// const listArray = [];
+// // //search local for array
+// // // const searchLocal = localStorage.getItem("listArray");
+// if (listArray !== null) {
+//   console.log(listArray);
+//   //   JSON.parse(listArray);
+// } else {
+//   console.log("Continue to work on these bugs");
+// }
 // const searchObj = {  //commented this out the rest didn't even find out. Is pretty much useless here.
 //   searchArray: ""
 // };

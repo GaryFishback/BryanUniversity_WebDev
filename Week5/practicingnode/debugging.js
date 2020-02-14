@@ -24,7 +24,7 @@ function walkingAgain(name) {
     console.log("Your are being Attacked by a Goblin !!!");
   } else if (attack < 25) {
     console.log("Your are being Attacked by a Skeleton !!!");
-  } 
+  }
   // Attack
   while ((attack < 5, attack < 10, attack < 15, attack < 20, attack < 25)) {
     let fightFlee = readline.question("Would you like to attack or run? \n\n");
@@ -55,27 +55,28 @@ function walkingAgain(name) {
       // console.log("you ran away\n");
       let chance1 = Math.floor(Math.random() * 100);
       var escapeChance = readline.question("choose 1 or 2 to escape");
-     if (escapeChance === 1 ){ 
-       while (escapeChance === "1") {
-        if (chance1 > 50) {
-          console.log("you escaped");
-         walkingAgain(name)
-         break
-        } else {
-          console.log("you did not escape");
-    
-          break;
-        }} elseif (escapeChance ===3){ while (escapeChance === "2") {
-          if (chance1 > 100) {
-            console.log("you did not escape\n");
+      if (escapeChance === 1) {
+        while (escapeChance === "1") {
+          if (chance1 > 50) {
+            console.log("you escaped");
+            walkingAgain(name);
             break;
-          } else if (chance1) {
-            console.log("you escaped\n");
-            walkingAgain(name)
+          } else {
+            console.log("you did not escape");
+
             break;
+            // }} elseif (escapeChance ===3){ while (escapeChance === "2") {
+            if (chance1 > 100) {
+              console.log("you did not escape\n");
+              break;
+            } else if (chance1) {
+              console.log("you escaped\n");
+              walkingAgain(name);
+              break;
+            }
+            return;
           }
-          return;
-        }}
+        }
       }
     }
   }
