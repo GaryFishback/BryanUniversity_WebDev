@@ -13,9 +13,4 @@ dividing = (num1, num2) => {
   console.log(num1 / num2);
 };
 
-module.exports = {
-  adding: adding,
-  subtracting: substracting,
-  multiplying: multiplying,
-  dividing: dividing
-};
+module.exports = { adding, substracting, multiplying, dividing };
