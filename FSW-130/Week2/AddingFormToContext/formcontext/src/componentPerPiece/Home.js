@@ -3,8 +3,8 @@ import React, { Component } from "react";
 import NavBar from "./navbar";
 import Main from "./main";
 import Footer from "./footer";
-import ThemeContext from "./../themeProvider/themeProviderComponent";
-import StyleContext from "./../themeProvider/styleProviderComponent";
+// import { ThemeConsumer } from "./../themeProvider/themeProviderComponent";
+import { ArrayProvider } from "./../themeProvider/arrayProviderComponent";
 import styled from "styled-components";
 
 class Home extends Component {
@@ -16,43 +16,23 @@ class Home extends Component {
   render() {
     const Home = styled.div`
       display: grid;
-      grid-template-rows: 10vw auto 10vw;
+      grid-template-rows: 5vw auto 5vw;
       width: 100vw;
       height: 100vh;
       overflow-x: hidden;
+      over-flow-y: scroll;
     `;
     return (
       <Home classname="home">
-        <ThemeContext.Consumer>
-          {randomTheme => {
-            // this.setState({
+        {/* // this.setState({
             //   themeState: randomTheme,
-            // });
+            // }); */}
 
-            return (
-              <StyleContext.Provider
-                value={
-                  this.state.themeState === "light" ? "lightblue" : "darkblue"
-                }
-              >
-                <NavBar />
-                <Main
-                  handleClick={() => {
-                    // console.log(this.state);
-                    this.setState(prevState => ({
-                      themeState: Math.random() >= 0.5 ? "light" : "dark"
-                    }));
-                    // so the toggle doesn't actually switch from one to the other. It runs a random algorithm that re-decides which theme will come next.
-                    //so it doesn't always have to change.
-
-                    console.log(this.state.themeState);
-                  }}
-                />
-                <Footer />
-              </StyleContext.Provider>
-            );
-          }}
-        </ThemeContext.Consumer>
+        <ArrayProvider>
+          <NavBar />
+          <Main />
+          <Footer />
+        </ArrayProvider>
       </Home>
     );
   }
@@ -61,7 +41,7 @@ class Home extends Component {
 export default Home;
 
 // {
-//   /* <StyleContext.Provider
+//   /* <ArrayContext.Provider
 // value={
 //   ThemeContext.Provider.value === "light"
 //     ? console.log("light")
@@ -69,5 +49,5 @@ export default Home;
 // }
 // >
 // <Home />
-// </StyleContext.Provider> */
+// </ArrayContext.Provider> */
 // }

@@ -43,3 +43,28 @@ const readlineSync = require("readline-sync");
 //     );
 //   }
 // }
+
+var human = {
+  name: "Bobbie",
+  age: 12
+};
+
+// console.log(Object.values(human));
+// console.log(human.name.charAt(0));
+
+if (human.age === "12") {
+  console.log(human.age);
+}
+
+// var str = "HELLO WORLD";
+// var res = str.charAt(0);
+// console.log(res);
+var num1 = 5;
+var num2 = 3;
+//a + b = c   a=5 ; b= 3 ; c=8
+function greaterThan(n1, n2) {
+  if (n1 > n2) {
+    console.log("greater than");
+  }
+}
+greaterThan(5, 3);

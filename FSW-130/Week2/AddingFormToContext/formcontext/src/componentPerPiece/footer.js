@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import StyleContext from "./../themeProvider/styleProviderComponent";
+import { ArrayConsumer } from "./../themeProvider/arrayProviderComponent";
 import styled from "styled-components";
 import light from "./../themeProvider/light";
 import dark from "./../themeProvider/dark";
@@ -10,7 +10,7 @@ import dark from "./../themeProvider/dark";
 const Footer = styled.footer`
   width: 100%;
   height: 100%%;
-  font-size: 7vw;
+  font-size: 3vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,15 +29,31 @@ class FooterTag extends Component {
   }
   render() {
     return (
-      <StyleContext.Consumer>
-        {theme => {
-          return theme === "lightblue" ? (
-            <Footer primary>{`Footer with ${theme}-theme`}</Footer>
-          ) : (
-            <Footer>{`Footer with ${theme}-theme`}</Footer>
+      <ArrayConsumer>
+        {array => {
+          // return array.array === "lightblue" ? (
+          return (
+            <Footer primary>
+              {/* {console.log(array.all)} */}
+              <a style={{ textDecoration: "none" }} href="#top">
+                {array.all.map((tweet, num) => {
+                  return (
+                    <div key={num} style={{ display: "inline" }}>
+                      <span style={{ textDecoration: "underline" }}>
+                        {tweet.user.name + " "}
+                      </span>
+                      <span>/</span>
+                    </div>
+                  );
+                })}
+              </a>
+            </Footer>
           );
+          // ) : (
+          //   <Footer>{`Footer with ${array.array}-array`}</Footer>
+          // );
         }}
-      </StyleContext.Consumer>
+      </ArrayConsumer>
     );
   }
 }
