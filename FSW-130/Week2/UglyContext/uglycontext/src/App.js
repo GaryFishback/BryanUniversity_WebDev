@@ -1,28 +1,17 @@
-import React, { Component } from "react";
-import { /*Link,*/ Switch, Route } from "react-router-dom";
-// import Login from "./jsPerFunction/loginPage/Login";
-import Login from "./permanentComponents/jsPerFunction/loginPage/Login";
-import LoggedIn from "./permanentComponents/jsPerFunction/LoggedIn/LoggedIn";
-
-class App extends Component {
-  render() {
-    return (
-      <div
-        style={{
-          display: "grid",
-          minHeight: " 100vh"
-        }}
-      >
-        <main>
-          <span></span>
-          <Switch>
-            <Route exact path="/" render={() => <Login />} />
-            <Route exact path="/LoggedIn" render={() => <LoggedIn />} />
-          </Switch>
-          <span></span>
-        </main>
-      </div>
-    );
-  }
+import React /*, { Component }*/ from "react";
+import "./App.css";
+import Home from "./componentPerPiece/Home";
+// import { ThemeProvider } from "./themeProvider/themeProviderComponent";
+// import StyleContext from "./themeProvider/styleProviderComponent";
+function App() {
+  // class App extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   // this.state = { blue: "N" };
+  // }
+  // render() {
+  return <Home />;
+  // }
 }
+
 export default App;
