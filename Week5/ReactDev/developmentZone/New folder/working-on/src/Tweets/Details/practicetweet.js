@@ -63,7 +63,7 @@ class Moderator extends Component {
     // , oauth_version="${requestParams.oauth_version}", oauth_signature="${encodedSignature}"`;
     // console.log(authorizationHeaderMine);
 
-    var xhr = new XMLHttpRequest(); //with xhr directly from postman
+    var xhr = new XMLHttpRequest(); //with the xhr directly from postman doesn't make any difference
     xhr.withCredentials = true;
 
     xhr.addEventListener("readystatechange", function() {
@@ -96,7 +96,7 @@ class Moderator extends Component {
     xhr.setRequestHeader(
       "Access-Control-Allow-Origin",
       "http://localhost:3002"
-    ); //got an error about missing "Access-Control-Allow-Origin", with this is gone.
+    ); //got an error about missing "Access-Control-Allow-Origin", with this is not gone.
 
     xhr.send();
     // const encodingHeader = header => { //with axios

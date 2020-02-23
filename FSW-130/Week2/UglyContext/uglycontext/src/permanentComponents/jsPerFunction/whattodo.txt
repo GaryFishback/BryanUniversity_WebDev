@@ -1,0 +1,3 @@
+This folder must be INSIDE Src to avoid ERROR => errorsArchive/outsideOfSrcERROR.jpg
+
+
