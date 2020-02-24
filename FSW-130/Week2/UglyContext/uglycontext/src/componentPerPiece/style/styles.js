@@ -1,8 +1,30 @@
 import styled from "styled-components";
-import light from "./../../themeProvider/light";
+import light from "./light";
 // import tweet from "./../Tweets";
-import dark from "./../../themeProvider/dark";
+import dark from "./dark";
+// i did most of the styling with styled-components. Most of it is compiled here so it wouldn't over-crowd the other components. I'm not a fan of inline styling. 
+const Nav = styled.nav`
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: ${props =>
+    props.primary === true ? light.colors.font : dark.colors.font};
+  background: ${props =>
+    props.primary === true ? light.colors.background : dark.colors.background};
+`;
 
+const Home = styled.div`
+  display: grid;
+  grid-template-rows: 5vw auto 5vw;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  over-flow-y: scroll;
+`;
 const Main = styled.main`
   width: 100%;
   height: 100%;
@@ -21,7 +43,7 @@ const Button = styled.button`
   width: 50%;
   height: 8vh;
   font-size: 2vw;
-  border: none;
+  border: #663221;
   margin: 0 auto;
   align-self: center;
   color: ${props =>
@@ -59,17 +81,24 @@ const Form = styled.section`
   width: 60%;
   border-left: ${light.colors.formBorder} 2vw solid;
   border-right: ${light.colors.formBorder} 2vw solid;
-  background: #53a2be;
+  background: #92482f;
   height: 50%;
+  padding-bottom: 1em;
   margin: 0 auto;
 `;
 const Tweet = styled(Form)`
-  width: 60%;
+  width: 100%;
   border-left: ${light.colors.formBorder} 2vw solid;
   border-right: ${light.colors.formBorder} 2vw solid;
-  background: #53a2be;
-  height: 50%;
-  margin: 0 auto;
+  background: #92482f;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  min-height: auto;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  padding: 0 auto;
+  margin: 0;
 `;
 const Headings = styled.h1`
   width: 80%;
@@ -91,15 +120,31 @@ const PHeading = styled.h3`
   margin-top: 2em;
   height: 100%;
   font-size: 1.5vw;
-  color: #55dde0;
+  color: #663221;
   grid-column: span 2;
-  background: #33658a;
+  background: #a06a34;
   margin: 0 auto;
+`;
+const Footer = styled.footer`
+  width: 100%;
+  height: 100%%;
+  font-size: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: ${props =>
+    props.primary === true ? light.colors.font : dark.colors.font};
+  background: ${props =>
+    props.primary === true ? light.colors.background : dark.colors.background};
 `;
 export {
   Main,
   Button,
+  Footer,
   Input,
+  Home,
+  Nav,
   Headings,
   PHeading,
   Tweet,

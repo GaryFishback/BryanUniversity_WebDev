@@ -3,25 +3,17 @@ import React, { Component } from "react";
 import NavBar from "./navbar";
 import Main from "./main";
 import Footer from "./footer";
+import { Home } from "./style/styles";
 // import { ThemeConsumer } from "./../themeProvider/themeProviderComponent";
-import { ArrayProvider } from "./../themeProvider/arrayProviderComponent";
-import styled from "styled-components";
+import { ArrayProvider } from "../themeProvider/arrayProviderComponent";
 
-class Home extends Component {
+class HomeClass extends Component {
   constructor(props) {
     super(props);
     this.state = { themeState: "" };
   }
 
   render() {
-    const Home = styled.div`
-      display: grid;
-      grid-template-rows: 5vw auto 5vw;
-      width: 100vw;
-      height: 100vh;
-      overflow-x: hidden;
-      over-flow-y: scroll;
-    `;
     return (
       <Home classname="home">
         {/* // this.setState({
@@ -38,7 +30,7 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default HomeClass;
 
 // {
 //   /* <ArrayContext.Provider

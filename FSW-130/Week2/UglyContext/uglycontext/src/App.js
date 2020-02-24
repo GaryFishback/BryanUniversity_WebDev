@@ -1,7 +1,7 @@
 import React /*, { Component }*/ from "react";
 import "./App.css";
 import Home from "./componentPerPiece/Home";
-// import { ThemeProvider } from "./themeProvider/themeProviderComponent";
+import { ThemeProvider } from "./themeProvider/themeProviderComponent";
 // import StyleContext from "./themeProvider/styleProviderComponent";
 function App() {
   // class App extends Component {
@@ -10,7 +10,12 @@ function App() {
   //   // this.state = { blue: "N" };
   // }
   // render() {
-  return <Home />;
+  return (
+    <ThemeProvider>
+      {/* in the end, i haven't used theme prodiver again */}
+      <Home />
+    </ThemeProvider>
+  );
   // }
 }
 

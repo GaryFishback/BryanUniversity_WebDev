@@ -1,25 +1,14 @@
 import React, { Component } from "react";
-import { ArrayConsumer } from "./../themeProvider/arrayProviderComponent";
-import styled from "styled-components";
-import light from "./../themeProvider/light";
-import dark from "./../themeProvider/dark";
+import { ArrayConsumer } from "../themeProvider/arrayProviderComponent";
+import { Link, Switch, Route } from "react-router-dom";
+// import styled from "styled-components";
+// import light from "./style/light";
+// import dark from "./style/dark";
 // console.log(dark);
 // console.log(dark.colors);
 // console.log(dark.colors.font);
 // console.log(dark.colors.background);
-const Nav = styled.nav`
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-size: 3vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: ${props =>
-    props.primary === true ? light.colors.font : dark.colors.font};
-  background: ${props =>
-    props.primary === true ? light.colors.background : dark.colors.background};
-`;
+import { Nav } from "./style/styles";
 //  border-bottom: ${props => props.primary ? "double 3px black" : "double 3px black"};
 class NavBar extends Component {
   constructor(props) {
@@ -34,18 +23,20 @@ class NavBar extends Component {
           // return array.array === "lightblue" ? (
           return (
             <Nav primary>
-              <a style={{ textDecoration: "none" }} href="#top">
-                {array.all.map((tweet, num) => {
-                  return (
+              {/* {array.all.map((tweet, num) => {
+                return (
+                  <Link to={`/${tweet.id}`}>
                     <div key={num} style={{ display: "inline" }}>
                       <span style={{ textDecoration: "underline" }}>
-                        {tweet.user.name + " "}
+                        {tweet.name + " "}
                       </span>
                       <span>/</span>
                     </div>
-                  );
-                })}
-              </a>
+                  </Link>
+                );
+              })} */}
+              <Link to="/"> Ugly NavBar here</Link>
+              {/* Both navbar are footer are the link back to the list of ugly things */}
             </Nav>
           );
           // ) : (

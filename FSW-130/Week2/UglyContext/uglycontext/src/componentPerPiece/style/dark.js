@@ -1,7 +1,7 @@
 export default {
   colors: {
-    font: "#55DDE0",
-    background: "#33658A"
+    font: "darkorange",
+    background: "#a06a34"
   }
 };
 //dark theme
