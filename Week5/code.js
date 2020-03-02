@@ -4,15 +4,15 @@
 //    FoodColor: all,
 //   LikesToShop: false,
 // };
-  // var fruit = ["apple", "strawberry", "peach"] ;
-  // concat("apple","strawberry", "peach")
+// var fruit = ["apple", "strawberry", "peach"] ;
+// concat("apple","strawberry", "peach")
 
-// let 
-// const 
-//= 
+// let
+// const
+//=
 // ==
-// === 
-// > < <= >= 
+// ===
+// > < <= >=
 
 // var string = 5 + "5";
 // console.log(string)
@@ -33,50 +33,24 @@
 //   var fruit = ["apple", "strawberry", "peach"]
 //   // concat("apple","strawberry", "peach")
 
-//ctrl + D 
+//ctrl + D
 //command + D
 
+// var shopper = {
+//   Shopper :"casey",
+//   Age : 24,
+//   FoodColor: ['apple', 'strawberry', "peach"],
+//   LikesToShop: false,
+//   varshopper: function (){
 
-var shopper = {
-  Shopper :"casey",
-  Age : 24,
-  FoodColor: ['apple', 'strawberry', "peach"],
-  LikesToShop: false,
-  varshopper: function (){
+//   }
+// };
+//   var fruit = ["apple", "strawberry", "peach"]
+//   var apple = "apple"
+//   var pinnaple = "pinnacle"
+//   // concat("apple","strawberry", "peach")
 
-  }
-};
-  var fruit = ["apple", "strawberry", "peach"]
-  var apple = "apple"
-  var pinnaple = "pinnacle"
-  // concat("apple","strawberry", "peach")
-
- console.log(shopper)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//  console.log(shopper)
 
 // function capitalizeAndLowercase(string) {
 //   return string.toUpperCase() + string.toLowerCase();
@@ -221,3 +195,32 @@ var shopper = {
 // var h1 = document.createElement("h1");
 // document.body.append(h1);
 // h1.innerHTML = Object.entries(object);
+const crypto = require("crypto");
+function rng() {
+  return crypto.randomBytes(16);
+}
+function v4(options, buf, offset) {
+  var i = (buf && offset) || 0;
+
+  if (typeof options == "string") {
+    buf = options === "binary" ? new Array(16) : null;
+    options = null;
+  }
+  options = options || {};
+
+  var rnds = options.random || (options.rng || rng)();
+
+  // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+  rnds[6] = (rnds[6] & 0x0f) | 0x40;
+  rnds[8] = (rnds[8] & 0x3f) | 0x80;
+
+  // Copy bytes to buffer, if provided
+  if (buf) {
+    for (var ii = 0; ii < 16; ++ii) {
+      buf[i + ii] = rnds[ii];
+    }
+  }
+
+  return buf || bytesToUuid(rnds);
+}
+v4();

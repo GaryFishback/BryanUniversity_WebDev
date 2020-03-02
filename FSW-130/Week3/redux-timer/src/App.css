@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Lobster+Two&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two&display=swap"); /*//to import the font*/
+/* the css IS a bit messy. .. */
 #wrapper {
   display: flex;
   flex-direction: column;
@@ -7,6 +8,7 @@
   text-align: center;
   background: red;
 }
+/* wrapper wraps around all of it. keeps it in direction column and centered. .buttons is the div around the buttons and makes sure the buttons are nicely horizontal. */
 .laps {
   align-self: center;
   display: grid;
@@ -103,3 +105,4 @@ button {
 .button + .button {
   margin-top: 2em;
 }
+/* these are the features that cause the button clicked animation .. i know is a bit messy. */
