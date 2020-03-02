@@ -21,24 +21,41 @@ document.body.append(newh1);
 
 //adjusting array
 
-const names = ["steve", "larry", "joe", "shirley", "steph", "nate", "rick", "emily"];
+const names = [
+  "steve",
+  "larry",
+  "joe",
+  "shirley",
+  "steph",
+  "nate",
+  "rick",
+  "emily"
+];
 for (var i = 0; i < names.length; i++) {
-    var h1 = document.createElement("h1");
-    h1.textContent = names[i];
-    document.body.append(h1);
-    h1.style.textTransform = "capitalize";
-    h1.style.textDecoration = "underline";
-    h1.style.fontFamily = "Georgia, serif";
-    h1.style.fontWeight = "1";
-    (i == 0 ? h1.style.color = "red" :
-        i == 1 ? h1.style.color = "orange" :
-        i == 2 ? h1.style.color = "green" :
-        i == 3 ? h1.style.color = "blue" :
-        i == 4 ? h1.style.color = "purple" :
-        i == 5 ? h1.style.color = "yellow" :
-        i == 6 ? h1.style.color = "brown" :
-        i == 7 ? h1.style.color = "teal" :
-        h1.style.color = "black");
+  var h1 = document.createElement("h1");
+  h1.textContent = names[i];
+  document.body.append(h1);
+  h1.style.textTransform = "capitalize";
+  h1.style.textDecoration = "underline";
+  h1.style.fontFamily = "Georgia, serif";
+  h1.style.fontWeight = "1";
+  i == 0
+    ? (h1.style.color = "red")
+    : i == 1
+    ? (h1.style.color = "orange")
+    : i == 2
+    ? (h1.style.color = "green")
+    : i == 3
+    ? (h1.style.color = "blue")
+    : i == 4
+    ? (h1.style.color = "purple")
+    : i == 5
+    ? (h1.style.color = "yellow")
+    : i == 6
+    ? (h1.style.color = "brown")
+    : i == 7
+    ? (h1.style.color = "teal")
+    : (h1.style.color = "black");
 }
 //Adjust your for-loop to now loop through the length of the array.
 //Instead of using “Hello World” as the text, swap it for the current name in the array so that all of the names now list out on the website.

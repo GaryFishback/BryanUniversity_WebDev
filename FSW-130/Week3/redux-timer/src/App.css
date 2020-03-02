@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two&display=swap");
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: red;
+}
+.laps {
+  align-self: center;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+#buttons {
+  padding-bottom: 25px;
+}
+body,
+.laps {
+  background: coral;
+  width: 100vw;
+  font-family: "Lobster Two";
+  font-weight: 500;
+  color: rgb(61, 16, 16);
+}
+
+/* #buttons {
+  width: 15em;
+  display: flex;
+  
+}
+
+button {
+  border-radius: 50%;
+  width: 5.5em;
+  color: black;
+  font-family: "Lobster Two";
+  font-weight: 500;
+  background-color: rgba(255, 0, 0, 0.685);
+  border: double brown 5px;
+  height: 5.5em;
+} */
+/* button:hover {
+  box-shadow: ;
+} */
+
+.button {
+  height: 5em;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  border: none;
+  color: red;
+  width: 5em;
+  background: radial-gradient(to bottom, red 40%, #7c0b0b 60%);
+  border-radius: 50%;
+  padding: 0;
+  display: inline-block;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  box-shadow: 0px -3px 10px 0 #7c0b0b, 10px -15px 60px 0 #7c0b0b,
+    0 3px 3px 0 rgba(57, 6, 90, 0.3), 0 15px 60px 0 rgba(57, 6, 90, 0.3);
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: box-shadow 0.4s cubic-bezier(0.1, 0.67, 0.31, 1);
+  transition: box-shadow 0.4s cubic-bezier(0.1, 0.67, 0.31, 1);
+}
+.button__text {
+  color: #7c0b0b;
+  border-radius: 50%;
+  padding: 1.8em 0.5em;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.1, 0.67, 0.31, 1);
+  transition: -webkit-transform 0.4s cubic-bezier(0.1, 0.67, 0.31, 1);
+  transition: transform 0.4s cubic-bezier(0.1, 0.67, 0.31, 1);
+  transition: transform 0.4s cubic-bezier(0.1, 0.67, 0.31, 1),
+    -webkit-transform 0.4s cubic-bezier(0.1, 0.67, 0.31, 1);
+  -webkit-transform: translate3d(0, 0, 6px);
+  transform: translate3d(0, 0, 6px);
+  text-shadow: 0 0px 7px #7c0b0b91;
+}
+.button:hover {
+  box-shadow: 0px -1px 1px 0 rgba(234, 5, 153, 0.1),
+    10px -15px 60px 0 rgba(234, 5, 153, 0.1), 0px 1px 1px 0 rgba(57, 6, 90, 0.1),
+    10px 15px 60px 0 rgba(57, 6, 90, 0.1);
+}
+.button:hover .button__text {
+  -webkit-transform: translate3d(0, 0, 1px);
+  transform: translate3d(0, 0, 1px);
+}
+.button:focus,
+.button:active {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.button:focus .button__text,
+.button:active .button__text {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.button + .button {
+  margin-top: 2em;
+}
