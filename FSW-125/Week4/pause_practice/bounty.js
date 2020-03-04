@@ -1,9 +1,6 @@
 const express = require("express");
 const app = express();
 const uuid = require("uuid");
-//I got errors about uuid's function to be deprecated.
-//Until i figure this out date.now is the only thing i can think of to be unique enough to be an id.
-//update fixed
 app.use(express.json());
 const bounties = [
   {
@@ -27,6 +24,12 @@ const bounties = [
 app.get("/bounties", (req, res) => {
   res.send({ bounties });
 });
+app.get("/bounties/:id", (req, res) => {
+  const id = req.params.id;
+  console.log(id);
+  const bounty = bounties.find(bounty => bounty._id === id);
+  res.send(bounty);
+});
 app.post("/bounties", (req, res) => {
   const newBounty = req.body;
   newBounty._id = uuid.v4();
@@ -37,5 +40,18 @@ app.post("/bounties", (req, res) => {
   );
 });
 // app.listen(9000, () => {});
-
+app.delete("/bounties/:id", (req, res) => {
+  const id = req.params.id;
+  console.log(id);
+  const bounty = bounties.findIndex(bounty => bounty._id === id);
+  res.send(`Deleted entry`);
+  bounties.splice(bounty, 1);
+});
+app.put("/bounties/:id", (req, res) => {
+  const id = req.params.id;
+  console.log(id);
+  const bounty = bounties.findIndex(bounty => bounty._id === id);
+  const updatedBounty = Object.assign(bounties[bounty], req.body);
+  res.send(updatedBounty);
+});
 app.listen(3030, () => {});
