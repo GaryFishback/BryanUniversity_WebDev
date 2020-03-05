@@ -9,6 +9,7 @@ import "./LoggedIn.css";
 import Details from "./Tweets/Details/details";
 import Footer from "./Footer/footer";
 import Navbar from "./Navigation/navbar";
+import PracticeTweet from "./Tweets/Details/practicetweet";
 import List from "./Tweets/List/list";
 
 function App() {
@@ -16,10 +17,11 @@ function App() {
     <div>
       <Navbar />
       {/* <GlobalStyle /> */}
-      <Switch>
+      {/* <Switch>
         <Route exact path="/" component={List} />
         <Route exact path="/:id" component={Details} />
-      </Switch>
+      </Switch> */}
+      <PracticeTweet />
       <Footer />
     </div>
   );

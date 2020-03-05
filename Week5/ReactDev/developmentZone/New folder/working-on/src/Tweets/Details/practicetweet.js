@@ -85,7 +85,7 @@ class Moderator extends Component {
     );
     xhr.setRequestHeader(
       "Access-Control-Allow-Origin",
-      "http://clientDomain.com"
+      "http://localhost:3000/"
     );
     xhr.setRequestHeader(
       "Access-Control-Allow-Methods",
@@ -95,7 +95,7 @@ class Moderator extends Component {
     xhr.setRequestHeader("Access-Control-Allow-Credentials", "true");
     xhr.setRequestHeader(
       "Access-Control-Allow-Origin",
-      "http://localhost:3002"
+      "http://localhost:3000/"
     ); //got an error about missing "Access-Control-Allow-Origin", with this is not gone.
 
     xhr.send();

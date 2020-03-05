@@ -1,4 +1,10 @@
-// const readline = require("readline-sync");
+const readline = require("readline-sync");
+let num1 = readline.questionInt("What is your first number?\n ");
+let num2 = readline.questionInt("What is your second number?\n ");
+console.log(typeof num1);
+console.log(typeof num2);
+console.log(num1 + num2);
+
 // console.log("Hello, I hope your ready for a great Adventure !!!" + "\n");
 // let fName = readline.question(" What is your name?\n ");
 // console.log(

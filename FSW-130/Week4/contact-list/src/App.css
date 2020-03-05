@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Lora|Noto+Serif|Playfair+Display&display=swap");
+
+.flex {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Playfair Display", serif;
+}
+h1 {
+  text-align: center;
+}
+.box1,
+.box3,
+.box5,
+.box7,
+.box9,
+.box11,
+.box13,
+.box15,
+.box17,
+.box19 {
+  position: relative;
+  animation: firstPair 50s 4;
+  left: 5%;
+  animation-direction: alternate;
+}
+@keyframes firstPair {
+  0% {
+    /* background: red; */
+    left: 5%;
+  }
+  45% {
+    /* background: yellow; */
+    left: 40%;
+  }
+
+  50% {
+    /* background: red; */
+    left: 80%;
+  }
+  75% {
+    /* background: red; */
+    left: 40%;
+  }
+  100% {
+    /* background: red; */
+    left: 5%;
+  }
+}
+
+.box2,
+.box4,
+.box6,
+.box8,
+.box10,
+.box12,
+.box14,
+.box16,
+.box18,
+.box20 {
+  position: relative;
+  animation: secondPair 50s 4;
+  left: 70%;
+  animation-direction: alternate;
+}
+@keyframes secondPair {
+  0% {
+    /* background: red; */
+    left: 70%;
+  }
+  25% {
+    /* background: yellow; */
+    left: 40%;
+  }
+
+  50% {
+    /* background: red; */
+    left: 5%;
+  }
+  75% {
+    /* background: red; */
+    left: 40%;
+  }
+  100% {
+    /* background: red; */
+    left: 70%;
+  }
+}
