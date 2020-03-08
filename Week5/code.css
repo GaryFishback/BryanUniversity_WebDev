@@ -119,7 +119,7 @@ body {
   -webkit-transform: translate3d(50px, 0, -100px) rotateY(20deg);
   transform: translate3d(50px, 0, -100px) rotateY(20deg);
 } */
-
+/* 
 .button {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -184,4 +184,27 @@ body {
 
 .button + .button {
   margin-top: 2em;
+} */
+
+#target {
+  background: blue;
+  height: 50px;
+  width: 50px;
+}
+#no-width {
+  width: auto;
+}
+
+#width-50 {
+  width: 50%;
+}
+
+#width-inherit {
+  width: inherit;
+}
+
+/* Make results easier to see */
+div {
+  border: 1px solid red;
+  padding: 8px;
 }
