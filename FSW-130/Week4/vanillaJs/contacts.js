@@ -24,7 +24,7 @@ const initialState = {
       phone: "786-567-5625",
       email: "lissaherilliumme@yahoo.com",
       img:
-        "https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-130/Week4/contact-list/src/download.png"
+        "https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-130/Week4/contact-list/src/imgs/download.png"
     },
     {
       color: "aquamarine",
@@ -32,7 +32,7 @@ const initialState = {
       phone: "786-567-5625",
       email: "lissaherilliumme@yahoo.com",
       img:
-        "https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-130/Week4/contact-list/src/download.png"
+        "https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-130/Week4/contact-list/src/imgs/download.png"
     },
     {
       color: "#B2FF66",
@@ -40,7 +40,7 @@ const initialState = {
       phone: "786-567-5625",
       email: "lissaherilliumme@yahoo.com",
       img:
-        "https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-130/Week4/contact-list/src/download.png"
+        "https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-130/Week4/contact-list/src/imgs/download.png"
     },
     {
       color: "#FFFF75",
@@ -48,7 +48,7 @@ const initialState = {
       phone: "786-567-5625",
       email: "lissaherilliumme@yahoo.com",
       img:
-        "https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-130/Week4/contact-list/src/download.png"
+        "https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-130/Week4/contact-list/src/imgs/download.png"
     }
     // "#A3E8FF", //fresh air
     // "aquamarine",
@@ -105,7 +105,7 @@ function reducer(state = initialState, action) {
 const store = Redux.createStore(reducer);
 
 var state = store.getState();
-state.color.map((contact, num) => {
+state.color.map(contact => {
   store.dispatch(countingContacts());
 
   creatingBoxes = (contact, num) => {
