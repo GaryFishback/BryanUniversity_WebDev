@@ -2,36 +2,36 @@ const express = require("express");
 const app = express();
 const uuid = require("uuid");
 app.use(express.json());
-const todos = require("./data");
-app.get("/todos", (req, res) => {
-  res.send({ todos });
+const bounties = require("./data");
+app.get("/bounties", (req, res) => {
+  res.send({ bounties });
 });
-app.get("/todos/:id", (req, res) => {
+app.get("/bounties/:id", (req, res) => {
   const id = req.params.id;
   console.log(id);
-  const todo = todos.find(todo => todo._id === id);
-  res.send(todo);
+  const bounty = bounties.find(bounty => bounty._id === id);
+  res.send(bounty);
 });
-app.post("/todos", (req, res) => {
-  const newTodo = req.body;
-  newTodo._id = uuid.v4();
-  todos.push(newTodo);
+app.post("/bounties", (req, res) => {
+  const newBounty = req.body;
+  newBounty._id = uuid.v4();
+  bounties.push(newBounty);
 
-  res.send(`Posted: Your new todo has been added to the list of todos`);
+  res.send(`Posted: Your new bounty has been added to the list of bounties`);
 });
-app.put("/todos/:id", (req, res) => {
+app.put("/bounties/:id", (req, res) => {
   const id = req.params.id;
   console.log(id);
-  const todo = todos.findIndex(todo => todo._id === id);
-  const updatedtodo = Object.assign(todos[todo], req.body);
-  res.send(updatedtodo);
+  const bounty = bounties.findIndex(bounty => bounty._id === id);
+  const updatedbounty = Object.assign(bounties[bounty], req.body);
+  res.send(updatedbounty);
 });
-app.delete("/todos/:id", (req, res) => {
+app.delete("/bounties/:id", (req, res) => {
   const id = req.params.id;
   console.log(id);
-  const todo = todos.findIndex(todo => todo._id === id);
+  const bounty = bounties.findIndex(bounty => bounty._id === id);
   res.send(`Deleted entry`);
-  todos.splice(todo, 1);
+  bounties.splice(bounty, 1);
 });
 
 app.listen(3030, () => {});
