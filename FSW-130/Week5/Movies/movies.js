@@ -26,7 +26,7 @@ function loading(data) {
     data: data
   };
 }
-const initialState = {
+const moviesState = {
   //   array: axios.get("/movies").then(res => {
   //     return res.data;
   //   }),
@@ -34,7 +34,7 @@ const initialState = {
   changing: "blue",
   counter: 0
 };
-function reducer(state = initialState, action) {
+function reducer(state = moviesState, action) {
   switch (action.type) {
     case "LOADING":
       return {
@@ -71,7 +71,7 @@ function reducer(state = initialState, action) {
 }
 
 const store = Redux.createStore(reducer);
-let state;
+let movieState;
 let array;
 axios
   .get("data")
@@ -79,10 +79,10 @@ axios
     array = res.data.movies;
     console.log(array);
     store.dispatch(loading(array));
-    state = store.getState();
-    console.log(state);
+    movieState = store.getState();
+    console.log(movieState);
 
-    state.array.map(movie => {
+    movieState.array.map(movie => {
       store.dispatch(countingMovies());
 
       creatingBoxes = (movie, num) => {
@@ -208,10 +208,10 @@ submitButton.addEventListener("click", () => {
   axios.post("/movies/data", newMovie).then(res => {
     console.log(res);
   });
+  store.dispatch(countingMovies());
+  store.dispatch(addOne(newMovie));
+  var newState = store.getState();
+  console.log(newState);
+  creatingBoxes(newState.array[newState.array.length - 1], newState.counter);
   //   store.dispatch(countingMovies());
-  //   store.dispatch(addOne(newMovie));
-  //   var newState = store.getState();
-  //   console.log(newState);
-  //   creatingBoxes(newState.array[newState.array.length], newState.counter);
-  //   //   store.dispatch(countingMovies());
 });

@@ -26,7 +26,7 @@ function loading(data) {
     data: data
   };
 }
-const initialState = {
+const showsState = {
   //   array: axios.get("/tvShows").then(res => {
   //     return res.data;
   //   }),
@@ -34,7 +34,7 @@ const initialState = {
   changing: "blue",
   counter: 0
 };
-function reducer(state = initialState, action) {
+function reducer(state = showsState, action) {
   switch (action.type) {
     case "LOADING":
       return {
@@ -72,7 +72,9 @@ function reducer(state = initialState, action) {
 }
 
 const store = Redux.createStore(reducer);
-let state;
+
+// SHOWS JS
+let showState;
 let array;
 axios
   .get("data")
@@ -80,10 +82,10 @@ axios
     array = res.data.tvShows;
     console.log(array);
     store.dispatch(loading(array));
-    state = store.getState();
-    console.log(state);
+    showState = store.getState();
+    console.log(showState);
 
-    state.array.map(tvShow => {
+    showState.array.map(tvShow => {
       store.dispatch(countingTvShows());
 
       creatingBoxes = (tvShow, num) => {

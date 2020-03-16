@@ -6,7 +6,8 @@ h1 {
 .flex {
   margin: 50px;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
   font-family: "Playfair Display", serif;
 }
 h1 {

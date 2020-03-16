@@ -3,7 +3,7 @@ const app = express();
 const uuid = require("uuid");
 const path = require("path");
 app.use(express.json());
-const movies = require("./data");
+const movies = require("./Movies/data");
 app.use("/movies", express.static(path.join(__dirname, "/")));
 app.use("/movies", express.static(path.join(__dirname, "/movies.js")));
 app.get("/movies", function(req, res) {
