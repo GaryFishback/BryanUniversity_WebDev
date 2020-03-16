@@ -1,0 +1,102 @@
+body {
+  background: black;
+}
+h1 {
+  color: lightcoral;
+}
+@import url("https://fonts.googleapis.com/css?family=Lora|Noto+Serif|Playfair+Display&display=swap");
+
+.flex {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Playfair Display", serif;
+}
+h1 {
+  text-align: center;
+}
+img {
+  width: 40%;
+  height: auto;
+  margin-left: 20%;
+}
+
+.button {
+  height: 5em;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  border: none;
+  /* color: red; */
+  width: 5em;
+  background: radial-gradient(to bottom, lightgray 40%, grey 60%);
+  border-radius: 50%;
+  padding: 0;
+  display: inline-block;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  box-shadow: 0px -3px 10px 0 grey, 10px -15px 60px 0 grey,
+    0 3px 3px 0 rgba(57, 6, 90, 0.3), 0 15px 60px 0 rgba(57, 6, 90, 0.3);
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: box-shadow 0.4s cubic-bezier(0.1, 0.67, 0.31, 1);
+  transition: box-shadow 0.4s cubic-bezier(0.1, 0.67, 0.31, 1);
+  background: white;
+}
+.button__text {
+  color: grey;
+  border-radius: 50%;
+  padding: 1.8em 0.5em;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.1, 0.67, 0.31, 1);
+  transition: -webkit-transform 0.4s cubic-bezier(0.1, 0.67, 0.31, 1);
+  transition: transform 0.4s cubic-bezier(0.1, 0.67, 0.31, 1);
+  transition: transform 0.4s cubic-bezier(0.1, 0.67, 0.31, 1),
+    -webkit-transform 0.4s cubic-bezier(0.1, 0.67, 0.31, 1);
+  -webkit-transform: translate3d(0, 0, 6px);
+  transform: translate3d(0, 0, 6px);
+  text-shadow: 0 0px 7px grey91;
+}
+.button:hover {
+  box-shadow: 0px -1px 1px 0 rgba(234, 5, 153, 0.1),
+    10px -15px 60px 0 rgba(234, 5, 153, 0.1), 0px 1px 1px 0 rgba(57, 6, 90, 0.1),
+    10px 15px 60px 0 rgba(57, 6, 90, 0.1);
+}
+.button:hover .button__text {
+  -webkit-transform: translate3d(0, 0, 1px);
+  transform: translate3d(0, 0, 1px);
+}
+.button:focus,
+.button:active {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.button:focus .button__text,
+.button:active .button__text {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.button + .button {
+  margin-top: 2em;
+}
+
+input {
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  /* background: rgb(0, 128, 0, 0.2); */
+}
+input::placeholder {
+  color: black;
+}
+.button {
+  margin: 50px;
+  align-self: center;
+}
+/* #small {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  } */

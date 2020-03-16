@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    <link rel="stylesheet" type="text/css" href="./movies.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="flex" id="movie-list">
+        <h1>Movies</h1>
+        <!-- <div
+          id="0"
+          class="box1"
+          style="background-color: rgb(163, 232, 255); width: 25em; height: 25em; padding-left: 5em; padding-top: 2.5em; padding-bottom: 2.5em; border-radius: 100px;"
+        >
+          <a
+            href="http://localhost:3000/"
+            class="button"
+            style="width: 50px; height: 50px; margin: 10px; left: 15em; display: inline-block;"
+            ><span class="button__text" style="padding-top: 17px;">DEL</span></a
+          >
+          <h2 style="display: inline-block;"><span>Contact #1</span></h2>
+          <h3><span>Name: </span> Lissa Herilliumme</h3>
+          <h3>
+            <span>Phone: </span>
+            <span
+              ><span
+                id="gc-number-0"
+                class="gc-cs-link"
+                title="Call with Google Voice"
+                >786-567-5625</span
+              ></span
+            >
+          </h3>
+          <h3><span>Email: </span> lissaherilliumme@yahoo.com</h3>
+          <h3>
+            <span>Photo:</span><br /><img
+              src="https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-130/Week4/movie-list/src/download.png"
+              alt=""
+            />
+          </h3>
+        </div> -->
+      </div>
+
+      <!-- <hr /> -->
+      <div class="flex">
+        <section>
+          <form
+            id="form"
+            style="padding-top: 50px; display: flex; flex-direction: column; justify-content: center; text-align: center; border-radius: 100px; width: 60%; margin: 50px auto 0px; height: 25vw;"
+          >
+            <h1>Adding a New Movie!</h1>
+            <section>
+              <input
+                name="title"
+                placeholder="Title:"
+                value=""
+                style="background: rgba(225, 225, 225, 0.7);"
+              />
+              <input
+                name="year"
+                placeholder="Year:"
+                type="number"
+                value=""
+                style="background: rgba(225, 225, 225, 0.7);"
+              /><input
+                name="genre"
+                placeholder="Genre:"
+                value=""
+                style="background: rgba(225, 225, 225, 0.7);"
+              />
+              <input
+                name="imgUrl"
+                placeholder="Cover Url"
+                value=""
+                style="background: rgba(225, 225, 225, 0.7);"
+              />
+            </section>
+            <br /><a id="submit" class="button"
+              ><span class="button__text">SAVE</span></a
+            >
+          </form>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdn.tutorialjinni.com/axios/0.19.2/axios.js"></script>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <script src="movies.js"></script>
+  </body>
+</html>

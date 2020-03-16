@@ -1,93 +1,48 @@
-var voters = [
-    { name: "Bob", age: 30, voted: true },
-    { name: "Jake", age: 32, voted: true },
-    { name: "Kate", age: 25, voted: false },
-    { name: "Sam", age: 20, voted: false },
-    { name: "Phil", age: 21, voted: true },
-    { name: "Ed", age: 55, voted: true },
-    { name: "Tami", age: 54, voted: true },
-    { name: "Mary", age: 31, voted: false },
-    { name: "Becky", age: 43, voted: false },
-    { name: "Joey", age: 41, voted: true },
-    { name: "Jeff", age: 30, voted: true },
-    { name: "Zach", age: 19, voted: false }
-]
+// const name = "John";
+// const age = 101;
 
+// function runforLoop(pets) {
+//   const petObjects = [];
 
+//   for (let i = 0; i < pets.length; i++) {
+//     const pet = { type: pets[i] };
+//     let name;
+//     if (pets[i] === "cat") {
+//       name = "fluffy";
+//     } else {
+//       name = "spot";
+//     }
+//     console.log("pet name: ", name);
+//     pet.name = name;
+//     petObjects.push(pet);
+//   }
+//   console.log("man name: ", name);
+//   return petObjects;
+// }
+// runforLoop(["cat", "dog"]);
 
-function totalVotes(arr) {
-    function reduceFunction(array, functionToRun, placeholder) {
-        this.reduceArray = array.reduce(functionToRun, placeholder);
-        return reduceFunction.reduceArray
-    }
+//2
+printString = (first, last, age) => {
+  console.log(`Hi ${first} ${last}, how does it feel to be ${age}?`);
+};
 
-    function youngVoters(final, object) {
-        if (object.age > 18 && object.age <= 25) { final++ }
-        return final
-    }
-
-
-    function youngVotedOrNot(final, object) {
-        if (object.age > 18 && object.age <= 25 && object.voted) { final++ }
-        return final
-    }
-
-
-    function midVoters(final, object) {
-        if (object.age >= 26 && object.age <= 35) { final++ }
-        return final
-    }
-
-    function midVotedOrNot(final, object) {
-        if (object.age >= 26 && object.age <= 35 && object.voted) { final++ }
-        return final
-    }
-
-
-    function oldVoters(final, object) {
-        if (object.age >= 36 && object.age <= 55) { final++ }
-        return final
-    }
-
-
-    function oldVotedOrNot(final, object) {
-        if (object.age >= 36 && object.age <= 55 && object.voted) { final++ }
-        return final
-    }
-    // let votesObject = {
-    //     reduceVoters1: new reduceFunction(arr, youngVoters, 0),
-    //     reduceVoters2: new reduceFunction(arr, youngVotedOrNot, 0),
-    //     reduceVoters3: new reduceFunction(arr, midVoters, 0),
-    //     reduceVoters4: new reduceFunction(arr, midVotedOrNot, 0),
-    //     reduceVoters5: new reduceFunction(arr, oldVoters, 0),
-    //     reduceVoters6: new reduceFunction(arr, oldVotedOrNot, 0)
-    // }
-
-    var reduceVoters1 = new reduceFunction(arr, youngVoters, 0)
-    var reduceVoters2 = new reduceFunction(arr, youngVotedOrNot, 0)
-    var reduceVoters3 = new reduceFunction(arr, midVoters, 0)
-    var reduceVoters4 = new reduceFunction(arr, midVotedOrNot, 0)
-    var reduceVoters5 = new reduceFunction(arr, oldVoters, 0)
-    var reduceVoters6 = new reduceFunction(arr, oldVotedOrNot, 0)
-        // console.log(reduceVoters1.reduceArray)
-        // console.log(reduceVoters2.reduceArray)
-        // console.log(reduceVoters3.reduceArray)
-        // console.log(reduceVoters4.reduceArray)
-        // console.log(reduceVoters5.reduceArray)
-        // console.log(reduceVoters6.reduceArray)
-
-    let votesObject = {
-        youth: reduceVoters1.reduceArray,
-        youngVotes: reduceVoters2.reduceArray,
-        mids: reduceVoters3.reduceArray,
-        midVotes: reduceVoters4.reduceArray,
-        olds: reduceVoters5.reduceArray,
-        oldVotes: reduceVoters6.reduceArray
-    }
-    console.log(votesObject)
-
-
+function printString2(first, last, age) {
+  console.log(`Hi ${first} ${last}, how does it feel to be ${age}?`);
 }
-totalVotes(voters)
+printString("Benjamin", "Ortiz", 21);
+printString2("Crystal", "Mullins", 21);
 
-module.exports = totalVotes;
+const carrot = ["bright orange", "ripe", "rotten"];
+
+function mapVegetables(arr) {
+  return arr.map(function(carrot) {
+    return { type: "carrot", name: carrot };
+  });
+}
+mapVegetables2 = arr => {
+  return arr.map(carrot => {
+    return { type: "carrot", name: carrot };
+  });
+};
+console.log(mapVegetables(carrot));
+console.log(mapVegetables2(carrot));
