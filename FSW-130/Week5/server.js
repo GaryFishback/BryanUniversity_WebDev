@@ -5,22 +5,29 @@ const path = require("path");
 app.use(express.json());
 
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname + "/server.html"));
+  res.sendFile(path.join(__dirname + "/webpack/dist/index.html"));
 });
-
-const tvShows = require("./TVShows/data");
+app.use("/", express.static(path.join(__dirname, "/webpack/dist/main.js")));
+var pathObj = path.parse(__filename);
+console.log(`../${pathObj.dir}`);
+const tvShows = require("./moviesTvShows/TVShows/src/data");
 app.use(
   "/tvShows",
-  express.static(path.join(__dirname, "/TVShows/tvShows.js"))
+  express.static(path.join(__dirname, "/moviesTvShows/TVShows/src/"))
 );
-app.use("/tvShows", express.static(path.join(__dirname, "/TVShows/")));
+app.use(
+  "/tvShows",
+  express.static(path.join(__dirname, "/moviesTvShows/TVShows/src/index.js"))
+);
 
 app.get("/tvShows", function(req, res) {
-  res.sendFile(path.join(__dirname + "/TVShows/tvShows.html"));
+  res.sendFile(path.join(__dirname + "/moviesTvShows/TVShows/dist/index.html"));
 });
-app.get("/tvShows", function(req, res) {
-  res.sendFile(path.join(__dirname + "/TVShows/tvShows.html"));
-});
+app.use(
+  "/tvShows",
+  express.static(path.join(__dirname, "/moviesTvShows/TVShows/dist/"))
+);
+
 // console.log(__dirname);
 app.get("/tvShows/data", (req, res) => {
   res.send({ tvShows });
@@ -53,11 +60,17 @@ app.delete("/tvShows/data/:id", (req, res) => {
   tvShows.splice(tvShow, 1);
 });
 
-const movies = require("./Movies/data");
-app.use("/movies", express.static(path.join(__dirname, "/Movies")));
-app.use("/movies", express.static(path.join(__dirname, "/Movies/movies.js")));
+const movies = require("./moviesTvShows/Movies/src/data");
+app.use(
+  "/movies",
+  express.static(path.join(__dirname, "/moviesTvShows/Movies/src/"))
+);
+app.use(
+  "/movies",
+  express.static(path.join(__dirname, "/moviesTvShows/Movies/src/index.js"))
+);
 app.get("/movies", function(req, res) {
-  res.sendFile(path.join(__dirname + "/Movies/movies.html"));
+  res.sendFile(path.join(__dirname + "/moviesTvShows/Movies/dist/index.html"));
 });
 
 // console.log(__dirname);
@@ -92,4 +105,4 @@ app.delete("/movies/data/:id", (req, res) => {
   movies.splice(movie, 1);
 });
 
-app.listen(9000, () => {});
+app.listen(8080, () => {});
