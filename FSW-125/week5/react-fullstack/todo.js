@@ -17,7 +17,7 @@ app.post("/bounties", (req, res) => {
   newBounty._id = uuid.v4();
   bounties.push(newBounty);
 
-  res.send(`Posted: Your new bounty has been added to the list of bounties`);
+  res.send(newBounty);
 });
 app.put("/bounties/:id", (req, res) => {
   const id = req.params.id;

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import "./App.css";
-import "./oklahoma/oklahoma.ttf";
+// import "./oklahoma/oklahoma.ttf";
 import Bounty from "./Bounty";
 
 class Bounties extends Component {
@@ -68,24 +68,19 @@ class Bounties extends Component {
       type: this.state.type,
       imgUrl: this.state.photoUrl
     };
+
     console.log(newBounty);
     axios.post("/bounties", newBounty).then(res => {
       console.log(res);
+      console.log(res.data.imgUrl);
+      console.log(this.state);
     });
-    // this.setState(prevState => {
-    //   return {
-    //     changing: "red",
-    //     counter: prevState.counter + 1,
-    //     newBounty: newBounty
-    //   };
-    // });
-    const div = document.createElement("div");
-    div.id = "new";
-    const wrapper = document.getElementById("wrapper");
-    wrapper.insertBefore(div, wrapper.children[wrapper.children.length - 1]);
-    console.log(wrapper.children[wrapper.children.length - 1]);
-    ReactDOM.render(<h1>BLUE</h1>, document.getElementById("new"));
-    console.log(this.state);
+
+    this.setState(prevState => {
+      return {
+        bounties: [...prevState.bounties, newBounty]
+      };
+    });
     //   store.dispatch(countingBountys());
   };
   // displayData = () => {
@@ -109,7 +104,7 @@ class Bounties extends Component {
       updating: true,
       updatingID: e.target.id
     });
-    var updating = document.getElementsByTagName("div");
+    // var updating = document.getElementsByTagName("div");
     // console.log(updating);
     var div = document.getElementById(e.target.id);
     console.log(div.children);
@@ -131,7 +126,7 @@ class Bounties extends Component {
     div.removeChild(div.children[1]);
     div.removeChild(div.children[1]);
     div.removeChild(div.children[1]);
-    var array = ["", "", "", "", ""];
+    // var array = ["", "", "", "", ""];
     // ReactDOM.render(
     //   array.map(() => (
     //     <input style={{ display: "block", margin: "5px" }}></input>
@@ -176,27 +171,27 @@ class Bounties extends Component {
           : console.log(e.target.id);
       div.append(input);
     }
-    var buttonAnchorDel = document.createElement("a");
-    div.append(buttonAnchorDel);
-    buttonAnchorDel.className = "button";
-    buttonAnchorDel.style.width = "100px";
-    buttonAnchorDel.style.height = "50px";
-    buttonAnchorDel.style.margin = "10px";
-    // buttonAnchorDel.style.left = "15em";
-    buttonAnchorDel.style.marginLeft = "25%";
-    buttonAnchorDel.style.position = "relative";
-    // buttonAnchorDel.style.left;
-    buttonAnchorDel.style.display = "inline-block";
-    buttonAnchorDel.id = e.target.id;
+    var buttonAnchorSubmit = document.createElement("a");
+    div.append(buttonAnchorSubmit);
+    buttonAnchorSubmit.className = "button";
+    buttonAnchorSubmit.style.width = "100px";
+    buttonAnchorSubmit.style.height = "50px";
+    buttonAnchorSubmit.style.margin = "10px";
+    // buttonAnchorSubmit.style.left = "15em";
+    buttonAnchorSubmit.style.marginLeft = "25%";
+    buttonAnchorSubmit.style.position = "relative";
+    // buttonAnchorSubmit.style.left;
+    buttonAnchorSubmit.style.display = "inline-block";
+    buttonAnchorSubmit.id = e.target.id;
 
-    var buttonSpanDel = document.createElement("span");
-    buttonAnchorDel.append(buttonSpanDel);
-    buttonSpanDel.textContent = "SUBMIT";
-    buttonSpanDel.className = "button__text";
-    buttonSpanDel.style.paddingTop = "17px";
-    buttonSpanDel.id = e.target.id;
-    // buttonSpanDel.id = num;
-    buttonAnchorDel.addEventListener("click", e => {
+    var buttonSpanSubmit = document.createElement("span");
+    buttonAnchorSubmit.append(buttonSpanSubmit);
+    buttonSpanSubmit.textContent = "SUBMIT";
+    buttonSpanSubmit.className = "button__text";
+    buttonSpanSubmit.style.paddingTop = "17px";
+    buttonSpanSubmit.id = e.target.id;
+    // buttonSpanSubmit.id = num;
+    buttonAnchorSubmit.addEventListener("click", e => {
       const living = div.children[5].value;
       console.log(living);
       const updates = {
@@ -304,7 +299,7 @@ class Bounties extends Component {
             height: "25vw",
             marginTop: 50
           }}
-          onClick={e => {}}
+          // onClick={e => {}}
         >
           <h1> Adding a New Bounty!</h1>
           <section>
