@@ -10,6 +10,7 @@ app.get("/", function(req, res) {
 app.use("/", express.static(path.join(__dirname, "/webpack/dist/main.js")));
 var pathObj = path.parse(__filename);
 console.log(`../${pathObj.dir}`);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 const tvShows = require("./moviesTvShows/TVShows/src/data");
 app.use(
   "/tvShows",

@@ -3,9 +3,9 @@ import store from "./redux/combineReducers";
 import { loading, addOne } from "./redux/loadingAddReducer";
 import { counting, deleteOne } from "./redux/counterAndDelete";
 
-var h2 = document.createElement("h2");
-document.body.append(h2);
-h2.textContent = "js file working";
+// var h2 = document.createElement("h2");
+// document.body.append(h2);
+// h2.textContent = "js file working";
 var creatingBoxes = (movie, num) => {
   var movieList = document.getElementById("movie-list");
   var movieDiv = document.createElement("div");
@@ -122,8 +122,8 @@ axios
   .catch(err => console.log(err));
 var submitButton = document.getElementById("submit");
 console.log(submitButton);
-var submitButton = document.getElementById("submit");
-console.log(submitButton);
+// var submitButton = document.getElementById("submit");
+// console.log(submitButton);
 submitButton.addEventListener("click", () => {
   var titleInput = document.getElementsByName("title")[0];
   // var colorInput = document.getElementsByName("color")[0];
@@ -149,10 +149,10 @@ submitButton.addEventListener("click", () => {
   store.dispatch(counting());
   store.dispatch(addOne(newObject));
   var newState = store.getState();
-  console.log(newState.loadingAdding.length[newState.loadingAdding.length - 1]);
+  // console.log(newState.loadingAdding.length[newState.loadingAdding.length - 1]);
   creatingBoxes(
     newState.loadingAdding[newState.loadingAdding.length - 1],
     newState.countingDelete
   );
-  store.dispatch(counting());
+  // store.dispatch(counting());
 });
