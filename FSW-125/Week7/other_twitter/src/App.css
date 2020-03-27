@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+input::placeholder {
+  color: #663221;
+}
+
+textarea {
+  width: 80%;
+  margin-left: -2em;
+  margin-right: 2em;
+  margin-top: 2em;
+  height: 100%;
+  font-size: 2vw;
+  color: #663221;
+  grid-column: span 2;
+  background: #a06a34;
+  margin: 0 auto;
+}
+textarea::placeholder {
+  color: #663221;
+}
+@media only screen and (max-width: 600px) {
+  #formfield {
+    margin: 0;
+    width: 100%;
+  }
+  #tweetfield {
+    margin: 0;
+    /* width: 100%; */
+  }
+}
+#tweetWrapper {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: auto auto auto;
+  /* margin-right: 0; */
+  width: 80%;
+  grid-gap: 10px;
+  margin: 0 auto;
+  /* display: flex; */
+  /* margin-left: 0; */
+}
+/* the little bit of editing that wasn't done in styled components is here. teh tweets wrapper is also edited. here.  */
