@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-
 import NavBar from "./navbar";
 import Main from "./main";
 import Footer from "./footer";
 import { Home } from "./style/styles";
-// import { ThemeConsumer } from "./../themeProvider/themeProviderComponent";
-import { ArrayProvider } from "../themeProvider/arrayProviderComponent";
+import { ArrayProvider } from "../contextProvider/arrayProviderComponent";
 
 class HomeClass extends Component {
   constructor(props) {
@@ -16,10 +14,6 @@ class HomeClass extends Component {
   render() {
     return (
       <Home classname="home">
-        {/* // this.setState({
-            //   themeState: randomTheme,
-            // }); */}
-
         <ArrayProvider>
           <NavBar />
           <Main />

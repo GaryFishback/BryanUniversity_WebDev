@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import { Link, Switch, Route } from "react-router-dom";
-import { ArrayConsumer } from "../themeProvider/arrayProviderComponent";
+import { ArrayConsumer } from "../contextProvider/arrayProviderComponent";
 import Form from "./Form";
 import Tweet from "./Tweet";
-// import tweet from "./../Tweets";
+
 import { Main, PHeading, Button } from "./style/styles";
-// here is where everything happens...
 class MainTag extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // title: "",
       isCompleted: "",
       created_at: "", //date
       id: "",
@@ -35,7 +33,6 @@ class MainTag extends Component {
       <ArrayConsumer>
         {array => {
           // the consumer wraps all of it, including the switch from list to details views.
-          // array.array === "lightblue" ? (
           return (
             <Switch>
               <Route

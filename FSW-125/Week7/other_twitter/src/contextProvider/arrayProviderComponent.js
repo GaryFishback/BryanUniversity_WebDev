@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import array from "./../data/Tweets";
+import array from "../data/Tweets";
 
 console.log(array.array);
 

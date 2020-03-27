@@ -3,121 +3,96 @@ class RightCol extends Component {
   render() {
     //sp is for the span element in the Paragraph function.
     return (
-      <div className="css-1dbjc4n r-1pi2tsx" style={{ minHeight: "105px" }}>
-        <div className="css-1dbjc4n" style={{ marginTop: "0px" }}></div>
-        <div className="css-1dbjc4n r-1xcajam r-ipm5af r-1hycxz">
-          <div className="css-1dbjc4n r-1adg3ll">
-            <div className="css-1dbjc4n">
-              <div className="css-1dbjc4n r-1l5qxre r-m611by">
-                <div className="css-1dbjc4n r-1awozwy r-aqfbo4 r-14lw9ot r-18u37iz r-1h3ijdo r-15d164r r-1vsu8ta r-1xcajam r-ipm5af r-1hycxz r-136ojw6">
-                  <div className="css-1dbjc4n r-1oszu61 r-1iusvr4 r-18u37iz r-16y2uox">
-                    <div className="css-1dbjc4n r-13awgt0 r-eqz5dr r-bnwqim r-8fdsdq">
-                      <div className="r-1oszu61 r-1phboty r-1yadl64 r-deolkf r-6koalj r-13awgt0 r-eqz5dr r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010">
+      <div style={{ minHeight: "105px" }}>
+        <div style={{ marginTop: "0px" }}></div>
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <div>
                         <form
                           action="#"
                           aria-label="Search Twitter"
                           role="search"
                           className="r-1oszu61 r-1phboty r-1yadl64 r-deolkf r-6koalj r-13awgt0 r-eqz5dr r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010"
                         >
-                          <div className="css-1dbjc4n r-1wbh5a2">
-                            <div className="css-1dbjc4n r-e84r5y r-42olwf r-sdzlij r-1phboty r-rs99b7 r-eqz5dr r-16y2uox r-1wbh5a2 r-1777fci">
-                              <div className="css-1dbjc4n r-18u37iz">
-                                <div className="css-1dbjc4n r-6koalj r-1777fci">
-                                  <svg
-                                    viewBox="0 0 24 24"
-                                    className="r-1re7ezh r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-18qmn74 r-1hfyk0a r-bnwqim r-1plcrui r-lrvibr"
-                                  >
-                                    <g>
-                                      <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
-                                    </g>
-                                  </svg>
-                                </div>
-                                <div
-                                  dir="auto"
-                                  className="css-901oao r-hkyrab r-6koalj r-16y2uox r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-qvutc0"
+                          <div>
+                            {" "}
+                            <div>
+                              {" "}
+                              <div>
+                                {" "}
+                                <div></div>
+                                <svg
+                                  viewBox="0 0 24 24"
+                                  className="r-1re7ezh r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-18qmn74 r-1hfyk0a r-bnwqim r-1plcrui r-lrvibr"
                                 >
-                                  <input
-                                    aria-activedescendant="typeaheadFocus-0.6106062346727563"
-                                    aria-autocomplete="list"
-                                    aria-label="Search query"
-                                    aria-owns="typeaheadDropdown-15"
-                                    autoCapitalize="sentences"
-                                    autoComplete="off"
-                                    autoCorrect="on"
-                                    placeholder="Search Twitter"
-                                    spellCheck="true"
-                                    enterkeyhint="search"
-                                    type="text"
-                                    dir="auto"
-                                    data-focusable="true"
-                                    className="r-30o5oe r-1niwhzg r-17gur6a r-1yadl64 r-deolkf r-homxoj r-poiln3 r-7cikom r-1ny4l3l r-1sp51qo r-1lrr6ok r-1dz5y72 r-1ttztb7 r-13qz1uu"
-                                    data-testid="SearchBox_Search_Input"
-                                    // value=""
-                                  ></input>
-                                </div>
-                                <div className="css-1dbjc4n r-6koalj r-1777fci"></div>
+                                  <g>
+                                    <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                                  </g>
+                                </svg>
                               </div>
+                              <div>
+                                <input
+                                  aria-activedescendant="typeaheadFocus-0.6106062346727563"
+                                  aria-autocomplete="list"
+                                  aria-label="Search query"
+                                  aria-owns="typeaheadDropdown-15"
+                                  autoCapitalize="sentences"
+                                  autoComplete="off"
+                                  autoCorrect="on"
+                                  placeholder="Search Twitter"
+                                  spellCheck="true"
+                                  enterkeyhint="search"
+                                  type="text"
+                                  dir="auto"
+                                  data-focusable="true"
+                                  className="r-30o5oe r-1niwhzg r-17gur6a r-1yadl64 r-deolkf r-homxoj r-poiln3 r-7cikom r-1ny4l3l r-1sp51qo r-1lrr6ok r-1dz5y72 r-1ttztb7 r-13qz1uu"
+                                  data-testid="SearchBox_Search_Input"
+                                  // value=""
+                                ></input>
+                              </div>
+                              <div></div>
                             </div>
                           </div>
-                          <div className="css-1dbjc4n r-13awgt0 r-bnwqim"></div>
+                          <div></div>
                         </form>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="css-1dbjc4n r-1h3ijdo"></div>
-                <div className="css-1dbjc4n r-1u4rsef r-9cbz99 r-t23y2h r-1phboty r-rs99b7 r-ku1wi2 r-1udh08x">
-                  <div className="css-1dbjc4n">
-                    <div className="css-1dbjc4n">
-                      <section
-                        aria-labelledby="accessible-list-21"
-                        className="css-1dbjc4n"
-                      >
-                        <h1
-                          aria-level="1"
-                          dir="auto"
-                          className="css-4rbku5 css-901oao r-4iw3lz r-1xk2f4g r-109y4c4 r-1udh08x r-wwvuq4 r-u8s1d r-92ng3h"
-                          id="accessible-list-21"
-                        >
-                          Trending now
-                        </h1>
-                        <div
-                          aria-label="Timeline: Trending now"
-                          className="css-1dbjc4n"
-                        >
-                          <div className="css-1dbjc4n">
-                            <div className="css-1dbjc4n r-1adg3ll">
-                              <div className="css-1dbjc4n">
-                                <div className="css-1dbjc4n r-my5ep6 r-rull8r r-qklmqi r-1wtj0ep r-1j3t67a r-1w50u8q">
-                                  <h2
-                                    aria-level="2"
-                                    className="css-4rbku5 css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep"
-                                  >
-                                    <div
-                                      dir="auto"
-                                      className="css-901oao css-bfa6kz r-hkyrab r-1qd0xha r-1b6yd1w r-1vr29t4 r-ad9z0x r-1sp7lne r-bcqeeo r-qvutc0"
-                                    >
-                                      <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                        Worldwide trends
-                                      </span>
+                <div></div>
+                <div>
+                  {" "}
+                  <div>
+                    {" "}
+                    <div>
+                      <section>
+                        <h1>Trending now</h1>
+                        <div>
+                          <div>
+                            {" "}
+                            <div>
+                              {" "}
+                              <div>
+                                {" "}
+                                <div>
+                                  <h2>
+                                    <div>
+                                      <span>Worldwide trends</span>
                                     </div>
-                                    <div className="css-1dbjc4n">
+                                    <div>
                                       <a
                                         href="/settings/trends"
-                                        aria-haspopup="false"
-                                        aria-label="Settings"
-                                        role="button"
-                                        data-focusable="true"
-                                        className="css-4rbku5 css-18t94o4 css-1dbjc4n r-1niwhzg r-42olwf r-sdzlij r-1phboty r-rs99b7 r-1loqt21 r-1w2pmg r-5pqaiu r-1vuscfd r-53xb7h r-mk0yit r-o7ynqc r-6416eg r-lrvibr"
                                         style={{
                                           marginRight:
                                             "calc(0px + (-1 * (41px - 1.5em)) / 2)"
                                         }}
                                       >
-                                        <div
-                                          dir="auto"
-                                          className="css-901oao r-1awozwy r-13gxpu9 r-6koalj r-18u37iz r-16y2uox r-1qd0xha r-a023e6 r-vw2c0b r-1777fci r-eljoum r-dnmrzs r-bcqeeo r-q4m81j r-qvutc0"
-                                        >
+                                        <div>
                                           <svg
                                             viewBox="0 0 24 24"
                                             className="r-13gxpu9 r-4qtqp9 r-yyyyoo r-1q142lx r-50lct3 r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"
@@ -133,126 +108,71 @@ class RightCol extends Component {
                                     </div>
                                   </h2>
                                 </div>
-                                <div className="css-1dbjc4n r-my5ep6 r-qklmqi r-1adg3ll">
-                                  <div
-                                    aria-haspopup="false"
-                                    data-focusable="true"
-                                    tabIndex="0"
-                                    className="css-1dbjc4n r-1loqt21 r-6koalj r-1j3t67a r-1w50u8q r-o7ynqc r-6416eg"
-                                    data-testid="trend"
-                                  >
-                                    <div className="css-1dbjc4n r-16y2uox r-bnwqim">
-                                      <div className="css-1dbjc4n r-1d09ksm r-18u37iz r-1wbh5a2">
-                                        <div
-                                          dir="auto"
-                                          className="css-901oao r-1re7ezh r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-bcqeeo r-qvutc0"
-                                        ></div>
+                                <div>
+                                  {" "}
+                                  <div>
+                                    {" "}
+                                    <div>
+                                      {" "}
+                                      <div>
+                                        {" "}
+                                        <div></div>
                                       </div>
-                                      <div
-                                        dir="ltr"
-                                        className="css-901oao r-hkyrab r-1qd0xha r-a023e6 r-vw2c0b r-ad9z0x r-bcqeeo r-vmopo1 r-qvutc0"
-                                      >
-                                        <span className="r-18u37iz">
-                                          <span
-                                            dir="ltr"
-                                            className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"
-                                          >
-                                            #StarTrekPicard
-                                          </span>
+                                      <div>
+                                        <span>
+                                          <span dir="ltr">#StarTrekPicard</span>
                                         </span>
                                       </div>
-                                      <div
-                                        dir="auto"
-                                        className="css-901oao r-1re7ezh r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-vmopo1 r-qvutc0"
-                                      >
-                                        <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                          All Episodes Now Streaming
-                                        </span>
+                                      <div>
+                                        <span>All Episodes Now Streaming</span>
                                       </div>
-                                      <div
-                                        dir="auto"
-                                        className="css-901oao r-1re7ezh r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-1g94qm0 r-bcqeeo r-qvutc0"
-                                        data-testid="metadata"
-                                      >
-                                        <div className="css-1dbjc4n r-1awozwy r-xoduu5 r-18u37iz">
-                                          <svg
-                                            viewBox="0 0 24 24"
-                                            className="r-1re7ezh r-4qtqp9 r-yyyyoo r-1q142lx r-ip8ujx r-7o8qx1 r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"
-                                          >
+                                      <div>
+                                        <div>
+                                          <svg viewBox="0 0 24 24">
                                             <g>
                                               <path d="M20.75 2H3.25C2.007 2 1 3.007 1 4.25v15.5C1 20.993 2.007 22 3.25 22h17.5c1.243 0 2.25-1.007 2.25-2.25V4.25C23 3.007 21.993 2 20.75 2zM17.5 13.504c0 .483-.392.875-.875.875s-.875-.393-.875-.876V9.967l-7.547 7.546c-.17.17-.395.256-.62.256s-.447-.086-.618-.257c-.342-.342-.342-.896 0-1.237l7.547-7.547h-3.54c-.482 0-.874-.393-.874-.876s.392-.875.875-.875h5.65c.483 0 .875.39.875.874v5.65z"></path>
                                             </g>
                                           </svg>
-                                          <span className="css-901oao css-16my406 r-1re7ezh r-1qd0xha r-n6v787 r-1sf4r6n r-bcqeeo r-qvutc0">
-                                            <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
+                                          <span>
+                                            <span>
                                               Promoted by CBS All Access
                                             </span>
                                           </span>
                                         </div>
                                       </div>
-                                      <div className="css-1dbjc4n r-u8s1d r-zchlnj r-1jy2w8o"></div>
+                                      <div></div>
                                     </div>
                                   </div>
                                 </div>
-                                <div className="css-1dbjc4n r-my5ep6 r-qklmqi r-1adg3ll">
-                                  <div
-                                    aria-haspopup="false"
-                                    data-focusable="true"
-                                    tabIndex="0"
-                                    className="css-1dbjc4n r-1loqt21 r-6koalj r-1j3t67a r-1w50u8q r-o7ynqc r-6416eg"
-                                    data-testid="trend"
-                                  >
-                                    <div className="css-1dbjc4n r-16y2uox r-bnwqim">
-                                      <div className="css-1dbjc4n r-1d09ksm r-18u37iz r-1wbh5a2">
-                                        <div
-                                          dir="auto"
-                                          aria-hidden="true"
-                                          className="css-901oao r-1re7ezh r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-bcqeeo r-qvutc0"
-                                        >
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            1
-                                          </span>
+                                <div>
+                                  <div>
+                                    {" "}
+                                    <div>
+                                      {" "}
+                                      <div>
+                                        {" "}
+                                        <div>
+                                          <span>1</span>
                                         </div>
-                                        <div
-                                          dir="auto"
-                                          aria-hidden="true"
-                                          className="css-901oao r-1re7ezh r-1q142lx r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-ou255f r-qvutc0"
-                                        >
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            ·
-                                          </span>
+                                        <div>
+                                          <span>·</span>
                                         </div>
-                                        <div
-                                          dir="auto"
-                                          className="css-901oao r-1re7ezh r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-bcqeeo r-qvutc0"
-                                        >
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            News · Trending
-                                          </span>
+                                        <div>
+                                          <span>News · Trending</span>
                                         </div>
                                       </div>
-                                      <div
-                                        dir="ltr"
-                                        className="css-901oao r-hkyrab r-1qd0xha r-a023e6 r-vw2c0b r-ad9z0x r-bcqeeo r-vmopo1 r-qvutc0"
-                                      >
-                                        <span className="r-18u37iz">
-                                          <span
-                                            dir="ltr"
-                                            className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"
-                                          >
-                                            #คั่นกูEP6
-                                          </span>
+                                      <div>
+                                        <span>
+                                          <span>#คั่นกูEP6</span>
                                         </span>
                                       </div>
                                       <div
                                         dir="auto"
                                         className="css-901oao r-1re7ezh r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-vmopo1 r-qvutc0"
                                       >
-                                        <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                          1.13M Tweets
-                                        </span>
+                                        <span>1.13M Tweets</span>
                                       </div>
-                                      <div className="css-1dbjc4n r-u8s1d r-zchlnj r-1jy2w8o">
+                                      <div>
                                         <div className="css-1dbjc4n r-18u37iz r-1h0z5md r-1joea0r">
                                           <div
                                             aria-haspopup="true"
@@ -285,7 +205,7 @@ class RightCol extends Component {
                                     </div>
                                   </div>
                                 </div>
-                                <div className="css-1dbjc4n r-my5ep6 r-qklmqi r-1adg3ll">
+                                <div>
                                   <div
                                     aria-haspopup="false"
                                     data-focusable="true"
@@ -300,37 +220,28 @@ class RightCol extends Component {
                                           aria-hidden="true"
                                           className="css-901oao r-1re7ezh r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-bcqeeo r-qvutc0"
                                         >
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            2
-                                          </span>
+                                          <span>2</span>
                                         </div>
                                         <div
                                           dir="auto"
                                           aria-hidden="true"
                                           className="css-901oao r-1re7ezh r-1q142lx r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-ou255f r-qvutc0"
                                         >
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            ·
-                                          </span>
+                                          <span>·</span>
                                         </div>
                                         <div
                                           dir="auto"
                                           className="css-901oao r-1re7ezh r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-bcqeeo r-qvutc0"
                                         >
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            kpop · Trending
-                                          </span>
+                                          <span>kpop · Trending</span>
                                         </div>
                                       </div>
                                       <div
                                         dir="ltr"
                                         className="css-901oao r-hkyrab r-1qd0xha r-a023e6 r-vw2c0b r-ad9z0x r-bcqeeo r-vmopo1 r-qvutc0"
                                       >
-                                        <span className="r-18u37iz">
-                                          <span
-                                            dir="ltr"
-                                            className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"
-                                          >
+                                        <span>
+                                          <span dir="ltr">
                                             #BlessedToHaveJackson
                                           </span>
                                         </span>
@@ -339,11 +250,9 @@ class RightCol extends Component {
                                         dir="auto"
                                         className="css-901oao r-1re7ezh r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-vmopo1 r-qvutc0"
                                       >
-                                        <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                          398K Tweets
-                                        </span>
+                                        <span>398K Tweets</span>
                                       </div>
-                                      <div className="css-1dbjc4n r-u8s1d r-zchlnj r-1jy2w8o">
+                                      <div>
                                         <div className="css-1dbjc4n r-18u37iz r-1h0z5md r-1joea0r">
                                           <div
                                             aria-haspopup="true"
@@ -376,7 +285,7 @@ class RightCol extends Component {
                                     </div>
                                   </div>
                                 </div>
-                                <div className="css-1dbjc4n r-my5ep6 r-qklmqi r-1adg3ll">
+                                <div>
                                   <div
                                     aria-haspopup="false"
                                     data-focusable="true"
@@ -391,50 +300,37 @@ class RightCol extends Component {
                                           aria-hidden="true"
                                           className="css-901oao r-1re7ezh r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-bcqeeo r-qvutc0"
                                         >
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            3
-                                          </span>
+                                          <span>3</span>
                                         </div>
                                         <div
                                           dir="auto"
                                           aria-hidden="true"
                                           className="css-901oao r-1re7ezh r-1q142lx r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-ou255f r-qvutc0"
                                         >
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            ·
-                                          </span>
+                                          <span>·</span>
                                         </div>
                                         <div
                                           dir="auto"
                                           className="css-901oao r-1re7ezh r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-bcqeeo r-qvutc0"
                                         >
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            Trending worldwide
-                                          </span>
+                                          <span>Trending worldwide</span>
                                         </div>
                                       </div>
                                       <div
                                         dir="ltr"
                                         className="css-901oao r-hkyrab r-1qd0xha r-a023e6 r-vw2c0b r-ad9z0x r-bcqeeo r-vmopo1 r-qvutc0"
                                       >
-                                        <span className="r-18u37iz">
-                                          <span
-                                            dir="ltr"
-                                            className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"
-                                          >
-                                            #NOMORE_NTHROOM
-                                          </span>
+                                        <span>
+                                          <span dir="ltr">#NOMORE_NTHROOM</span>
                                         </span>
                                       </div>
                                       <div
                                         dir="auto"
                                         className="css-901oao r-1re7ezh r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-vmopo1 r-qvutc0"
                                       >
-                                        <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                          255K Tweets
-                                        </span>
+                                        <span>255K Tweets</span>
                                       </div>
-                                      <div className="css-1dbjc4n r-u8s1d r-zchlnj r-1jy2w8o">
+                                      <div>
                                         <div className="css-1dbjc4n r-18u37iz r-1h0z5md r-1joea0r">
                                           <div
                                             aria-haspopup="true"
@@ -467,7 +363,7 @@ class RightCol extends Component {
                                     </div>
                                   </div>
                                 </div>
-                                <div className="css-1dbjc4n r-my5ep6 r-qklmqi r-1adg3ll">
+                                <div>
                                   <div
                                     aria-haspopup="false"
                                     data-focusable="true"
@@ -482,50 +378,37 @@ class RightCol extends Component {
                                           aria-hidden="true"
                                           className="css-901oao r-1re7ezh r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-bcqeeo r-qvutc0"
                                         >
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            4
-                                          </span>
+                                          <span>4</span>
                                         </div>
                                         <div
                                           dir="auto"
                                           aria-hidden="true"
                                           className="css-901oao r-1re7ezh r-1q142lx r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-ou255f r-qvutc0"
                                         >
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            ·
-                                          </span>
+                                          <span>·</span>
                                         </div>
                                         <div
                                           dir="auto"
                                           className="css-901oao r-1re7ezh r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-bcqeeo r-qvutc0"
                                         >
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            kpop · Trending
-                                          </span>
+                                          <span>kpop · Trending</span>
                                         </div>
                                       </div>
                                       <div
                                         dir="ltr"
                                         className="css-901oao r-hkyrab r-1qd0xha r-a023e6 r-vw2c0b r-ad9z0x r-bcqeeo r-vmopo1 r-qvutc0"
                                       >
-                                        <span className="r-18u37iz">
-                                          <span
-                                            dir="ltr"
-                                            className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"
-                                          >
-                                            #KingJacksonDay
-                                          </span>
+                                        <span>
+                                          <span dir="ltr">#KingJacksonDay</span>
                                         </span>
                                       </div>
                                       <div
                                         dir="auto"
                                         className="css-901oao r-1re7ezh r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-vmopo1 r-qvutc0"
                                       >
-                                        <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                          245K Tweets
-                                        </span>
+                                        <span>245K Tweets</span>
                                       </div>
-                                      <div className="css-1dbjc4n r-u8s1d r-zchlnj r-1jy2w8o">
+                                      <div>
                                         <div className="css-1dbjc4n r-18u37iz r-1h0z5md r-1joea0r">
                                           <div
                                             aria-haspopup="true"
@@ -569,9 +452,7 @@ class RightCol extends Component {
                                     dir="auto"
                                     className="css-901oao r-13gxpu9 r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-qvutc0"
                                   >
-                                    <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                      Show more
-                                    </span>
+                                    <span>Show more</span>
                                   </div>
                                 </div>
                               </div>
@@ -593,9 +474,7 @@ class RightCol extends Component {
                           dir="auto"
                           className="css-901oao css-bfa6kz r-hkyrab r-1qd0xha r-1b6yd1w r-1vr29t4 r-ad9z0x r-bcqeeo r-qvutc0"
                         >
-                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                            Who to follow
-                          </span>
+                          <span>Who to follow</span>
                         </div>
                       </h2>
                     </div>
@@ -661,10 +540,8 @@ class RightCol extends Component {
                                         dir="auto"
                                         className="css-901oao css-bfa6kz r-hkyrab r-1qd0xha r-a023e6 r-vw2c0b r-ad9z0x r-bcqeeo r-3s2u2q r-qvutc0"
                                       >
-                                        <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            E Pluribus Unum Fund
-                                          </span>
+                                        <span>
+                                          <span>E Pluribus Unum Fund</span>
                                         </span>
                                       </div>
                                       <div
@@ -677,9 +554,7 @@ class RightCol extends Component {
                                         dir="ltr"
                                         className="css-901oao css-bfa6kz r-1re7ezh r-18u37iz r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-qvutc0"
                                       >
-                                        <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                          @unumfund
-                                        </span>
+                                        <span>@unumfund</span>
                                       </div>
                                     </div>
                                   </div>
@@ -699,9 +574,7 @@ class RightCol extends Component {
                                     className="css-901oao r-1awozwy r-13gxpu9 r-6koalj r-18u37iz r-16y2uox r-1qd0xha r-a023e6 r-vw2c0b r-1777fci r-eljoum r-dnmrzs r-bcqeeo r-q4m81j r-qvutc0"
                                   >
                                     <span className="css-901oao css-16my406 css-bfa6kz r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                      <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                        Follow
-                                      </span>
+                                      <span>Follow</span>
                                     </span>
                                   </div>
                                 </div>
@@ -716,10 +589,7 @@ class RightCol extends Component {
                           ></div>
                           <div className="css-1dbjc4n r-1iusvr4 r-16y2uox r-5f2r5o">
                             <div className="css-1dbjc4n r-1awozwy r-18u37iz r-crgep1 r-1mdbw0j r-mk0yit r-glunga">
-                              <svg
-                                viewBox="0 0 24 24"
-                                className="r-1re7ezh r-4qtqp9 r-yyyyoo r-1q142lx r-ip8ujx r-7o8qx1 r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"
-                              >
+                              <svg viewBox="0 0 24 24">
                                 <g>
                                   <path d="M20.75 2H3.25C2.007 2 1 3.007 1 4.25v15.5C1 20.993 2.007 22 3.25 22h17.5c1.243 0 2.25-1.007 2.25-2.25V4.25C23 3.007 21.993 2 20.75 2zM17.5 13.504c0 .483-.392.875-.875.875s-.875-.393-.875-.876V9.967l-7.547 7.546c-.17.17-.395.256-.62.256s-.447-.086-.618-.257c-.342-.342-.342-.896 0-1.237l7.547-7.547h-3.54c-.482 0-.874-.393-.874-.876s.392-.875.875-.875h5.65c.483 0 .875.39.875.874v5.65z"></path>
                                 </g>
@@ -728,9 +598,7 @@ class RightCol extends Component {
                                 dir="auto"
                                 className="css-901oao r-1re7ezh r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-bcqeeo r-qvutc0"
                               >
-                                <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                  Promoted
-                                </span>
+                                <span>Promoted</span>
                               </div>
                             </div>
                           </div>
@@ -797,10 +665,8 @@ class RightCol extends Component {
                                         dir="auto"
                                         className="css-901oao css-bfa6kz r-hkyrab r-1qd0xha r-a023e6 r-vw2c0b r-ad9z0x r-bcqeeo r-3s2u2q r-qvutc0"
                                       >
-                                        <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            Jake Lundgren
-                                          </span>
+                                        <span>
+                                          <span>Jake Lundgren</span>
                                         </span>
                                       </div>
                                       <div
@@ -813,9 +679,7 @@ class RightCol extends Component {
                                         dir="ltr"
                                         className="css-901oao css-bfa6kz r-1re7ezh r-18u37iz r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-qvutc0"
                                       >
-                                        <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                          @TeachHistoryyy
-                                        </span>
+                                        <span>@TeachHistoryyy</span>
                                       </div>
                                     </div>
                                   </div>
@@ -835,9 +699,7 @@ class RightCol extends Component {
                                     className="css-901oao r-1awozwy r-13gxpu9 r-6koalj r-18u37iz r-16y2uox r-1qd0xha r-a023e6 r-vw2c0b r-1777fci r-eljoum r-dnmrzs r-bcqeeo r-q4m81j r-qvutc0"
                                   >
                                     <span className="css-901oao css-16my406 css-bfa6kz r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                      <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                        Follow
-                                      </span>
+                                      <span>Follow</span>
                                     </span>
                                   </div>
                                 </div>
@@ -907,10 +769,8 @@ class RightCol extends Component {
                                         dir="auto"
                                         className="css-901oao css-bfa6kz r-hkyrab r-1qd0xha r-a023e6 r-vw2c0b r-ad9z0x r-bcqeeo r-3s2u2q r-qvutc0"
                                       >
-                                        <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                          <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                            Emma Brown
-                                          </span>
+                                        <span>
+                                          <span>Emma Brown</span>
                                         </span>
                                       </div>
                                       <div
@@ -923,9 +783,7 @@ class RightCol extends Component {
                                         dir="ltr"
                                         className="css-901oao css-bfa6kz r-1re7ezh r-18u37iz r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-qvutc0"
                                       >
-                                        <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                          @19manateeEm
-                                        </span>
+                                        <span>@19manateeEm</span>
                                       </div>
                                     </div>
                                   </div>
@@ -945,9 +803,7 @@ class RightCol extends Component {
                                     className="css-901oao r-1awozwy r-13gxpu9 r-6koalj r-18u37iz r-16y2uox r-1qd0xha r-a023e6 r-vw2c0b r-1777fci r-eljoum r-dnmrzs r-bcqeeo r-q4m81j r-qvutc0"
                                   >
                                     <span className="css-901oao css-16my406 css-bfa6kz r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                      <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                                        Follow
-                                      </span>
+                                      <span>Follow</span>
                                     </span>
                                   </div>
                                 </div>
@@ -967,9 +823,7 @@ class RightCol extends Component {
                         dir="auto"
                         className="css-901oao r-13gxpu9 r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-qvutc0"
                       >
-                        <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                          Show more
-                        </span>
+                        <span>Show more</span>
                       </div>
                     </a>
                   </aside>
@@ -988,9 +842,7 @@ class RightCol extends Component {
                       className="css-4rbku5 css-18t94o4 css-901oao r-1re7ezh r-1loqt21 r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-hrzydr r-bcqeeo r-1qfoi16 r-qvutc0"
                       rel=" noopener noreferrer"
                     >
-                      <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                        Terms
-                      </span>
+                      <span>Terms</span>
                     </a>
                     <a
                       href="https://twitter.com/privacy"
@@ -1000,9 +852,7 @@ class RightCol extends Component {
                       className="css-4rbku5 css-18t94o4 css-901oao r-1re7ezh r-1loqt21 r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-hrzydr r-bcqeeo r-1qfoi16 r-qvutc0"
                       rel=" noopener noreferrer"
                     >
-                      <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                        Privacy policy
-                      </span>
+                      <span>Privacy policy</span>
                     </a>
                     <a
                       href="https://support.twitter.com/articles/20170514"
@@ -1012,9 +862,7 @@ class RightCol extends Component {
                       className="css-4rbku5 css-18t94o4 css-901oao r-1re7ezh r-1loqt21 r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-hrzydr r-bcqeeo r-1qfoi16 r-qvutc0"
                       rel=" noopener noreferrer"
                     >
-                      <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                        Cookies
-                      </span>
+                      <span>Cookies</span>
                     </a>
                     <a
                       href="https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html"
@@ -1024,9 +872,7 @@ class RightCol extends Component {
                       className="css-4rbku5 css-18t94o4 css-901oao r-1re7ezh r-1loqt21 r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-hrzydr r-bcqeeo r-1qfoi16 r-qvutc0"
                       rel=" noopener noreferrer"
                     >
-                      <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                        Ads info
-                      </span>
+                      <span>Ads info</span>
                     </a>
                     <div
                       aria-expanded="false"
@@ -1056,9 +902,7 @@ class RightCol extends Component {
                       dir="auto"
                       className="css-901oao r-1re7ezh r-1qd0xha r-n6v787 r-16dba41 r-1sf4r6n r-hrzydr r-bcqeeo r-1qfoi16 r-qvutc0"
                     >
-                      <span className="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">
-                        © 2020 Twitter, Inc.
-                      </span>
+                      <span>© 2020 Twitter, Inc.</span>
                     </div>
                   </nav>
                 </div>
