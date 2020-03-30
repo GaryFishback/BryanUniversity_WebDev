@@ -1,0 +1,350 @@
+#wrapper {
+  width: 100%;
+  margin: 0;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 95% 5%;
+}
+#left {
+  /* border-right: solid black; */
+  background-image: url(./../../imgs/LoginPage_leftbird_fixed.jpg);
+  /* background-image: url(https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/Week7/twitter_spa/src/imgs/LoginPage_leftbird_fixed.jpg);  */
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#right {
+  /* background-image: url(https://i.pinimg.com/564x/ef/b2/73/efb27314e7a44d188f4488816cddaf77.jpg); */
+  background: white;
+}
+footer {
+  grid-column: span 2;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+main {
+  margin: 0;
+  height: 100%;
+}
+#twitter_icon {
+  /* display: block; */
+  fill: rgb(29, 161, 242);
+  height: 41.25px;
+  width: 41.25px;
+}
+.left_center_div svg {
+  margin-right: 15px;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  fill: rgb(255, 255, 255);
+  flex-shrink: 0;
+  font-size: 23px;
+  height: 28.75px;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  pointer-events: auto;
+  position: relative;
+  text-size-adjust: 100%;
+  user-select: none;
+  /* vertical-align: text-bottom; */
+  width: 28.75px;
+  -webkit-box-direction: normal;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+p span {
+  font-size: 19px;
+  display: inline;
+}
+.left_center_div {
+  padding-top: 10%;
+  grid-row: 2;
+  grid-column: 2;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+#left {
+  font-weight: bold;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#right {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 33% auto 1fr;
+}
+nav {
+  grid-column: span 3;
+}
+.right_center_div {
+  grid-row: 2;
+  grid-column: 2;
+  width: 380px;
+  height: 380px;
+}
+.right_center_div h1 {
+  font-size: 30px;
+}
+.right_center_div h3 {
+  margin-top: 59px;
+  font-size: 15px;
+}
+nav a {
+  color: rgb(29, 161, 242);
+  text-decoration: none;
+  font-size: 13px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+.right_center_div a {
+  background-color: white;
+  /* border-bottom-color: rgba(0, 0, 0, 0); */
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  /* border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0px;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1; */
+  /* border-left-color: rgba(0, 0, 0, 0); */
+  /* border-left-style: solid;
+  border-left-width: 1px; */
+  /* border-right-color: rgba(0, 0, 0, 0); */
+  /* border-right-style: solid;
+  border-right-width: 1px; */
+  /* border-top-color: rgba(0, 0, 0, 0); */
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(29, 161, 242);
+  box-sizing: border-box;
+  color: rgb(29, 161, 242);
+  cursor: pointer;
+  display: flex;
+  flex-basis: auto;
+  /* flex-direction: column; */
+  flex-shrink: 0;
+  font-family: "Times New Roman";
+  font-size: 15px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 400;
+  height: 39px;
+  line-height: normal;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  min-height: 39px;
+  min-width: 62.79px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  padding-left: 40%;
+  padding-top: 2%;
+  /* padding-bottom: -5%; */
+  /* text-decoration-color: rgb(0, 0, 0); */
+  text-decoration: none;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
+
+  /* text-decoration-style: solid; */
+  text-size-adjust: 100%;
+  transition-duration: 0.2s;
+  transition-property: background-color, box-shadow;
+  user-select: none;
+  width: 380px;
+  z-index: 0;
+  -webkit-box-align: stretch;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#signup {
+  color: white;
+  background: rgb(29, 161, 242);
+}
+
+.login_nav {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5vw;
+}
+.login_nav div {
+  display: flex;
+  flex-direction: column;
+}
+/* .loginButton {
+  background-color: white;
+  border-radius: 9999px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(29, 161, 242);
+  color: rgb(29, 161, 242);
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+  padding-bottom: 0px;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-top: 1%;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  max-height: 35px;
+  max-width: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
+  max-width: 25px;
+  padding-left: -15px;
+  padding-right: -15px;
+} */
+
+.loginButton {
+  background-color: white;
+  border-radius: 9999px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(29, 161, 242);
+  box-sizing: border-box;
+  color: rgb(29, 161, 242);
+  font-size: 15px;
+  font-weight: 400;
+  height: 39px;
+  margin-left: 15px;
+  margin-top: 20px;
+  min-height: 39px;
+  min-width: 80.79px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  /* padding-left: 40%; */
+  padding-top: 1%;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
+}
+input {
+  height: 26px;
+  width: 190;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  border: none;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.5);
+}
+nav span {
+  font-size: 15px;
+  color: rgb(101, 119, 134);
+}
+nav > div {
+  margin: 15px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer span {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  padding-right: 15px;
+  font-size: 13px;
+  color: rgb(101, 119, 134);
+}
+/* alert {
+  color: red;
+} */
+@media only screen and (max-width: 1200px) {
+  #right {
+    /* border-right: solid black; */
+    background-image: url(./../../imgs/LoginPage_leftbird_fixed.jpg);
+    /* background-image: url(https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/Week7/twitter_spa/src/imgs/LoginPage_leftbird_fixed.jpg);  */
+
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #wrapper {
+    grid-template-columns: 100%;
+  }
+  #right {
+    /* border-right: solid black; */
+    background-image: url(./../../imgs/LoginPage_leftbird_fixed.jpg);
+    /* background-image: url(https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/Week7/twitter_spa/src/imgs/LoginPage_leftbird_fixed.jpg);  */
+    grid-template-rows: 15% auto 1fr;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .login_nav {
+    grid-column: span 2;
+    margin-left: 45vw;
+    padding-left: 45%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .right_center_div {
+    grid-column: span 2;
+    margin-left: 20vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .login_nav {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20vw;
+    padding-left: 0;
+  }
+  #right {
+    grid-template-rows: 30% auto 1fr;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .login_nav {
+    margin-left: 5vw;
+  }
+  .right_center_div {
+    grid-column: span 3;
+    margin-left: 5vw;
+  }
+}
