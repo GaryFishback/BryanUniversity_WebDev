@@ -1,5 +1,40 @@
 import React, { Component } from "react";
 import { Link /*, Switch, Route*/ } from "react-router-dom";
+// var viewportwidth;
+// var viewportheight;
+
+// // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+
+// if (typeof window.innerWidth != "undefined") {
+//   viewportwidth = window.innerWidth;
+
+//   viewportheight = window.innerHeight;
+//   console.log(viewportwidth);
+//   console.log(viewportheight);
+// }
+
+// // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+// else if (
+//   typeof document.documentElement != "undefined" &&
+//   typeof document.documentElement.clientWidth != "undefined" &&
+//   document.documentElement.clientWidth != 0
+// ) {
+//   (viewportwidth = document.documentElement.clientWidth),
+//     (viewportheight = document.documentElement.clientHeight);
+//   console.log(viewportwidth);
+//   console.log(viewportheight);
+// }
+
+// // older versions of IE
+// else {
+//   viewportwidth = document.getElementsByTagName("body")[0].clientWidth;
+//   viewportheight = document.getElementsByTagName("body")[0].clientHeight;
+//   console.log(viewportwidth);
+//   console.log(viewportheight);
+// }
+// document.write(
+//   "<p>Your viewport width is " + viewportwidth + "x" + viewportheight + "</p>"
+// );
 class LeftNav extends Component {
   render() {
     //sp is for the span element in the Paragraph function.
@@ -26,6 +61,7 @@ class LeftNav extends Component {
             {window.innerWidth > 1000 ? <span>Home</span> : console.log("1000")}
           </div>
         </Link>
+
         <Link to="/LoggedIn/">
           <div>
             <div>
@@ -120,7 +156,7 @@ class LeftNav extends Component {
             )}
           </div>
         </Link>
-        <div>
+        <div style={{ margin: "0" }}>
           <svg viewBox="0 0 24 24">
             <g>
               <path d="M16.5 10.25c-.965 0-1.75.787-1.75 1.75s.784 1.75 1.75 1.75c.964 0 1.75-.786 1.75-1.75s-.786-1.75-1.75-1.75zm0 2.5c-.414 0-.75-.336-.75-.75 0-.413.337-.75.75-.75s.75.336.75.75c0 .413-.336.75-.75.75zm-4.5-2.5c-.966 0-1.75.787-1.75 1.75s.785 1.75 1.75 1.75 1.75-.786 1.75-1.75-.784-1.75-1.75-1.75zm0 2.5c-.414 0-.75-.336-.75-.75 0-.413.337-.75.75-.75s.75.336.75.75c0 .413-.336.75-.75.75zm-4.5-2.5c-.965 0-1.75.787-1.75 1.75s.785 1.75 1.75 1.75c.964 0 1.75-.786 1.75-1.75s-.787-1.75-1.75-1.75zm0 2.5c-.414 0-.75-.336-.75-.75 0-.413.337-.75.75-.75s.75.336.75.75c0 .413-.336.75-.75.75z"></path>

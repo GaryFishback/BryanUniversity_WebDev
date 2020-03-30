@@ -14,6 +14,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 #right {
   /* background-image: url(https://i.pinimg.com/564x/ef/b2/73/efb27314e7a44d188f4488816cddaf77.jpg); */
   background: white;
@@ -36,7 +37,7 @@ main {
   height: 41.25px;
   width: 41.25px;
 }
-#left svg {
+.left_center_div svg {
   margin-right: 15px;
   color: rgb(255, 255, 255);
   display: inline-block;
@@ -291,3 +292,45 @@ footer span {
 /* alert {
   color: red;
 } */
+@media only screen and (max-width: 1200px) {
+  #right {
+    /* border-right: solid black; */
+    background-image: url(./../../imgs/LoginPage_leftbird_fixed.jpg);
+    /* background-image: url(https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/Week7/twitter_spa/src/imgs/LoginPage_leftbird_fixed.jpg);  */
+
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #wrapper {
+    grid-template-columns: 100%;
+  }
+  #right {
+    /* border-right: solid black; */
+    background-image: url(./../../imgs/LoginPage_leftbird_fixed.jpg);
+    /* background-image: url(https://raw.githubusercontent.com/GiselleMartinez006/BryanUniversity_WebDev/master/FSW-120/Week7/twitter_spa/src/imgs/LoginPage_leftbird_fixed.jpg);  */
+    grid-template-rows: 15% auto 1fr;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .login_nav {
+    grid-column: span 2;
+    margin-left: 45vw;
+    padding-left: 45%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .right_center_div {
+    grid-column: span 2;
+    margin-left: 20vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .login_nav {
+    display: flex;
+    flex-direction: column;
+  }
+}

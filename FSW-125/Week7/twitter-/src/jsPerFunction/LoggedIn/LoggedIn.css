@@ -26,19 +26,19 @@
   justify-content: center;
 }
 #switcher_center {
-  border-right: solid grey 1px;
-  border-left: solid grey 1px;
+  border-right: solid rgb(235, 233, 233) 1px;
+  border-left: solid rgb(235, 233, 233) 1px;
   width: 600px;
   height: auto;
 }
 .right_newsfeed {
-  border-right: solid black;
-  /* border-left: solid black; */
+  border-right: solid rgb(235, 233, 233);
+  /* border-left: solid rgb(235, 233, 233); */
   width: 350px;
 }
 .left_navbar {
-  /* border-right: solid black; */
-  border-left: solid black;
+  /* border-right: solid rgb(235, 233, 233); */
+  border-left: solid rgb(235, 233, 233);
   width: 280px;
 }
 .left_navbar svg {
@@ -63,4 +63,8 @@
 
 img {
   max-width: 50px;
+}
+
+.tweet:hover {
+  background-color: rgba(180, 214, 235, 0.233);
 }

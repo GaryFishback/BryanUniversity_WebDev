@@ -10,6 +10,7 @@ import LeftNav from "./LeftNav";
 import RightCol from "./RightCol";
 // import NavBar from "./jsPerFunction/Navbar";
 // import Footer from "./jsPerFunction/Footer";
+import { BrowserRouter as Router } from "react-router-dom";
 import Profile from "./Profile/Profile";
 
 // import Services from "./jsPerFunction/Services";
@@ -41,20 +42,27 @@ class LoggedIn extends Component {
           </section>
           <section id="switcher_center">
             <Switch>
-              <Route exact path="/LoggedIn" component={Home} />
+              <Route
+                exact
+                path="/LoggedIn/"
+                render={() => (
+                  <Router>
+                    <Home />
+                  </Router>
+                )}
+              />
               {/* <Route exact path="/LoggedIn/:id" component={Details} /> */}
               <Route exact path="/LoggedIn/Profile" component={Profile} />
 
               {/* <Route path="/services" render={() => <Services />} /> */}
             </Switch>
           </section>
-          {window.innerWidth > 800 ? (
+          {window.innerWidth > 1400 ? (
             <section className="right_newsfeed">
-              {/* <h1>NEWS HERE</h1> */}
               <RightCol />
             </section>
           ) : (
-            console.log(800)
+            console.log(1400)
           )}
         </main>
         {/* <Footer /> */}

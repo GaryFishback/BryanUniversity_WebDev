@@ -3,27 +3,17 @@ const uuid = require("uuid");
 //a method is a function set as a property of an object that enacts itself UPON the object itself
 module.exports = [
   {
-    created_at: "Mon May 06 20:01:29 +0000 2019",
-    _id: uuid.v4(),
+    created_at: "Sun Mar 22 14:19:40 +0000 2020",
+    _id: uuid.v4(), //1241731273799892994,
+    id_str: "1241731273799892994",
     text:
-      "Today's new update means that you can finally add Pizza Cat to your Retweet with comments! Learn more about this ne… https://t.co/Rbc9TF2s5X",
-    truncated: true,
+      "You always know what you need to do. It's just whether or not you actually take the action.",
+    truncated: false,
     entities: {
       hashtags: [],
       symbols: [],
       user_mentions: [],
-      urls: [
-        {
-          url: "https://t.co/Rbc9TF2s5X",
-          expanded_url: "https://twitter.com/i/web/status/1125490788736032770",
-          display_url: "twitter.com/i/web/status/1…",
-          indices: [117, 140]
-        }
-      ]
-    },
-    metadata: {
-      iso_language_code: "en",
-      result_type: "recent"
+      urls: []
     },
     source:
       '<a href="https://mobile.twitter.com" rel="nofollow">Twitter Web App</a>',
@@ -33,547 +23,414 @@ module.exports = [
     in_reply_to_user_id_str: null,
     in_reply_to_screen_name: null,
     user: {
-      _id: uuid.v4(),
-      name: "Twitter Dev",
-      screen_name: "TwitterDev",
-      location: "Internet",
-      description:
-        "Your official source for Twitter Platform news, updates & events. Need technical help? Visit https://t.co/mGHnxZU8c1 ⌨️ #TapIntoTwitter",
-      url: "https://t.co/FGl7VOULyL",
+      _id: uuid.v4(), //1216412080233799680,
+      id_str: "1216412080233799680",
+      name: "Andrew Gunderman",
+      screen_name: "Agunderman10",
+      location: "",
+      description: "Freshman at OSU, Founder of Sprout, Founder, CEO of Vyra",
+      url: null,
       entities: {
-        url: {
-          urls: [
-            {
-              url: "https://t.co/FGl7VOULyL",
-              expanded_url: "https://developer.twitter.com/",
-              display_url: "developer.twitter.com",
-              indices: [0, 23]
-            }
-          ]
-        },
         description: {
-          urls: [
-            {
-              url: "https://t.co/mGHnxZU8c1",
-              expanded_url: "https://twittercommunity.com/",
-              display_url: "twittercommunity.com",
-              indices: [93, 116]
-            }
-          ]
+          urls: []
         }
       },
       protected: false,
-      followers_count: 501947,
-      friends_count: 1473,
-      listed_count: 1507,
-      created_at: "Sat Dec 14 04:35:55 +0000 2013",
-      favourites_count: 2186,
+      followers_count: 12,
+      friends_count: 27,
+      listed_count: 0,
+      created_at: "Sun Jan 12 17:30:20 +0000 2020",
+      favourites_count: 11,
       utc_offset: null,
       time_zone: null,
-      geo_enabled: true,
-      verified: true,
-      statuses_count: 3389,
-      lang: "en",
+      geo_enabled: false,
+      verified: false,
+      statuses_count: 8,
+      lang: null,
       contributors_enabled: false,
       is_translator: false,
-      is_translation_enabled: null,
-      profile_background_color: null,
+      is_translation_enabled: false,
+      profile_background_color: "F5F8FA",
       profile_background_image_url: null,
       profile_background_image_url_https: null,
-      profile_background_tile: null,
-      profile_image_url: null,
+      profile_background_tile: false,
+      profile_image_url:
+        "http://pbs.twimg.com/profile_images/1216412269250142208/NHKrnXuR_normal.jpg",
       profile_image_url_https:
-        "https://pbs.twimg.com/profile_images/880136122604507136/xHrnqf1T_normal.jpg",
-      profile_banner_url:
-        "https://pbs.twimg.com/profile_banners/2244994945/1498675817",
-      profile_link_color: null,
-      profile_sidebar_border_color: null,
-      profile_sidebar_fill_color: null,
-      profile_text_color: null,
-      profile_use_background_image: null,
-      has_extended_profile: null,
-      default_profile: false,
+        "https://pbs.twimg.com/profile_images/1216412269250142208/NHKrnXuR_normal.jpg",
+      profile_link_color: "1DA1F2",
+      profile_sidebar_border_color: "C0DEED",
+      profile_sidebar_fill_color: "DDEEF6",
+      profile_text_color: "333333",
+      profile_use_background_image: true,
+      has_extended_profile: true,
+      default_profile: true,
       default_profile_image: false,
-      following: false,
+      following: true,
       follow_request_sent: false,
       notifications: false,
-      translator_type: null
+      translator_type: "none"
     },
     geo: null,
     coordinates: null,
     place: null,
     contributors: null,
-    is_quote_status: true,
-    quoted_status: {
-      created_at: "Mon May 06 19:14:46 +0000 2019",
-      _id: uuid.v4(),
-      text:
-        "It's easy to express yourself by Retweeting with a comment. What if you could take it a step further and include me… https://t.co/YTqpNZZ8M9",
-      truncated: true,
-      entities: {
-        hashtags: [],
-        symbols: [],
-        user_mentions: [],
-        urls: [
-          {
-            url: "https://t.co/YTqpNZZ8M9",
-            expanded_url:
-              "https://twitter.com/i/web/status/1125479034513645569",
-            display_url: "twitter.com/i/web/status/1…",
-            indices: [117, 140]
-          }
-        ]
-      },
-      metadata: {
-        iso_language_code: "en",
-        result_type: "recent"
-      },
-      source:
-        '<a href="http://twitter.com" rel="nofollow">Twitter Web Client</a>',
-      in_reply_to_status_id: null,
-      in_reply_to_status_id_str: null,
-      in_reply_to_user_id: null,
-      in_reply_to_user_id_str: null,
-      in_reply_to_screen_name: null,
-      user: {
-        _id: uuid.v4(),
-        name: "Twitter Support",
-        screen_name: "TwitterSupport",
-        location: "Twitter HQ",
-        description:
-          "Your official source for Twitter Support. We're available 24/7 via Direct Message to answer account questions. Follow us for tips, tricks, and announcements.",
-        url: "https://t.co/heEvRrl4yN",
-        entities: {
-          url: {
-            urls: [
-              {
-                url: "https://t.co/heEvRrl4yN",
-                expanded_url: "https://help.twitter.com",
-                display_url: "help.twitter.com",
-                indices: [0, 23]
-              }
-            ]
-          },
-          description: {
-            urls: []
-          }
-        },
-        protected: false,
-        followers_count: 5861908,
-        friends_count: 17,
-        listed_count: 15129,
-        created_at: "Thu Dec 04 18:51:57 +0000 2008",
-        favourites_count: 313,
-        utc_offset: null,
-        time_zone: null,
-        geo_enabled: true,
-        verified: true,
-        statuses_count: 27955,
-        lang: "en",
-        contributors_enabled: false,
-        is_translator: false,
-        is_translation_enabled: null,
-        profile_background_color: null,
-        profile_background_image_url: null,
-        profile_background_image_url_https: null,
-        profile_background_tile: null,
-        profile_image_url: null,
-        profile_image_url_https:
-          "https://pbs.twimg.com/profile_images/941807338171777025/PRP6vwDq_normal.jpg",
-        profile_banner_url:
-          "https://pbs.twimg.com/profile_banners/17874544/1499274456",
-        profile_link_color: null,
-        profile_sidebar_border_color: null,
-        profile_sidebar_fill_color: null,
-        profile_text_color: null,
-        profile_use_background_image: null,
-        has_extended_profile: null,
-        default_profile: false,
-        default_profile_image: false,
-        following: false,
-        follow_request_sent: false,
-        notifications: false,
-        translator_type: null
-      },
-      geo: null,
-      coordinates: null,
-      place: null,
-      contributors: null,
-      is_quote_status: false,
-      retweet_count: 1466,
-      favorite_count: 3990,
-      favorited: false,
-      retweeted: false,
-      possibly_sensitive: false,
-      lang: "en"
-    },
-    retweet_count: 20,
-    favorite_count: 44,
-    favorited: false,
+    is_quote_status: false,
+    retweet_count: 0,
+    favorite_count: 3,
+    favorited: true,
     retweeted: false,
-    possibly_sensitive: false,
     lang: "en"
   },
   {
-    created_at: "Sat May 04 15:00:33 +0000 2019",
-    _id: uuid.v4(),
+    created_at: "Tue Mar 10 00:20:55 +0000 2020",
+    _id: uuid.v4(), //1237171539600183296,
+    id_str: "1237171539600183296",
     text:
-      "If you're at #Pycon2019 and you use Twitter data or the Twitter API with your code, we are running an Open Space in… https://t.co/mVLIzEr9Gx",
+      "Too many times we conform to who we think others want us to be. \n\nStop that. Be you.\n\n#inspiration #motivation #entrepreneur #leadership",
+    truncated: false,
+    entities: {
+      hashtags: [
+        {
+          text: "inspiration",
+          indices: [86, 98]
+        },
+        {
+          text: "motivation",
+          indices: [99, 110]
+        },
+        {
+          text: "entrepreneur",
+          indices: [111, 124]
+        },
+        {
+          text: "leadership",
+          indices: [125, 136]
+        }
+      ],
+      symbols: [],
+      user_mentions: [],
+      urls: []
+    },
+    source:
+      '<a href="https://mobile.twitter.com" rel="nofollow">Twitter Web App</a>',
+    in_reply_to_status_id: null,
+    in_reply_to_status_id_str: null,
+    in_reply_to_user_id: null,
+    in_reply_to_user_id_str: null,
+    in_reply_to_screen_name: null,
+    user: {
+      _id: uuid.v4(), //1216412080233799680,
+      id_str: "1216412080233799680",
+      name: "Andrew Gunderman",
+      screen_name: "Agunderman10",
+      location: "",
+      description: "Freshman at OSU, Founder of Sprout, Founder, CEO of Vyra",
+      url: null,
+      entities: {
+        description: {
+          urls: []
+        }
+      },
+      protected: false,
+      followers_count: 12,
+      friends_count: 27,
+      listed_count: 0,
+      created_at: "Sun Jan 12 17:30:20 +0000 2020",
+      favourites_count: 11,
+      utc_offset: null,
+      time_zone: null,
+      geo_enabled: false,
+      verified: false,
+      statuses_count: 8,
+      lang: null,
+      contributors_enabled: false,
+      is_translator: false,
+      is_translation_enabled: false,
+      profile_background_color: "F5F8FA",
+      profile_background_image_url: null,
+      profile_background_image_url_https: null,
+      profile_background_tile: false,
+      profile_image_url:
+        "http://pbs.twimg.com/profile_images/1216412269250142208/NHKrnXuR_normal.jpg",
+      profile_image_url_https:
+        "https://pbs.twimg.com/profile_images/1216412269250142208/NHKrnXuR_normal.jpg",
+      profile_link_color: "1DA1F2",
+      profile_sidebar_border_color: "C0DEED",
+      profile_sidebar_fill_color: "DDEEF6",
+      profile_text_color: "333333",
+      profile_use_background_image: true,
+      has_extended_profile: true,
+      default_profile: true,
+      default_profile_image: false,
+      following: true,
+      follow_request_sent: false,
+      notifications: false,
+      translator_type: "none"
+    },
+    geo: null,
+    coordinates: null,
+    place: null,
+    contributors: null,
+    is_quote_status: false,
+    retweet_count: 1,
+    favorite_count: 2,
+    favorited: true,
+    retweeted: false,
+    lang: "en"
+  },
+  {
+    created_at: "Wed Feb 05 22:57:18 +0000 2020",
+    _id: uuid.v4(), //1225191697002438663,
+    id_str: "1225191697002438663",
+    text:
+      '"Most people fail because they #major in #minor things."\n#TonyRobbins',
+    truncated: false,
+    entities: {
+      hashtags: [
+        {
+          text: "major",
+          indices: [31, 37]
+        },
+        {
+          text: "minor",
+          indices: [41, 47]
+        },
+        {
+          text: "TonyRobbins",
+          indices: [57, 69]
+        }
+      ],
+      symbols: [],
+      user_mentions: [],
+      urls: []
+    },
+    source:
+      '<a href="http://twitter.com/download/android" rel="nofollow">Twitter for Android</a>',
+    in_reply_to_status_id: null,
+    in_reply_to_status_id_str: null,
+    in_reply_to_user_id: null,
+    in_reply_to_user_id_str: null,
+    in_reply_to_screen_name: null,
+    user: {
+      _id: uuid.v4(), //1219775745246892034,
+      id_str: "1219775745246892034",
+      name: "Vyra",
+      screen_name: "joinvyra",
+      location: "Columbus, OH",
+      description: "Changing the way the world runs technical interviews.",
+      url: null,
+      entities: {
+        description: {
+          urls: []
+        }
+      },
+      protected: false,
+      followers_count: 9,
+      friends_count: 9,
+      listed_count: 0,
+      created_at: "Wed Jan 22 00:18:23 +0000 2020",
+      favourites_count: 5,
+      utc_offset: null,
+      time_zone: null,
+      geo_enabled: false,
+      verified: false,
+      statuses_count: 10,
+      lang: null,
+      contributors_enabled: false,
+      is_translator: false,
+      is_translation_enabled: false,
+      profile_background_color: "F5F8FA",
+      profile_background_image_url: null,
+      profile_background_image_url_https: null,
+      profile_background_tile: false,
+      profile_image_url:
+        "http://pbs.twimg.com/profile_images/1221917870575247362/zsIjrMqS_normal.jpg",
+      profile_image_url_https:
+        "https://pbs.twimg.com/profile_images/1221917870575247362/zsIjrMqS_normal.jpg",
+      profile_banner_url:
+        "https://pbs.twimg.com/profile_banners/1219775745246892034/1580162847",
+      profile_link_color: "1DA1F2",
+      profile_sidebar_border_color: "C0DEED",
+      profile_sidebar_fill_color: "DDEEF6",
+      profile_text_color: "333333",
+      profile_use_background_image: true,
+      has_extended_profile: true,
+      default_profile: true,
+      default_profile_image: false,
+      following: true,
+      follow_request_sent: false,
+      notifications: false,
+      translator_type: "none"
+    },
+    geo: null,
+    coordinates: null,
+    place: null,
+    contributors: null,
+    is_quote_status: false,
+    retweet_count: 0,
+    favorite_count: 1,
+    favorited: true,
+    retweeted: false,
+    lang: "en"
+  },
+  {
+    created_at: "Wed Jan 15 22:56:09 +0000 2020",
+    _id: uuid.v4(), //1217581262740713472,
+    id_str: "1217581262740713472",
+    text:
+      "The moment you stop blaming everyone else and realize that you need to focus on improving yourself - your life will become so much better.",
+    truncated: false,
+    entities: {
+      hashtags: [],
+      symbols: [],
+      user_mentions: [],
+      urls: []
+    },
+    source:
+      '<a href="http://twitter.com/download/android" rel="nofollow">Twitter for Android</a>',
+    in_reply_to_status_id: null,
+    in_reply_to_status_id_str: null,
+    in_reply_to_user_id: null,
+    in_reply_to_user_id_str: null,
+    in_reply_to_screen_name: null,
+    user: {
+      _id: uuid.v4(), //1216412080233799680,
+      id_str: "1216412080233799680",
+      name: "Andrew Gunderman",
+      screen_name: "Agunderman10",
+      location: "",
+      description: "Freshman at OSU, Founder of Sprout, Founder, CEO of Vyra",
+      url: null,
+      entities: {
+        description: {
+          urls: []
+        }
+      },
+      protected: false,
+      followers_count: 12,
+      friends_count: 27,
+      listed_count: 0,
+      created_at: "Sun Jan 12 17:30:20 +0000 2020",
+      favourites_count: 11,
+      utc_offset: null,
+      time_zone: null,
+      geo_enabled: false,
+      verified: false,
+      statuses_count: 8,
+      lang: null,
+      contributors_enabled: false,
+      is_translator: false,
+      is_translation_enabled: false,
+      profile_background_color: "F5F8FA",
+      profile_background_image_url: null,
+      profile_background_image_url_https: null,
+      profile_background_tile: false,
+      profile_image_url:
+        "http://pbs.twimg.com/profile_images/1216412269250142208/NHKrnXuR_normal.jpg",
+      profile_image_url_https:
+        "https://pbs.twimg.com/profile_images/1216412269250142208/NHKrnXuR_normal.jpg",
+      profile_link_color: "1DA1F2",
+      profile_sidebar_border_color: "C0DEED",
+      profile_sidebar_fill_color: "DDEEF6",
+      profile_text_color: "333333",
+      profile_use_background_image: true,
+      has_extended_profile: true,
+      default_profile: true,
+      default_profile_image: false,
+      following: true,
+      follow_request_sent: false,
+      notifications: false,
+      translator_type: "none"
+    },
+    geo: null,
+    coordinates: null,
+    place: null,
+    contributors: null,
+    is_quote_status: false,
+    retweet_count: 0,
+    favorite_count: 4,
+    favorited: true,
+    retweeted: false,
+    lang: "en"
+  },
+  {
+    created_at: "Sat Jan 18 17:35:30 +0000 2020",
+    _id: uuid.v4(), //1218587731212800002,
+    id_str: "1218587731212800002",
+    text:
+      "Why would you focus on everyone else when you could focus on yourself? Live your life, not theirs.\n\n#truth… https://t.co/nwewoXx0ry",
     truncated: true,
     entities: {
       hashtags: [
         {
-          text: "Pycon2019",
-          indices: [13, 23]
+          text: "truth",
+          indices: [100, 106]
         }
       ],
       symbols: [],
       user_mentions: [],
       urls: [
         {
-          url: "https://t.co/mVLIzEr9Gx",
-          expanded_url: "https://twitter.com/i/web/status/1124690280777699328",
+          url: "https://t.co/nwewoXx0ry",
+          expanded_url: "https://twitter.com/i/web/status/1218587731212800002",
           display_url: "twitter.com/i/web/status/1…",
-          indices: [117, 140]
+          indices: [108, 131]
         }
       ]
     },
-    metadata: {
-      iso_language_code: "en",
-      result_type: "recent"
-    },
     source:
-      '<a href="http://twitter.com" rel="nofollow">Twitter for  iPhone</a>',
+      '<a href="http://twitter.com/download/android" rel="nofollow">Twitter for Android</a>',
     in_reply_to_status_id: null,
     in_reply_to_status_id_str: null,
     in_reply_to_user_id: null,
     in_reply_to_user_id_str: null,
     in_reply_to_screen_name: null,
     user: {
-      _id: uuid.v4(),
-      name: "Twitter Dev",
-      screen_name: "TwitterDev",
-      location: "Internet",
-      description:
-        "Your official source for Twitter Platform news, updates & events. Need technical help? Visit https://t.co/mGHnxZU8c1 ⌨️ #TapIntoTwitter",
-      url: "https://t.co/FGl7VOULyL",
+      _id: uuid.v4(), //1216412080233799680,
+      id_str: "1216412080233799680",
+      name: "Andrew Gunderman",
+      screen_name: "Agunderman10",
+      location: "",
+      description: "Freshman at OSU, Founder of Sprout, Founder, CEO of Vyra",
+      url: null,
       entities: {
-        url: {
-          urls: [
-            {
-              url: "https://t.co/FGl7VOULyL",
-              expanded_url: "https://developer.twitter.com/",
-              display_url: "developer.twitter.com",
-              indices: [0, 23]
-            }
-          ]
-        },
         description: {
-          urls: [
-            {
-              url: "https://t.co/mGHnxZU8c1",
-              expanded_url: "https://twittercommunity.com/",
-              display_url: "twittercommunity.com",
-              indices: [93, 116]
-            }
-          ]
+          urls: []
         }
       },
       protected: false,
-      followers_count: 501947,
-      friends_count: 1473,
-      listed_count: 1507,
-      created_at: "Sat Dec 14 04:35:55 +0000 2013",
-      favourites_count: 2186,
+      followers_count: 12,
+      friends_count: 27,
+      listed_count: 0,
+      created_at: "Sun Jan 12 17:30:20 +0000 2020",
+      favourites_count: 11,
       utc_offset: null,
       time_zone: null,
-      geo_enabled: true,
-      verified: true,
-      statuses_count: 3389,
-      lang: "en",
+      geo_enabled: false,
+      verified: false,
+      statuses_count: 8,
+      lang: null,
       contributors_enabled: false,
       is_translator: false,
-      is_translation_enabled: null,
-      profile_background_color: null,
+      is_translation_enabled: false,
+      profile_background_color: "F5F8FA",
       profile_background_image_url: null,
       profile_background_image_url_https: null,
-      profile_background_tile: null,
-      profile_image_url: null,
-      profile_image_url_https:
-        "https://pbs.twimg.com/profile_images/880136122604507136/xHrnqf1T_normal.jpg",
-      profile_banner_url:
-        "https://pbs.twimg.com/profile_banners/2244994945/1498675817",
-      profile_link_color: null,
-      profile_sidebar_border_color: null,
-      profile_sidebar_fill_color: null,
-      profile_text_color: null,
-      profile_use_background_image: null,
-      has_extended_profile: null,
-      default_profile: false,
-      default_profile_image: false,
-      following: false,
-      follow_request_sent: false,
-      notifications: false,
-      translator_type: null
-    },
-    geo: null,
-    coordinates: null,
-    place: null,
-    contributors: null,
-    is_quote_status: false,
-    retweet_count: 12,
-    favorite_count: 27,
-    favorited: false,
-    retweeted: false,
-    possibly_sensitive: false,
-    lang: "en"
-  },
-  {
-    created_at: "Mon Mar 29 15:35:18 +0000 2010",
-    _id: uuid.v4(),
-    text: "@harashoskas おやすみー！またね！",
-    truncated: false,
-    entities: {
-      hashtags: [],
-      symbols: [],
-      user_mentions: [
-        {
-          screen_name: "harashoskas",
-          name: "ごろね",
-          _id: uuid.v4(),
-          indices: [0, 12]
-        }
-      ],
-      urls: []
-    },
-    source:
-      '<a href="http://twitter.com" rel="nofollow">Twitter Web Client</a>',
-    in_reply_to_status_id: null,
-    in_reply_to_status_id_str: null,
-    in_reply_to_screen_name: "harashoskas",
-    user: {
-      _id: uuid.v4(),
-      name: "ライラ",
-      screen_name: "lyla_bot",
-      location: "イベリア半島",
-      description:
-        "SoundHorizonマキシシングル【聖戦のイベリア】に登場する焔と契りし少女（ライラ）の非公式自動botです。詳しくは上記URLを参照ください。（制作者 @Cy666）",
-      url: "http://t.co/neI0o3E58n",
-      entities: {
-        url: {
-          urls: [
-            {
-              url: "http://t.co/neI0o3E58n",
-              expanded_url: "http://cy666-lab.com/bot/bot-tutorial3/",
-              display_url: "cy666-lab.com/bot/bot-tutori…",
-              indices: [0, 22]
-            }
-          ]
-        },
-        description: {
-          urls: []
-        }
-      },
-      protected: false,
-      followers_count: 1612,
-      friends_count: 2387,
-      listed_count: 154,
-      created_at: "Thu Dec 03 03:39:43 +0000 2009",
-      favourites_count: 0,
-      utc_offset: null,
-      time_zone: null,
-      geo_enabled: false,
-      verified: false,
-      statuses_count: 63471,
-      lang: null,
-      contributors_enabled: false,
-      is_translator: false,
-      is_translation_enabled: false,
-      profile_background_color: "C9063D",
-      profile_background_image_url:
-        "http://abs.twimg.com/images/themes/theme17/bg.gif",
-      profile_background_image_url_https:
-        "https://abs.twimg.com/images/themes/theme17/bg.gif",
       profile_background_tile: false,
       profile_image_url:
-        "http://pbs.twimg.com/profile_images/1842867121/lyla_box_normal.png",
+        "http://pbs.twimg.com/profile_images/1216412269250142208/NHKrnXuR_normal.jpg",
       profile_image_url_https:
-        "https://pbs.twimg.com/profile_images/1842867121/lyla_box_normal.png",
-      profile_link_color: "FF6699",
-      profile_sidebar_border_color: "DBE9ED",
-      profile_sidebar_fill_color: "E00000",
-      profile_text_color: "333333",
-      profile_use_background_image: true,
-      has_extended_profile: false,
-      default_profile: false,
-      default_profile_image: false,
-      can_media_tag: true,
-      followed_by: false,
-      following: false,
-      follow_request_sent: false,
-      notifications: false,
-      translator_type: "none"
-    },
-    geo: null,
-    coordinates: null,
-    place: null,
-    contributors: null,
-    is_quote_status: false,
-    retweet_count: 0,
-    favorite_count: 0,
-    favorited: false,
-    retweeted: false,
-    lang: "ja"
-  },
-  {
-    created_at: "Tue Mar 21 20:50:14 +0000 2006",
-    _id: uuid.v4(),
-    text: "just setting up my twttr",
-    truncated: false,
-    entities: {
-      hashtags: [],
-      symbols: [],
-      user_mentions: [],
-      urls: []
-    },
-    source:
-      '<a href="http://twitter.com" rel="nofollow">Twitter Web Client</a>',
-    in_reply_to_status_id: null,
-    in_reply_to_status_id_str: null,
-    in_reply_to_user_id: null,
-    in_reply_to_user_id_str: null,
-    in_reply_to_screen_name: null,
-    user: {
-      _id: uuid.v4(),
-      name: "jack 🌍🌏🌎",
-      screen_name: "jack",
-      location: "",
-      description: "#bitcoin",
-      url: null,
-      entities: {
-        description: {
-          urls: []
-        }
-      },
-      protected: false,
-      followers_count: 4387817,
-      friends_count: 4277,
-      listed_count: 28311,
-      created_at: "Tue Mar 21 20:50:14 +0000 2006",
-      favourites_count: 26434,
-      utc_offset: null,
-      time_zone: null,
-      geo_enabled: true,
-      verified: true,
-      statuses_count: 26511,
-      lang: null,
-      contributors_enabled: false,
-      is_translator: false,
-      is_translation_enabled: false,
-      profile_background_color: "EBEBEB",
-      profile_background_image_url:
-        "http://abs.twimg.com/images/themes/theme7/bg.gif",
-      profile_background_image_url_https:
-        "https://abs.twimg.com/images/themes/theme7/bg.gif",
-      profile_background_tile: false,
-      profile_image_url:
-        "http://pbs.twimg.com/profile_images/1115644092329758721/AFjOr-K8_normal.jpg",
-      profile_image_url_https:
-        "https://pbs.twimg.com/profile_images/1115644092329758721/AFjOr-K8_normal.jpg",
-      profile_banner_url: "https://pbs.twimg.com/profile_banners/12/1483046077",
-      profile_link_color: "990000",
-      profile_sidebar_border_color: "DFDFDF",
-      profile_sidebar_fill_color: "F3F3F3",
-      profile_text_color: "333333",
-      profile_use_background_image: true,
-      has_extended_profile: true,
-      default_profile: false,
-      default_profile_image: false,
-      can_media_tag: true,
-      followed_by: false,
-      following: false,
-      follow_request_sent: false,
-      notifications: false,
-      translator_type: "regular"
-    },
-    geo: null,
-    coordinates: null,
-    place: null,
-    contributors: null,
-    is_quote_status: false,
-    retweet_count: 114499,
-    favorite_count: 123029,
-    favorited: false,
-    retweeted: false,
-    lang: "en"
-  },
-  {
-    created_at: "Mon Mar 29 15:35:18 +0000 2010",
-    _id: uuid.v4(),
-    text:
-      "Veja: Novo Clipe Stefhany  Falem de mim - Novo Clipe Stefhany  Falem de mim – Conseguiram de tanto fazer piada com ... http://ow.ly/16V8eH",
-    truncated: false,
-    entities: {
-      hashtags: [],
-      symbols: [],
-      user_mentions: [],
-      urls: []
-    },
-    source:
-      '<a href="http://twitter.com" rel="nofollow">Twitter Web Client</a>',
-    in_reply_to_status_id: null,
-    in_reply_to_status_id_str: null,
-    in_reply_to_user_id: null,
-    in_reply_to_user_id_str: null,
-    in_reply_to_screen_name: null,
-    user: {
-      _id: uuid.v4(),
-      name: "Guilherme Yoki",
-      screen_name: "Gui0_q",
-      location: "",
-      description: "",
-      url: null,
-      entities: {
-        description: {
-          urls: []
-        }
-      },
-      protected: false,
-      followers_count: 55,
-      friends_count: 817,
-      listed_count: 2,
-      created_at: "Thu Dec 10 16:12:34 +0000 2009",
-      favourites_count: 0,
-      utc_offset: null,
-      time_zone: null,
-      geo_enabled: false,
-      verified: false,
-      statuses_count: 3603,
-      lang: null,
-      contributors_enabled: false,
-      is_translator: false,
-      is_translation_enabled: false,
-      profile_background_color: "C0DEED",
-      profile_background_image_url:
-        "http://abs.twimg.com/images/themes/theme1/bg.png",
-      profile_background_image_url_https:
-        "https://abs.twimg.com/images/themes/theme1/bg.png",
-      profile_background_tile: false,
-      profile_image_url:
-        "http://pbs.twimg.com/profile_images/568189390/funny-pictures-hamster-has-a-corn_normal.jpg",
-      profile_image_url_https:
-        "https://pbs.twimg.com/profile_images/568189390/funny-pictures-hamster-has-a-corn_normal.jpg",
+        "https://pbs.twimg.com/profile_images/1216412269250142208/NHKrnXuR_normal.jpg",
       profile_link_color: "1DA1F2",
       profile_sidebar_border_color: "C0DEED",
       profile_sidebar_fill_color: "DDEEF6",
       profile_text_color: "333333",
       profile_use_background_image: true,
-      has_extended_profile: false,
+      has_extended_profile: true,
       default_profile: true,
       default_profile_image: false,
-      can_media_tag: true,
-      followed_by: false,
-      following: false,
+      following: true,
       follow_request_sent: false,
       notifications: false,
       translator_type: "none"
@@ -584,9 +441,9 @@ module.exports = [
     contributors: null,
     is_quote_status: false,
     retweet_count: 0,
-    favorite_count: 0,
-    favorited: false,
+    favorite_count: 2,
+    favorited: true,
     retweeted: false,
-    lang: "pt"
+    lang: "en"
   }
 ];

@@ -14,6 +14,7 @@ app.get("/tweets/:id", (req, res) => {
 });
 app.post("/tweets", (req, res) => {
   const newTweet = req.body;
+  console.log(req.body);
   newTweet._id = uuid.v4();
   tweets.push(newTweet);
 
