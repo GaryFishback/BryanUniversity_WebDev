@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 
 const Container = styled.div`
   // width: ;

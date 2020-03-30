@@ -3,21 +3,21 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Form from "./../../Home/home_form";
-import { Link, Switch, Route, useParams } from "react-router-dom";
+import { Link /*, Switch, Route, useParams*/ } from "react-router-dom";
 import styled from "styled-components";
 import {
-  addOne,
+  // addOne,
   deleteOne,
-  countingContacts,
-  colorInput,
-  saveData,
+  // countingContacts,
+  // colorInput,
+  // saveData,
   updateOne,
-  saveID,
-  saveTweet,
-  nameInput,
-  emailInput,
-  phoneInput,
-  imgUrlInput
+  // saveID,
+  saveTweet
+  // nameInput,
+  // emailInput,
+  // phoneInput,
+  // imgUrlInput
 } from "./../../redux/actions";
 import { connect } from "react-redux";
 const Container = styled.div`
@@ -283,7 +283,6 @@ class Details extends Component {
                       </g>
                     </svg>
                     <svg
-                    
                       style={{
                         fill: "gray",
                         width: "18px",

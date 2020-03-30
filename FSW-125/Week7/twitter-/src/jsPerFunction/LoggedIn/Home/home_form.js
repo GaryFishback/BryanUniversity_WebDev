@@ -1,21 +1,21 @@
 import React, { Component } from "react";
-import {
-  addOne,
-  deleteOne,
-  saveID,
-  countingContacts,
-  colorInput,
-  saveData,
-  nameInput,
-  emailInput,
-  phoneInput,
-  imgUrlInput
-} from "./../redux/actions";
+// import {
+//   addOne,
+//   deleteOne,
+//   saveID,
+//   countingContacts,
+//   colorInput,
+//   saveData,
+//   nameInput,
+//   emailInput,
+//   phoneInput,
+//   imgUrlInput
+// } from "./../redux/actions";
 import { connect } from "react-redux";
 // import ReactDOM from "react-dom";
 // import styled from "styled-components";
 // import { Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 
 class Form extends Component {
   constructor() {
@@ -26,6 +26,7 @@ class Form extends Component {
     return (
       <div id="form_div">
         <img
+          alt=""
           style={{ width: "47px", height: "47px", borderRadius: "9999px" }}
           src="https://abs.twimg.com/sticky/default_profile_images/default_profile_bigger.png"
         ></img>

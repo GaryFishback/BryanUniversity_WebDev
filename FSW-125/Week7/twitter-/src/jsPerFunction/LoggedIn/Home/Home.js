@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route, useParams } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import axios from "axios";
 import styled from "styled-components";
 import Form from "./home_form";
@@ -8,15 +8,15 @@ import "./home.css";
 import TweetPreview from "./../Tweets/List/TweetPreview";
 import {
   addOne,
-  deleteOne,
+  // deleteOne,
   saveID,
-  countingContacts,
-  colorInput,
-  saveData,
-  nameInput,
-  emailInput,
-  phoneInput,
-  imgUrlInput
+  // countingContacts,
+  // colorInput,
+  saveData
+  // nameInput,
+  // emailInput,
+  // phoneInput,
+  // imgUrlInput
 } from "./../redux/actions";
 import { connect } from "react-redux";
 const Container = styled.div`
@@ -60,8 +60,7 @@ class Home extends Component {
                   const newTweet = {
                     created_at: new Date().toString(),
                     _id: Math.random(),
-                    text:
-                      description,
+                    text: description,
                     truncated: true,
                     entities: {
                       hashtags: [],
@@ -70,7 +69,8 @@ class Home extends Component {
                       urls: [
                         {
                           url: "https://t.co/Rbc9TF2s5X",
-                          expanded_url: "https://twitter.com/i/web/status/1125490788736032770",
+                          expanded_url:
+                            "https://twitter.com/i/web/status/1125490788736032770",
                           display_url: "twitter.com/i/web/status/1…",
                           indices: [117, 140]
                         }
@@ -160,7 +160,7 @@ class Home extends Component {
                     is_quote_status: true,
                     quoted_status: {
                       created_at: "Mon May 06 19:14:46 +0000 2019",
-                      
+
                       text:
                         "It's easy to express yourself by Retweeting with a comment. What if you could take it a step further and include me… https://t.co/YTqpNZZ8M9",
                       truncated: true,
@@ -266,11 +266,11 @@ class Home extends Component {
                     retweeted: false,
                     possibly_sensitive: false,
                     lang: "en"
-                  }
+                  };
                   console.log(newTweet);
                   axios.post("/tweets", newTweet).then(response => {
-                    console.log(response.data)
-                    this.props.dispatch(addOne(newTweet))
+                    console.log(response.data);
+                    this.props.dispatch(addOne(newTweet));
                     // console.log(response);
                     //to make an actual tweet come out of this end i would have to use vanilla javascript. Because the other methods would erase all the other tweets that are already there.. and that would take forever again.
                     //So i wanted to make a get request that would get all the tweets to populate with the tweet array tweets.
@@ -287,7 +287,7 @@ class Home extends Component {
                 {this.props.tweetsArray.map((tweet, num) => {
                   return (
                     <TweetPreview
-                      linkTo={`Tweets/${tweet._id}`}
+                      linkTo={`LoggedIn/Tweets/${tweet._id}`}
                       key={num}
                       id={tweet._id}
                       saveIDToState={e => {
