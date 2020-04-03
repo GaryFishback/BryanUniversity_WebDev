@@ -284,15 +284,11 @@ class Home extends Component {
             ></div>
             <section id="display">
               <Container>
-                {this.props.blue}
+                {/* {this.props.blue} */}
                 {this.props.tweetsArray.map((tweet, num) => {
                   return (
                     <TweetPreview
-                      linkTo={
-                        this.props.clicked
-                          ? `Tweets/${tweet._id}`
-                          : `LoggedIn/Tweets/${tweet._id}`
-                      }
+                      linkTo={`LoggedIn/Tweets/${tweet._id}`}
                       key={num}
                       id={tweet._id}
                       saveIDToState={e => {
@@ -311,11 +307,7 @@ class Home extends Component {
               </Container>{" "}
             </section>
           </Route>
-          <Route
-            exact
-            path="/LoggedIn/Tweets/:id"
-            children={<Details blue="blue" />}
-          />
+          <Route exact path="/LoggedIn/Tweets/:id" children={<Details />} />
         </Switch>{" "}
       </div>
     );
@@ -327,7 +319,6 @@ const mapStateToProps = state => {
     tweetsArray: state.tweetsArray,
     changing: state.changing,
     counter: state.counter,
-    email: state.email,
     id: state.id,
     name: state.name,
     clicked: state.clicked,

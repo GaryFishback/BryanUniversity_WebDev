@@ -5,20 +5,7 @@ import axios from "axios";
 import Form from "./../../Home/home_form";
 import { Link /*, Switch, Route, useParams*/ } from "react-router-dom";
 import styled from "styled-components";
-import {
-  // addOne,
-  deleteOne,
-  // countingContacts,
-  // colorInput,
-  // saveData,
-  updateOne,
-  // saveID,
-  saveTweet
-  // nameInput,
-  // emailInput,
-  // phoneInput,
-  // imgUrlInput
-} from "./../../redux/actions";
+import { deleteOne, updateOne, saveTweet } from "./../../redux/actions";
 import { connect } from "react-redux";
 const Container = styled.div`
   // width: ;
@@ -158,7 +145,7 @@ class Details extends Component {
 
                         <span>{tweet.created_at}</span>
                         <Link
-                          to={this.props.clicked ? `/LoggedIn/` : `/../`}
+                          to={`/LoggedIn/`}
                           onMouseDown={e => {
                             console.log(e.target);
                             const id = e.target.id;

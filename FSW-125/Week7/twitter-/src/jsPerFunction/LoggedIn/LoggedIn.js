@@ -1,20 +1,12 @@
 import React, { Component } from "react";
-// import "./App.css";
-// import { BrowserRouter as Router } from "react-router-dom";
 import { /*Link,*/ Switch, Route } from "react-router-dom";
 import "./LoggedIn.css";
 //Pages:
 import Home from "./Home/Home";
-// import Login from "./Login";
 import LeftNav from "./LeftNav";
 import RightCol from "./RightCol";
-// import NavBar from "./jsPerFunction/Navbar";
-// import Footer from "./jsPerFunction/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 import Profile from "./Profile/Profile";
-
-// import Services from "./jsPerFunction/Services";
-//function components
 
 class LoggedIn extends Component {
   render() {
