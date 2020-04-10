@@ -1,0 +1,263 @@
+@media only screen and (min-width:780px ) {
+.topdividers {
+    height: 50px;
+    width: 100%;
+}
+
+/*HEADER*/
+
+header {
+    /*background: url(https://raw.githubusercontent.com/GiselleMartinez006/FSW-100-assignments/master/assignments/Inprogress/week6/Complete%20Project%203%20Create%20a%20Responsive%20Website/img/agujasblanco_canva_stretched.jpg);*/
+    background: url(https://github.com/GiselleMartinez006/FSW-100-assignments/blob/master/assignments/Inprogress/week6/Complete%20Project%203%20Create%20a%20Responsive%20Website/img/s3_L0057000_L0057963.jpg?raw=true);
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    padding: 5% 0;
+    /*font-family: 'Italianno', cursive;*/
+    font-family: 'Allura', cursive;
+    /*font-family: 'Arizonia', cursive;
+font-family: 'Calligraffitti', cursive;*/
+}
+
+/*.welcomesection {
+    width: 100%;
+    /*display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 5vw 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60vw;
+}*/
+
+#TopHeading {
+    margin-left: 5vw;
+    font-size: 100px;
+    text-align: center;
+    color: Blue;
+    text-shadow: 5px -1px 2px rgba(0, 170, 0, 0.73);
+}
+
+.welcomesection .none {
+    width: 10%;
+}
+
+.welcomequote {
+    color: blue;
+    font-size: 35px;
+    width: 25vw;
+    text-align: left;
+    height: auto;
+    
+}
+.welcomequote:hover{
+    text-shadow: 1px 1px 17px rgba(10, 255, 0, 1);
+}
+
+.welcomesection figure {
+    margin-top: 8vw;
+}
+
+.welcomesection figure img {
+    width: 250px;
+    height: auto;
+}
+
+/*welcome header over*/
+
+/*ARTICLE*/
+
+article {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 254, 254, 1) 22%, rgba(167, 252, 252, 1) 42%, rgba(33, 215, 215, 1) 76%, rgba(111, 228, 233, 1) 100%);
+    display: grid;
+    grid-template-columns: 75% 20%;
+    grid-gap: 1vw;
+    justify-items: left;
+    z-index: 0;
+}
+
+.treatments {
+    margin: auto;
+    width: 80%;
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
+#wrapper {
+    vertical-align: top;
+    float: left;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-row: span 1;
+    grid-column: span 1;
+    flex-wrap: wrap;
+}
+
+/*#acupunctureheading {
+    flex-grow: 20px;
+}
+
+#moxibustionheading {
+    flex-shrink: 10px;
+}
+
+#cuppingheading {
+    flex-shrink: 20px;
+}*/
+
+#treatmentheading, summary {
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 2.5vw;
+}
+
+summary {
+    font-size: 1.5vw;
+    padding-top: 4vw;
+    padding-bottom: 3vw;
+}
+
+.semi-headingdescriptions, .treatments p {
+    font-size: 2em;
+    font-family: 'Life Savers', cursive;
+}
+
+.treatments p {
+    font-size: 1.5em;
+}
+
+#wrapper2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+#shiatsuheading, #tuinaheading, #swedishheading {
+    font-size: 1em;
+    font-family: 'Martel Sans', sans-serif;
+}
+summary:hover{
+    text-decoration: underline;
+    color: darkblue;
+    transform: scale(1.1)
+}
+#massageheading{
+    margin-top: 8vw;
+}
+/*ASIDE HERE*/
+
+aside {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0;
+    /*padding-top: 10%;*/
+    background: rgb(6, 226, 171);
+    font-family: 'Arima Madurai', cursive;
+    text-align: center;
+    position: sticky;
+}
+
+aside h1 {
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+#sideimg {
+    max-width: 20vw;
+    box-sizing: contain;
+}
+
+.table {
+    padding-left: 15%;
+    border: solid 1px;
+    border-color: black;
+    border-radius: 95%;
+    border-collapse: collapse;
+    transition: all 0.5s;
+    position: absolute;
+    margin-left: auto;
+}
+.table:hover{
+    transform: scale(1.3);
+}
+th {
+    background: teal;
+    border-collapse: collapse;
+}
+
+/*FOOTER HERE*/
+
+footer {
+    margin: auto;
+    clear: both;
+    padding-left: 10%;
+    font-family: 'Arima Madurai', cursive;
+    background: linear-gradient(180deg, rgba(111, 228, 233, 1) 0%, rgba(33, 215, 215, 1) 11%, rgba(30, 227, 117, 1) 59%, rgba(92, 249, 67, 1) 100%);
+}
+
+footer h1 {
+    font-family: 'Arizonia', cursive;
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+footer h1:hover{
+    text-decoration: underline;
+    color: darkgreen;
+}
+.contact-items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact {
+    background: url(https://github.com/GiselleMartinez006/PublishingAcu_Mockup/blob/master/Week6/img/Backgroundblue.jpg?raw=true);
+    padding: 80px 0;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+/*darkcover
+
+.contact:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: -1;
+}*/
+
+.contact-items input[type="text"] {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 50%;
+}
+
+.contact-items textarea {
+    border-radius: 10px;
+    height: 150px;
+    padding: 15px;
+    width: 50%;
+}
+
+.contact-items a {
+    background: blue;
+    color: white;
+    display: block;
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 15px 80px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 5vw;
+}
+}

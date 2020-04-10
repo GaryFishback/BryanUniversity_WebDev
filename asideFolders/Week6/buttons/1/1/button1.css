@@ -1,0 +1,51 @@
+.button1 {
+    text-align: center;
+    border:none;
+    background:none;
+    width: 50px;
+    padding: 8px;
+    border-radius: 85%;
+    transition: 0.3s ease-out;
+    margin-left: 5vw;
+}
+
+.button1 svg {
+    width: 25px;
+    height: 25px;
+    transition: 0.3s;
+}
+
+.button1 :hover {
+    border: #C0C0C0 1px solid;
+    width: 250px;
+    padding: 8px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+#line3 {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+#line1 {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+#line2 {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}

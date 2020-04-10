@@ -1,0 +1,37 @@
+#scroll {
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    border-color: blue;
+    background-color:rgb(220, 241, 245);
+    text-indent:-9999px; /*so top written is not visible*/
+    display:none;
+    /*border: blue solid 2px;*/
+    border-radius:50%;
+}
+#scroll span {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-8px;
+    margin-top:-12px;
+    height:0;
+    width:0;
+    border:8px solid transparent;
+    border-bottom-color:rgb(27, 7, 207);
+}
+#scroll:hover {
+    background-color:rgb(27, 7, 207);
+    transform: scale(1.1)
+    }
+
+    #scroll:hover >span{
+        border-bottom-color: rgb(220, 241, 245);
+        transform: scale(1.1)
+    }
+
+
+ 
