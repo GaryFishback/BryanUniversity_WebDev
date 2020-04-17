@@ -45,43 +45,22 @@
 // document.write(
 //   "<p>Your viewport width is " + viewportwidth + "x" + viewportheight + "</p>"
 // );
-axios
-  .get("https://swapi.co/api/people/1")
-  .then((response) => {
-    const h1 = document.createElement("h1");
-    h1.textContent = "Name: " + response.data.name;
-    document.body.append(h1);
-    const h2 = document.createElement("h2");
-    h2.textContent = "Skin Color: " + response.data.skin_color;
-    document.body.append(h2);
-    const h3 = document.createElement("h3");
-    h3.textContent = "Eye Color: " + response.data.eye_color;
-    document.body.append(h3);
-    const h4 = document.createElement("h4");
-    h4.textContent = "Hair Color: " + response.data.hair_color;
-    document.body.append(h4);
-    axios.get(response.data.species).then((response) => {
-      const h1 = document.createElement("h1");
-      h1.textContent = "Species: " + response.data.name;
-      document.body.append(h1);
-      const h2 = document.createElement("h2");
-      h2.textContent = "Classification: " + response.data.classification;
-      document.body.append(h2);
-      const h3 = document.createElement("h3");
-      h3.textContent = "Average Hair Color: " + response.data.hair_colors;
-      document.body.append(h3);
-      const h4 = document.createElement("h4");
-      h4.textContent = "Average Lifespan: " + response.data.average_lifespan;
-      document.body.append(h4);
-    });
-    console.log(response.data);
-    axios.get(response.data.homeworld).then((response) => {
-      console.log(response.data);
-    });
-  })
-  .catch((error) => console.log(error));
-document.body.style.backgroundColor = "grey";
+var changes = { name: "not a color", _id: 142341213 };
+uglyThingsArray = [
+  { name: "color", _id: 142341213 },
+  { name: "color1", _id: 1452452353 },
+  { name: "color2", _id: 14235235213 },
+];
+console.log(uglyThingsArray);
+const index = uglyThingsArray.findIndex((parameter) => {
+  console.log(parameter);
+  return parameter._id === changes._id;
+});
+console.log(uglyThingsArray[index]);
 
-var blue = document.createElement("h1");
-blue.textContent = "blue";
-document.body.append(blue);
+const updateduglyThing = Object.assign(uglyThingsArray[index], changes);
+console.log(updateduglyThing);
+
+console.log(uglyThingsArray);
+
+console.log(Object.assign(changes, { name: "blue" }));

@@ -10,17 +10,17 @@ class ArrayProvider extends Component {
     super(props);
     this.state = {
       // tweetArray: array.array[gettingRandom(5)],
-      fullArray: array.array
+      fullArray: array.array,
     };
   }
 
   pushOne = (e, newTweet) => {
     console.log(this.state.fullArray);
     // console.log(array.array[array.array.length - 1]);
-    this.setState(prevState => {
+    this.setState((prevState) => {
       // console.log(prevState.fullArray.concat("1"));
       return {
-        fullArray: [...prevState.fullArray, newTweet]
+        fullArray: [...prevState.fullArray, newTweet],
 
         // fullArray: prevState.fullArray.push(
       };
@@ -31,33 +31,26 @@ class ArrayProvider extends Component {
   deleteOne = (e, id) => {
     console.log(this.state.fullArray);
     console.log(id);
-    const filterId = item => {
+    const filterId = (item) => {
       return item.id !== id;
     };
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return { fullArray: prevState.fullArray.filter(filterId) };
     });
   }; //the functiont to delete one tweet.
-  editOne = (e, changes, id) => {
-    //the fucntion to edit one. Once the edit form submit button is pressed this is triggered with the inputs.
-    //id is the id of the ugly thing item that is in full view to be edited.
-    //changes is the new changes to teh item.
+  editOne = (changes, id) => {
     const editing = (changes, prev) => {
-      // console.log(prev);
-      const filtering = item => {
-        // console.log(item.id);
-        return item.id !== id; //returns an array of the ones that don't match. they get saved as changing
+      const filtering = (item) => {
+        return item.id !== id;
       };
-      let changing = prev.fullArray.filter(filtering); //this is where it continues. it separates the other ugly things that won't be changed from the one that will be.
-      changes.id = id; //i don't want the item's id to change because i want it to remain the same item, just changed a bit.
-      //maintaining the old id with the new changes of the ugly item isthe next step on the logic before it is all saved to the full array.
+      let changing = prev.fullArray.filter(filtering);
+      changes.id = id;
       console.log(changes);
       return [...changing, changes];
     };
-    this.setState(prevState => {
-      // console.log(prevState);
+    this.setState((prevState) => {
       return {
-        fullArray: editing(changes, prevState)
+        fullArray: editing(changes, prevState),
       };
     }); //the logic starts down here. where fullArray is set equal to the return of the editing function. it takes in prevstate and the changes
   };
@@ -80,7 +73,7 @@ class ArrayProvider extends Component {
           all: this.state.fullArray,
           delete: this.deleteOne,
           edit: this.editOne,
-          pushOne: this.pushOne
+          pushOne: this.pushOne,
         }}
       >
         {this.props.children}

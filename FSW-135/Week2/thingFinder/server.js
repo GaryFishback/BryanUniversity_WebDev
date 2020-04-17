@@ -15,7 +15,7 @@ mongoose.connect(
   () => console.log("Connected to the DB")
 );
 
-app.use("/data", require("./routes/inventory"));
+app.use("/", require("./routes/inventory"));
 //get all
 // app.get("/data", (req, res) => {
 //   data.find((err, items) => {

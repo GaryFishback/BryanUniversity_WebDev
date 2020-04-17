@@ -20,7 +20,7 @@ class MainTag extends Component {
       name: "", //user.name = title
       edit: false,
       comment: false,
-      commentField: ""
+      commentField: "",
     };
   }
   // handleChange = event => {
@@ -33,7 +33,7 @@ class MainTag extends Component {
   render() {
     return (
       <ArrayConsumer>
-        {array => {
+        {(array) => {
           // the consumer wraps all of it, including the switch from list to details views.
           // array.array === "lightblue" ? (
           return (
@@ -62,13 +62,13 @@ class MainTag extends Component {
                           >
                             <Tweet
                               //onclick event listener on the whole tweet aside from the link to effect.
-                              clickTweet={e => {
+                              clickTweet={(e) => {
                                 this.setState({
                                   id: tweet.id,
                                   name: tweet.name,
                                   created_at: tweet.created_at,
                                   text: tweet.text,
-                                  img: tweet.img
+                                  img: tweet.img,
                                 });
                               }}
                               id={tweet.id}
@@ -119,7 +119,7 @@ class MainTag extends Component {
                     <Button
                       onClick={(e, id) => {
                         this.setState({
-                          edit: true
+                          edit: true,
                         });
                       }}
                     >
@@ -128,7 +128,7 @@ class MainTag extends Component {
                     {this.state.edit ? (
                       <Form
                         onClickHandler={(e, state) => {
-                          array.edit(e, state, this.state.id);
+                          array.edit(state, this.state.id);
                         }}
                         // form's submit button triggers the editing effect on the fullArray.
                       ></Form>
