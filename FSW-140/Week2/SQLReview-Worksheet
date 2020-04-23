@@ -1,0 +1,82 @@
+For this assignment, write queries using SQL to acquire data about customers, vendors, products, and employees in a fictitious sales database. 
+These queries will cover many of the core aspects of writing SQL to produce data for reporting and analyzing information. 
+There may be multiple ways to produce the same results, but ensure you are returning the requested fields.
+
+Using the Sales Orders database, complete the queries below. 
+
+1. Show all the information on our customers.
+a. Query: SELECT * FROM customers;
+
+b. Columns: 9
+
+c. Expected Rowcount: 28
+
+2. Show a list of states, in reverse alphabetical order, where our vendors are located, and include the names of the vendor.
+a. Query: SELECT VendState, VendName FROM vendors ORDER BY VendState desc;
+
+b. Columns: 1 (states)
+
+c. Expected Rowcount: 10 rows
+
+3. What if we adjusted the retail price of each product by increasing it 7 percent?
+a. Query: SELECT ProductName, RetailPrice, RetailPrice*0.07 as IncreaseAmount, RetailPrice+RetailPrice*0.07 as IncreasedRetailPrice  FROM products;
+
+b. Columns: 4
+
+c. Expected Rowcount: 40
+
+4. Show a list of orders made by each customer in ascending date order.
+a. Query: SELECT * FROM orders ORDER BY OrderDate Asc;
+
+b. Columns: 5
+
+c. Expected Rowcount:944
+
+5.Give the names of all vendors based in Albany, Anchorage, and Dallas.
+a. Query: 
+SELECT * FROM vendors WHERE 
+VendCity = "Dallas" or 
+VendCity = "Albany" or
+VendCity = "Anchorage"; 
+
+b. Columns: 1
+
+c. Expected Rowcount:3
+
+6. Show an alphabetized list of products with a quantity on hand greater than or equal to 30.
+a. Query: SELECT ProductName, QuantityOnHand FROM products WHERE QuantityOnHand >= 30 ORDER BY ProductName;
+
+b. Columns: 2
+
+c. Expected Rowcount:9
+
+7. What vendors do we work with that don’t have an email address?
+a. Query: SELECT VendName FROM vendors WHERE VendEMailAddress IS NULL ;
+
+b. Columns:  1
+
+c. Expected Rowcount: 4
+
+8. List employees and the dates their orders shipped sorted by order date.
+a. Query: SELECT EmployeeID, OrderDate, ShipDate , OrderNumber FROM orders ORDER BY OrderDate;
+
+b. Columns: 4
+
+c. Expected Rowcount: 944
+
+9. Show the vendors and products they supply to us for products over $75 for vendors in Texas. 
+a. Query: SELECT ProductNumber, VendorID FROM product_vendors WHERE ProductNumber = ANY (SELECT ProductNumber FROM products WHERE RetailPrice > 75.00) AND VendorID = ANY (SELECT VendorID FROM vendors WHERE VendState = "TX") ;
+
+
+b. Columns: 2
+
+c. Expected Rowcount: 14
+
+10. Show employees who live in the same city and state as our vendors.
+a. Query: SELECT concat(EmpFirstName, " " , EmpLastName)AS FullName, EmpCity, EmpState  FROM employees WHERE EmpCity = ANY ( SELECT VendCity FROM vendors) 
+OR EmpState = ANY (SELECT VendState FROM vendors) <= this line added to the end for those in the same state
+
+b. Columns: 3
+
+c. Expected Rowcount: For same city there were only two, when I added the ones in the same states (but not necessarily same city) it turned to 8.
+

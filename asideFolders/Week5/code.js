@@ -1,66 +1,38 @@
-// function titleCase(str) {
-//   var splitStr = str.toLowerCase().split(" ");
-//   for (var i = 0; i < splitStr.length; i++) {
-//     // You do not need to check if i is larger than splitStr length, as your for does that for you
-//     // Assign it back to the array
-//     splitStr[i] =
-//       splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
-//   }
-//   // Directly return the joined string
-//   return splitStr.join(" ");
+// {<IfStatement> <js>
+// (PRELIMINARIES)
+if (5 > 3) {
+  console.log("IS FIVE GREATER THAN THREE");
+}
+var cat = "cat";
+if (5 > cat.length) {
+  console.log("IS THE LENGTH OF CAT");
+}
+var dog = "dog";
+if (cat.length === dog.length) {
+  console.log("CAT IS EQUAL TO DOG");
+}
+if (dog.length !== cat.length) console.log("CAT IS NOT EQUAL TO DOG");
+
+// {BRONZE MEDAL}
+var person = {
+  name: "Bobby",
+  age: 12,
+};
+console.log(person.age);
+if (18 > person.age) {
+  console.log("IF TWELVE IS GREATER THAN EIGHTEEN");
+}
+if (18 < person.age) {
+  console.log("IF TWELVE IS LESS THAN EIGHTEEN");
+}
+// if(B>18){
+//     console.log("IF B IS GREATER THAN EIGHTEEN")
+//     }
+// if(B===18){
+//     console.log("IF B IS EQUAL TO EIGHTEEN")
 // }
-// console.log(titleCase("I'm a little tea pot"));
-// var viewportwidth;
-// var viewportheight;
-
-// // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
-
-// if (typeof window.innerWidth != "undefined") {
-//   viewportwidth = window.innerWidth;
-
-//   viewportheight = window.innerHeight;
-//   console.log(viewportwidth);
-//   console.log(viewportheight);
+// {SILVER MEDAL}
+if ("1" === 1) console.log("1" === 1);
+console.log(1 === 1);
+console.log("l" === "1");
 // }
-
-// // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
-// else if (
-//   typeof document.documentElement != "undefined" &&
-//   typeof document.documentElement.clientWidth != "undefined" &&
-//   document.documentElement.clientWidth != 0
-// ) {
-//   (viewportwidth = document.documentElement.clientWidth),
-//     (viewportheight = document.documentElement.clientHeight);
-//   console.log(viewportwidth);
-//   console.log(viewportheight);
-// }
-
-// // older versions of IE
-// else {
-//   viewportwidth = document.getElementsByTagName("body")[0].clientWidth;
-//   viewportheight = document.getElementsByTagName("body")[0].clientHeight;
-//   console.log(viewportwidth);
-//   console.log(viewportheight);
-// }
-// document.write(
-//   "<p>Your viewport width is " + viewportwidth + "x" + viewportheight + "</p>"
-// );
-var changes = { name: "not a color", _id: 142341213 };
-uglyThingsArray = [
-  { name: "color", _id: 142341213 },
-  { name: "color1", _id: 1452452353 },
-  { name: "color2", _id: 14235235213 },
-];
-console.log(uglyThingsArray);
-const index = uglyThingsArray.findIndex((parameter) => {
-  console.log(parameter);
-  return parameter._id === changes._id;
-});
-console.log(uglyThingsArray[index]);
-
-const updateduglyThing = Object.assign(uglyThingsArray[index], changes);
-console.log(updateduglyThing);
-
-console.log(uglyThingsArray);
-
-console.log(Object.assign(changes, { name: "blue" }));

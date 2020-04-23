@@ -21,7 +21,7 @@ router.get("/data/:id", (req, res, next) => {
       res.status(500);
       return next(err);
     } else {
-      return res.status(200).send(`${item}`);
+      return res.status(200).send(item);
     }
   });
 });
