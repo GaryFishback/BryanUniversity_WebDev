@@ -18,10 +18,17 @@ c. Expected Rowcount: 357
 
 3. Assign a sales rep (employee) to each customer that does not have one in the newly created table from problem three.
 a. Query: 
+SELECT * FROM nosalesrep;
+UPDATE nosalesrep 
+SET nosalesrep.customers =  (  SELECT  (SELECT DISTINCT CustomerID FROM orders WHERE orders.OrderNumber = nosalesrep.orders)  FROM orders
+     WHERE nosalesrep.orders = orders.OrderNumber ) SELECT * FROM nosalesrep;
+SET nosalesrep.employee =   ( SELECT  (SELECT DISTINCT EmployeeID FROM orders WHERE orders.OrderNumber = nosalesrep.orders) FROM orders
+    WHERE nosalesrep.orders = orders.OrderNumber  );
+SELECT * FROM nosalesrep;
 
-b. Columns: 
+b. Columns: 3
 
-c. Expected Rowcount:
+c. Expected Rowcount: 358
 
 4. What is the average quoted price of a helmet?
 a. Query: SELECT AVG(RetailPrice) FROM products//
@@ -46,22 +53,89 @@ b. Columns: 1
 c. Expected Rowcount:1
 
 7. Show each employee, the employee’s total sales (in dollars), the employee’s total sales item quantity, and the average item 
-a. Query: 
+a. Query: -- CREATE TABLE employeeStats (employeeID INT,employeeName VARCHAR(500), orderNum INT, totalsales INT, averageItem VARCHAR(500)); 
+ DELETE FROM employeestats;
+INSERT INTO employeeStats (orderNum, totalsales, averageItem, orderQuatity) SELECT DISTINCT orderNumber, sales, average, summedQuantity  FROM (SELECT SUM(QuantityOrdered) AS summedQuantity,SUM(QuotedPrice) AS sales, ROUND(AVG(ProductNumber)) as average , orderNumber FROM order_details GROUP BY OrderNumber) t ;
 
-b. Columns: 
+-- ALTER TABLE employeeStats
+-- ADD orderQuatity INT;
+SELECT * FROM employeestats;
+--     
+    UPDATE employeeStats
+SET employeeStats.employeeID = 
+    (
+SELECT 
+ ( SELECT DISTINCT employeeID FROM orders WHERE orders.OrderNumber = employeestats.orderNum )
+FROM orders
+    WHERE
+     orders.OrderNumber = employeeStats.orderNum
+    );
 
-c. Expected Rowcount:
+UPDATE employeeStats
+SET employeeStats.employeeName = 
+    (
+SELECT 
+ (SELECT concat(EmpFirstName, EmpLastName) AS FullName FROM employees WHERE employees.EmployeeID = employeeStats.employeeID )
+FROM employees
+    WHERE
+     employees.EmployeeID = employeeStats.employeeID
+    );
+    
+SELECT * FROM employeeStats;
+
+b. Columns: 6
+
+c. Expected Rowcount: 933
 
 8. Create a new table with the following: vendor id, vendor phone number, daysToDeliver, product number, and product name.
-a. Query: 
+a. Query:  -- -- -- Create a new table with the following: vendor id, vendor phone number, daysToDeliver, product number, and product name.
+CREATE TABLE vendorsvsproducts (vendorID INT,vendorName VARCHAR(500), vendorPhone INT, productNum INT, productName VARCHAR(500), daysTdeliver INT);
+INSERT INTO vendorsvsproducts (daysTdeliver, productNum, vendorID) SELECT DISTINCT DaysToDeliver, ProductNumber, VendorID FROM product_vendors;
 
-b. Columns: 
+UPDATE vendorsvsproducts
+SET vendorsvsproducts.vendorName = 
+    (
+SELECT 
+ (SELECT DISTINCT VendName FROM vendors WHERE vendors.VendorID = vendorsvsproducts.vendorID)
+FROM vendors
+    WHERE
+     vendorsvsproducts.vendorID = vendors.VendorID
+    );
+    
+SELECT * FROM vendorsvsproducts;
 
-c. Expected Rowcount:
+UPDATE vendorsvsproducts
+SET vendorsvsproducts.productName = 
+    (
+SELECT 
+ (SELECT DISTINCT ProductName FROM products WHERE products.ProductNumber = vendorsvsproducts.productNum)
+FROM products
+    WHERE
+     vendorsvsproducts.ProductNum=products.ProductNumber
+    );
+    
+SELECT * FROM vendorsvsproducts;
+
+UPDATE vendorsvsproducts
+SET vendorsvsproducts.vendorPhone = 
+    (
+SELECT 
+ (SELECT DISTINCT VendPhoneNumber FROM vendors WHERE vendors.VendorID = vendorsvsproducts.vendorID )
+FROM vendors
+    WHERE
+     vendorsvsproducts.vendorID = vendors.VendorID
+    );
+    
+SELECT * FROM vendorsvsproducts;
+
+
+b. Columns: 6
+
+c. Expected Rowcount: 90
 
 9. Show all current orders whos order total is more than the average order total for all orders.
-a. Query: 
+a. Query: SELECT DISTINCT orderNumber, sales FROM (SELECT SUM(QuotedPrice) AS sales, orderNumber FROM order_details GROUP BY OrderNumber) t WHERE sales > (SELECT AVG(QuotedPrice) FROM order_details);
 
-b. Columns: 
+b. Columns: 2
 
-c. Expected Rowcount:
+c. Expected Rowcount: 680
