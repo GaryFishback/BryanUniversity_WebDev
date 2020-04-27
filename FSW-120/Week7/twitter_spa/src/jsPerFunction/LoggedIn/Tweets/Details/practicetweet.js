@@ -16,10 +16,10 @@ class Moderator extends Component {
         oauth_signature_method: "HMAC-SHA1",
         oauth_timestamp: "",
         oauth_nonce: "",
-        oauth_version: "1.0"
+        oauth_version: "1.0",
       },
       consumerSecret: "5IlLf180quNrrIhoA8yvh8bQxZAxLF4C7DihWPFQWGJombtcE9", // your consumer_secret
-      tokenSecret: "pNRu7eiHIWPdjtUoa862wCVg6nHf8TF05TKQXeM8UgtsX" // your token_secret
+      tokenSecret: "pNRu7eiHIWPdjtUoa862wCVg6nHf8TF05TKQXeM8UgtsX", // your token_secret
     };
   }
 
@@ -33,7 +33,7 @@ class Moderator extends Component {
     return text;
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
 
     // let getData = {
@@ -66,7 +66,7 @@ class Moderator extends Component {
     var xhr = new XMLHttpRequest(); //with xhr directly from postman
     xhr.withCredentials = true;
 
-    xhr.addEventListener("readystatechange", function() {
+    xhr.addEventListener("readystatechange", function () {
       if (this.readyState === 4) {
         console.log(this.responseText);
       }
@@ -105,24 +105,24 @@ class Moderator extends Component {
     //   }
     // };
     // encodingHeader(authorizationHeader);
-    // axios({
-    //   method: "get",
-    //   url:
-    //     "https://api.twitter.com/1.1/statuses/lookup.json?id=1125490788736032770",
-    //   headers: {
-    //     // Accept: "application/json",
-    //     // "Content-Type": "application/json",
-    //     Authorization: authorizationHeader,
-    //     Access: "*/*"
-    //   }
-    //   //   data: getData
-    // })
-    //   .then(res => {
-    //     console.log(res);
-    //   })
-    //   .catch(err => console.log(err));
+    axios({
+      method: "get",
+      url:
+        "https://api.twitter.com/1.1/statuses/lookup.json?id=1125490788736032770",
+      headers: {
+        // Accept: "application/json",
+        // "Content-Type": "application/json",
+        Authorization: authorizationHeader,
+        Access: "*/*",
+      },
+      //   data: getData
+    })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
   };
-
+  //
   render() {
     return (
       <div className="moderator">
