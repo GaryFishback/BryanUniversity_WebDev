@@ -1,6 +1,7 @@
 const express = require("express");
 const issueRouter = express.Router();
 const Issue = require("../models/issue");
+const User = require("../models/user");
 emptyHandler = (found, res) => {
   !found.length //is 2 equal signs in purpose
     ? res.status(204).send()
@@ -33,6 +34,24 @@ issueRouter.post("/", (req, res, next) => {
     }
     return res.status(201).send(savedIssue);
   });
+
+  User.findOneAndUpdate(
+    { _id: req.user._id },
+    {
+      $push: {
+        issues: { issue: req.body, date: req.body.date },
+      },
+    },
+    { new: true },
+    (err, updatedUser) => {
+      if (err) {
+        res.status(500);
+        return next(err);
+      } else {
+        return res.status(201).send(updatedUser);
+      }
+    }
+  );
 });
 
 //Get Issues by User

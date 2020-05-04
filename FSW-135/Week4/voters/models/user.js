@@ -6,6 +6,7 @@ const userSchema = new Schema({
   username: { type: String, required: true },
   password: { type: String, required: true },
   birthdate: { type: Number, required: true },
+  issues: { type: Array, default: [] },
   //birthdate, limit realistically.
   //hashed password SALT
   //username
