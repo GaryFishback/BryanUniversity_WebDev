@@ -9,6 +9,7 @@ emptyHandler = (found, res) => {
 
 //get issues
 issueRouter.get("/", (req, res, next) => {
+  console.log(req.user);
   Issue.find((err, issues) => {
     if (err) {
       res.status(500);
@@ -20,9 +21,9 @@ issueRouter.get("/", (req, res, next) => {
 });
 
 //add New ISSUE
-issueRouter.post("/:userID", (req, res, next) => {
-  console.log(req.params);
-  req.body.userID = req.params.userID;
+issueRouter.post("/", (req, res, next) => {
+  console.log(req.body);
+  req.body.userID = req.user._id;
   req.body.date = new Date();
   const newIssue = new Issue(req.body);
   newIssue.save((err, savedIssue) => {
@@ -35,9 +36,9 @@ issueRouter.post("/:userID", (req, res, next) => {
 });
 
 //Get Issues by User
-issueRouter.get("/user/:userID", (req, res, next) => {
-  console.log(req.params.userID);
-  Issue.find({ userID: req.params.userID }, (err, issues) => {
+issueRouter.get("/user/", (req, res, next) => {
+  console.log(req.user._id);
+  Issue.find({ userID: req.user._id }, (err, issues) => {
     if (err) {
       res.status(500);
       return next(err);
@@ -83,7 +84,7 @@ issueRouter.put("/:issueID/:userID/upvote", (req, res, next) => {
         upVotes: 1,
       },
       $push: {
-        voters: { userID: req.params.userID, voted: "upvoted" },
+        voters: { userID: req.user._id, voted: "upvoted" },
       },
     },
     { new: true },
@@ -106,7 +107,7 @@ issueRouter.put("/:issueID/:userID/downvote", (req, res, next) => {
         downVotes: 1,
       },
       $push: {
-        voters: { userID: req.params.userID, voted: "downvoted" },
+        voters: { userID: req.user._id, voted: "downvoted" },
       },
     },
     { new: true },

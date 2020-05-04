@@ -19,9 +19,9 @@ commentRouter.get("/", (req, res, next) => {
 });
 
 //add New Comment
-commentRouter.post("/:issueID/:userID", (req, res, next) => {
+commentRouter.post("/:issueID/", (req, res, next) => {
   console.log(req.params);
-  req.body.userID = req.params.userID;
+  req.body.userID = req.user._id;
   req.body.issueID = req.params.issueID;
   console.log(req.body);
   req.body.date = new Date();
@@ -47,8 +47,8 @@ commentRouter.get("/issue/:issueID", (req, res, next) => {
 });
 
 //Get Comments by User
-commentRouter.get("/user/:userID", (req, res, next) => {
-  Comment.find({ userID: req.params.userID }, (err, comments) => {
+commentRouter.get("/user/", (req, res, next) => {
+  Comment.find({ userID: req.user._id }, (err, comments) => {
     if (err) {
       res.status(500);
       return next(err);

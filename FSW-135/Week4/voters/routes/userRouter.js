@@ -1,7 +1,7 @@
 const express = require("express");
 const userRouter = express.Router();
 const User = require("../models/user");
-const jwt = require("jsonwebtoken");
+
 emptyhandling = (found, res) => {
   !found.length //is 2 equal signs in purpose
     ? res.status(204).send()
@@ -20,7 +20,7 @@ userRouter.get("/", (req, res, next) => {
 });
 //getOne user
 userRouter.get("/:userID", (req, res, next) => {
-  User.find({ _id: req.params.userID }, (err, user) => {
+  User.find({ _id: req.user._id }, (err, user) => {
     if (err) {
       res.status(500);
       return next(err);
@@ -33,7 +33,7 @@ userRouter.get("/:userID", (req, res, next) => {
 //update user info
 userRouter.put("/:userID", (req, res, next) => {
   User.findOneAndUpdate(
-    { _id: req.params.userID },
+    { _id: req.user._id },
     req.body,
     { new: true },
     (err, updatedUser) => {
@@ -48,7 +48,7 @@ userRouter.put("/:userID", (req, res, next) => {
 });
 
 userRouter.delete("/:userID", (req, res, next) => {
-  User.findOneAndDelete({ _id: req.params.userID }, (err, deletedUser) => {
+  User.findOneAndDelete({ _id: req.user._id }, (err, deletedUser) => {
     if (err) {
       res.status(500);
       return next(err);

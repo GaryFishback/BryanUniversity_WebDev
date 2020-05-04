@@ -1,8 +1,9 @@
 const express = require("express");
 const authRouter = express.Router();
 const User = require("../models/user");
+const jwt = require("jsonwebtoken");
 //add new user DIRECTLY
-userRouter.post("/signup", (req, res, next) => {
+authRouter.post("/signup", (req, res, next) => {
   User.findOne({ username: req.body.username }, (err, user) => {
     if (err) {
       res.status(500);
@@ -25,7 +26,7 @@ userRouter.post("/signup", (req, res, next) => {
 });
 
 //login
-userRouter.post("/users", (req, res, next) => {
+authRouter.post("/user", (req, res, next) => {
   User.findOne({ username: req.body.username }, (err, user) => {
     if (err) {
       res.status(500);
