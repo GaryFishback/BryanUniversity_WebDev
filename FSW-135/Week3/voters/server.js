@@ -5,9 +5,10 @@ const mongoose = require("mongoose");
 
 app.use(express.json());
 app.use(morgan("dev"));
+const dbConnectionString = "mongodb://localhost:27017/voterdb";
 
 mongoose.connect(
-  "mongodb://localhost:27017/voterdb",
+  dbConnectionString,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -17,9 +18,9 @@ mongoose.connect(
   () => console.log("Connected to the voter DB")
 );
 
-app.use("/", require("./auth_route/userRouter.js"));
-app.use("/issues", require("./auth_route/issuesRouter.js"));
-app.use("/comments", require("./auth_route/commentsRouter.js"));
+app.use("/", require("./routes/userRouter.js"));
+app.use("/issues", require("./routes/issuesRouter.js"));
+app.use("/comments", require("./routes/commentsRouter"));
 // app.use("/postuser", require("./auth_route/newuser.js"));
 // app.use("/home", require("./auth_route/home.js")); //list all issues here
 // app.use("/profile", require("./auth_route/profile.js"));

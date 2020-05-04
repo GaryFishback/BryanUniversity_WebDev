@@ -8,9 +8,9 @@ planetsList.addEventListener("click", () => {
   const h1 = document.createElement("h1");
   h1.textContent = "It takes a while to load...";
   sectionData.append(h1);
-  axios.get("https://swapi.co/api/planets").then(response => {
+  axios.get("https://swapi.dev/api/planets").then((response) => {
     var data = response.data.results;
-    showData = data => {
+    showData = (data) => {
       for (i = 0; i < data.length; i++) {
         const p1 = document.createElement("p");
         // const p2 = document.createElement("p");

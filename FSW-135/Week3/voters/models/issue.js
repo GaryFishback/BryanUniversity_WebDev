@@ -4,8 +4,10 @@ const Schema = mongoose.Schema;
 const issueSchema = new Schema({
   title: { type: String, required: true },
   description: { type: String, required: true },
-  upVotes: { type: Number, default: 0 },
-  downVotes: { type: Number, default: 0 },
+  votes: {
+    upVotes: { type: Number, default: 0 },
+    downVotes: { type: Number, default: 0 },
+  },
   voters: { type: Array, default: [] },
   comments: { type: Array, default: [] },
   date: { type: Date, required: true },
