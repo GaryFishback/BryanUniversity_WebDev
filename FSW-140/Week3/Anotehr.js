@@ -783,3 +783,21 @@ console.log(randomBooloean)
 //  WHEN 29 THEN  0
 //   WHEN 30 THEN 1
  
+
+
+CREATE TABLE frames (framed INT,
+   apple INT,
+   circle INT,
+   double_oval INT,
+   florida INT,
+   half_circle INT,
+   half_oval INT,
+   oval INT,
+   rectangle_3d INT,
+   rectangular INT,
+   seashell INT,
+   split INT,
+   tomb INT,
+   triple INT,
+   window_frame INT,
+   wood INT);
