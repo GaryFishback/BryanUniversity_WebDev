@@ -3,6 +3,7 @@ const authRouter = express.Router();
 const User = require("../models/user");
 const jwt = require("jsonwebtoken");
 //add new user DIRECTLY
+
 authRouter.post("/signup", (req, res, next) => {
   User.findOne({ username: req.body.username }, (err, user) => {
     if (err) {
