@@ -2,7 +2,7 @@ const express = require("express");
 const authRouter = express.Router();
 const User = require("../models/user");
 const jwt = require("jsonwebtoken");
-//add new user DIRECTLY
+//add new user 
 
 authRouter.post("/signup", (req, res, next) => {
   User.findOne({ username: req.body.username }, (err, user) => {
@@ -20,8 +20,8 @@ authRouter.post("/signup", (req, res, next) => {
         res.status(500);
         return next(err);
       }
-      const token = jwt.sign(savedUser.toObject(), process.env.SECRET);
-      return res.status(201).send({ token, user: savedUser });
+        const token = jwt.sign(savedUser.withoutPassword(), process.env.SECRET);
+        return res.status(201).send({ token, user: savedUser.withoutPassword() });
     });
   });
 });
@@ -38,14 +38,26 @@ authRouter.post("/", (req, res, next) => {
       res.status(403);
       return next(new Error("Username or Password are incorrect"));
     }
-    if (req.body.password !== user.password) {
-      console.log(req.body.password);
-      res.status(403);
-      return next(new Error("Username or Password are incorrect"));
-    }
+    //if (req.body.password !== user.password) {
+    //  console.log(req.body.password);
+    //  res.status(403);
+    //  return next(new Error("Username or Password are incorrect"));
+    //}
 
-    const token = jwt.sign(user.toObject(), process.env.SECRET);
-    return res.status(200).send({ token, user });
+      user.checkPassword(req.body.password, (err, isMatch) => {
+          if (err) {
+        res.status(403);
+        return next(new Error("Username or Password are incorrect"));
+          }
+
+          if (!isMatch) {
+      res.status(403);
+      return next(new error("username or password are incorrect"));
+          }
+
+const token = jwt.sign(user.withoutPassword(), process.env.SECRET);
+    return res.status(200).send({ token, user: user.withoutPassword() });
+      })  
   });
 });
 

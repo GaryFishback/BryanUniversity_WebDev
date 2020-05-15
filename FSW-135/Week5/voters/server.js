@@ -4,8 +4,10 @@ require("dotenv").config();
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const expressJwt = require("express-jwt");
+const cors = require("cors");
 app.use(express.json());
 app.use(morgan("dev"));
+app.use(cors())
 
 mongoose.connect(
   "mongodb://localhost:27017/voterdb",
@@ -15,14 +17,22 @@ mongoose.connect(
     useCreateIndex: true,
     useFindAndModify: false,
   },
-  () => console.log("Connected to the voter DB")
+  () => {
+      return console.log("Connected to the voter DB");
+  }
 );
 
-app.use("/", require("./routes/authRouter"));
-app.use("/", expressJwt({ secret: process.env.SECRET }));
-app.use("/user", require("./routes/userRouter.js"));
-app.use("/issues", require("./routes/issuesRouter.js"));
-app.use("/comments", require("./routes/commentsRouter.js"));
+
+app.get('/', function (req, res, next) {
+    res.json({ msg: 'This is CORS-enabled for all origins!' })
+})
+
+
+app.use("/auth", require("./routes/authRouter"));
+app.use("/app/", expressJwt({ secret: process.env.SECRET }));
+app.use("/app/user", require("./routes/userRouter.js"));
+app.use("/app/issues", require("./routes/issuesRouter.js"));
+app.use("/app/comments", require("./routes/commentsRouter.js"));
 // app.use("/postuser", require("./auth_route/newuser.js"));
 // app.use("/home", require("./auth_route/home.js")); //list all issues here
 // app.use("/profile", require("./auth_route/profile.js"));
@@ -34,7 +44,7 @@ app.use((err, req, res, next) => {
   }
   return res.send({ errMsg: err.message });
 });
-
-app.listen(4028, () => {
-  console.log("Server is running on port 4028");
+var port = 3030;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}; with CORS anabled`);
 });

@@ -6,10 +6,10 @@ import App from "./App.js";
 // import "./index.css";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <UserProvider>
+  <UserProvider>
+    <BrowserRouter>
       <App />
-    </UserProvider>
-  </BrowserRouter>,
+    </BrowserRouter>{" "}
+  </UserProvider>,
   document.getElementById("root")
 );

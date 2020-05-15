@@ -1,19 +1,27 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
+import React, { useContext } from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Navbar from "./components/Navbar.js";
+import Footer from "./components/Footer.js";
+import Header from "./components/Header.js";
 import Auth from "./components/auth/auth.js";
 import Profile from "./components/profile.js";
-import Public from "./components/public.js";
+import Issues from "./components/issues.js";
+
+import { UserContext } from "./context/userProvider"
 
 export default function App() {
-  return (
-    <div className="app">
-      <Navbar />
-      <Switch>
-        <Route exact path="/" render={() => <Auth />} />
-        <Route path="/profile" render={() => <Profile />} />
-        <Route path="/public" render={() => <Public />} />
-      </Switch>
+    const { token, logout, allIssues, getIssues} = useContext(UserContext)
+    console.log(allIssues)
+    return (
+        <div className="app" style={{ height: "100vh", width: "100vw", display: "grid", gridTemplateRows: "8% auto 8%"}}>
+            <Navbar logout={logout} token={token}/>
+        <Switch>
+        <Route exact path="/" render={() => token ? <Redirect to="profile"/> : <Header />} />
+        <Route path="/auth" render={() => token ? <Redirect to="profile"/> :<Auth />} />
+                <Route path="/profile" render={() => !token ? <Redirect to="auth" /> :<Profile />} />
+                <Route path="/issues" render={() => !token ? <Redirect to="auth" /> : <Issues allIssues={allIssues} getIssues={getIssues} />} />
+          </Switch>
+          <Footer />
     </div>
   );
 }

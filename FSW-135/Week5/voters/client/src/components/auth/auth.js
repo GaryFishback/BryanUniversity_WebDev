@@ -1,13 +1,13 @@
 import React, { useState, useContext } from "react";
 import AuthForm from "./authForm.js";
-import { UserContext } from "./../../context/userProvider";
+import { UserContext } from "../../context/userProvider";
 
 const initInputs = { username: "", password: "" };
 
 export default function Auth() {
   const [inputs, setInputs] = useState(initInputs);
   const [toggle, setToggle] = useState(false);
-  const { signup } = useContext(UserContext);
+  const { signup, login } = useContext(UserContext);
   function handleChange(e) {
     const { name, value } = e.target;
     setInputs((prevInputs) => ({
@@ -23,7 +23,7 @@ export default function Auth() {
 
   function handleLogin(e) {
     e.preventDefault();
-    // login
+    login(inputs)
   }
 
   return (
@@ -31,23 +31,23 @@ export default function Auth() {
       <h1>Todo App</h1>
       {!toggle ? (
         <>
-          <AuthForm
-            handleChange={handleChange}
-            handleSubmit={handleSignup}
-            inputs={inputs}
-            btnText="Sign up"
-          />
-          <p onClick={() => setToggle((prev) => !prev)}>Already a member?</p>
+                  <AuthForm
+                      handleChange={handleChange}
+                      handleSubmit={handleLogin}
+                      inputs={inputs}
+                      btnText="Login"
+                  />
+                  <p onClick={() => setToggle((prev) => !prev)}>Not a member?</p>
         </>
       ) : (
         <>
-          <AuthForm
-            handleChange={handleChange}
-            handleSubmit={handleLogin}
-            inputs={inputs}
-            btnText="Login"
-          />
-          <p onClick={() => setToggle((prev) => !prev)}>Not a member?</p>
+       <AuthForm
+                          handleChange={handleChange}
+                          handleSubmit={handleSignup}
+                          inputs={inputs}
+                          btnText="Sign up"
+                      />
+                      <p onClick={() => setToggle((prev) => !prev)}>Already a member?</p>
         </>
       )}
     </div>
