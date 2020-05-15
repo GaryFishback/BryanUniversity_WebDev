@@ -2,8 +2,7 @@ import React from "react";
 
 export default function AuthForm(props) {
   const {
-      handleChange,
-      errMsg,
+    handleChange,
     handleSubmit,
     btnText,
     inputs: { username, password },
@@ -25,8 +24,7 @@ export default function AuthForm(props) {
         onChange={handleChange}
         placeholder="Password"
       />
-          <button>{btnText}</button>
-          <p style={{ color: "red" , fontWeight: "bold"}}>{errMsg}</p>
+      <button>{btnText}</button>
     </form>
   );
 }

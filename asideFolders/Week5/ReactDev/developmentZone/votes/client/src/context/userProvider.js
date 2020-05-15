@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Axios from "axios";
+import Axios from "../../node_modules/axios";
 export const UserContext = React.createContext();
 
 const axios = Axios.create()
@@ -14,20 +14,10 @@ export default function UserProvider(props) {
     const initialState = {
         user: JSON.parse(localStorage.getItem("user")) || {}
         , token: localStorage.getItem("token") || ""
-        , issues: JSON.parse(localStorage.getItem("IssuesByUser")) || [], 
-            allIssues: JSON.parse(localStorage.getItem("IssuesAll")) || [], 
-        errMsg: ""
+        , issues: [], 
+        allIssues: []
 };
-    const [userState, setUserState] = useState(initialState);
-
-    function handleAuthErr(errMsg) {
-        console.dir(errMsg)
-        setUserState(prevState => ({
-            ...prevState, 
-            errMsg
-        }))
-    }
-
+  const [userState, setUserState] = useState(initialState);
   function signup(credentials) {
     const newUser = {
       name: credentials.username,
@@ -38,7 +28,7 @@ export default function UserProvider(props) {
     console.log(newUser);
 
     Axios
-        .post("http://localhost:3030/auth/signup", newUser)
+      .post("auth/signup", newUser)
         .then((res) => {
             console.log(res.data)
 
@@ -53,14 +43,14 @@ export default function UserProvider(props) {
             }))
 
         })
-        .catch((err) => handleAuthErr(err.response.data.errMsg));
+        .catch((err) => console.dir(err.response.data.errMsg));
     }
     function login(credentials) {
         
         console.log(credentials);
 
         Axios
-            .post("http://localhost:3030/auth", credentials)
+            .post("auth/", credentials)
             .then((res) => {
                 console.log(res.data)
 
@@ -68,7 +58,6 @@ export default function UserProvider(props) {
 
                 localStorage.setItem("token", token)
                 localStorage.setItem("user", JSON.stringify(user))
-                
 
                 getUserIssues()
                 getIssues()
@@ -79,7 +68,7 @@ export default function UserProvider(props) {
                 }))
 
             })
-            .catch((err) => handleAuthErr(err.response.data.errMsg));
+            .catch((err) => console.dir(err.response.data.errMsg));
     }
 
 
@@ -97,7 +86,7 @@ export default function UserProvider(props) {
 
 
     function addIssue(newIssue) {
-        axios.post("http://localhost:3030/app/issues", newIssue).then(res => {
+        axios.post("app/issues", newIssue).then(res => {
             console.log(res.data)
             setUserState(prevState => ({
                 ...prevState,
@@ -106,34 +95,30 @@ export default function UserProvider(props) {
 
 
             }))
-        }).catch((err) => { handleAuthErr(err.response.data.errMsg) })
+        }).catch((err) => { console.log(err.response.data.errMsg) })
        }
 
     function getUserIssues() {
 
-        axios.get("http://localhost:3030/app/issues/user").then(res => {
+        axios.get("app/issues/user").then(res => {
             console.log(res.data)
             setUserState(prevState => ({
                 ...prevState,
                 issues: res.data
 
             }))
-            localStorage.setItem("IssuesByUser", JSON.stringify(res.data))
-
-        }).catch((err) => { handleAuthErr(err.response.data.errMsg) })
+        }).catch((err) => { console.log(err.response.data.errMsg) })
     }
     function getIssues() {
 
-        axios.get("http://localhost:3030/app/issues").then(res => {
+        axios.get("app/issues").then(res => {
             console.log(res.data)
             setUserState(prevState => ({
                 ...prevState,
                 allIssues: res.data
 
             }))
-            localStorage.setItem("IssuesAll", JSON.stringify(res.data))
-
-        }).catch((err) => { handleAuthErr(err.response.data.errMsg) })
+        }).catch((err) => { console.log(err) })
     }
 
 

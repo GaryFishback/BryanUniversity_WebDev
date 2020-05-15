@@ -8,10 +8,10 @@ export default function Navbar(props) {
   return (
       <nav className="navbar" style={{
           display: "flex", justifyContent: "center", background: " linear-gradient(0deg, rgba(17,146,255,1) 0%, rgba(57,151,242,1) 65%, rgba(255,255,255,1) 100%)"}}>
-
+          <Link style={{ color: "blue" }} to="/profile">Profile</Link>
+          <Link style={{ color: "blue" }} to="/issues">Issues</Link>
          
-          {token ?<> <Link style={{ color: "blue" }} to="/profile">Profile</Link>
-              <Link style={{ color: "blue" }} to="/issues">Issues</Link><a onClick={logout}>LogOut</a></> : <Link style={{ color: "blue" }} to="/auth">Login/SignUp</Link>}
+          {token ? <a onClick={logout}>LogOut</a> : <Link style={{ color: "blue" }} to="/auth">Login/SignUp</Link>}
     </nav>
   );
 }

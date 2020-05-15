@@ -52,7 +52,7 @@ authRouter.post("/", (req, res, next) => {
 
           if (!isMatch) {
       res.status(403);
-      return next(new Error("username or password are incorrect"));
+      return next(new error("username or password are incorrect"));
           }
 
 const token = jwt.sign(user.withoutPassword(), process.env.SECRET);

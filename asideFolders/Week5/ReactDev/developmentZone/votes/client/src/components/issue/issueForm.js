@@ -7,20 +7,9 @@ const initInputs = {
 };
 
 export default function IssueForm(props) {
-    const {addIssue, errMsg} = props
-    const [inputs, setInputs] = useState(initInputs);
+    const {addIssue} = props
+  const [inputs, setInputs] = useState(initInputs);
 
-
-    let simpleErr = errMsg.split("Path")
-    let simpleErrArray = [];
-    for (let i = 0; i < simpleErr.length; i++) {
-        if (errMsg.split("Path")[0].substring(0, 25) === "Issue validation failed: " && i > 0) {
-            //console.log(errMsg.split("Path")[i].split('.')[0])
-            //console.log(errMsg.split("Path")[0].substring(0,25))
-            simpleErrArray.push(errMsg.split("Path")[i].split('.')[0])
-        }
-    }
-    //console.log(simpleErrArray)
   function handleChange(e) {
     const { name, value } = e.target;
     setInputs((prevInputs) => ({
@@ -59,13 +48,7 @@ export default function IssueForm(props) {
       //  onChange={handleChange}
               //  placeholder="Image Url"/>
           }
-          <button>Add Issue</button>
-          {simpleErrArray.map(errString => {
-              return (< p style={{ color: "red", fontWeight: "bold" }}>{errString}</p>
-              )
-          }
-          )}
-             
+      <button>Add Issue</button>
     </form>
   );
 }
