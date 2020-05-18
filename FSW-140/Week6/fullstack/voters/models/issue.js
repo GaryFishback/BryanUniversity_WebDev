@@ -1,19 +1,10 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+function IssueObject(title, description, date, UserID, upVotes, downVotes) {
+  (this.title = title),
+    (this.description = description),
+    (this.date = date),
+    (this.upVotes = upVotes),
+    (this.downVotes = downVotes),
+    (this.UserID = UserID);
+}
 
-const issueSchema = new Schema({
-  title: { type: String, required: true },
-  description: { type: String, required: true },
-  upVotes: { type: Number, default: 0 },
-  downVotes: { type: Number, default: 0 },
-  voters: { type: Array, default: [] },
-  comments: { type: Array, default: [] },
-  date: { type: Date, required: true },
-  userID: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
-    required: true,
-  },
-});
-
-module.exports = mongoose.model("Issue", issueSchema);
+module.exports = IssueObject;

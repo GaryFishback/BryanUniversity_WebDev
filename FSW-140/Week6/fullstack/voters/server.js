@@ -11,6 +11,7 @@ const db = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "774107",
+  database: "votesdb",
 });
 db.connect((err) => {
   if (err) {
@@ -18,51 +19,74 @@ db.connect((err) => {
   }
   console.log("Connected to MySQL");
 });
-// app.use("/", require("./routes/authRouter"));
-// app.use("/", expressJwt({ secret: process.env.SECRET }));
-// app.use("/user", require("./routes/userRouter.js"));
-// app.use("/issues", require("./routes/issuesRouter.js"));
-// app.use("/comments", require("./routes/commentsRouter.js"));
+app.use("/", require("./routes/authRouter"));
+app.use("/app", expressJwt({ secret: process.env.SECRET }));
+app.use("/app/user", require("./routes/userRouter.js"));
+app.use("/app/issues", require("./routes/issuesRouter.js"));
+app.use("/app/comments", require("./routes/commentsRouter.js"));
+
 app.get("/createdb", (req, res) => {
-  let sql = `CREATE DATABASE Issues;`;
+  let sql = `CREATE DATABASE votesdb;`;
   db.query(sql, (err, result) => {
     if (err) {
       throw err;
     }
     console.log(result);
-
-    res.send("Database Issues created");
+    let sql = `USE votesdb;`;
+    db.query(sql, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      console.log(result);
+      res.send("using votesdb Database");
+    });
   });
 });
-app.get("/createdb", (req, res) => {
-  let useSql = `USE Issues;`;
+//this one seems kind of unnecessary since the "use database" query is not maintained to queries from another get request and it would be super redundant to add "use database" on every single request- but is working too.
+
+app.get("/createdb/tables", (req, res) => {
+  let sql = `CREATE TABLE IF NOT EXISTS Issues(_id SERIAL PRIMARY KEY ,
+    title VARCHAR(100),
+    description VARCHAR(1000), 
+    upVotes INT,
+    downVotes INT,
+    date DATE,
+    userID VARCHAR(100));`;
   db.query(sql, (err, result) => {
     if (err) {
       throw err;
     }
     console.log(result);
-    res.send("using Issues Database");
+    let sql = `CREATE TABLE IF NOT EXISTS Comments(_id SERIAL PRIMARY KEY ,
+    text VARCHAR(100),
+    date DATE,
+    issueID VARCHAR(100),
+    userID VARCHAR(100));`;
+    db.query(sql, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      console.log(result);
+
+      let sql = `CREATE TABLE IF NOT EXISTS Users(_id SERIAL PRIMARY KEY ,
+    name VARCHAR(100),
+    username VARCHAR(50), 
+    password VARCHAR(50), 
+    birthdate DATE
+        );`;
+      db.query(sql, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        console.log(result);
+
+        res.send("Tables created");
+      });
+    });
   });
 });
 
-app.get("/createdb", (req, res) => {
-  let sql = `CREATE TABLE IF NOT EXISTS Issues(_id INT , title VARCHAR(100),
-    description VARCHAR(1000), date 
-    upVotes: { type: Number, default: 0 },
-    downVotes: { type: Number, default: 0 },
-    voters: { type: Array, default: [] },
-    comments: { type: Array, default: [] },
-    date: { type: Date, required: true },
-    userID:);`;
-  db.query(sql, (err, result) => {
-    if (err) {
-      throw err;
-    }
-    console.log(result);
-
-    res.send("Database Issues created");
-  });
-});
+//Yeyyy is working. All 3 tables get created under one get request.
 
 app.use((err, req, res, next) => {
   console.log(err);
@@ -75,3 +99,4 @@ app.use((err, req, res, next) => {
 app.listen(4040, () => {
   console.log("Server is running on port 4040");
 });
+module.exports = { db: db };

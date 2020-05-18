@@ -1,19 +1,11 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
 
-const commentSchema = new Schema({
-  text: { type: String, required: true },
-  issueID: {
-    type: Schema.Types.ObjectId,
-    ref: "Issue",
-    required: true,
-  },
-  userID: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
-    required: true,
-  },
-  date: { type: Date, required: true },
-});
+function CommentObject(text, date, IssueID, UserID) {
+    this.text = text,
+    this.date = date,
+        this.IssueID = IssueID, 
+        this.UserID = UserID
+}
 
-module.exports = mongoose.model("Comment", commentSchema);
+
+
+module.exports = CommentObject

@@ -14,8 +14,8 @@ export default function UserProvider(props) {
     const initialState = {
         user: JSON.parse(localStorage.getItem("user")) || {}
         , token: localStorage.getItem("token") || ""
-        , issues: JSON.parse(localStorage.getItem("IssuesByUser")) || [], 
-            allIssues: JSON.parse(localStorage.getItem("IssuesAll")) || [], 
+        , issues: [], 
+            allIssues: [], 
         errMsg: ""
 };
     const [userState, setUserState] = useState(initialState);
@@ -53,7 +53,12 @@ export default function UserProvider(props) {
             }))
 
         })
-        .catch((err) => handleAuthErr(err.response.data.errMsg));
+        .catch((err) => {
+            console.log(err);
+            if (err.response && err.response.data && err.response.data.errMsg) {
+                handleAuthErr(err.response.data.errMsg)
+            }
+        });
     }
     function login(credentials) {
         
@@ -70,16 +75,20 @@ export default function UserProvider(props) {
                 localStorage.setItem("user", JSON.stringify(user))
                 
 
-                getUserIssues()
-                getIssues()
+                //getUserIssues()
+                //getIssues()
 
                 setUserState(prevUserState => ({
                     ...prevUserState,
                     user, token
                 }))
 
-            })
-            .catch((err) => handleAuthErr(err.response.data.errMsg));
+            }).catch((err) => {
+                console.log(err);
+                if (err.response && err.response.data && err.response.data.errMsg ) {
+                    handleAuthErr(err.response.data.errMsg)
+                }
+            });
     }
 
 
@@ -106,7 +115,12 @@ export default function UserProvider(props) {
 
 
             }))
-        }).catch((err) => { handleAuthErr(err.response.data.errMsg) })
+        }).catch((err) => {
+            console.log(err);
+            if (err.response && err.response.data && err.response.data.errMsg) {
+                handleAuthErr(err.response.data.errMsg)
+            }
+        })
        }
 
     function getUserIssues() {
@@ -118,9 +132,14 @@ export default function UserProvider(props) {
                 issues: res.data
 
             }))
-            localStorage.setItem("IssuesByUser", JSON.stringify(res.data))
+            //localStorage.setItem("IssuesByUser", JSON.stringify(res.data))
 
-        }).catch((err) => { handleAuthErr(err.response.data.errMsg) })
+        }).catch((err) => {
+            console.log(err);
+            if (err.response && err.response.data && err.response.data.errMsg) {
+                handleAuthErr(err.response.data.errMsg)
+            }
+        })
     }
     function getIssues() {
 
@@ -131,9 +150,14 @@ export default function UserProvider(props) {
                 allIssues: res.data
 
             }))
-            localStorage.setItem("IssuesAll", JSON.stringify(res.data))
+            //localStorage.setItem("IssuesAll", JSON.stringify(res.data))
 
-        }).catch((err) => { handleAuthErr(err.response.data.errMsg) })
+        }).catch((err) => {
+            console.log(err);
+            if (err.response && err.response.data && err.response.data.errMsg) {
+                handleAuthErr(err.response.data.errMsg)
+            }
+        })
     }
 
 
@@ -144,7 +168,7 @@ export default function UserProvider(props) {
               signup,
               logout,
                 login, 
-                addIssue, 
+                addIssue, getIssues, getUserIssues
                  
       }}
     >

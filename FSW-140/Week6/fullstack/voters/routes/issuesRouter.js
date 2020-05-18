@@ -1,8 +1,15 @@
 const express = require("express");
 const issueRouter = express.Router();
-const Issue = require("../models/issue");
-const User = require("../models/user");
-emptyHandler = (found, res) => {
+const IssueObject = require("./../models/issue");
+const mysql = require("mysql");
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "774107",
+  database: "votesdb",
+});
+
+emptyhandling = (found, res) => {
   !found.length //is 2 equal signs in purpose
     ? res.status(204).send()
     : res.status(200).send(found);
@@ -10,178 +17,178 @@ emptyHandler = (found, res) => {
 
 //get issues
 issueRouter.get("/", (req, res, next) => {
-  Issue.find((err, issues) => {
+  let sql = `SELECT * FROM issues`;
+  db.query(sql, (err, result) => {
     if (err) {
-      res.status(500);
-      return next(err);
+      throw err;
     }
-    // console.log(issues);
-    return emptyHandler(issues, res);
+    console.log("all issues");
+    emptyhandling(result, res);
   });
 });
 
-//add New ISSUE
+//add New Issue
 issueRouter.post("/", (req, res, next) => {
-  console.log(req.body);
+  console.log(req.params);
+  //req.body.userID = req.user._id;
   req.body.userID = req.user._id;
-  req.body.date = new Date();
-  const newIssue = new Issue(req.body);
-
-  newIssue.save((err, savedIssue) => {
+  let date = new Date();
+  req.body.date = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`;
+  let newIssue = new IssueObject(
+    req.body.title,
+    req.body.description,
+    req.body.date,
+    req.body.userID,
+    0,
+    0
+  );
+  console.log(newIssue);
+  let sql = `INSERT INTO issues (title, description, date, userID) VALUES ('${req.body.title}','${req.body.description}','${req.body.date}', '${req.body.userID}' );`;
+  db.query(sql, (err, result) => {
     if (err) {
-      res.status(500);
-      return next(err);
+      throw err;
     }
-    User.findOneAndUpdate(
-      { _id: req.user._id },
-      {
-        $push: {
-          issues: { issue: req.body, date: req.body.date },
-        },
-      },
-      { new: true },
-      (err, updatedUser) => {
-        if (err) {
-          res.status(500);
-          return next(err);
-        }
-      }
-    );
-    return res.status(201).send(savedIssue);
+    console.log(result);
+    return res.status(201).send(newIssue);
   });
 });
 
 //Get Issues by User
 issueRouter.get("/user/", (req, res, next) => {
-  console.log(req.user._id);
-  Issue.find({ userID: req.user._id }, (err, issues) => {
+  let sql = `SELECT * FROM issues WHERE userid = '${req.user._id}'`;
+  db.query(sql, (err, result) => {
     if (err) {
-      res.status(500);
-      return next(err);
+      throw err;
     }
-    return emptyHandler(issues, res);
+    console.log("issues by user");
+    emptyhandling(result, res);
   });
 });
 
 //Get Issue by ID
 issueRouter.get("/:issueID", (req, res, next) => {
-  Issue.find({ _id: req.params.issueID }, (err, issues) => {
+  let sql = `SELECT * FROM issues WHERE _id = ${req.params.issueID}`;
+  db.query(sql, (err, result) => {
     if (err) {
-      res.status(500);
-      return next(err);
+      throw err;
     }
-    return emptyHandler(issues, res);
+    console.log("single issue by id");
+    emptyhandling(result, res);
   });
 });
 
 //update issue info
 issueRouter.put("/:issueID", (req, res, next) => {
-  Issue.findOneAndUpdate(
-    { _id: req.params.issueID, userID: req.user._id },
-    req.body,
-    { new: true },
-    (err, updatedIssue) => {
+  console.log(req.params);
+  //req.body.userID = req.user._id;
+  //req.body.userID = req.params.userID;
+  //req.body.issueID = req.params.issueID;
+  //let date = new Date()
+  //req.body.date = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`
+  //let newIssue = new IssueObject(req.body.text, req.body.date, req.body.issueID, req.body.userID)
+  //console.log(newIssue)
+  console.log(req.body.title === "undefined");
+  if (req.body.title !== undefined) {
+    let sqlText = `UPDATE issues SET title = '${req.body.title}' WHERE _id = ${req.params.issueID};`;
+    db.query(sqlText, (err, result) => {
       if (err) {
-        res.status(500);
-        return next(err);
-      } else {
-        return res.status(201).send(updatedIssue);
+        throw err;
       }
-    }
-  );
-});
-
-//upvote
-issueRouter.put("/:issueID/upvote", (req, res, next) => {
-  Issue.find({ _id: req.params.issueID }, (err, issue) => {
-    if (err) {
-      res.status(500);
-      return next(err);
-    }
-    // console.log(issue[0].voters);
-    var voter = issue[0].voters.findIndex((voter) => {
-      return voter.userID === req.user._id && voter.voted === "upvoted";
+      console.dir(result);
+      return result;
     });
-    console.log(voter);
-    if (voter < 0) {
-      Issue.findOneAndUpdate(
-        { _id: req.params.issueID },
-        {
-          $inc: {
-            upVotes: 1,
-          },
-          $push: {
-            voters: { userID: req.user._id, voted: "upvoted" },
-          },
-        },
-        { new: true },
-        (err, updatedIssue) => {
-          if (err) {
-            res.status(500);
-            return next(err);
-          }
-          return res.status(201).send(updatedIssue);
-        }
-      );
-    } else {
-      res.status(500);
-      return next(new Error("You already upvoted this issue"));
-    }
-  });
-});
-// downvote
-issueRouter.put("/:issueID/downvote", (req, res, next) => {
-  Issue.find({ _id: req.params.issueID }, (err, issue) => {
-    if (err) {
-      res.status(500);
-      return next(err);
-    }
-    // console.log(issue[0].voters);
-    var voter = issue[0].voters.findIndex((voter) => {
-      return voter.userID === req.user._id && voter.voted === "downvoted";
+  } //making the update changes
+  if (req.body.description !== undefined) {
+    let sqlDes = `UPDATE issues SET description = '${req.body.description}' WHERE _id = ${req.params.issueID};`;
+    db.query(sqlDes, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      console.dir(result);
+      return result;
     });
-    console.log(voter);
-    if (voter < 0) {
-      Issue.findOneAndUpdate(
-        { _id: req.params.issueID },
-        {
-          $inc: {
-            downVotes: 1,
-          },
-          $push: {
-            voters: { userID: req.user._id, voted: "downvoted" },
-          },
-        },
-        { new: true },
-        (err, updatedIssue) => {
-          if (err) {
-            res.status(500);
-            return next(err);
-          }
-          return res.status(201).send(updatedIssue);
-        }
-      );
-    } else {
-      res.status(500);
-      return next(new Error("You already downvoted this issue"));
+  }
+  let getSql = `SELECT * FROM issues WHERE _id = ${req.params.issueID}`;
+  db.query(getSql, (err, result) => {
+    if (err) {
+      throw err;
     }
-  });
+    console.log("single issue edited");
+    emptyhandling(result, res);
+  }); //returning specific object with all its information including updates.
 });
-
+let deletedIndexes = [];
 issueRouter.delete("/:issueID", (req, res, next) => {
-  Issue.findOneAndDelete(
-    { _id: req.params.issueID, userID: req.user._id },
-    (err, deletedIssue) => {
-      if (err) {
-        res.status(500);
-        return next(err);
-      } else {
-        return res
-          .status(200)
-          .send(`Successfully Deleted Issue: ${deletedIssue}`);
-      }
+  //// keeping track of issueids deleted, deleting only If it has not been deleted before (if the issue id entered is not in the deleted records table.)
+  var message = "nothing deleted yet";
+  let getRecordSql = `SELECT issueID FROM DeletedRecords`;
+  db.query(getRecordSql, (err, result) => {
+    if (err) {
+      throw err;
     }
-  );
-});
 
+    for (let i = 0; i < result.length; i++) {
+      deletedIndexes.push(result[i].issueID);
+    }
+    // console.log(
+    //   "result line 130",
+    //   deletedIndexes.findIndex((issue) => {
+    //     return issue === `${req.params.issueID}`;
+    //   })
+    // );
+    console.log("result line 132", deletedIndexes[21]);
+    // console.log(
+    //   "line 135",
+    //   !deletedIndexes[
+    //     deletedIndexes.findIndex((issue) => {
+    //       return issue === `${req.params.issueID}`;
+    //     })
+    //   ]
+    // );
+    if (
+      !deletedIndexes[
+        deletedIndexes.findIndex((issue) => {
+          return issue === `${req.params.issueID}`;
+        })
+      ]
+    ) {
+      let sql = ` DELETE FROM issues WHERE _id = ${req.params.issueID};`;
+
+      db.query(sql, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        console.log(result);
+        return result;
+      });
+      console.log(deletedIndexes);
+      //making the delete change
+
+      let recordSql = `INSERT INTO DeletedRecords (issueID ) VALUES (${req.params.issueID});`;
+      db.query(recordSql, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        console.log(result);
+
+        return result;
+      });
+      message = "single deleted issue";
+    }
+    let getSql = `SELECT * FROM issues`;
+    db.query(getSql, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      console.log(message);
+      emptyhandling(result, res);
+    });
+  });
+  //console.log("result length", resultLength)
+  //if (deletedIndexes.length >= 9) {
+  //    console.log("result length", resultLength)
+  //    console.log("deletedindexes length", deletedIndexes.length)
+  //    console.log("deletedindexes after SELECT", deletedIndexes)
+  //}
+});
 module.exports = issueRouter;

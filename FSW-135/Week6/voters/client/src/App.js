@@ -11,7 +11,7 @@ import { UserContext } from "./context/userProvider"
 
 export default function App() {
     const { token, logout, allIssues, getIssues} = useContext(UserContext)
-    console.log(allIssues)
+    
     return (
         <div className="app" style={{ height: "100vh", width: "100vw", display: "grid", gridTemplateRows: "8% auto 8%"}}>
             <Navbar logout={logout} token={token}/>

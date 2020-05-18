@@ -9,15 +9,17 @@ const initInputs = {
 export default function IssueForm(props) {
     const {addIssue, errMsg} = props
     const [inputs, setInputs] = useState(initInputs);
-
-
-    let simpleErr = errMsg.split("Path")
+    
     let simpleErrArray = [];
-    for (let i = 0; i < simpleErr.length; i++) {
-        if (errMsg.split("Path")[0].substring(0, 25) === "Issue validation failed: " && i > 0) {
-            //console.log(errMsg.split("Path")[i].split('.')[0])
-            //console.log(errMsg.split("Path")[0].substring(0,25))
-            simpleErrArray.push(errMsg.split("Path")[i].split('.')[0])
+  if (errMsg)  {console.log(errMsg)
+        let simpleErr = errMsg.split("Path")
+     
+        for (let i = 0; i < simpleErr.length; i++) {
+            if (errMsg.split("Path")[0].substring(0, 25) === "Issue validation failed: " && i > 0) {
+                //console.log(errMsg.split("Path")[i].split('.')[0])
+                //console.log(errMsg.split("Path")[0].substring(0,25))
+                simpleErrArray.push(errMsg.split("Path")[i].split('.')[0])
+            }
         }
     }
     //console.log(simpleErrArray)
@@ -35,7 +37,7 @@ export default function IssueForm(props) {
       setInputs(initInputs)
   }
 
-  const { title, description, imgUrl } = inputs;
+  const { title, description } = inputs;
   return (
     <form onSubmit={handleSubmit}>
       <input
