@@ -14,10 +14,32 @@ emptyhandling = (found, res) => {
     ? res.status(204).send()
     : res.status(200).send(found);
 };
-
+withoutPassword = (user) => {
+  delete user.password;
+  delete user._id;
+  // delete user.withoutPassword,
+  // delete user.checkPassword,
+  delete user.username;
+  return user;
+};
 //get all users
 userRouter.get("/", (req, res, next) => {
   let sql = `SELECT * FROM users`;
+  db.query(sql, (err, result) => {
+    if (err) {
+      res.status(500);
+      throw err;
+    }
+    for (let i = 0; i < result.length; i++) {
+      console.log(result[i]);
+      withoutPassword(result[i]);
+    }
+    return emptyhandling(result, res);
+  });
+});
+//get all users
+userRouter.get("/profile", (req, res, next) => {
+  let sql = `SELECT * FROM users WHERE _id = ${req.user._id}`;
   db.query(sql, (err, result) => {
     if (err) {
       res.status(500);
@@ -30,13 +52,7 @@ userRouter.get("/", (req, res, next) => {
 //getOne user
 userRouter.put("/", (req, res, next) => {
   console.log(req.user);
-  //req.body.userID = req.user._id;
-  //req.body.userID = req.user._id;
-  //req.body.userID = req.user._id;
-  //let date = new Date()
-  //req.body.date = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`
-  //let newIssue = new IssueObject(req.body.text, req.body.date, req.body.userID, req.body.userID)
-  //console.log(newIssue)
+
   console.log(req.body.name === "undefined");
   if (req.body.name !== undefined) {
     let sqlText = `UPDATE users SET name = '${req.body.name}' WHERE _id = ${req.user._id};`;

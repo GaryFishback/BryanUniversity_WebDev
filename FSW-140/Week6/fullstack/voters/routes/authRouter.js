@@ -1,4 +1,5 @@
 const express = require("express");
+const bcrypt = require("bcrypt");
 const authRouter = express.Router();
 const UserObject = require("./../models/user");
 const mysql = require("mysql");
@@ -25,50 +26,86 @@ authRouter.post("/signup", (req, res, next) => {
     }
     console.log(
       result[
-        result.findIndex((issue) => {
-          return issue.username === `${req.body.username}`;
+        result.findIndex((user) => {
+          return user.username === `${req.body.username}`;
         })
       ]
     );
     if (
       result[
-        result.findIndex((issue) => {
-          return issue.username === `${req.body.username}`;
+        result.findIndex((user) => {
+          return user.username === `${req.body.username}`;
         })
       ]
     ) {
       res.status(403);
       return next(new Error("That username is taken"));
-    } else {
-      let date = new Date();
-      req.body.date = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`;
-      let newUser = new UserObject(
-        req.body.name,
-        req.body.username,
-        req.body.date,
-        req.body.password
-      );
+    }
+    let date = new Date();
+    req.body.date = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`;
 
-      let sql = `INSERT INTO users (name, username, password, birthdate) VALUES ('${req.body.name}','${req.body.username}', '${req.body.password}','${req.body.date}' );`;
+    console.log("req.body", req.body);
+    // UserObject.hashPassword(next, req.body);
+    // console.log("function hash", UserObject.hashPassword(next, req.body));
+    // console.log("req.body after hash", req.body);
+
+    // const user = this;
+    // if (!user.isModified("password")) return next();
+
+    // var hash = bcrypt.hash(req.body.password, 10, (err, hash) => {
+    //   if (err) return next(err);
+
+    //   req.body.password = hash;
+    //   console.log("hash", hash);
+    //   console.log("user at hash function", req.body.password);
+    //   return hash;
+    // });
+    // console.log("hash, 63", hash);
+
+    let newUser = new UserObject(
+      req.body.name,
+      req.body.username,
+      req.body.date,
+      req.body.password
+    );
+
+    // console.log("blue blue blue blue", newUser);
+    // console.log("newUser", newUser);
+
+    var userObj = {
+      name: newUser.name,
+      username: newUser.username,
+      birthdate: newUser.birthdate,
+      password: newUser.password,
+    };
+    console.log("userObj after hash", userObj);
+
+    let sql = `INSERT INTO users (name, username, password, birthdate) VALUES ('${userObj.name}','${userObj.username}', '${userObj.password}','${userObj.birthdate}' );`;
+    db.query(sql, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      console.log("after insert", userObj);
+      // return res.status(201).send(newUser);
+      // UserObject.withoutPassword();
+      // emptyhandling(result, res);
+
+      let sql = `SELECT * FROM users;`;
       db.query(sql, (err, result) => {
         if (err) {
           throw err;
         }
 
-        // return res.status(201).send(newUser);
-
-        // emptyhandling(result, res);
-        var userObj = {
-          name: req.body.name,
-          username: req.body.username,
-          date: req.body.date,
-          password: req.body.password,
-        };
-        console.log("newUser", userObj);
-        const token = jwt.sign(userObj, process.env.SECRET);
+        console.log("signedup user", result);
+        let { _id, name, username, password, birthdate } = result[
+          result.length - 1
+        ];
+        let newUser = { _id, name, username, password, birthdate };
+        const token = jwt.sign(newUser, process.env.SECRET);
         return res.status(201).send({ token, user: newUser });
       });
-    }
+    });
+    // }
   });
 });
 //   });
@@ -81,17 +118,17 @@ authRouter.post("/", (req, res, next) => {
     if (err) {
       throw err;
     }
-    console.log(
-      result[
-        result.findIndex((issue) => {
-          return issue.username === `${req.body.username}`;
-        })
-      ]
-    );
+    // console.log(
+    //   result[
+    //     result.findIndex((user) => {
+    //       return user.username === `${req.body.username}`;
+    //     })
+    //   ]
+    // );
     if (
       !result[
-        result.findIndex((issue) => {
-          return issue.username === `${req.body.username}`;
+        result.findIndex((user) => {
+          return user.username === `${req.body.username}`;
         })
       ]
     ) {
@@ -119,12 +156,52 @@ authRouter.post("/", (req, res, next) => {
       if (err) {
         throw err;
       }
-      let { _id, name, username, date, password } = result[0];
-      console.log(_id, name, username, date, password);
-      userObj = { _id, name, username, date, password };
-      console.log(userObj);
+      // let { _id, name, username, date, password } =result[0] ;
+      // console.log(_id, name, username, date, password);
+      // UserObject.Name = result[0].name;
+      // UserObject.username = result[0].username;
+      // UserObject.birthdate = result[0].birthdate;
+      // UserObject.password = result[0].password;
+      console.log("result", result);
+      const newUser = new UserObject(
+        result[0].name,
+        result[0].username,
+        result[0].birthdate,
+        result[0].password
+      );
+      // console.log("userObj", userObj);
+
+      // UserObject.checkPassword(newUser.password, (err, isMatch) => {
+      //   console.log("isMatch", isMatch);
+      //   if (err) {
+      //     console.log("err", err);
+      //     res.status(403);
+      //     return next(new Error("username or Password are incorrect"));
+      //   }
+
+      //   if (!isMatch) {
+      //     res.status(403);
+      //     return next(new Error("username or password are incorrect"));
+      //   }
+      // console.log("userobject withoutpassword", UserObject.withoutPassword());
+      // console.log("new user 151", newUser);
+      // newUser.withoutPassword();
+      // console.log("new user 153", newUser);
+      // delete UserObject.withoutPassword;
+      // delete UserObject.checkPassword;
+
+      var { name, username, birthdate, password, _id } = result[0];
+      var userObj = {
+        _id,
+        name,
+        username,
+        birthdate,
+        password,
+      };
+      console.log("line 149", userObj);
       const token = jwt.sign(userObj, process.env.SECRET);
-      return res.status(200).send({ token, userObj });
+      return res.status(200).send({ token, user: result[0] });
+      // });
     });
   });
 });

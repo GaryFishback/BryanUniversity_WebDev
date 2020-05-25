@@ -29,9 +29,10 @@ issueRouter.get("/", (req, res, next) => {
 
 //add New Issue
 issueRouter.post("/", (req, res, next) => {
-  console.log(req.params);
+  console.log(req.user);
   //req.body.userID = req.user._id;
   req.body.userID = req.user._id;
+  console.log(req.user);
   let date = new Date();
   req.body.date = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`;
   let newIssue = new IssueObject(
@@ -48,8 +49,15 @@ issueRouter.post("/", (req, res, next) => {
     if (err) {
       throw err;
     }
-    console.log(result);
-    return res.status(201).send(newIssue);
+
+    let sql = `SELECT * FROM issues WHERE title= '${req.body.title}' AND description = '${req.body.description}' AND date = '${req.body.date}' AND userID = '${req.body.userID}'  `;
+    db.query(sql, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      console.log(result);
+      return res.status(201).send(result);
+    });
   });
 });
 
@@ -60,7 +68,7 @@ issueRouter.get("/user/", (req, res, next) => {
     if (err) {
       throw err;
     }
-    console.log("issues by user");
+    console.log("issues by user", result);
     emptyhandling(result, res);
   });
 });

@@ -1,9 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import UserProvider from "./context/userProvider";
+import App from "./App.js";
+// import "./index.css";
 
 ReactDOM.render(
-  <App />,
-
+  <UserProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>{" "}
+  </UserProvider>,
   document.getElementById("root")
 );

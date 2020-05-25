@@ -5,6 +5,8 @@ const morgan = require("morgan");
 // const mongoose = require("mongoose");
 const mysql = require("mysql");
 const expressJwt = require("express-jwt");
+const cors = require("cors");
+app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 const db = mysql.createConnection({
@@ -96,7 +98,7 @@ app.use((err, req, res, next) => {
   return res.send({ errMsg: err.message });
 });
 
-app.listen(4040, () => {
-  console.log("Server is running on port 4040");
+app.listen(3030, () => {
+  console.log("Server is running on port 3030");
 });
 module.exports = { db: db };

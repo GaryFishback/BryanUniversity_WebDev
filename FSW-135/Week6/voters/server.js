@@ -5,9 +5,10 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const expressJwt = require("express-jwt");
 const cors = require("cors");
+app.use(cors());
+
 app.use(express.json());
 app.use(morgan("dev"));
-app.use(cors())
 
 mongoose.connect(
   "mongodb://localhost:27017/voterdb",
@@ -18,15 +19,13 @@ mongoose.connect(
     useFindAndModify: false,
   },
   () => {
-      return console.log("Connected to the voter DB");
+    return console.log("Connected to the voter DB");
   }
 );
 
-
-app.get('/', function (req, res, next) {
-    res.json({ msg: 'This is CORS-enabled for all origins!' })
-})
-
+app.get("/", function (req, res, next) {
+  res.json({ msg: "This is CORS-enabled for all origins!" });
+});
 
 app.use("/auth", require("./routes/authRouter"));
 app.use("/app/", expressJwt({ secret: process.env.SECRET }));
