@@ -10,8 +10,8 @@ export default function Issue(props) {
   return (
     <div id="issue">
       <h1>{title}</h1>
-      <h3>{description}</h3>
       <p>{date}</p>
+      <h3>{description}</h3>
     </div>
   );
 }

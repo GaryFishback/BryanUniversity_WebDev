@@ -1,37 +1,18 @@
 import React, { useState, useContext } from "react";
-import AuthForm from "./authForm.js";
 import { UserContext } from "../../context/userProvider";
 //material UI
-import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
 import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-// import Avatar from "@material-ui/core/Avatar";
-// import Button from "@material-ui/core/Button";
-// import CssBaseline from "@material-ui/core/CssBaseline";
-// import TextField from "@material-ui/core/TextField";
-// import FormControlLabel from "@material-ui/core/FormControlLabel";
-// import Checkbox from "@material-ui/core/Checkbox";
-// import Link from "@material-ui/core/Link";
-// import Grid from "@material-ui/core/Grid";
-// import Box from "@material-ui/core/Box";
-// import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-// import Typography from "@material-ui/core/Typography";
-// import { makeStyles } from "@material-ui/core/styles";
-// import Container from "@material-ui/core/Container";
-
-const initInputs = { fullName: "", username: "", password: "" };
 
 export default function Auth() {
+  const initInputs = { fullName: "", username: "", password: "" };
   const [inputs, setInputs] = useState(initInputs);
   const [toggle, setToggle] = useState(false);
   const { signup, login, errMsg } = useContext(UserContext);
@@ -105,9 +86,6 @@ export default function Auth() {
           <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className={classesLogin.paper}>
-              <Avatar className={classesLogin.avatar}>
-                <LockOutlinedIcon />
-              </Avatar>
               <Typography component="h1" variant="h5">
                 Login
               </Typography>
@@ -180,9 +158,6 @@ export default function Auth() {
           <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className={classesSignUp.paper}>
-              <Avatar className={classesSignUp.avatar}>
-                <LockOutlinedIcon />
-              </Avatar>
               <Typography component="h1" variant="h5">
                 Sign up
               </Typography>

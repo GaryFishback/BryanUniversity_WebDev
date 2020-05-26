@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import IssueForm from "./issue/issueForm";
 import IssuesList from "./issue/issuesList.js";
+import Container from "@material-ui/core/Container";
 
 export default class Profile extends Component {
   constructor(props) {
@@ -15,6 +16,7 @@ export default class Profile extends Component {
   }
   componentDidMount = () => {
     console.log(this.props.state);
+    this.props.state.getUserIssues();
     this.setState({
       user: this.props.state.user.name,
       addIssue: this.props.state.addIssue,
@@ -22,7 +24,6 @@ export default class Profile extends Component {
       getUserIssues: this.props.state.getUserIssues,
       errMsg: this.props.state.errMsg,
     });
-    this.props.state.getUserIssues();
   };
 
   render() {
@@ -39,8 +40,16 @@ export default class Profile extends Component {
           }}
           errMsg={this.state.errMsg}
         />
-
-        <IssuesList issues={this.state.issues} errMsg={this.state.errMsg} />
+        <Container
+          component="main"
+          maxWidth="x"
+          style={{ textAlign: "center" }}
+        >
+          <IssuesList
+            issues={this.props.state.issues}
+            errMsg={this.state.errMsg}
+          />
+        </Container>
       </div>
     );
   }
