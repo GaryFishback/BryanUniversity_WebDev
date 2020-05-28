@@ -1,0 +1,865 @@
+Delivered-To: giselle.sanchez@bryanuniversity.edu
+Received: by 2002:a4f:ae1b:0:0:0:0:0 with SMTP id x27csp479978ive;
+        Tue, 26 May 2020 15:17:45 -0700 (PDT)
+X-Received: by 2002:a19:7714:: with SMTP id s20mr1465370lfc.161.1590531465065;
+        Tue, 26 May 2020 15:17:45 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1590531465; cv=none;
+        d=google.com; s=arc-20160816;
+        b=kVKnKI5GJJrAes10DyvT1w5MNinQQktDI6W5JVx+856rVtouT2ajDR2OYPJhpIVUHe
+         9Feib+EOh6MQQrxN82XtkO8X44KsMv5ALiTyMIsuMJdtYQ5c729g0tN5vu+XjKunGRYF
+         EWP77roc4RcY60vaqLcSNq1qrXRt77iU7KQeda8uMt+gNo/zVPrU9LIhLq3aX59nrjzs
+         UgaF4+c6/v1hT8zn+L6thyiPKXVs9t6a/QQpjsLVuW3m5PgGvc17lfmbULvlAkFblU3x
+         6xT7lV/uGSTBR1wvlwPq1AyImgz+ZrGsy2FLRuQaayazYqt8McYvYCDP8UJcGB8cs4d7
+         9zIg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=Ldi805CFtL3PN5W1bqhzjZkbSz5ocYxOKc0SlLQ8Oow=;
+        b=ItbKZGKG6mRA4cEZ90dyk55cSShOzqF8Pwpvub1aX+i8yLXW+cw8Yy3zSwo73FtgTL
+         c0q3weUGRZ9v4HHyw2iotLCbfLYR/Dv/g2bv7HjXhKJNZd7/78gaiCSOtjCxFr+cqylE
+         I+UJf2/W+DfBRnPAgxyObzdLed/xjF0w/k8wRsAgqOzCdRwDaRdMpSWCnLQBcmwESN6N
+         rq2xu1mHF5k//eG7LK5+Wi/9s5zzrzfg7DDn3fsfEipKp/pWdAsbv0NxLe5ifsfU8yYh
+         KE2fVBGBB/LnydVZrHWr6LuUTTRIpB9KIjBZ2WN/TIyX1/120ZQlLEG/2mevfXG6FOgC
+         aWpg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@bryanuniversity-edu.20150623.gappssmtp.com header.s=20150623 header.b=QlpbnsXJ;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of karrina.domke@bryanuniversity.edu) smtp.mailfrom=karrina.domke@bryanuniversity.edu
+Return-Path: <karrina.domke@bryanuniversity.edu>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id l27sor403327lfe.41.2020.05.26.15.17.44
+        for <giselle.sanchez@bryanuniversity.edu>
+        (Google Transport Security);
+        Tue, 26 May 2020 15:17:45 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of karrina.domke@bryanuniversity.edu) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bryanuniversity-edu.20150623.gappssmtp.com header.s=20150623 header.b=QlpbnsXJ;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of karrina.domke@bryanuniversity.edu) smtp.mailfrom=karrina.domke@bryanuniversity.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=bryanuniversity-edu.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc;
+        bh=Ldi805CFtL3PN5W1bqhzjZkbSz5ocYxOKc0SlLQ8Oow=;
+        b=QlpbnsXJHhMJ1DeJDaHounoPqP/2JC+aWQfyAqqHCdtub59mo0673W8t/SCIPdjkt7
+         rfnNrIHtIJjFNeHHeiGrFHVbANsWcXS9C6U8OTSVQkqFylRQZT3eeUg8MEuoBHr39ASj
+         2JBFPz+sSQpP9OZWe7tHB6C9GUih+Vdufa68jYRGT3lsTJGNhawEROMTCal0x2BJx9Fp
+         1zK71mV7/xpCctgPAUB2/TWnjA8xHYxS7H8nCRksRiYJ3TOiVc3aJOm2F6Xpe1uT1hgF
+         eE/J6mkRqYrcOol4OLriqXKUr+gnq0W3omM0lTUXFoqxtSiMG7cwZB3PlZ6lI/yAFLJi
+         tTeA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc;
+        bh=Ldi805CFtL3PN5W1bqhzjZkbSz5ocYxOKc0SlLQ8Oow=;
+        b=nsTdZHYVx1312JSzyDiIXP5FqCuRGUf+76azXXloPaTPDDS+qnLB9jBLusycvM9dxW
+         wLhH2TWX5zhYIlp80GtPKr4PIGt5eWntXUk10426xBeT3vdWm94dVKwBnsUr6inelxDP
+         gJszllI4d50yFCHVcSQd6R7jXlEVC8iRSBLaM5QRjWw9zQxbP9eo1RK8QPmi4DQ3scOw
+         1fD9NqNUYMVb6CWsQUUjyMeI0ti7fNWcuUewVCitqFXUCsAO03LVX0zqQhAxAJ5cvwy6
+         9iwTTEfbkqlb4NQp9xWW0fzI3IbkjdB8b02hwNRJLI1Ti9Ng9wzi4pLvHgbs06q8Tf2E
+         bqzA==
+X-Gm-Message-State: AOAM530gVUrCzAWLTCgORVYLRaW+BqPjqxPj0B12SAscW6napuZrFiwj
+	7opeUuwzi/prx8XAKYVuXVlbpQOB1oJp5R2yGcu9zwR+yXE/qA==
+X-Google-Smtp-Source: ABdhPJyBRJ1qhMrUBHjZ4Cr9kkAZNGInOH0HWOH98gBAX9ONeKgl4VTPSCbOoA/Wv+b4Kfq2NO3wNEK3rnx4MNlClV0=
+X-Received: by 2002:a05:6512:691:: with SMTP id t17mr1521965lfe.85.1590531463895;
+ Tue, 26 May 2020 15:17:43 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAMgO4_FtZvFWcpo1OXA+U1Md7Axgy7_YDku0Fp926Qt9khrf6A@mail.gmail.com>
+ <CAMgO4_HPF1a_H393fWkgBR3Q-A72qvMhbGkLEVQrfFH=iFJ5vQ@mail.gmail.com>
+ <CAMgO4_H8iw5MEk=0j5hrZy8+25ybf1XS4kiqSJR6KD-tboJ=vQ@mail.gmail.com> <CAMgO4_HmnoczSOFTpe8-oSxZHPxarZQ3UXHbzip0ykTspGmbUw@mail.gmail.com>
+In-Reply-To: <CAMgO4_HmnoczSOFTpe8-oSxZHPxarZQ3UXHbzip0ykTspGmbUw@mail.gmail.com>
+From: Karrina Domke <karrina.domke@bryanuniversity.edu>
+Date: Tue, 26 May 2020 15:17:07 -0700
+Message-ID: <CAMAi7VEP=YgBm7yVwyNx=s_vFZoSaWztaTjX2DUkku6LPPRwSg@mail.gmail.com>
+Subject: Re: FSW-135 Mock Interview Request
+To: Giselle Martinez-Sanchez <giselle.sanchez@bryanuniversity.edu>
+Cc: BUCareerServices <careerservices@bryanuniversity.edu>, 
+	Barry Jackson <barry.jackson@bryanuniversity.edu>
+Content-Type: multipart/mixed; boundary="000000000000e92b4605a694767e"
+
+--000000000000e92b4605a694767e
+Content-Type: multipart/alternative; boundary="000000000000e92b4405a694767c"
+
+--000000000000e92b4405a694767c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello Giselle,
+
+Thank you so much for dropping by today for office hours to complete your
+mock interview. I have attached a copy of the interview rubric for you. I
+have not received the zoom video link yet, but once it comes in, I will
+send you that as well just in case you want to review any of the
+information we discussed.
+
+To follow up on some of the questions we talked about, I wanted to send you
+a few resources I think might be helpful for you. Take a look and if you
+have any questions, please let us know. For situational questions, like the
+one you were asked to become an Academic Consultant, here are 2 quick
+videos that go over the STAR technique that I mentioned. The first one is
+more of a fun explanation but both are great examples for how to use that
+method.
+
+   - https://www.youtube.com/watch?v=3DojMt2ktJEyQ - fun explanation
+   - https://www.youtube.com/watch?v=3DKTATIx8gUxU - more direct explanatio=
+n
+
+Here is also a quick article that has 8 questions to ask at the end of an
+interview:
+https://www.grb.uk.com/blog/the-8-best-questions-to-ask-at-the-end-of-an-in=
+terview
+.
+
+Please let us know if you have any questions and we will be sending you
+feedback on your resume and cover letter as well shortly. Have a great rest
+of your week!
+
+Sincerely,
+
+Karrina Domke
+
+*Career Services Advisor*
+Main: (855) 889-2830
+
+Direct: (623) 505-4184
+
+karrina.domke@bryanuniversity.edu
+
+[image: Bryan University] <http://bryanuniversity.edu/>
+
+  <https://twitter.com/bryanuniversity>
+<https://twitter.com/bryanuniversity>
+<https://www.facebook.com/BryanUniversity>
+***************************************************************************=
+**********
+The information contained in this communication is intended solely for the
+use of
+the individual or entity to whom it is addressed and others authorized to
+receive it.
+If you have received this communication in error, please notify us
+immediately by
+responding to this email and then deleting it from your system.
+
+
+
+On Tue, May 26, 2020 at 2:24 PM Giselle Martinez-Sanchez <
+giselle.sanchez@bryanuniversity.edu> wrote:
+
+>
+> Forwarded Conversation
+> Subject: FSW-135 Mock Interview Request
+> ------------------------
+>
+> From: Giselle Martinez-Sanchez <giselle.sanchez@bryanuniversity.edu>
+> Date: Sun, May 24, 2020 at 11:39 AM
+> To: <careerservices@bryanuniversity.edu>
+>
+>
+> Hello,
+> I would like to request if possible to have a mock interview this coming
+> week for my career readiness assignment, which is due before Thursday
+> night.
+> I will soon reply through this thread with my updated resume, cover
+> letter and the job description of the job posting that I found appealing
+> attached.
+>
+> Thank You and Have a Great Day,
+> GiselleMtnezS.
+>
+> PS: If I don't have a suit yet, what would be the second best option to
+> wear for the interview?
+> --
+> Full Name: Giselle Martinez-Sanchez
+> Web-Development Consultant & Student at Bryan University
+> Email: giselle.sanchez@bryanuniversity.edu
+> Phone: =E2=80=AA(786) 265-8870=E2=80=AC
+> -For a quicker response in day hours please send me a text message when
+> possible.
+> www.bryanuniversity.edu
+>
+> [image: Bryan University]
+>  (Links to an external site.) <http://www.bryanuniversity.edu/>
+>
+> <https://twitter.com/bryanuniversity>
+> <https://twitter.com/bryanuniversity>
+> <https://www.facebook.com/BryanUniversity>
+> <https://www.youtube.com/user/bryanuniversity>
+>
+>
+> ----------
+> From: Giselle Martinez-Sanchez <giselle.sanchez@bryanuniversity.edu>
+> Date: Sun, May 24, 2020 at 11:55 AM
+> To: <careerservices@bryanuniversity.edu>
+>
+>
+> Currently working on the Cover Letter, I will have it completed by
+> tonight.
+>
+> Thank You and Have a Great Day,
+> GMtnezS.
+>
+>
+> ----------
+> From: Giselle Martinez-Sanchez <giselle.sanchez@bryanuniversity.edu>
+> Date: Sun, May 24, 2020 at 9:00 PM
+> To: <careerservices@bryanuniversity.edu>
+>
+>
+> I hereby attached the cover letter and this is the link to the position,
+> in case it remains active hereinafter :
+>
+> https://www.linkedin.com/jobs/search/?keywords=3Djunior%20developer&locat=
+ion=3D&locationId=3D
+> <https://www.linkedin.com/jobs/search/?keywords=3Djunior%20developer&loca=
+tion=3D&locationId=3D>
+>
+> Cover Letter Script:
+>
+> *Giselle Martinez-Sanchez                       **Email: *
+> gmtnezschez@gmail.com
+>
+> *Mobile: *786-636-5669
+>
+> FDM
+> Group
+> 24 May 2020
+>
+>
+>
+> *Application for Junior Software Developer Position*
+>
+>
+>
+> Dear Ms. Salama,
+>
+>
+>
+> As a highly motivated and dedicated student with strong interpersonal
+> skills, I would like to have the chance to join the FDM Group as Junior
+> Software Developer.
+>
+> I am confident I can help the company strive if given a chance to join FD=
+M
+> Group because I believe myself capable of providing the team the traits
+> described in the description of the position.
+>
+> This is what I love to do and as such I will tirelessly continue improvin=
+g
+> my abilities in the field.  Working hard will enable me *not just to
+> learn but to give back to the communities that have helped me become who =
+I
+> am. *
+>
+> As a junior developer, I understand there are still many things I have ye=
+t
+> to learn and polish and I am no less than *thrilled *about it!
+>
+> As you could see in my resume, I was hired by the university I study at a=
+s
+> Academic Consultant since December 2019. This program revolves around *re=
+al
+> practice writing code and building challenging projects*.
+>
+> *Hence, I consider it hard proof that I can thrive in a fast and
+> challenging environment not just for work but also while learning. And ho=
+w
+> much I love debugging big loads of errors in code, *since part of my job
+> is to work with other students to break down the bugs in their code.
+>
+> I also know I am younger than most, I consider it a flaw because is easy
+> to undermine the maturity and level of responsibility of us while we are
+> young individuals with little formal experience to backup our worth.
+> However, is true that we must start small in order to make the best versi=
+on
+> of ourselves as the years transpire and *I will not stop until I get
+> there.*
+>
+> That includes improvement not only in the field I=E2=80=99m studying but =
+also in
+> work, life and soul.
+>
+> But because actions stand more than words, here is the link to the
+> Portfolium profile we=E2=80=99ve been building through the program; I adm=
+it I have
+> not sat down to polish the appearance, yet , but I think we could agree
+> that the content matters more than the cover of the book:
+>
+> https://portfolium.com/GiselleMartine17/portfolio
+>
+>
+>
+> All of that is why I would love the chance of having FDM Group become a
+> part of my life, as I become part of the FDM Group!
+>
+>
+>
+> Thank You for Your Time! And Have a Great Week!
+>
+> Giselle MtnezS
+>
+>
+>
+>
+> --
+> Full Name: Giselle Martinez-Sanchez
+> Web-Development Consultant & Student at Bryan University
+> Email: giselle.sanchez@bryanuniversity.edu
+> Phone: =E2=80=AA(786) 265-8870=E2=80=AC
+> -For a quicker response in day hours please send me a text message when
+> possible.
+> www.bryanuniversity.edu
+>
+> [image: Bryan University]
+>  (Links to an external site.) <http://www.bryanuniversity.edu/>
+>
+> <https://twitter.com/bryanuniversity>
+> <https://twitter.com/bryanuniversity>
+> <https://www.facebook.com/BryanUniversity>
+> <https://www.youtube.com/user/bryanuniversity>
+>
+
+--000000000000e92b4405a694767c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:arial,sa=
+ns-serif;font-size:small">Hello Giselle,</div><div class=3D"gmail_default" =
+style=3D"font-family:arial,sans-serif;font-size:small"><br></div><div class=
+=3D"gmail_default" style=3D"font-family:arial,sans-serif;font-size:small">T=
+hank you so much for dropping by today for office hours to complete your mo=
+ck interview. I have attached a copy of the interview rubric for you. I hav=
+e not received the zoom video link yet, but once it comes in, I will send y=
+ou that as well just in case you want to review any of the information we d=
+iscussed.=C2=A0</div><div class=3D"gmail_default" style=3D"font-family:aria=
+l,sans-serif;font-size:small"><br></div><div class=3D"gmail_default" style=
+=3D"font-family:arial,sans-serif;font-size:small">To follow up on some of t=
+he questions we talked about, I wanted to send you a few resources I think =
+might be helpful for you. Take a look and if you have any questions, please=
+ let us know. For situational questions, like the one you were asked to bec=
+ome an Academic Consultant, here are 2 quick videos that go over the STAR t=
+echnique that I mentioned. The first one is more of a fun explanation but b=
+oth are great examples for how to use that method.=C2=A0</div><div class=3D=
+"gmail_default" style=3D"font-family:arial,sans-serif;font-size:small"><ul>=
+<li><a href=3D"https://www.youtube.com/watch?v=3DojMt2ktJEyQ">https://www.y=
+outube.com/watch?v=3DojMt2ktJEyQ</a>=C2=A0- fun explanation</li><li><a href=
+=3D"https://www.youtube.com/watch?v=3DKTATIx8gUxU">https://www.youtube.com/=
+watch?v=3DKTATIx8gUxU</a> - more direct explanation</li></ul><div>Here is a=
+lso a quick article that has 8 questions to ask at the end of an interview:=
+=C2=A0<a href=3D"https://www.grb.uk.com/blog/the-8-best-questions-to-ask-at=
+-the-end-of-an-interview">https://www.grb.uk.com/blog/the-8-best-questions-=
+to-ask-at-the-end-of-an-interview</a>.</div><div><br></div><div>Please let =
+us know if you have any questions and we will be sending you feedback on yo=
+ur resume and cover letter as well shortly. Have a great rest of your week!=
+</div><div><br></div></div><div><div dir=3D"ltr" data-smartmail=3D"gmail_si=
+gnature"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr=
+"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div =
+dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"=
+ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><d=
+iv dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr=
+"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div =
+dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"=
+ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><d=
+iv dir=3D"ltr"><div><div><span style=3D"font-family:arial,sans-serif">Since=
+rely,</span><br></div><div><span style=3D"font-family:arial,sans-serif"><br=
+></span></div><div dir=3D"ltr"><p class=3D"MsoNormal"><span style=3D"color:=
+black;font-family:arial,sans-serif"></span><span style=3D"color:black;font-=
+family:arial,sans-serif">Karrina Domke</span><br></p><p class=3D"MsoNormal"=
+><font face=3D"arial, sans-serif"><i><span style=3D"color:rgb(139,14,4)">Ca=
+reer Services Advisor</span></i><br></font><span style=3D"font-family:arial=
+,sans-serif;line-height:107%">Main:=C2=A0</span><span style=3D"font-family:=
+arial,sans-serif;line-height:13.91px"><span title=3D"Call with Google Voice=
+"><span id=3D"m_4324207011801863827gc-number-6" title=3D"Call with Google V=
+oice"><span id=3D"gc-number-15" class=3D"gc-cs-link" title=3D"Call with Goo=
+gle Voice">(855) 889-2830</span></span></span></span></p><p class=3D"MsoNor=
+mal"><span style=3D"font-family:arial,sans-serif;line-height:13.91px">Direc=
+t: <span title=3D"Call with Google Voice"><span id=3D"m_4324207011801863827=
+gc-number-7" title=3D"Call with Google Voice"><span id=3D"gc-number-16" cla=
+ss=3D"gc-cs-link" title=3D"Call with Google Voice">(623) 505-4184</span></s=
+pan></span></span></p><p class=3D"MsoNormal"><a href=3D"mailto:karrina.domk=
+e@bryanuniversity.edu" style=3D"font-family:arial,sans-serif" target=3D"_bl=
+ank"><span style=3D"line-height:107%;color:rgb(31,73,125)"><span style=3D"c=
+olor:rgb(17,85,204)">karrina.domke@bryanuniversity.edu</span></span></a><br=
+></p></div></div><div><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><d=
+iv dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr=
+"><p style=3D"font-size:12.8px;color:rgb(80,0,80)"><font face=3D"arial, san=
+s-serif"><a href=3D"http://bryanuniversity.edu/" style=3D"color:rgb(17,85,2=
+04)" target=3D"_blank"><img src=3D"http://lessons.bryanuniversity.edu/email=
+signature/bryanlogo.jpg" alt=3D"Bryan University"></a></font></p><p><img sr=
+c=3D"https://docs.google.com/uc?export=3Ddownload&amp;id=3D1Ws1UhcDqwTmCtCh=
+tT2iLNeeoFO5I4lF4&amp;revid=3D0B2aGMKeZQTh7aXJWdFlvR2NOY2hWZEZMUGFQSWwyRFVs=
+dVdJPQ" style=3D"font-size:12.8px;color:rgb(34,34,34)"><font face=3D"arial,=
+ sans-serif" style=3D"color:rgb(80,0,80);font-size:12.8px">=C2=A0</font><a =
+href=3D"https://twitter.com/bryanuniversity" style=3D"font-size:12.8px;font=
+-family:arial,sans-serif;color:rgb(17,85,204)" target=3D"_blank"><img src=
+=3D"https://docs.google.com/a/bryanuniversity.edu/uc?id=3D0B94GCcYWTjmlQ0da=
+U1dlYk1pdTg&amp;export=3Ddownload" style=3D"color:rgb(34,34,34)"></a><span =
+style=3D"color:rgb(80,0,80);font-size:12.8px;font-family:arial,sans-serif">=
+=C2=A0=C2=A0</span><a href=3D"https://twitter.com/bryanuniversity" style=3D=
+"font-size:12.8px;font-family:arial,sans-serif;color:rgb(17,85,204)" target=
+=3D"_blank"><img src=3D"https://docs.google.com/a/bryanuniversity.edu/uc?id=
+=3D0B94GCcYWTjmlU2xFbkhoU1RxdkE&amp;export=3Ddownload" style=3D"color:rgb(3=
+4,34,34)"></a><span style=3D"color:rgb(80,0,80);font-size:12.8px;font-famil=
+y:arial,sans-serif">=C2=A0=C2=A0</span><a href=3D"https://www.facebook.com/=
+BryanUniversity" style=3D"font-size:12.8px;font-family:arial,sans-serif;col=
+or:rgb(17,85,204)" target=3D"_blank"><img src=3D"https://docs.google.com/a/=
+bryanuniversity.edu/uc?id=3D0B94GCcYWTjmlZHZlQ2tfZkFRcnM&amp;export=3Ddownl=
+oad" style=3D"color:rgb(34,34,34)"></a><span style=3D"color:rgb(80,0,80);fo=
+nt-size:12.8px;font-family:arial,sans-serif"></span><span style=3D"color:rg=
+b(80,0,80);font-size:12.8px;font-family:arial,sans-serif"></span><a style=
+=3D"font-size:12.8px;font-family:arial,sans-serif;color:rgb(34,34,34)"></a>=
+<span style=3D"color:rgb(80,0,80);font-size:12.8px;font-family:arial,sans-s=
+erif">=C2=A0=C2=A0</span><br></p><div style=3D"font-size:12.8px;margin-bott=
+om:0px;margin-left:0px;padding-bottom:5px"><div style=3D"overflow:hidden"><=
+div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><font face=3D"arial, sans-serif"><span style=3D"f=
+ont-size:7pt;color:rgb(0,36,93)">******************************************=
+*******************************************</span><span style=3D"color:rgb(=
+31,73,125);font-size:11pt"></span><br style=3D"font-size:12.8px"><span styl=
+e=3D"font-size:7pt;color:rgb(0,36,93)">The information contained in this co=
+mmunication is intended solely for the use of=C2=A0</span><span style=3D"co=
+lor:rgb(31,73,125);font-size:11pt"></span><br style=3D"font-size:12.8px"><s=
+pan style=3D"font-size:7pt;color:rgb(0,36,93)">the individual or entity to =
+whom it is addressed and others authorized to receive it.</span><span style=
+=3D"color:rgb(31,73,125);font-size:11pt"></span><br style=3D"font-size:12.8=
+px"><span style=3D"font-size:7pt;color:rgb(0,36,93)">If you have received t=
+his communication in error, please notify us immediately by</span><span sty=
+le=3D"color:rgb(31,73,125);font-size:11pt"></span><br style=3D"font-size:12=
+.8px"><span style=3D"font-size:7pt;color:rgb(0,36,93)">responding to this e=
+mail and then deleting it from your system.<br><br></span></font></div></di=
+v></div></div></div></div></div></div></div></div></div></div></div></div><=
+/div></div></div></div></div></div></div></div></div></div></div></div></di=
+v></div></div></div></div></div></div></div></div></div></div></div></div><=
+/div></div></div></div></div></div></div></div></div></div></div></div></di=
+v></div></div></div></div></div></div></div></div></div></div></div><br></d=
+iv><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On =
+Tue, May 26, 2020 at 2:24 PM Giselle Martinez-Sanchez &lt;<a href=3D"mailto=
+:giselle.sanchez@bryanuniversity.edu" target=3D"_blank">giselle.sanchez@bry=
+anuniversity.edu</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" =
+style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);pa=
+dding-left:1ex"><div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font=
+-family:georgia,serif"><br></div><div class=3D"gmail_quote"><div dir=3D"ltr=
+"><span style=3D"font-size:large;font-weight:bold">Forwarded Conversation</=
+span><br><span style=3D"font-weight:bold">Subject: FSW-135 Mock Interview R=
+equest</span><br>------------------------<br></div><br><div dir=3D"ltr" cla=
+ss=3D"gmail_attr" style=3D"color:rgb(136,136,136)">From: <strong class=3D"g=
+mail_sendername" dir=3D"auto">Giselle Martinez-Sanchez</strong> <span dir=
+=3D"auto">&lt;<a href=3D"mailto:giselle.sanchez@bryanuniversity.edu" target=
+=3D"_blank">giselle.sanchez@bryanuniversity.edu</a>&gt;</span><br>Date: Sun=
+, May 24, 2020 at 11:39 AM<br>To:  &lt;<a href=3D"mailto:careerservices@bry=
+anuniversity.edu" target=3D"_blank">careerservices@bryanuniversity.edu</a>&=
+gt;<br></div><br><br><div dir=3D"ltr"><div style=3D"font-family:georgia,ser=
+if">Hello,=C2=A0</div><div style=3D"font-family:georgia,serif">I would like=
+ to request if possible to have a mock interview this coming week for my ca=
+reer readiness assignment,=C2=A0which is due before Thursday night.=C2=A0</=
+div><div style=3D"font-family:georgia,serif">I will soon reply through this=
+ thread with my updated resume, cover letter=C2=A0and the job description o=
+f the job posting that I found appealing attached.=C2=A0</div><div style=3D=
+"font-family:georgia,serif"><br></div><div style=3D"font-family:georgia,ser=
+if">Thank You and Have a=C2=A0Great Day,=C2=A0</div><div style=3D"font-fami=
+ly:georgia,serif">GiselleMtnezS.=C2=A0</div><div style=3D"font-family:georg=
+ia,serif"><br></div><div style=3D"font-family:georgia,serif">PS: If I don&#=
+39;t have a suit yet, what would be the second best option to wear for the =
+interview?=C2=A0</div>-- <br><div dir=3D"ltr"><div dir=3D"ltr"><div><div di=
+r=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"lt=
+r"><div><div dir=3D"ltr"><div dir=3D"ltr"><div style=3D"font-family:georgia=
+,serif;text-align:center"><span style=3D"font-size:large">Full Name: Gisell=
+e Martinez-Sanchez</span><br></div><div><div dir=3D"ltr" style=3D"font-fami=
+ly:georgia,serif;text-align:center"><span style=3D"font-size:large">Web-Dev=
+elopment Consultant</span><font size=3D"4">=C2=A0&amp; Student at Bryan Uni=
+versity</font></div><div dir=3D"ltr"><div style=3D"font-family:georgia,seri=
+f;text-align:center"><font face=3D"georgia, serif" size=3D"4">Email:=C2=A0<=
+a href=3D"mailto:giselle.sanchez@bryanuniversity.edu" style=3D"color:rgb(17=
+,85,204)" target=3D"_blank">giselle.sanchez@bryanuniversity.edu</a></font><=
+/div><div style=3D"text-align:center"><font face=3D"georgia, serif"><font s=
+ize=3D"4">Phone:=C2=A0</font></font><span style=3D"color:rgb(32,33,36);font=
+-size:14px;letter-spacing:0.25px"><font face=3D"arial, sans-serif">=E2=80=
+=AA(786) 265-8870</font></span><span style=3D"font-family:georgia,serif;col=
+or:rgb(32,33,36);font-size:14px;letter-spacing:0.25px">=E2=80=AC</span></di=
+v><div style=3D"font-family:georgia,serif;text-align:center"><font face=3D"=
+georgia, serif">-</font>For a quicker response in day hours please send me =
+a text message when possible.</div><div style=3D"font-family:georgia,serif;=
+text-align:center"><font size=3D"4"><a href=3D"http://www.bryanuniversity.e=
+du/" rel=3D"noreferrer noopener" style=3D"font-family:Lato,&quot;Helvetica =
+Neue&quot;,Helvetica,Arial,sans-serif;outline:transparent solid 0.125rem" t=
+arget=3D"_blank">www.bryanuniversity.edu</a>=C2=A0</font></div></div><p sty=
+le=3D"font-family:Lato,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-seri=
+f;margin:12px 0px;color:rgb(45,59,69);font-size:12px"></p><div style=3D"fon=
+t-family:georgia,serif;text-align:center"><img src=3D"http://lessons.bryanu=
+niversity.edu/emailsignature/bryanlogo.jpg" alt=3D"Bryan University" style=
+=3D"max-width: 231px; height: auto; vertical-align: middle; border: 0px;"><=
+/div><a href=3D"http://www.bryanuniversity.edu/" rel=3D"noreferrer noopener=
+" style=3D"font-family:georgia,serif;outline:transparent solid 0.125rem" ta=
+rget=3D"_blank"><span style=3D"text-align:center;border:0px;height:1px;over=
+flow:hidden;padding:0px;width:1px">=C2=A0(Links to an external site.)</span=
+></a><p style=3D"font-family:georgia,serif"></p><p style=3D"font-family:Lat=
+o,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;text-align:center;m=
+argin:12px 0px;color:rgb(45,59,69);font-size:12px"><a href=3D"https://twitt=
+er.com/bryanuniversity" style=3D"outline:transparent solid 0.125rem" target=
+=3D"_blank"><img src=3D"https://docs.google.com/a/bryanuniversity.edu/uc?id=
+=3D0B94GCcYWTjmlQ0daU1dlYk1pdTg&amp;export=3Ddownload" alt=3D"" style=3D"ma=
+x-width: 48px; height: auto; vertical-align: middle; border: 0px;"></a>=C2=
+=A0=C2=A0<a href=3D"https://twitter.com/bryanuniversity" style=3D"outline:t=
+ransparent solid 0.125rem" target=3D"_blank"><img src=3D"https://docs.googl=
+e.com/a/bryanuniversity.edu/uc?id=3D0B94GCcYWTjmlU2xFbkhoU1RxdkE&amp;export=
+=3Ddownload" alt=3D"" style=3D"max-width: 48px; height: auto; vertical-alig=
+n: middle; border: 0px;"></a>=C2=A0=C2=A0<a href=3D"https://www.facebook.co=
+m/BryanUniversity" style=3D"outline:transparent solid 0.125rem" target=3D"_=
+blank"><img src=3D"https://docs.google.com/a/bryanuniversity.edu/uc?id=3D0B=
+94GCcYWTjmlZHZlQ2tfZkFRcnM&amp;export=3Ddownload" alt=3D"" style=3D"max-wid=
+th: 48px; height: auto; vertical-align: middle; border: 0px;"></a><a style=
+=3D"outline:transparent solid 0.125rem"></a>=C2=A0=C2=A0<a href=3D"https://=
+www.youtube.com/user/bryanuniversity" style=3D"outline:transparent solid 0.=
+125rem" target=3D"_blank"><img src=3D"https://docs.google.com/a/bryanuniver=
+sity.edu/uc?id=3D0B94GCcYWTjmlX09QdmtwRnNqUVE&amp;export=3Ddownload" alt=3D=
+"" style=3D"max-width: 48px; height: auto; vertical-align: middle; border: =
+0px;"><br></a><br></p></div></div></div></div></div></div><div><div><div></=
+div></div></div></div></div></div></div></div></div></div>
+<br><br><div dir=3D"ltr" class=3D"gmail_attr" style=3D"color:rgb(136,136,13=
+6)">----------<br>From: <strong class=3D"gmail_sendername" dir=3D"auto">Gis=
+elle Martinez-Sanchez</strong> <span dir=3D"auto">&lt;<a href=3D"mailto:gis=
+elle.sanchez@bryanuniversity.edu" target=3D"_blank">giselle.sanchez@bryanun=
+iversity.edu</a>&gt;</span><br>Date: Sun, May 24, 2020 at 11:55 AM<br>To:  =
+&lt;<a href=3D"mailto:careerservices@bryanuniversity.edu" target=3D"_blank"=
+>careerservices@bryanuniversity.edu</a>&gt;<br></div><br><br><div dir=3D"lt=
+r"><div style=3D"font-family:georgia,serif">Currently working=C2=A0on the C=
+over Letter, I will have it completed by tonight.=C2=A0</div><div style=3D"=
+font-family:georgia,serif"><br></div><div style=3D"font-family:georgia,seri=
+f">Thank You and Have a Great Day,=C2=A0</div><div style=3D"font-family:geo=
+rgia,serif">GMtnezS.=C2=A0</div></div><br><br><div dir=3D"ltr" class=3D"gma=
+il_attr" style=3D"color:rgb(136,136,136)">----------<br>From: <strong class=
+=3D"gmail_sendername" dir=3D"auto">Giselle Martinez-Sanchez</strong> <span =
+dir=3D"auto">&lt;<a href=3D"mailto:giselle.sanchez@bryanuniversity.edu" tar=
+get=3D"_blank">giselle.sanchez@bryanuniversity.edu</a>&gt;</span><br>Date: =
+Sun, May 24, 2020 at 9:00 PM<br>To:  &lt;<a href=3D"mailto:careerservices@b=
+ryanuniversity.edu" target=3D"_blank">careerservices@bryanuniversity.edu</a=
+>&gt;<br></div><br><br><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><=
+div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div style=3D"font-family=
+:georgia,serif">I hereby=C2=A0attached the cover letter and this is the lin=
+k to the position, in case it remains active hereinafter :=C2=A0</div><div =
+style=3D"font-family:georgia,serif"><a href=3D"https://www.linkedin.com/job=
+s/search/?keywords=3Djunior%20developer&amp;location=3D&amp;locationId=3D" =
+target=3D"_blank">https://www.linkedin.com/jobs/search/?keywords=3Djunior%2=
+0developer&amp;location=3D&amp;locationId=3D=C2=A0</a></div><div style=3D"f=
+ont-family:georgia,serif"><br></div><div style=3D"font-family:georgia,serif=
+">Cover Letter Script:=C2=A0</div><div style=3D"font-family:georgia,serif">=
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal">=
+<b><span lang=3D"EN-AU" style=3D"font-size:18pt">Giselle Martinez-Sanchez=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 </span></b><b><sp=
+an lang=3D"EN-AU" style=3D"font-size:14pt">Email: </span></b><span lang=3D"=
+EN-AU" style=3D"font-size:14pt"><a href=3D"mailto:gmtnezschez@gmail.com" ta=
+rget=3D"_blank">gmtnezschez@gmail.com</a></span><b><span lang=3D"EN-AU" sty=
+le=3D"font-size:18pt"><span></span></span></b></p>
+
+<div style=3D"border-top:none;border-right:none;border-left:none;border-bot=
+tom:1.5pt solid windowtext;padding:0in 0in 1pt">
+
+<p class=3D"MsoNormal" align=3D"right" style=3D"margin-bottom:12pt;text-ali=
+gn:right;line-height:normal;border:none;padding:0in"><b><span lang=3D"EN-AU=
+" style=3D"font-size:14pt">Mobile: </span></b><span lang=3D"EN-AU" style=3D=
+"font-size:14pt">786-636-5669<span></span></span></p>
+
+</div>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal">=
+<span lang=3D"EN-AU" style=3D"font-size:14pt">FDM Group=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0
+24 May 2020<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal">=
+<span lang=3D"EN-AU" style=3D"font-size:14pt"><span>=C2=A0</span></span></p=
+>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal">=
+<b><span lang=3D"EN-AU" style=3D"font-size:13pt">Application <a name=3D"m_4=
+324207011801863827_m_4818126576230719924_m_8416552684879987222__Hlk28949577=
+">for
+Junior Software Developer </a>Position<span></span></span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal">=
+<b><span lang=3D"EN-AU" style=3D"font-size:13pt">=C2=A0</span></b></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal">=
+<span lang=3D"EN-AU" style=3D"font-size:13pt">Dear Ms. Salama, <span></span=
+></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal">=
+<span lang=3D"EN-AU" style=3D"font-size:13pt">=C2=A0</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:3pt;text-align:justify"><span=
+ lang=3D"EN-AU" style=3D"font-size:12.5pt">As a highly
+motivated and dedicated student with strong interpersonal skills, I would l=
+ike
+to have the chance to join the FDM Group as Junior Software Developer. <spa=
+n></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:3pt;text-align:justify"><span=
+ lang=3D"EN-AU" style=3D"font-size:12.5pt">I am confident
+I can help the company strive if given a chance to join FDM Group because I=
+ believe
+myself capable of providing the team the traits described in the descriptio=
+n of
+the position. <span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:3pt;text-align:justify"><span=
+ lang=3D"EN-AU" style=3D"font-size:12.5pt">This is what I
+love to do and as such I will tirelessly continue improving my abilities in=
+ the
+field.=C2=A0 Working hard will enable me <u>not
+just to learn but <b>to give back</b> to the communities that have helped m=
+e
+become who I am. </u><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:3pt;text-align:justify"><span=
+ lang=3D"EN-AU" style=3D"font-size:12.5pt">As a junior
+developer, I understand there are still many things I have yet to learn and
+polish and I am no less than <b>thrilled </b>about it! <span></span></span>=
+</p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:3pt;text-align:justify"><span=
+ lang=3D"EN-AU" style=3D"font-size:12.5pt">As you could
+see in my resume, I was hired by the university I study at as Academic
+Consultant since December 2019. This program revolves around <b><u>real pra=
+ctice
+writing code and building challenging projects</u></b>. <span></span></span=
+></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:3pt;text-align:justify"><u><s=
+pan lang=3D"EN-AU" style=3D"font-size:12.5pt">Hence, I
+consider it hard proof that I can thrive in a fast and challenging environm=
+ent
+not just for work but also while learning. And how much I love debugging bi=
+g
+loads of errors in code, </span></u><span lang=3D"EN-AU" style=3D"font-size=
+:12.5pt">since part of my job
+is to work with other students to break down the bugs in their code. <u>=C2=
+=A0<span></span></u></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:3pt;text-align:justify"><span=
+ lang=3D"EN-AU" style=3D"font-size:12.5pt">I also know I
+am younger than most, I consider it a flaw because is easy to undermine the
+maturity and level of responsibility of us while we are young individuals w=
+ith
+little formal experience to backup our worth. However, is true that we must
+start small in order to make the best version of ourselves as the years
+transpire and <b>I will not stop until I get there.<span></span></b></span>=
+</p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:3pt;text-align:justify"><span=
+ lang=3D"EN-AU" style=3D"font-size:12.5pt">That includes
+improvement not only in the field I=E2=80=99m studying but also in work, li=
+fe and soul.
+<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:3pt;text-align:justify"><span=
+ lang=3D"EN-AU" style=3D"font-size:12.5pt">But because
+actions stand more than words, here is the link to the Portfolium profile w=
+e=E2=80=99ve
+been building through the program; I admit I have not sat down to polish th=
+e
+appearance, yet , but I think we could agree that the content matters more =
+than
+the cover of the book: <span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:3pt;text-align:justify"><span=
+ lang=3D"EN-AU" style=3D"font-size:12.5pt"><a href=3D"https://portfolium.co=
+m/GiselleMartine17/portfolio" target=3D"_blank">https://portfolium.com/Gise=
+lleMartine17/portfolio</a>
+<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;text-align:justify;l=
+ine-height:normal"><span lang=3D"EN-AU" style=3D"font-size:12.5pt"><span>=
+=C2=A0</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;text-align:justify;l=
+ine-height:normal"><span lang=3D"EN-AU" style=3D"font-size:12.5pt">All of t=
+hat is why I would love the chance of having FDM Group become a
+part of my life, as I become part of the FDM Group!<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal">=
+<span lang=3D"EN-AU" style=3D"font-size:12pt;font-family:&quot;Angsana New&=
+quot;,serif"><span>=C2=A0</span></span></p>
+
+<p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;tex=
+t-align:center;line-height:normal"><span lang=3D"EN-AU" style=3D"font-size:=
+16pt">Thank You for Your
+Time! And Have a Great Week!<span></span></span></p>
+
+<p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;tex=
+t-align:center;line-height:normal"><span lang=3D"EN-AU" style=3D"font-size:=
+12pt">Giselle MtnezS<span></span></span></p></div></div></div></div></div><=
+/div></div><br><br></div><br clear=3D"all"><div><br></div>-- <br><div dir=
+=3D"ltr"><div dir=3D"ltr"><div><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div><div dir=3D"ltr"><div dir=
+=3D"ltr"><div style=3D"font-family:georgia,serif;text-align:center"><span s=
+tyle=3D"font-size:large">Full Name: Giselle Martinez-Sanchez</span><br></di=
+v><div><div dir=3D"ltr" style=3D"font-family:georgia,serif;text-align:cente=
+r"><span style=3D"font-size:large">Web-Development Consultant</span><font s=
+ize=3D"4">=C2=A0&amp; Student at Bryan University</font></div><div dir=3D"l=
+tr"><div style=3D"font-family:georgia,serif;text-align:center"><font face=
+=3D"georgia, serif" size=3D"4">Email:=C2=A0<a href=3D"mailto:giselle.sanche=
+z@bryanuniversity.edu" style=3D"color:rgb(17,85,204)" target=3D"_blank">gis=
+elle.sanchez@bryanuniversity.edu</a></font></div><div style=3D"text-align:c=
+enter"><font face=3D"georgia, serif"><font size=3D"4">Phone:=C2=A0</font></=
+font><span style=3D"color:rgb(32,33,36);font-size:14px;letter-spacing:0.25p=
+x"><font face=3D"arial, sans-serif">=E2=80=AA(786) 265-8870</font></span><s=
+pan style=3D"font-family:georgia,serif;color:rgb(32,33,36);font-size:14px;l=
+etter-spacing:0.25px">=E2=80=AC</span></div><div style=3D"font-family:georg=
+ia,serif;text-align:center"><font face=3D"georgia, serif">-</font>For a qui=
+cker response in day hours please send me a text message when possible.</di=
+v><div style=3D"font-family:georgia,serif;text-align:center"><font size=3D"=
+4"><a href=3D"http://www.bryanuniversity.edu/" rel=3D"noreferrer noopener" =
+style=3D"font-family:Lato,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-s=
+erif;outline:transparent solid 0.125rem" target=3D"_blank">www.bryanunivers=
+ity.edu</a>=C2=A0</font></div></div><p style=3D"font-family:Lato,&quot;Helv=
+etica Neue&quot;,Helvetica,Arial,sans-serif;margin:12px 0px;color:rgb(45,59=
+,69);font-size:12px"></p><div style=3D"font-family:georgia,serif;text-align=
+:center"><img src=3D"http://lessons.bryanuniversity.edu/emailsignature/brya=
+nlogo.jpg" alt=3D"Bryan University" style=3D"max-width: 231px; height: auto=
+; vertical-align: middle; border: 0px;"></div><a href=3D"http://www.bryanun=
+iversity.edu/" rel=3D"noreferrer noopener" style=3D"font-family:georgia,ser=
+if;outline:transparent solid 0.125rem" target=3D"_blank"><span style=3D"tex=
+t-align:center;border:0px;height:1px;overflow:hidden;padding:0px;width:1px"=
+>=C2=A0(Links to an external site.)</span></a><p style=3D"font-family:georg=
+ia,serif"></p><p style=3D"font-family:Lato,&quot;Helvetica Neue&quot;,Helve=
+tica,Arial,sans-serif;text-align:center;margin:12px 0px;color:rgb(45,59,69)=
+;font-size:12px"><a href=3D"https://twitter.com/bryanuniversity" style=3D"o=
+utline:transparent solid 0.125rem" target=3D"_blank"><img src=3D"https://do=
+cs.google.com/a/bryanuniversity.edu/uc?id=3D0B94GCcYWTjmlQ0daU1dlYk1pdTg&am=
+p;export=3Ddownload" alt=3D"" style=3D"max-width: 48px; height: auto; verti=
+cal-align: middle; border: 0px;"></a>=C2=A0=C2=A0<a href=3D"https://twitter=
+.com/bryanuniversity" style=3D"outline:transparent solid 0.125rem" target=
+=3D"_blank"><img src=3D"https://docs.google.com/a/bryanuniversity.edu/uc?id=
+=3D0B94GCcYWTjmlU2xFbkhoU1RxdkE&amp;export=3Ddownload" alt=3D"" style=3D"ma=
+x-width: 48px; height: auto; vertical-align: middle; border: 0px;"></a>=C2=
+=A0=C2=A0<a href=3D"https://www.facebook.com/BryanUniversity" style=3D"outl=
+ine:transparent solid 0.125rem" target=3D"_blank"><img src=3D"https://docs.=
+google.com/a/bryanuniversity.edu/uc?id=3D0B94GCcYWTjmlZHZlQ2tfZkFRcnM&amp;e=
+xport=3Ddownload" alt=3D"" style=3D"max-width: 48px; height: auto; vertical=
+-align: middle; border: 0px;"></a><a style=3D"outline:transparent solid 0.1=
+25rem"></a>=C2=A0=C2=A0<a href=3D"https://www.youtube.com/user/bryanunivers=
+ity" style=3D"outline:transparent solid 0.125rem" target=3D"_blank"><img sr=
+c=3D"https://docs.google.com/a/bryanuniversity.edu/uc?id=3D0B94GCcYWTjmlX09=
+QdmtwRnNqUVE&amp;export=3Ddownload" alt=3D"" style=3D"max-width: 48px; heig=
+ht: auto; vertical-align: middle; border: 0px;"><br></a><br></p></div></div=
+></div></div></div></div><div><div><div></div></div></div></div></div></div=
+></div></div></div></div>
+</blockquote></div>
+
+--000000000000e92b4405a694767c--
+--000000000000e92b4605a694767e
+Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; 
+	name="Giselle Martinez-Sanchez - Career Services Rubric.xlsx"
+Content-Disposition: attachment; 
+	filename="Giselle Martinez-Sanchez - Career Services Rubric.xlsx"
+Content-Transfer-Encoding: base64
+Content-ID: <f_kaogtmgb0>
+X-Attachment-Id: f_kaogtmgb0
+
+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
+--000000000000e92b4605a694767e--

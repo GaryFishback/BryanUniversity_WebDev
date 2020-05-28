@@ -131,7 +131,7 @@ export default function UserProvider(props) {
         console.log("res.data", res.data);
         setUserState((prevState) => ({
           ...prevState,
-          issues: res.data,
+          issues: res.data || [],
         }));
         localStorage.setItem("IssuesByUser", JSON.stringify(res.data));
       })
@@ -149,7 +149,7 @@ export default function UserProvider(props) {
         console.log(res.data);
         setUserState((prevState) => ({
           ...prevState,
-          allIssues: res.data,
+          allIssues: res.data || [],
         }));
         localStorage.setItem("IssuesAll", JSON.stringify(res.data));
       })

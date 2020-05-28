@@ -37,7 +37,7 @@ userRouter.get("/", (req, res, next) => {
     return emptyhandling(result, res);
   });
 });
-//get all users
+//get user by id
 userRouter.get("/profile", (req, res, next) => {
   let sql = `SELECT * FROM users WHERE _id = ${req.user._id}`;
   db.query(sql, (err, result) => {

@@ -75,7 +75,7 @@ export default function CommentForm(props) {
   return (
     <>
       <Container component="main" maxWidth="xs">
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         <div className={classesNewComment.paper}>
           <form
             id={props.issueId}

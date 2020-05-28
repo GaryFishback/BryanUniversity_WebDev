@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Axios from "axios";
 import IssueForm from "./issue/issueForm";
 import IssuesList from "./issue/issuesList.js";
-import Container from "@material-ui/core/Container";
+// import Container from "@material-ui/core/Container";
 const axios = Axios.create();
 
 axios.interceptors.request.use((config) => {
@@ -47,9 +47,9 @@ export default class Profile extends Component {
     console.log(this.state);
     this.setState({
       user: this.props.state.user,
-      addIssue: this.props.state.addIssue,
-      issues: this.props.state.issues,
-      getUserIssues: this.props.state.getUserIssues,
+      // addIssue: this.props.state.addIssue,
+      // issues: this.props.state.issues,
+      // getUserIssues: this.props.state.getUserIssues,
       errMsg: this.props.state.errMsg,
     });
     console.log("this.state.user", this.props.state.user);
@@ -68,8 +68,9 @@ export default class Profile extends Component {
         .then((res) => {
           console.log("new issue res.data", res.data);
           this.setState((prevState) => ({
-            issues: [...prevState.issues, res.data],
+            issues: [...prevState.issues, res.data[0]],
           }));
+          console.log(this.state);
         })
         .catch((err) => {
           console.log(err);
@@ -81,7 +82,7 @@ export default class Profile extends Component {
     return (
       <div className="profile">
         <h1 style={{ textAlign: "center" }}>
-          What would you like to do {this.props.state.user.Name}?{" "}
+          What would you like to do {this.props.state.user.name}?{" "}
         </h1>
         <IssueForm
           addIssue={addIssue}
@@ -100,8 +101,8 @@ export default class Profile extends Component {
         > */}
         <IssuesList
           issues={this.state.issues}
-          user={this.props.state.user}
-          errMsg={this.state.errMsg}
+          // user={this.props.state.user}
+          // errMsg={this.state.errMsg}
         />
         {/* </Container> */}
       </div>

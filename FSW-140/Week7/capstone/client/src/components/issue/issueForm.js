@@ -76,7 +76,7 @@ export default function IssueForm(props) {
   return (
     <>
       <Container component="main" maxWidth="xs">
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         <div className={classesNewIssue.paper}>
           <form className={classesNewIssue.form} onSubmit={handleSubmit}>
             <TextField

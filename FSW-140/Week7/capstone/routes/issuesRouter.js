@@ -17,7 +17,7 @@ emptyhandling = (found, res) => {
 
 //get issues
 issueRouter.get("/", (req, res, next) => {
-  let sql = `SELECT * FROM issues`;
+  let sql = `SELECT * FROM issues ORDER BY upVotes DESC`;
   db.query(sql, (err, result) => {
     if (err) {
       throw err;
@@ -88,13 +88,6 @@ issueRouter.get("/:issueID", (req, res, next) => {
 //update issue info
 issueRouter.put("/:issueID", (req, res, next) => {
   console.log(req.params);
-  //req.body.userID = req.user._id;
-  //req.body.userID = req.params.userID;
-  //req.body.issueID = req.params.issueID;
-  //let date = new Date()
-  //req.body.date = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`
-  //let newIssue = new IssueObject(req.body.text, req.body.date, req.body.issueID, req.body.userID)
-  //console.log(newIssue)
   console.log(req.body.title === "undefined");
   if (req.body.title !== undefined) {
     let sqlText = `UPDATE issues SET title = '${req.body.title}' WHERE _id = ${req.params.issueID};`;
@@ -116,6 +109,26 @@ issueRouter.put("/:issueID", (req, res, next) => {
       return result;
     });
   }
+  if (req.body.upVotes !== undefined) {
+    let sqlText = `UPDATE issues SET upVotes = '${req.body.upVotes}' WHERE _id = ${req.params.issueID};`;
+    db.query(sqlText, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      console.dir(result);
+      return result;
+    });
+  } //making the update changes
+  if (req.body.downVotes !== undefined) {
+    let sqlText = `UPDATE issues SET downVotes = '${req.body.downVotes}' WHERE _id = ${req.params.issueID};`;
+    db.query(sqlText, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      console.dir(result);
+      return result;
+    });
+  } //making the update changes
   let getSql = `SELECT * FROM issues WHERE _id = ${req.params.issueID}`;
   db.query(getSql, (err, result) => {
     if (err) {
