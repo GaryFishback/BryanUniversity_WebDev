@@ -1,28 +1,39 @@
 import React, { useState } from "react";
+//material UI core components
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Grid from "@material-ui/core/Grid";
+import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
 
 const initInputs = {
   title: "",
   description: "",
-  imgUrl: "",
 };
 
 export default function IssueForm(props) {
-    const {addIssue, errMsg} = props
-    const [inputs, setInputs] = useState(initInputs);
-    
-    let simpleErrArray = [];
-  if (errMsg)  {console.log(errMsg)
-        let simpleErr = errMsg.split("Path")
-     
-        for (let i = 0; i < simpleErr.length; i++) {
-            if (errMsg.split("Path")[0].substring(0, 25) === "Issue validation failed: " && i > 0) {
-                //console.log(errMsg.split("Path")[i].split('.')[0])
-                //console.log(errMsg.split("Path")[0].substring(0,25))
-                simpleErrArray.push(errMsg.split("Path")[i].split('.')[0])
-            }
-        }
+  const { addIssue, errMsg } = props;
+  const [inputs, setInputs] = useState(initInputs);
+
+  let simpleErrArray = [];
+  if (errMsg) {
+    console.log(errMsg);
+    let simpleErr = errMsg.split("Path");
+
+    for (let i = 0; i < simpleErr.length; i++) {
+      if (
+        errMsg.split("Path")[0].substring(0, 25) ===
+          "Issue validation failed: " &&
+        i > 0
+      ) {
+        //console.log(errMsg.split("Path")[i].split('.')[0])
+        //console.log(errMsg.split("Path")[0].substring(0,25))
+        simpleErrArray.push(errMsg.split("Path")[i].split(".")[0]);
+      }
     }
-    //console.log(simpleErrArray)
+  }
+
   function handleChange(e) {
     const { name, value } = e.target;
     setInputs((prevInputs) => ({
@@ -33,41 +44,79 @@ export default function IssueForm(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-      addIssue(inputs)
-      setInputs(initInputs)
+    console.log(props);
+    console.log(inputs);
+    addIssue(inputs);
   }
 
-  const { title, description } = inputs;
+  const useNewIssueStyles = makeStyles((theme) => ({
+    paper: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+    },
+
+    form: {
+      width: "100%",
+    },
+    submit: {
+      margin: theme.spacing(3, 0, 2),
+    },
+  }));
+  const classesNewIssue = useNewIssueStyles();
+
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="title"
-        value={title}
-        onChange={handleChange}
-        placeholder="Title"
-      />
-      <input
-        type="text"
-        name="description"
-        value={description}
-        onChange={handleChange}
-        placeholder="Description"
-      />
-          {// <input
-      //  type="text"
-      //  name="imgUrl"
-      //  value={imgUrl}
-      //  onChange={handleChange}
-              //  placeholder="Image Url"/>
-          }
-          <button>Add Issue</button>
-          {simpleErrArray.map(errString => {
-              return (< p style={{ color: "red", fontWeight: "bold" }}>{errString}</p>
-              )
-          }
-          )}
-             
-    </form>
+    <>
+      <Container component="main" maxWidth="xs">
+        <div className={classesNewIssue.paper}>
+          <form className={classesNewIssue.form} onSubmit={handleSubmit}>
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              onBlur={handleChange}
+              id="title"
+              label="Title"
+              name="title"
+              autoComplete="title"
+              autoFocus
+            />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              onBlur={handleChange}
+              required
+              fullWidth
+              name="description"
+              label="Description"
+              type="description"
+              id="description"
+              autoComplete="description"
+            />
+
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classesNewIssue.submit}
+            >
+              Submit Issue
+            </Button>
+            {simpleErrArray.map((errString) => {
+              return (
+                <FormControlLabel
+                  style={{ color: "red", fontWeight: "bold" }}
+                  control={<p>{errString}</p>}
+                />
+              );
+            })}
+
+            <Grid container></Grid>
+          </form>
+        </div>
+      </Container>
+    </>
   );
 }

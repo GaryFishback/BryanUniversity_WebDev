@@ -3,3 +3,4 @@ node_modules/
 *.cmd
 *.ps1
 .env
+.xlsx
