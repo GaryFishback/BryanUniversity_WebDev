@@ -35,6 +35,10 @@
   border-right: solid rgb(235, 233, 233);
   /* border-left: solid rgb(235, 233, 233); */
   width: 350px;
+ 
+}
+.mock-newsfeed{
+  font-size: 10px;
 }
 .left_navbar {
   /* border-right: solid rgb(235, 233, 233); */

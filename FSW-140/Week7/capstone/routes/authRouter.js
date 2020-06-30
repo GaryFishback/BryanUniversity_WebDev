@@ -93,7 +93,7 @@ authRouter.post("/signup", (req, res, next) => {
       let sql = `SELECT * FROM users;`;
       db.query(sql, (err, result) => {
         if (err) {
-          throw err;
+          throw err; 
         }
 
         console.log("signedup user", result);

@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "../../context/userProvider";
-//material UI
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
@@ -18,8 +17,6 @@ export default function Auth() {
   const { signup, login, errMsg } = useContext(UserContext);
   function handleChange(e) {
     const { name, value } = e.target;
-    console.log("name", name);
-    console.log("value", value);
     setInputs((prevInputs) => ({
       ...prevInputs,
       [name]: value,
@@ -28,13 +25,11 @@ export default function Auth() {
 
   function handleSignup(e) {
     e.preventDefault();
-    console.log(inputs);
     signup(inputs);
   }
 
   function handleLogin(e) {
     e.preventDefault();
-    console.log(inputs);
     login(inputs);
   }
   const useLoginStyles = makeStyles((theme) => ({
@@ -49,7 +44,7 @@ export default function Auth() {
       backgroundColor: theme.palette.secondary.main,
     },
     form: {
-      width: "100%", // Fix IE 11 issue.
+      width: "100%",
       marginTop: theme.spacing(1),
     },
     submit: {
@@ -69,7 +64,7 @@ export default function Auth() {
       backgroundColor: theme.palette.secondary.main,
     },
     form: {
-      width: "100%", // Fix IE 11 issue.
+      width: "100%",
       marginTop: theme.spacing(3),
     },
     submit: {
@@ -127,7 +122,6 @@ export default function Auth() {
                 <FormControlLabel
                   style={{ color: "red", fontWeight: "bold" }}
                   control={<p>{errMsg}</p>}
-                  // label={errMsg}
                 />
                 <Grid container>
                   <Grid item>

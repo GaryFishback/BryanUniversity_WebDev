@@ -6,14 +6,11 @@ import Header from "./components/Header.js";
 import Auth from "./components/auth/auth.js";
 import Profile from "./components/profile.js";
 import Issues from "./components/issues.js";
-//context
 import { UserContext } from "./context/userProvider";
-
 export default function App() {
   const { token, logout, allIssues, getIssues } = useContext(UserContext);
 
   const state = useContext(UserContext);
-  // initialize PerfectScrollbar on windows devices
 
   return (
     <div

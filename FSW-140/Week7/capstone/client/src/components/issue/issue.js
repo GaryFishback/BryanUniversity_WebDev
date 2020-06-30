@@ -5,19 +5,14 @@ import Container from "@material-ui/core/Container";
 import CommentForm from "./comments/commentForm";
 import CommentList from "./comments/commentList";
 import { makeStyles } from "@material-ui/core/styles";
-// import Icon from "@material-ui/core/Icon";
-// @material-ui/icons
+
 import ArrowUpward from "@material-ui/icons/ArrowUpward";
 import ArrowDownward from "@material-ui/icons/ArrowDownward";
 import AccessTime from "@material-ui/icons/AccessTime";
 import Delete from "@material-ui/icons/Delete";
 
-// import GridItem from "./../Grid/GridItem";
-// import GridContainer from "../Grid/GridContainer.js";
-
 import Card from "../Card/Card";
 import CardHeader from "./../Card/CardHeader.js";
-// import CardIcon from "./../Card/CardIcon.js";
 import CardBody from "./../Card/CardBody.js";
 import CardFooter from "./../Card/CardFooter.js";
 import styles from "./../../assets/jss/material-dashboard-react/views/dashboardStyle.js";
@@ -40,32 +35,20 @@ axios.interceptors.request.use((config) => {
 export default function Issue(props) {
   const loggedUser = JSON.parse(localStorage.getItem("user"));
   const classes = useStyles();
-  var {
-    _id,
-    upVotes,
-    downVotes,
-    // voters,
-    // comments,
-    title,
-    description,
-    userID,
-    date,
-  } = props;
-  console.log(props);
+  var { _id, upVotes, downVotes, title, description, date } = props;
+
   const [votes, setVotesState] = useState({
     upVotes: upVotes,
     downVotes: downVotes,
     errMsg: "",
-    // voters: voters,
   });
-  console.log("votes state", votes);
+
   const [commentsState, setCommentsState] = useState({
     comments: [],
     errMsg: "",
     issueID: _id,
   });
-  console.log("votes state", votes);
-  //console.log(_id, upVotes, downVotes, voters, comments, title, description, userID, date)
+
   const handleAuthErr = (errMsg) => {
     console.dir(errMsg);
     setCommentsState((prevState) => ({
@@ -73,8 +56,6 @@ export default function Issue(props) {
     }));
   };
   const addComment = (e, newComment) => {
-    console.log(e.target.id);
-    console.log(newComment);
     axios
       .post(`http://localhost:3030/app/comments/${e.target.id}`, newComment)
       .then((res) => {
@@ -92,16 +73,8 @@ export default function Issue(props) {
   };
   return (
     <div id="issue" className={_id}>
-      {/* <GridItem sm={10}> */}
       <Card plain>
         <CardHeader color="info">
-          {/* <ChartistGraph
-              className="ct-chart"
-              data={dailySalesChart.data}
-              type="Line"
-              options={dailySalesChart.options}
-              listener={dailySalesChart.animation}
-            /> */}
           <p className={classes.cardCategory}>
             <span className={classes.whiteText}>{capitalize(description)}</span>
           </p>
@@ -121,16 +94,12 @@ export default function Issue(props) {
                 e.target.style.color = "red";
               }}
               onClick={(e) => {
-                console.log(e.currentTarget);
-                console.log(loggedUser._id);
                 var id = e.currentTarget.id;
                 axios
                   .delete(
                     `http://localhost:3030/app/issues/${e.currentTarget.id}`
                   )
                   .then((res) => {
-                    console.log(res);
-                    console.log(id);
                     alert("Seccesfully Deleted Issue");
                     var div = document.getElementsByClassName(id)[0];
 
@@ -148,18 +117,11 @@ export default function Issue(props) {
             <span className={classes.infoText}>
               <ArrowUpward
                 onClick={() => {
-                  console.log("_id", _id);
-                  console.log("upvotes", upVotes);
-                  // console.log("voters", voters);
-                  // console.log("comments", comments);
-                  console.log("userID", userID);
-
                   axios
                     .put(`http://localhost:3030/app/issues/${_id}`, {
                       upVotes: votes.upVotes + 1,
                     })
                     .then((res) => {
-                      console.log(res);
                       setVotesState((prevState) => ({
                         ...prevState,
                         upVotes: votes.upVotes + 1,
@@ -173,26 +135,11 @@ export default function Issue(props) {
               {votes.upVotes}
               <ArrowDownward
                 onClick={() => {
-                  console.log("_id", _id);
-                  console.log("downvotes", downVotes);
-                  console.log("userID", userID);
-                  // var ifVoted = votes.voters.findIndex((voter) => {
-                  //   console.log(voter.userID);
-                  //   console.log(loggedUser._id);
-                  //   console.log(voter.voted);
-                  //   return (
-                  //     voter.userID === loggedUser._id &&
-                  //     voter.voted === "downvoted"
-                  //   );
-                  // });
-                  // console.log("ifVoted", ifVoted);
-                  // if (ifVoted < 0) {
                   axios
                     .put(`http://localhost:3030/app/issues/${_id}`, {
                       downVotes: votes.downVotes + 1,
                     })
                     .then((res) => {
-                      console.log(res);
                       setVotesState((prevState) => ({
                         ...prevState,
                         downVotes: votes.downVotes + 1,
@@ -202,12 +149,6 @@ export default function Issue(props) {
                     .catch((err) => {
                       console.log(err);
                     });
-                  // } else {
-                  //   setVotesState((prevState) => ({
-                  //     ...prevState,
-                  //     errMsg: "you can only downvote once",
-                  //   }));
-                  // }
                 }}
                 className={classes.downArrowCardCategory}
               />{" "}
@@ -232,7 +173,6 @@ export default function Issue(props) {
               id={_id}
               onClick={() => {
                 const getIssueComments = () => {
-                  console.log(axios);
                   axios
                     .get(`http://localhost:3030/app/comments/issue/${_id}`)
                     .then((res) => {
@@ -240,14 +180,12 @@ export default function Issue(props) {
                       setCommentsState((prevState) => ({
                         comments: res.data || [],
                       }));
-                      console.log(res.data);
 
                       if (res.data.length === 0) {
                         setCommentsState((prevState) => ({
                           comments: [{ text: "NO COMMENTS HERE; ADD ONE!" }],
                         }));
                       }
-                      // localStorage.setItem("IssuesByUser", JSON.stringify(res.data));
                     })
                     .catch((err) => {
                       console.log(err);
@@ -262,16 +200,6 @@ export default function Issue(props) {
                 };
 
                 getIssueComments();
-                // console.log(this.state);
-                // this.setState({
-                //   user: this.props.state.user,
-                //   addComment: this.props.state.addComment,
-                //   issues: this.props.state.issues,
-                //   getUserIssues: this.props.state.getUserIssues,
-                //   errMsg: this.props.state.errMsg,
-                // });
-                // console.log("this.state.user", this.props.state.user);
-                console.log(commentsState);
               }}
             >
               View Comments
@@ -280,15 +208,10 @@ export default function Issue(props) {
         </CardFooter>{" "}
         <CardFooter chart>
           <div className={classes.stats} id="commentsSection">
-            <CommentList
-              comments={commentsState.comments}
-              user={loggedUser}
-              // errMsg={this.state.errMsg}
-            />
+            <CommentList comments={commentsState.comments} user={loggedUser} />
           </div>
         </CardFooter>
       </Card>
-      {/* </GridItem> */}
     </div>
   );
 }

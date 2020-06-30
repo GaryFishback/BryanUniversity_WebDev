@@ -19,7 +19,9 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   fill: rgb(29, 161, 242);
 }
-
+.mock-newsfeed{
+  font-size: 10px;
+}
 #loggedin_main {
   text-align: center;
   display: flex;

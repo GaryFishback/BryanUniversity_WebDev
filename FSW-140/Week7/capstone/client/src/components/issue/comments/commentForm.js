@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-//material UI
 import Button from "@material-ui/core/Button";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Grid from "@material-ui/core/Grid";
@@ -18,7 +16,6 @@ export default function CommentForm(props) {
 
   let simpleErrArray = [];
   if (errMsg) {
-    console.log(errMsg);
     let simpleErr = errMsg.split("Path");
 
     for (let i = 0; i < simpleErr.length; i++) {
@@ -27,13 +24,10 @@ export default function CommentForm(props) {
           "Comment validation failed: " &&
         i > 0
       ) {
-        //console.log(errMsg.split("Path")[i].split('.')[0])
-        //console.log(errMsg.split("Path")[0].substring(0,25))
         simpleErrArray.push(errMsg.split("Path")[i].split(".")[0]);
       }
     }
   }
-  //console.log(simpleErrArray)
   function handleChange(e) {
     const { name, value } = e.target;
     setInputs((prevInputs) => ({
@@ -44,16 +38,7 @@ export default function CommentForm(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(props);
-    console.log(inputs);
     addComment(e, inputs);
-
-    // let date = new Date();
-    // let brokendate = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`;
-    // inputs.date = new Date();
-
-    // props.newComment(inputs);
-    // var inputs = document.get
   }
 
   const useNewCommentStyles = makeStyles((theme) => ({
@@ -64,7 +49,7 @@ export default function CommentForm(props) {
     },
 
     form: {
-      width: "100%", // Fix IE 11 issue.
+      width: "100%",
     },
     submit: {
       margin: theme.spacing(3, 0, 2),
@@ -75,7 +60,6 @@ export default function CommentForm(props) {
   return (
     <>
       <Container component="main" maxWidth="xs">
-        {/* <CssBaseline /> */}
         <div className={classesNewComment.paper}>
           <form
             id={props.issueId}
@@ -110,7 +94,6 @@ export default function CommentForm(props) {
                 <FormControlLabel
                   style={{ color: "red", fontWeight: "bold" }}
                   control={<p>{errString}</p>}
-                  // label={errMsg}
                 />
               );
             })}

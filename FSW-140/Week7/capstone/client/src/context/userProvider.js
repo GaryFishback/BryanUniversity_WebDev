@@ -29,14 +29,12 @@ export default function UserProvider(props) {
   }
 
   function signup(credentials) {
-    console.log(credentials);
     const newUser = {
       name: credentials.Name,
       username: credentials.username,
       password: credentials.password,
       birthdate: "20002015",
     };
-    console.log(newUser);
 
     Axios.post("http://localhost:3030/signup", newUser)
       .then((res) => {
@@ -61,18 +59,12 @@ export default function UserProvider(props) {
       });
   }
   function login(credentials) {
-    console.log(credentials);
-
     Axios.post("http://localhost:3030/", credentials)
       .then((res) => {
         const { user, token } = res.data;
         console.log(res.data);
         localStorage.setItem("token", token);
         localStorage.setItem("user", JSON.stringify(user));
-
-        // getUserIssues();
-        // getIssues();
-
         setUserState((prevUserState) => ({
           ...prevUserState,
           user,
@@ -85,7 +77,6 @@ export default function UserProvider(props) {
           handleAuthErr(err.response.data.errMsg);
         }
       });
-    console.log(Axios);
   }
 
   function logout() {
@@ -107,12 +98,10 @@ export default function UserProvider(props) {
     axios
       .get("http://localhost:3030/app/issues")
       .then((res) => {
-        console.log(res.data);
         setUserState((prevState) => ({
           ...prevState,
           allIssues: res.data,
         }));
-        // localStorage.setItem("IssuesAll", JSON.stringify(res.data));
       })
       .catch((err) => {
         console.log(err);
@@ -129,9 +118,8 @@ export default function UserProvider(props) {
         signup,
         logout,
         login,
-        // addIssue,
+
         getIssues,
-        // getUserIssues,
       }}
     >
       {props.children}

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Axios from "axios";
 import IssueForm from "./issue/issueForm";
 import IssuesList from "./issue/issuesList.js";
-// import Container from "@material-ui/core/Container";
 const axios = Axios.create();
 
 axios.interceptors.request.use((config) => {
@@ -24,16 +23,12 @@ export default class Profile extends Component {
 
   componentDidMount = () => {
     this.getUserIssues = () => {
-      console.log(axios);
       axios
         .get("http://localhost:3030/app/issues/user")
         .then((res) => {
-          console.log("res.data", res.data);
           this.setState((prevState) => ({
             issues: res.data || [],
           }));
-          console.log(this.state.issues);
-          // localStorage.setItem("IssuesByUser", JSON.stringify(res.data));
         })
         .catch((err) => {
           console.log(err);
@@ -42,17 +37,13 @@ export default class Profile extends Component {
           }
         });
     };
-    console.log(this.props.state);
+
     this.getUserIssues();
-    console.log(this.state);
+
     this.setState({
       user: this.props.state.user,
-      // addIssue: this.props.state.addIssue,
-      // issues: this.props.state.issues,
-      // getUserIssues: this.props.state.getUserIssues,
       errMsg: this.props.state.errMsg,
     });
-    console.log("this.state.user", this.props.state.user);
   };
 
   render() {
@@ -70,7 +61,6 @@ export default class Profile extends Component {
           this.setState((prevState) => ({
             issues: [...prevState.issues, res.data[0]],
           }));
-          console.log(this.state);
         })
         .catch((err) => {
           console.log(err);
@@ -84,27 +74,9 @@ export default class Profile extends Component {
         <h1 style={{ textAlign: "center" }}>
           What would you like to do {this.props.state.user.name}?{" "}
         </h1>
-        <IssueForm
-          addIssue={addIssue}
-          // newIssue={(inputs) => {
-          //   this.setState((prevState) => ({
-          //     newIssue: inputs,
-          //     issues: [...prevState.issues, inputs],
-          //   }));
-          // }}
-          errMsg={this.state.errMsg}
-        />
-        {/* <Container
-          component="main"
-          maxWidth="xl"
-          style={{ textAlign: "center" }}
-        > */}
-        <IssuesList
-          issues={this.state.issues}
-          // user={this.props.state.user}
-          // errMsg={this.state.errMsg}
-        />
-        {/* </Container> */}
+        <IssueForm addIssue={addIssue} errMsg={this.state.errMsg} />
+
+        <IssuesList issues={this.state.issues} />
       </div>
     );
   }
